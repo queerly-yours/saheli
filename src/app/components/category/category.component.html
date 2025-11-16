@@ -1,0 +1,56 @@
+<div class="category-wrapper">
+    <div class="category-left-content">
+        <div class="category-decade-wrapper">
+            <div class="w-100">
+                <app-header-lines [years]="categoryData?.decades ?? []"></app-header-lines>
+            </div>
+        </div>
+    </div>
+
+    <div class="category-content">
+        <span class="category-name">{{categoryData?.title}}</span>
+        <div class="category-description-wrapper">
+            @for (item of categoryData?.description; track $index) {
+            <span class="category-description">{{item}}</span>
+            }
+        </div>
+
+        @if (categoryData?.subCategoryList?.length || categoryData?.articleList?.length) {
+        <span class="category-article-heading">ARTICLES</span>
+        }
+
+        @if (categoryData?.subCategoryList?.length) {
+        <app-accordion [panels]="categoryData?.subCategoryList ?? []"></app-accordion>
+        }
+
+        @if (categoryData?.articleList?.length) {
+        <div class="category-article-summary">
+            @for (item of categoryData?.articleList; track $index) {
+            <app-article-summary [articleSummary]="item"></app-article-summary>
+            }
+        </div>
+        }
+
+        @if (categoryData?.archiveImg) {
+        <div class="archive-img-wrapper">
+            <span class="category-article-heading">Archive</span>
+            <img [src]="categoryData?.archiveImg" width="300" height="300" />
+        </div>
+        }
+
+        @if (categoryData?.archiveList?.length) {
+        <div class="archive-list-wrapper">
+            @for (item of categoryData.archiveList; track $index) {
+            <div class="archive-wrapper">
+                <img [src]="item.archiveImg" width="250" height="250" alt="">
+                <span class="archive-title">{{item.title}}</span>
+            </div>
+            }
+        </div>
+        }
+    </div>
+
+    <div class="category-right-content">
+
+    </div>
+</div>

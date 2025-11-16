@@ -1,0 +1,17 @@
+.home-banner {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.home-text-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .home-text {
+        padding: 80px 150px 50px 150px;
+        font-weight: 400;
+        max-width: 75%;
+        text-align: start;
+    }
+}

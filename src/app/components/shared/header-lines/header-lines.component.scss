@@ -1,0 +1,89 @@
+.header-horizontal-bar {
+    display: flex;
+    width: 100%;
+    border-right: 3px solid #ae84e8;
+    align-items: center;
+    height: 25px;
+    margin-top: 17px;
+
+    div {
+        height: 3px;
+        width: 100%;
+        background-color: #ae84e8;
+    }
+}
+
+.timeline-container {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 40px 0;
+    width: 200px;
+    top: -14px;
+}
+
+/* Vertical line */
+.timeline-line {
+    position: absolute;
+    left: 60px;
+    /* adjust so ticks align nicely */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #ae84e8;
+    /* purple */
+}
+
+/* Years list section */
+.years {
+    margin-left: 60px;
+    /* space to the right of the line */
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.year-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Short horizontal tick */
+.tick {
+    width: 25px;
+    height: 2px;
+    background-color: #ae84e8;
+}
+
+/* Year text */
+.year-text {
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.year-text:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.label {
+    position: absolute;
+    left: 54px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #c8941a;
+}
+
+.header-lines-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 5em);
+}

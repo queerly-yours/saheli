@@ -1,0 +1,28 @@
+.article-summary-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    .article-title {
+        text-transform: uppercase;
+        color: #5c2d91;
+        padding-top: 5px;
+    }
+
+    .article-title,
+    .article-subtitle,
+    .article-date {
+        padding-bottom: 5px;
+    }
+}
+
+.article-summary-wrapper:hover {
+    cursor: pointer;
+
+    .article-title {
+        text-decoration: underline;
+    }
+}

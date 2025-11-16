@@ -1,0 +1,21 @@
+.footer-wrapper {
+    display: flex;
+    padding: 15px 80px 10px 120px;
+
+    .footer-info-left {
+        flex: .8;
+    }
+
+    .footer-info-right {
+        flex: .2;
+
+        .footerLinkItem {
+            padding-bottom: 5px;
+
+            a {
+                text-decoration: none;
+                font-weight: 400;
+            }
+        }
+    }
+}

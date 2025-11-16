@@ -1,0 +1,29 @@
+<div class="header-horizontal-bar">
+    <div></div>
+</div>
+
+<div class="header-lines-wrapper">
+    @if (years.length) {
+    <div>
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            <div class="years">
+                @for (y of years; track $index) {
+                <div class="year-item">
+                    <span class="tick"></span>
+                    <span class="year-text">{{ y }}</span>
+                </div>
+                }
+            </div>
+        </div>
+
+        <div class="label">
+            VIEW BY DECADE
+        </div>
+    </div>
+    }
+
+    <div>
+        <img src="../../../../assets/shared/1.png" alt="" height="600" class="pt-5">
+    </div>
+</div>

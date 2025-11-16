@@ -1,0 +1,66 @@
+<header class="header">
+  <div class="header-block">
+    <!-- Logo -->
+    <div class="logo" [routerLink]="'/'">
+      <img src="../../../../assets/logo/header-logo.png" alt="Logo" />
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+      <!-- Search Box -->
+      <div class="search-container">
+        <input type="text" placeholder="Search..." class="search-box" />
+        <ng-icon name="heroMagnifyingGlass" size="20" class="search-icon"></ng-icon>
+      </div>
+
+      <div class="hamburger-menu">
+        <div (mouseenter)="resetMenu()">
+          <ng-icon name="heroBars3" size="26" class="icon"></ng-icon>
+        </div>
+
+        <ul class="dropdown">
+          @for (item of menu; track $index) {
+          @if (item.id !== '14') {
+          <li class="dropdown-item">
+            <!-- (click)="toggleCategory(item)" -->
+            <div class="category-item" (click)="decideNavigateOrExpand(item)">
+              <a class="parent-link">
+                {{ item.title }}
+              </a>
+              @if (item.subCategoryList.length) {
+              @if (item.isOpen) {
+              <ng-icon name="heroChevronUp" size="20" class="category-down"></ng-icon>
+              } @else {
+              <ng-icon name="heroChevronDown" size="20" class="category-down"></ng-icon>
+              }
+              }
+            </div>
+
+            @if (item.isOpen && item.subCategoryList.length) {
+            <ul class="sub-dropdown">
+              @for (child of item.subCategoryList; track $index) {
+              <li>
+                <a (click)="decideNavigateOrExpand(child)">&bull;&nbsp;&nbsp;{{ child.title }}</a>
+                @if (child.innerCategories?.length) {
+                <ul class="sub-sub-dropdown">
+                  @for (subChild of child.innerCategories; track $index) {
+                  <li>
+                    <a (click)="decideNavigateOrExpand(subChild)">&bull;&nbsp;&nbsp;{{ subChild.title }}</a>
+                  </li>
+                  }
+                </ul>
+                }
+              </li>
+              }
+            </ul>
+            }
+
+          </li>
+          }
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="header-bottom-border"></div>
+</header>

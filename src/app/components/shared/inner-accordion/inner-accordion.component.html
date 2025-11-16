@@ -1,0 +1,22 @@
+<section class="accordion" role="tablist" aria-multiselectable="false">
+
+    @if (panels.length) {
+    <div class="panel" *ngFor="let p of panels">
+        <button class="panel-header" (click)="toggle(p.id)" [attr.aria-expanded]="isOpen(p.id)"
+            [attr.aria-controls]="'panel-body-' + p.id" id="{{'panel-header-' + p.id}}" type="button">
+            <span class="title">{{ p.title }}</span>
+
+            <!-- chevron: down when closed, up when open -->
+            <ng-icon class="chev" [name]="isOpen(p.id) ? 'heroChevronUp' : 'heroChevronDown'" size="18"
+                aria-hidden="true"></ng-icon>
+        </button>
+
+        <div class="panel-body" id="{{'panel-body-' + p.id}}" role="region"
+            [attr.aria-labelledby]="'panel-header-' + p.id" [class.open]="isOpen(p.id)">
+            @for (item of p.articleList; track $index) {
+                <app-article-summary [articleSummary]="item"></app-article-summary>
+            }
+        </div>
+    </div>
+    }
+</section>

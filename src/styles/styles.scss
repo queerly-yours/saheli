@@ -1,0 +1,68 @@
+@use './variables.scss' as *;
+
+body {
+  margin: 0;
+  padding-top: 85px; /* adjust based on header height */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 22px;
+}
+
+.bg-primary {
+  background: $dark-purple;
+}
+
+.bg-gold {
+  background: $primary-gold;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.font-white {
+  color: $white;
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.pt-5 {
+  padding-top: 50px;
+}
+
+
+/* Scrollbar design starts */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2f2f2;  /* light neutral */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cccccc;   /* neutral gray */
+  border-radius: 4px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cccccc #f2f2f2; /* Firefox */
+}
+
+/* Scrollbar design ends */

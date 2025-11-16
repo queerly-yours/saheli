@@ -1,0 +1,20 @@
+<div class="bg-primary">
+    <img class="w-100" src="../../../../assets/footer/Group 1.png" alt="">
+</div>
+<div class="bg-primary font-white footer-wrapper">
+    <div class="footer-info-left">
+        <p>You are free to quote or use any materials from <br> our site, and it would be great to hear if you do.</p>
+        <p class="fs-18">saheli women's resource centre. <br>
+            above 105-108 defence colony flyover market, new delhi 110024 <br>
+            connect with us at saheliwomen&#64;gmail.com</p>
+    </div>
+    <div class="footer-info-right">
+        <p>
+        @for (footerItem of footerLinkList; track $index) {
+            <div class="footerLinkItem">
+                <a [href]="footerItem.routeLink" class="font-white">{{footerItem.label}}</a>
+            </div>
+        }
+        </p>
+    </div>
+</div>

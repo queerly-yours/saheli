@@ -1,0 +1,77 @@
+:host {
+    display: block;
+}
+
+/* accordion wrapper — no outer border; only panel bottom borders */
+.accordion {
+    width: 100%;
+    background: transparent;
+}
+
+/* each panel has only a bottom border */
+.panel {
+    border: 0;
+    border-bottom: 1px solid #e6e6e6;
+    /* bottom border only */
+}
+
+/* header button (title + icon) */
+.panel-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 0px;
+    background: transparent;
+    border: 0;
+    text-align: left;
+    cursor: pointer;
+    border-bottom: 1px solid #ae84e8;
+    font-weight: 400;
+    line-height: 25px;
+    font-size: 16px;
+    color: inherit;
+}
+
+/* title */
+.panel-header .title {
+    font-size: 16px;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+/* chevron icon */
+.chev {
+    color: #666;
+    transition: transform 220ms ease, color 220ms ease;
+}
+
+
+/* panel body — collapsed by default */
+.panel-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 260ms ease, padding 200ms ease;
+    padding: 0px 16px;
+    background: transparent;
+}
+
+.panel-body.open {
+    padding: 0px 16px;
+    max-height: 500px;
+}
+
+.panel-body-inner {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.panel-header:hover .title {
+    color: #111;
+}
+
+.panel-header:hover .chev {
+    color: #333;
+}
