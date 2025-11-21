@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { articleList } from '../../../utils/data-model';
+import { Router } from '@angular/router';
+import { ParamType } from '../../../utils/utils';
 
 @Component({
   selector: 'app-article-summary',
@@ -11,7 +13,10 @@ export class ArticleSummaryComponent {
 
   @Input() articleSummary: articleList | null = null;
 
+  constructor(private router: Router) { }
+
+
   navigateToArticle(id: string | undefined) {
-    console.log(id);
+    this.router.navigate(['/details', id, ParamType.Article]);
   }
 }

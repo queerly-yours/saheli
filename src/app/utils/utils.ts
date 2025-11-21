@@ -11,6 +11,18 @@ export function filterByIds<T>(items: T[], ids: string[], key: keyof T): T[] {
 }
 
 /**
+ * Find from an array of objects based on a IDs.
+ * @param items The array of objects to filter.
+ * @param ids The array of string IDs to filter by.
+ * @param key The key in the objects that holds the ID.
+ * @returns A new array containing only the filtered items.
+ */
+export function findById<T>(items: T[], id: string, key: keyof T): T | undefined {
+    return items.find(item => String(item[key]) === id);
+}
+
+
+/**
  * Filters an array of objects where a specified key (which is an array of strings) contains any of the given IDs.
  * @param items The array of objects to filter.
  * @param ids The array of string IDs to check for within the key's array.
@@ -33,5 +45,6 @@ export function filterByArrayKeyAndIds<T>(items: T[], ids: string[], key: keyof 
 export enum ParamType {
     Category = 'category',
     SubCategory = 'subcategory',
-    Archive = 'archive'
+    Archive = 'archive',
+    Article = 'article'
 }

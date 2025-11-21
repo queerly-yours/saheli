@@ -39,4 +39,14 @@ export interface archive {
     archiveImg?: string;
 }
 
+export interface article {
+    id: string;
+    decades: string[];
+    publishedDate: string;
+    exactDate: string;
+    subtitle: string;
+    title: string;
+    value: string;
+}
+
 export type CategoryItem = category | subCategory;

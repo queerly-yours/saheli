@@ -1,10 +1,5 @@
 <div>
-    <div class="home-banner">
-        <img src="../../../assets/home/temp-img - Copy.png" alt="">
-    </div>
-    @for (item of testButtons; track $index) {
-        <button (click)="navigateToCategory(item)">Test Data {{$index + 1}}</button>
-    }
+    <app-home-banner></app-home-banner>
 
     <div class="home-text-wrapper">
         <div class="home-text">

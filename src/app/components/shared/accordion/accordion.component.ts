@@ -20,9 +20,7 @@ export class AccordionComponent {
 
   openPanelId: string | null = null;
 
-  ngOnChanges() {
-    console.log(this.panels);
-  }
+  ngOnChanges() {  }
 
 
   toggle(panelId: string) {

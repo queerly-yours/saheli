@@ -1,0 +1,307 @@
+.saheli-banner {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.banner-inner {
+    position: relative;
+    width: 100%;
+    padding-top: 60%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+
+.banner-inner .bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+
+/* Generic circle styling: image fills, label centered on top */
+.circle {
+    position: absolute;
+    transform-origin: center center;
+    cursor: pointer;
+}
+
+.circle img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.circle .label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
+    color: #ee94bb;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.circle .l1 {
+    align-items: flex-start;
+    text-transform: uppercase;
+    padding-top: 40px;
+}
+
+.circle .l2 {
+    justify-content: flex-start;
+    padding-left: 45px;
+}
+
+/* Silhouette common style */
+.sil {
+    position: absolute;
+    width: 8%;
+    height: auto;
+    pointer-events: none;
+}
+
+
+/* --- Absolute placements (percent-based) ---
+Values tuned to visually match the provided mock. Adjust per-asset sizes and positions.
+*/
+.c-1 {
+    left: 1%;
+    top: 1%;
+    width: 13%;
+}
+
+.c-2 {
+    left: 23.5%;
+    top: 6%;
+    width: 19.5%;
+}
+
+.c-3 {
+    left: 49.5%;
+    top: 4%;
+    width: 12%;
+}
+
+.c-4 {
+    left: 72%;
+    top: 6%;
+    width: 16%;
+}
+
+.c-5 {
+    left: 3%;
+    top: 45%;
+    width: 18%;
+}
+
+.c-6 {
+    left: 29%;
+    top: 65%;
+    width: 19%;
+}
+
+.c-7 {
+    left: 50%;
+    top: 39%;
+    width: 17%;
+}
+
+.c-8 {
+    left: 62%;
+    top: 70%;
+    width: 13%;
+}
+
+.c-9 {
+    left: 87%;
+    top: 29%;
+    width: 12%;
+}
+
+.c-10 {
+    left: 84%;
+    top: 74%;
+    width: 16%;
+}
+
+.c-11 {
+    left: 74%;
+    top: 48%;
+    width: 13%;
+}
+
+
+.s-1 {
+    left: 1.5%;
+    top: 11%;
+    width: 16%;
+}
+
+.s-2 {
+    left: 18%;
+    top: 4%;
+    width: 14%;
+}
+
+.s-3 {
+    left: 42%;
+    top: 19%;
+    width: 17%;
+}
+
+.s-4 {
+    left: 63%;
+    top: 5%;
+    width: 12%;
+}
+
+.s-5 {
+    left: 81%;
+    top: 0%;
+    width: 10%;
+}
+
+.s-6 {
+    left: 85%;
+    top: 64%;
+    width: 15%;
+}
+
+.s-7 {
+    left: 18%;
+    top: 31%;
+    width: 16%;
+}
+
+.s-8 {
+    left: 7%;
+    top: 66%;
+    width: 13%;
+}
+
+.s-9 {
+    left: 20.5%;
+    top: 80%;
+    width: 20%;
+}
+
+.s-10 {
+    left: 44.15%;
+    top: 65%;
+    width: 5%;
+}
+
+.s-11 {
+    left: 35%;
+    top: 37%;
+    width: 14%;
+}
+
+.s-12 {
+    left: 51.5%;
+    top: 29%;
+    width: 14%;
+}
+
+.s-13 {
+    left: 61%;
+    top: 51%;
+    width: 11%;
+}
+
+.s-14 {
+    left: 53%;
+    top: 79%;
+    width: 19%;
+}
+
+.s-15 {
+    left: 66%;
+    top: 25%;
+    width: 15%;
+}
+
+.s-16 {
+    left: 90%;
+    top: 21%;
+    width: 11%;
+}
+
+.s-17 {
+    left: 82.75%;
+    top: 45%;
+    width: 5%;
+}
+
+
+/* Typography scaling for smaller screens */
+@media (max-width:900px) {
+    .circle .label {
+        font-size: 2.6vw;
+    }
+
+    .sil {
+        width: 11%;
+    }
+}
+
+@media (max-width:480px) {
+    .banner-inner {
+        padding-top: 75%;
+        /* taller on very small devices */
+    }
+
+    .circle .label {
+        font-size: 3.8vw;
+    }
+
+    .sil {
+        width: 14%;
+    }
+
+    /* reduce some circles to avoid overlap on tiny screens */
+    .c-6 {
+        left: 26%;
+        top: 60%;
+        width: 20%;
+    }
+
+    .c-2 {
+        left: 22%;
+        top: 8%;
+        width: 22%;
+    }
+}
+
+.circle img.secondary {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .6s;
+}
+
+.circle:hover img.primary {
+    opacity: 0;
+}
+
+.circle:hover img.secondary {
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+.circle:hover div.label {
+    color: #fff
+}

@@ -213,5 +213,14 @@ export const articlesSummary: articleList[] = [
         categoryIdList: ['7'],
         subCategoryIdList: []
     },
+    {
+        id: 'Article24',
+        isArticle: true,
+        publishedDate: 'Newsletter Sep - Dec 2003',
+        subtitle: 'The International Initiative for Justice in Gujarat Release of Report: Threatened Existence',
+        title: 'Threatened Existence: Report of International Initiative for Justice in Gujarat',
+        categoryIdList: [],
+        subCategoryIdList: ['Subcategory1']
+    },
     
 ]

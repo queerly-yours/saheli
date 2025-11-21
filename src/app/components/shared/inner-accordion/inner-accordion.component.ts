@@ -18,9 +18,7 @@ export class InnerAccordionComponent {
 
   openPanelId: string | null = null;
 
-  ngOnChanges() {
-    console.log(this.panels);
-  }
+  ngOnChanges() { }
 
 
   toggle(panelId: string) {
