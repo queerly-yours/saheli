@@ -21,7 +21,7 @@ export class SearchResultsComponent implements OnInit {
   results: FuseResult<SearchItem>[] = [];
   pagedResults: FuseResult<SearchItem>[] = [];
   page = 1;
-  pageSize = 5;
+  pageSize = 10;
   totalPages = 1;
   loading = true;
   pageChanging = false;;
