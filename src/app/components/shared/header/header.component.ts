@@ -5,11 +5,12 @@ import { Router, RouterModule } from '@angular/router';
 import { categories } from '../../../utils/category';
 import { category, subCategory } from '../../../utils/data-model';
 import { ParamType } from '../../../utils/utils';
+import { SearchDropdownComponent } from "../search/search.component";
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgIconComponent, RouterModule],
+  imports: [NgIconComponent, RouterModule, SearchDropdownComponent],
   providers: [provideIcons({ heroBars3, heroMagnifyingGlass, heroChevronDown, heroChevronUp })],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']

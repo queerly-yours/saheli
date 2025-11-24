@@ -1,0 +1,11 @@
+<div class="search-container">
+    <div class="search-wrapper">
+        <input class="search-input" [formControl]="q" (keyup.enter)="onSearch()" placeholder="Search articles..." />
+        <button class="clear-btn" *ngIf="q.value?.length" (click)="clearSearch()">
+            ✕
+        </button>
+        <button class="search-btn" (click)="onSearch()">
+            <ng-icon name="heroMagnifyingGlass" size="20"></ng-icon>
+        </button>
+    </div>
+</div>

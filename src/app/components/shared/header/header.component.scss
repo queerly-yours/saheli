@@ -44,26 +44,6 @@
   flex-wrap: nowrap;
 }
 
-/* SEARCH CONTAINER */
-.search-container {
-  position: relative;
-}
-
-.search-box {
-  padding: 10px 10px 10px 30px;
-  // border-radius: 5px;
-  border: none;
-  max-width: 250px;
-}
-
-.search-icon {
-  position: absolute;
-  top: 50%;
-  left: 8px;
-  transform: translateY(-50%);
-  color: gray;
-}
-
 
 .hamburger-menu {
   position: relative;

@@ -49,4 +49,9 @@ export interface article {
     value: string;
 }
 
+export interface SearchItem {
+  type: 'article';
+  payload: article;
+}
+
 export type CategoryItem = category | subCategory;

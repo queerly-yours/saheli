@@ -1,0 +1,44 @@
+<div class="results-page saheli-style">
+
+    <!-- SPINNER -->
+    <div class="loading-container" *ngIf="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- CONTENT -->
+    <ng-container *ngIf="!loading">
+
+        @if (query) {
+        <div class="search-query-header">Search results for "{{ query }}"</div>
+        } @else {
+        <div class="search-query-header">Search results:</div>
+        }
+
+        <div *ngIf="pagedResults.length === 0" class="no">No results</div>
+
+        <div class="paged-results-wrapper" [class.page-changing]="pageChanging">
+            <div *ngFor="let r of pagedResults" class="row" (click)="onClick(r)">
+                <div class="title" [innerHTML]="getHighlighted(r, 'title')"></div>
+                <div class="subtitle" *ngIf="r.item.subtitle" [innerHTML]="getHighlighted(r, 'subtitle')"></div>
+                <div class="meta">{{ r.item.payload.publishedDate }}</div>
+                <div class="snippet" *ngIf="getSnippet(r) as snip" [innerHTML]="snip"></div>
+            </div>
+        </div>
+
+
+        <div class="pager" *ngIf="totalPages > 1">
+            <button class="arrow" (click)="setPage(page - 1)" [disabled]="page === 1">
+                <ng-icon name="heroArrowLeftCircle" size="28"></ng-icon>
+            </button>
+
+            <button class="number" *ngFor="let p of [].constructor(totalPages); let i = index" (click)="setPage(i + 1)"
+                [class.active]="page === i + 1">
+                {{ i + 1 }}
+            </button>
+
+            <button class="arrow" (click)="setPage(page + 1)" [disabled]="page === totalPages">
+                <ng-icon name="heroArrowRightCircle" size="28"></ng-icon>
+            </button>
+        </div>
+    </ng-container>
+</div>

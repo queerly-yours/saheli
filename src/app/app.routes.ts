@@ -16,4 +16,10 @@ export const routes: Routes = [
         path: 'details/:id/:type/:articleId',
         component: ArticleComponent,
     },
+    {
+    path: 'search',
+    loadComponent: () =>
+      import('./components/shared/search/search-results/search-results.component')
+        .then(m => m.SearchResultsComponent)
+  },
 ];
