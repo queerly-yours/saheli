@@ -10,9 +10,10 @@
     @if (type === paramTypes.Article) {
     <div class="article-content">
         <span class="article-title">{{categoryData?.title}}</span>
+        @if (categoryData?.subtitle) {
         <span class="article-subtitle">{{categoryData?.subtitle}}</span>
+        }
         <div class="article-dates-wrapper">
-            <div>{{categoryData?.exactDate}}</div>
             <div>{{categoryData?.publishedDate}}</div>
         </div>
         <div [innerHTML]="getSanitizedValue(categoryData?.value)" class="article-content-wrapper"></div>
