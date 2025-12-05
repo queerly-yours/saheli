@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { filterByIds, ParamType } from '../../utils/utils';
 import { categories } from '../../utils/category';
 import { AccordionComponent } from "../shared/accordion/accordion.component";
@@ -8,10 +8,14 @@ import { HeaderLinesComponent } from "../shared/header-lines/header-lines.compon
 import { subcategoriesSummary } from '../../utils/all-subcategory-summary';
 import { articles } from '../../utils/all-articles';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { CategoryPopComponent } from "../shared/category-pop/category-pop.component";
+import { NgClass } from '@angular/common';
+import { article, category, subCategory } from '../../utils/data-model';
+import { DateUtilsService } from '../../services/date-utils/date-utils.service';
 
 @Component({
   selector: 'app-category',
-  imports: [AccordionComponent, ArticleSummaryComponent, HeaderLinesComponent],
+  imports: [AccordionComponent, ArticleSummaryComponent, HeaderLinesComponent, CategoryPopComponent, NgClass],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss'
 })
@@ -20,16 +24,29 @@ export class DetailsComponent {
   categoryData!: any;
   type!: string;
   paramTypes = ParamType;
+  viewByDecade = false;
+  selectedDecade: string | null = null;
+  selectedId: string | null = null;
+  decadeWiseArticleList: any[] = [];
 
 
-  constructor(private route: ActivatedRoute, private sanitizer: DomSanitizer) {
+  constructor(private route: ActivatedRoute, private sanitizer: DomSanitizer, private router: Router, private dateUtils: DateUtilsService) {
   }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      const id = params.get('id');
+      this.selectedId = params.get('id');
       this.type = params.get('type') ?? '';
-      this.fetchDetailsBasedOnParamType(id, this.type);
+      this.fetchDetailsBasedOnParamType(this.selectedId, this.type);
+    });
+
+    this.route.queryParams.subscribe(params => {
+      this.selectedDecade = params['decade'] || null;
+      if (this.selectedDecade) {
+        this.applyDecadeFilter();
+      } else {
+        this.viewByDecade = false;
+      }
     });
   }
 
@@ -40,15 +57,15 @@ export class DetailsComponent {
 
     switch (type) {
       case ParamType.Category:
-        this.fetchCategoryData(id);
+        this.fetchCategoryData(id, categories);
         break;
 
       case ParamType.SubCategory:
-        this.fetchSubCategoryData(id);
+        this.fetchCategoryData(id, subcategoriesSummary);
         break;
 
       case ParamType.Article:
-        this.fetchArticleData(id);
+        this.fetchCategoryData(id, articles);
         break;
 
       default:
@@ -56,21 +73,58 @@ export class DetailsComponent {
     }
 
   }
-  
-  fetchCategoryData(id: string) {
-    this.categoryData = filterByIds(categories, [id], 'id')[0];
-  }
 
-  fetchSubCategoryData(id: string) {
-    this.categoryData = filterByIds(subcategoriesSummary, [id], 'id')[0];
-  }
-
-  fetchArticleData(id: string) {
-    this.categoryData = filterByIds(articles, [id], 'id')[0];
-    console.log(this.categoryData);
+  fetchCategoryData(id: string, instance: any[]) {
+    this.categoryData = filterByIds(instance, [id], 'id')[0];
   }
 
   getSanitizedValue(value: string): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(value);
   }
+
+  onDecadeClick(decade: any) {
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { decade },
+      queryParamsHandling: 'merge' // keep others
+    });
+  }
+
+  applyDecadeFilter() {
+    this.decadeWiseArticleList = [];
+    this.viewByDecade = true;
+    if (this.categoryData.articleList?.length) {
+      const categoryDecadeArticles = this.categoryData.articleList.filter((article: any) => article.decade === this.selectedDecade);
+      this.decadeWiseArticleList.push(...categoryDecadeArticles);
+    }
+
+    if (this.categoryData.subCategoryList?.length) {
+      this.categoryData.subCategoryList.forEach((subCategory: any) => {
+        if (subCategory.articleList?.length) {
+          const subCategoryDecadeArticles = subCategory.articleList.filter((article: any) => article.decade === this.selectedDecade);
+          this.decadeWiseArticleList.push(...subCategoryDecadeArticles);
+
+          if (subCategory.innerCategories?.length) {
+            subCategory.innerCategories.forEach((innerCategory: any) => {
+              if (innerCategory.articleList?.length) {
+                const innerCategoryDecadeArticles = innerCategory.articleList.filter((article: any) => article.decade === this.selectedDecade);
+                this.decadeWiseArticleList.push(...innerCategoryDecadeArticles);
+              }
+            })
+          }
+        }
+      })
+    }
+
+    this.decadeWiseArticleList = this.dateUtils.sortByPublishedDate(this.decadeWiseArticleList);
+
+    this.decadeWiseArticleList = Object.values(
+      this.decadeWiseArticleList.reduce((acc: Record<string, any>, item) => {
+        acc[item.id] = item;
+        return acc;
+      }, {})
+    );
+  }
+
+
 }

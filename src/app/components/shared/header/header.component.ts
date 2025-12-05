@@ -56,7 +56,6 @@ export class HeaderComponent {
     }
 
     if ('isCategory' in item && item.isCategory && item.subCategoryList.length === 0) {
-      if (item.id !== '1')
         this.router.navigate(['/details/', item.id, ParamType.Category]);
     }
   }

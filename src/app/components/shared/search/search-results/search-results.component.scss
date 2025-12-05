@@ -4,6 +4,7 @@
     padding: 80px 14px 20px 14px;
     max-width: 760px;
     margin: auto;
+    min-height: 50vh;
 }
 
 .search-query-header {
@@ -11,6 +12,13 @@
     font-size: 40px;
     font-weight: 400;
     margin-bottom: 20px;
+}
+
+.no-results {
+    min-height: 35vh;
+    font-size: 18px;
+    color: #5c2d91;
+    font-weight: 500;
 }
 
 /* ========== SPINNER ========== */
@@ -107,7 +115,7 @@
     margin-top: 40px;
 
     .number {
-        padding: 6px 12px;
+        padding: 8px 8px;
         border-radius: 4px;
         border: transparent;
         background: transparent;

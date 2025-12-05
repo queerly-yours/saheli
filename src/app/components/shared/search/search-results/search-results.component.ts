@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { SearchService, SearchItem } from '../../../../services/search/search.service';
 import { FuseResult } from 'fuse.js';
 import { provideIcons, NgIcon } from '@ng-icons/core';
 import { heroArrowLeftCircle, heroArrowRightCircle } from '@ng-icons/heroicons/outline';
+import { ParamType } from '../../../../utils/utils';
 
 @Component({
   selector: 'app-search-results',
@@ -29,7 +30,8 @@ export class SearchResultsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private searchService: SearchService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -38,8 +40,8 @@ export class SearchResultsComponent implements OnInit {
       this.loading = true;
 
       // if (this.query) {
-        this.page = 1;
-        this.searchService.search(this.query, 1000);
+      this.page = 1;
+      this.searchService.search(this.query, 1000);
       // }
     });
 
@@ -67,74 +69,55 @@ export class SearchResultsComponent implements OnInit {
 
   onClick(r: FuseResult<SearchItem>) {
     console.log('Clicked result:', r.item.payload);
+    this.router.navigate(['/details', r.item.payload.id, ParamType.Article]);
   }
 
-  // /** Highlight matches in title or subtitle */
-  // getHighlighted(result: FuseResult<SearchItem>, key: 'title' | 'subtitle'): SafeHtml {
-  //   const matches = result.matches?.filter(m => m.key === key);
-  //   if (!matches || matches.length === 0) return result.item[key] || '';
-
-  //   let text = result.item[key] || '';
-  //   let highlighted = '';
-  //   let lastIndex = 0;
-
-  //   matches.forEach(m => {
-  //     m.indices.forEach(([start, end]: [number, number]) => {
-  //       highlighted += this.escapeHtml(text.slice(lastIndex, start));
-  //       highlighted += `<mark>${this.escapeHtml(text.slice(start, end + 1))}</mark>`;
-  //       lastIndex = end + 1;
-  //     });
-  //   });
-
-  //   highlighted += this.escapeHtml(text.slice(lastIndex));
-  //   return this.sanitizer.bypassSecurityTrustHtml(highlighted);
-  // }
 
   /** Highlight matches in title or subtitle */
-getHighlighted(result: FuseResult<SearchItem>, key: 'title' | 'subtitle'): SafeHtml {
-  const matches = result.matches?.filter(m => m.key === key);
-  if (!matches || matches.length === 0) return this.sanitizer.bypassSecurityTrustHtml(result.item[key] || '');
+  getHighlighted(result: FuseResult<SearchItem>, key: 'title' | 'subtitle'): SafeHtml {
+    const matches = result.matches?.filter(m => m.key === key);
+    if (!matches || matches.length === 0) return this.sanitizer.bypassSecurityTrustHtml(result.item[key] || '');
 
-  const text = result.item[key] || '';
-  let highlights: [number, number][] = [];
+    const text = result.item[key] || '';
+    let highlights: [number, number][] = [];
 
-  // Collect all indices from matches
-  matches.forEach(m => {
-    m.indices.forEach(([start, end]: [number, number]) => {
-      highlights.push([start, end]);
+    // Collect all indices from matches
+    matches.forEach(m => {
+      m.indices.forEach(([start, end]: [number, number]) => {
+        highlights.push([start, end]);
+      });
     });
-  });
 
-  if (highlights.length === 0) return this.sanitizer.bypassSecurityTrustHtml(text);
+    if (highlights.length === 0) return this.sanitizer.bypassSecurityTrustHtml(text);
 
-  // Merge overlapping / adjacent indices
-  highlights.sort((a, b) => a[0] - b[0]);
-  const merged: [number, number][] = [];
-  let [currStart, currEnd] = highlights[0];
+    // Merge overlapping / adjacent indices
+    highlights.sort((a, b) => a[0] - b[0]);
+    const merged: [number, number][] = [];
+    let [currStart, currEnd] = highlights[0];
 
-  for (let i = 1; i < highlights.length; i++) {
-    const [start, end] = highlights[i];
-    if (start <= currEnd + 1) {
-      currEnd = Math.max(currEnd, end); // merge
-    } else {
-      merged.push([currStart, currEnd]);
-      [currStart, currEnd] = [start, end];
+    for (let i = 1; i < highlights.length; i++) {
+      const [start, end] = highlights[i];
+      if (start <= currEnd + 1) {
+        currEnd = Math.max(currEnd, end); // merge
+      } else {
+        merged.push([currStart, currEnd]);
+        [currStart, currEnd] = [start, end];
+      }
     }
-  }
-  merged.push([currStart, currEnd]);
+    merged.push([currStart, currEnd]);
 
-  // Build highlighted string
-  let resultHtml = '';
-  let lastIndex = 0;
-  for (const [start, end] of merged) {
-    resultHtml += this.escapeHtml(text.slice(lastIndex, start));
-    resultHtml += `<mark>${this.escapeHtml(text.slice(start, end + 1))}</mark>`;
-    lastIndex = end + 1;
-  }
-  resultHtml += this.escapeHtml(text.slice(lastIndex));
+    // Build highlighted string
+    let resultHtml = '';
+    let lastIndex = 0;
+    for (const [start, end] of merged) {
+      resultHtml += this.escapeHtml(text.slice(lastIndex, start));
+      resultHtml += `<mark>${this.escapeHtml(text.slice(start, end + 1))}</mark>`;
+      lastIndex = end + 1;
+    }
+    resultHtml += this.escapeHtml(text.slice(lastIndex));
 
-  return this.sanitizer.bypassSecurityTrustHtml(resultHtml);
-}
+    return this.sanitizer.bypassSecurityTrustHtml(resultHtml);
+  }
 
   /** Generate snippet for valueText with all matches highlighted */
   getSnippet(result: FuseResult<SearchItem>): SafeHtml | null {

@@ -4,6 +4,14 @@ import { filterByArrayKeyAndIds } from "./utils";
 
 export const subcategoriesSummary: subCategory[] = [
     {
+        id: 'Subcategory25',
+        articleList: filterByArrayKeyAndIds(articlesSummary, ['Subcategory25'], 'subCategoryIdList'),
+        categoryIdList: ['3'],
+        description: ['Saheli was born out of a vibrant anti-dowry campaign of the women’s movement against women being murdered or harassed for dowry. Aiming to save the lives of these young women, we started counselling them in legal matters and helping them rebuild their lives. Women and girls coming to us widened our understanding and soon it was clear that the violence they were subject to was just not dowry-related but rather that emotional torture, economic deprivation and discrimination was meted out by husbands, in-laws and parents to perpetuate the subordination of women within the family. Our work with battered women brought us up against patriarchal forces in various forms: unsupportive families and neighbours, disbelieving police at local thanas, unscrupulous lawyers, and unsympathetic magistrates. Consequently, we ran a shelter for women for a few years and campaigned for the enactment of new laws as well as amendments to the existing laws. Though we did not continue as a crisis intervention centre after 1990s, our linkage with the issue has remained alive through our work at several levels including work on the creation and implementation of the Protection of Women from Domestic Violence Act 2005.'],
+        isSubcategory: true,
+        title: 'Communalism'
+    },
+    {
         id: 'Subcategory1',
         articleList: filterByArrayKeyAndIds(articlesSummary, ['Subcategory1'], 'subCategoryIdList'),
         categoryIdList: ['2', '3'],
@@ -128,6 +136,14 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Sex Selection',
+    },
+    {
+        id: 'Subcategory26',
+        articleList: filterByArrayKeyAndIds(articlesSummary, ['Subcategory26'], 'subCategoryIdList'),
+        categoryIdList: ['4'],
+        description: ['Saheli was born out of a vibrant anti-dowry campaign of the women’s movement against women being murdered or harassed for dowry. Aiming to save the lives of these young women, we started counselling them in legal matters and helping them rebuild their lives. Women and girls coming to us widened our understanding and soon it was clear that the violence they were subject to was just not dowry-related but rather that emotional torture, economic deprivation and discrimination was meted out by husbands, in-laws and parents to perpetuate the subordination of women within the family. Our work with battered women brought us up against patriarchal forces in various forms: unsupportive families and neighbours, disbelieving police at local thanas, unscrupulous lawyers, and unsympathetic magistrates. Consequently, we ran a shelter for women for a few years and campaigned for the enactment of new laws as well as amendments to the existing laws. Though we did not continue as a crisis intervention centre after 1990s, our linkage with the issue has remained alive through our work at several levels including work on the creation and implementation of the Protection of Women from Domestic Violence Act 2005.'],
+        isSubcategory: true,
+        title: 'Medical Ethics'
     },
     {
         id: 'Subcategory14',
@@ -260,6 +276,14 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Saheli Day',
+    },
+    {
+        id: 'Subcategory27',
+        articleList: filterByArrayKeyAndIds(articlesSummary, ['Subcategory27'], 'subCategoryIdList'),
+        categoryIdList: ['12'],
+        description: ['Saheli was born out of a vibrant anti-dowry campaign of the women’s movement against women being murdered or harassed for dowry. Aiming to save the lives of these young women, we started counselling them in legal matters and helping them rebuild their lives. Women and girls coming to us widened our understanding and soon it was clear that the violence they were subject to was just not dowry-related but rather that emotional torture, economic deprivation and discrimination was meted out by husbands, in-laws and parents to perpetuate the subordination of women within the family. Our work with battered women brought us up against patriarchal forces in various forms: unsupportive families and neighbours, disbelieving police at local thanas, unscrupulous lawyers, and unsympathetic magistrates. Consequently, we ran a shelter for women for a few years and campaigned for the enactment of new laws as well as amendments to the existing laws. Though we did not continue as a crisis intervention centre after 1990s, our linkage with the issue has remained alive through our work at several levels including work on the creation and implementation of the Protection of Women from Domestic Violence Act 2005.'],
+        isSubcategory: true,
+        title: 'Others'
     },
     {
         id: 'InnerCategory1',

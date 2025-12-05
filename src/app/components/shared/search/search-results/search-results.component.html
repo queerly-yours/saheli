@@ -14,7 +14,7 @@
         <div class="search-query-header">Search results:</div>
         }
 
-        <div *ngIf="pagedResults.length === 0" class="no">No results</div>
+        <div *ngIf="pagedResults.length === 0" class="no-results">Sorry, we couldn’t find that. Let’s try searching differently.</div>
 
         <div class="paged-results-wrapper" [class.page-changing]="pageChanging">
             <div *ngFor="let r of pagedResults" class="row" (click)="onClick(r)">

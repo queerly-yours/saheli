@@ -1,0 +1,352 @@
+.floating-dot {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.floating-dot img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.side-panel {
+    position: fixed;
+    top: 20%;
+    right: -500px;
+    /* start hidden */
+    width: 500px;
+    height: 70vh;
+    background: transparent;
+    //   border-top-left-radius: 28px;
+    //   border-bottom-left-radius: 28px;
+    border-radius: 25px;
+
+    box-shadow: none;
+    /* no panel shadow */
+    overflow: hidden;
+    z-index: 9998;
+
+    transition: right 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.side-panel.open {
+    right: 50px;
+    /* slide in */
+    background: #f9f4ff;
+    box-shadow: -12px 0px 40px rgba(0, 0, 0, 0.28);
+}
+
+.bg-wrap {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* long soft right shadow */
+    box-shadow: -12px 0px 40px rgba(0, 0, 0, 0.28);
+
+    border-top-left-radius: 28px;
+    border-bottom-left-radius: 28px;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 32px;
+    height: 100%;
+}
+
+/* content */
+.circle {
+    position: absolute;
+    transform-origin: center center;
+    cursor: pointer;
+}
+
+.circle img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.circle .label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
+    // color: #ee94bb;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.circle .l1 {
+    align-items: flex-start;
+    text-transform: uppercase;
+    padding-top: 40px;
+}
+
+// .circle .l2 {
+//     justify-content: flex-start;
+//     padding-left: 45px;
+// }
+
+/* Silhouette common style */
+.sil {
+    position: absolute;
+    width: 8%;
+    height: auto;
+    pointer-events: none;
+}
+
+
+/* --- Absolute placements (percent-based) ---
+Values tuned to visually match the provided mock. Adjust per-asset sizes and positions.
+*/
+.c-1 {
+    left: 1%;
+    top: 1%;
+    width: 22%;
+}
+
+.c-2 {
+    left: 42%;
+    top: 6%;
+    width: 20%;
+}
+
+.c-3 {
+    left: 78%;
+    top: 4%;
+    width: 21%;
+}
+
+.c-4 {
+    left: 18%;
+    top: 20%;
+    width: 26%;
+}
+
+.c-5 {
+    left: 3%;
+    top: 45%;
+    width: 20%;
+}
+
+.c-6 {
+    left: 4%;
+    top: 75%;
+    width: 23%;
+}
+
+.c-7 {
+    left: 42%;
+    top: 39%;
+    width: 25%;
+}
+
+.c-8 {
+    left: 30%;
+    top: 60%;
+    width: 25%;
+}
+
+.c-9 {
+    left: 66%;
+    top: 22%;
+    width: 22%;
+}
+
+.c-10 {
+    left: 63%;
+    top: 72%;
+    width: 26%;
+}
+
+.c-11 {
+    left: 74%;
+    top: 51%;
+    width: 23%;
+}
+
+
+.s-1 {
+    left: 1.5%;
+    top: 11%;
+    width: 25%;
+}
+
+.s-2 {
+    left: 32%;
+    top: 2%;
+    width: 23%;
+}
+
+.s-3 {
+    left: 42%;
+    top: 19%;
+    width: 24%;
+}
+
+.s-4 {
+    left: 62%;
+    top: 10%;
+    width: 15%;
+}
+
+.s-5 {
+    left: 78%;
+    top: 0%;
+    width: 14%;
+}
+
+.s-6 {
+    left: 78%;
+    top: 62%;
+    width: 23%;
+}
+
+.s-7 {
+    left: 4%;
+    top: 59%;
+    width: 22%;
+}
+
+.s-8 {
+    left: 23%;
+    top: 77%;
+    width: 20%;
+}
+
+.s-9 {
+    left: 72%;
+    top: 39%;
+    width: 25%;
+}
+
+.s-10 {
+    left: 48%;
+    top: 58%;
+    width: 9%;
+}
+
+.s-11 {
+    left: 28%;
+    top: 43%;
+    width: 17%;
+}
+
+.s-12 {
+     left: 4%;
+    top: 30%;
+    width: 25%;
+}
+
+.s-13 {
+    left: 62%;
+    top: 52%;
+    width: 14%;
+}
+
+.s-14 {
+    left: 49%;
+    top: 79%;
+    width: 30%;
+}
+
+.s-15 {
+    left: 55%;
+    top: 28%;
+    width: 21%;
+}
+
+.s-16 {
+    left: 85%;
+    top: 23%;
+    width: 15%;
+}
+
+.s-17 {
+    left: 82.75%;
+    top: 45%;
+    width: 5%;
+}
+
+
+/* Typography scaling for smaller screens */
+@media (max-width:900px) {
+    .circle .label {
+        font-size: 2.6vw;
+    }
+
+    .sil {
+        width: 11%;
+    }
+}
+
+@media (max-width:480px) {
+    .banner-inner {
+        padding-top: 75%;
+        /* taller on very small devices */
+    }
+
+    .circle .label {
+        font-size: 3.8vw;
+    }
+
+    .sil {
+        width: 14%;
+    }
+
+    /* reduce some circles to avoid overlap on tiny screens */
+    .c-6 {
+        left: 26%;
+        top: 60%;
+        width: 20%;
+    }
+
+    .c-2 {
+        left: 22%;
+        top: 8%;
+        width: 22%;
+    }
+}
+
+.circle img.secondary {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .6s;
+}
+
+.circle:hover img.primary {
+    opacity: 0;
+}
+
+.circle:hover img.secondary {
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+.circle:hover div.label {
+    color: #fff
+}

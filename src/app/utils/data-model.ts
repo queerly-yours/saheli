@@ -6,6 +6,7 @@ export interface articleList {
     isArticle: boolean;
     categoryIdList?: string[];
     subCategoryIdList?: string[];
+    decade?: string;
 }
 
 export interface subCategory {
@@ -41,9 +42,8 @@ export interface archive {
 
 export interface article {
     id: string;
-    decades: string[];
+    decades?: string[];
     publishedDate: string;
-    exactDate: string;
     subtitle: string;
     title: string;
     value: string;

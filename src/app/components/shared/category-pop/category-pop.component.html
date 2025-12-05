@@ -1,0 +1,105 @@
+<!-- Floating Dot -->
+<div class="floating-dot" (mouseenter)="openPanel()" (mouseleave)="startCloseTimer()">
+    <img src="../../../../assets/shared/dot-half.png" alt="dot">
+</div>
+
+<!-- SIDE PANEL -->
+<div class="side-panel" [class.open]="panelOpen" (mouseenter)="cancelCloseTimer()" (mouseleave)="startCloseTimer()">
+
+    <div class="bg-wrap">
+        <img src="../../../../assets/shared/vertical-menu-bg.png" class="bg-img" />
+    </div>
+
+    <div class="content">
+        <div class="circle c-1" (click)="navigateToCategory('Sexualities & Gender')">
+            <img class="primary" src="../../../../assets/home/home-banner/c-1.png" alt="Sexualities and Gender" />
+            <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
+            <div class="label l1">SEXUALITIES<br />AND GENDER</div>
+        </div>
+
+        <div class="circle c-2" (click)="navigateToCategory('Women\'s Health')">
+            <img class="primary" src="../../../../assets/home/home-banner/c-2.png" alt="Women\'s Health" />
+            <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
+            <div class="label">WOMEN'S<br />HEALTH</div>
+        </div>
+
+        <div class="circle c-3" (click)="navigateToCategory('Legal Struggles')">
+            <img class="primary" src="../../../../assets/home/home-banner/c-3.png" alt="Legal Struggles" />
+            <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
+            <div class="label">LEGAL<br />STRUGGLES</div>
+        </div>
+
+
+        <div class="circle c-4" (click)="navigateToCategory('Countering Communalism')">
+            <img class="primary" src="../../../../assets/home/home-banner/c-4.png" alt="Countering Communalism" />
+            <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
+            <div class="label">COUNTERING<br />COMMUNALISM</div>
+        </div>
+
+
+        <div class="circle c-5" (click)="navigateToCategory('Resisting Violence')">
+            <img class="primary" src="../../../../assets/home/home-banner/c-5.png" alt="Resisting Violence" />
+            <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
+            <div class="label">RESISTING<br />VIOLENCE</div>
+        </div>
+
+
+        <div class="circle c-6" (click)="navigateToCategory('Other debates & concerns')">
+            <img class="primary" src="../../../../assets/home/home-banner/c-6.png" alt="Other debates" />
+            <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
+            <div class="label">OTHER DEBATES<br />AND CONCERNS</div>
+        </div>
+
+
+        <div class="circle c-7" (click)="navigateToCategory('Contesting caste')">
+            <img class="primary" src="../../../../assets/home/home-banner/c-7.png" alt="Contesting caste" />
+            <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
+            <div class="label l2">CONTESTING<br />CASTE</div>
+        </div>
+
+
+        <div class="circle c-8" (click)="navigateToCategory('CONFERENCES')">
+            <img class="primary" src="../../../../assets/home/home-banner/c-8.png" alt="Conferences" />
+            <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
+            <div class="label">CONFERENCES</div>
+        </div>
+
+
+        <div class="circle c-9" (click)="navigateToCategory('Solidarity')">
+            <img class="primary" src="../../../../assets/home/home-banner/c-9.png" alt="Solidarity" />
+            <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
+            <div class="label">Solidarity</div>
+        </div>
+
+
+        <div class="circle c-10" (click)="navigateToCategory('Celebrations')">
+            <img class="primary" src="../../../../assets/home/home-banner/c-10.png" alt="Celebrations" />
+            <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
+            <div class="label">Celebrations</div>
+        </div>
+
+        <div class="circle c-11" (click)="navigateToCategory('State Repression')">
+            <img class="primary" src="../../../../assets/home/home-banner/c-11.png" alt="State Repression" />
+            <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
+            <div class="label">State Repression</div>
+        </div>
+
+        <!-- silhouettes (reused assets) -->
+        <img class="sil s-1" src="../../../../assets/home/home-banner/s-1.png" alt="group" />
+        <img class="sil s-2" src="../../../../assets/home/home-banner/s-2.png" alt="group" />
+        <img class="sil s-3" src="../../../../assets/home/home-banner/s-3.png" alt="group" />
+        <img class="sil s-4" src="../../../../assets/home/home-banner/s-4.png" alt="group" />
+        <img class="sil s-5" src="../../../../assets/home/home-banner/s-5.png" alt="group" />
+        <img class="sil s-6" src="../../../../assets/home/home-banner/s-6.png" alt="group" />
+        <img class="sil s-7" src="../../../../assets/home/home-banner/s-7.png" alt="group" />
+        <img class="sil s-8" src="../../../../assets/home/home-banner/s-8.png" alt="group" />
+        <img class="sil s-9" src="../../../../assets/home/home-banner/s-9.png" alt="group" />
+        <img class="sil s-10" src="../../../../assets/home/home-banner/s-10.png" alt="group" />
+        <img class="sil s-11" src="../../../../assets/home/home-banner/s-11.png" alt="group" />
+        <img class="sil s-12" src="../../../../assets/home/home-banner/s-12.png" alt="group" />
+        <img class="sil s-13" src="../../../../assets/home/home-banner/s-13.png" alt="group" />
+        <img class="sil s-14" src="../../../../assets/home/home-banner/s-14.png" alt="group" />
+        <img class="sil s-15" src="../../../../assets/home/home-banner/s-15.png" alt="group" />
+        <img class="sil s-16" src="../../../../assets/home/home-banner/s-16.png" alt="group" />
+    </div>
+</div>

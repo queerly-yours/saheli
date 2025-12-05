@@ -11,7 +11,7 @@
                 @for (y of years; track $index) {
                 <div class="year-item">
                     <span class="tick"></span>
-                    <span class="year-text">{{ y }}</span>
+                    <span class="year-text" (click)="onDecadeClick(y)" [ngClass]="{'selected-decade': selectedDecade === y}">{{ y }}</span>
                 </div>
                 }
             </div>

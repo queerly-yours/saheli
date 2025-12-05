@@ -2,11 +2,13 @@
     <div class="category-left-content">
         <div class="category-decade-wrapper">
             <div class="w-100">
-                <app-header-lines [years]="categoryData?.decades ?? []"></app-header-lines>
+                <app-header-lines [years]="categoryData?.decades ?? []" [selectedDecade]="selectedDecade"
+                    (selectDecade)="onDecadeClick($event)"></app-header-lines>
             </div>
         </div>
     </div>
 
+    @if (!viewByDecade) {
     @if (type === paramTypes.Article) {
     <div class="article-content">
         <span class="article-title">{{categoryData?.title}}</span>
@@ -27,12 +29,13 @@
             }
         </div>
 
-        @if (categoryData?.subCategoryList?.length || categoryData?.articleList?.length) {
+        @if (categoryData?.subCategoryList?.length || categoryData?.innerCategories?.length ||
+        categoryData?.articleList?.length) {
         <span class="category-article-heading">ARTICLES</span>
         }
 
-        @if (categoryData?.subCategoryList?.length) {
-        <app-accordion [panels]="categoryData?.subCategoryList ?? []"></app-accordion>
+        @if (categoryData?.subCategoryList?.length || categoryData?.innerCategories?.length) {
+        <app-accordion [panels]="categoryData?.subCategoryList ?? categoryData?.innerCategories ?? []"></app-accordion>
         }
 
         @if (categoryData?.articleList?.length) {
@@ -44,7 +47,7 @@
         }
 
         @if (categoryData?.archiveImg) {
-        <div class="archive-img-wrapper">
+        <div class="archive-img-wrapper" [ngClass]="{'mt-5': !categoryData?.articleList?.length}">
             <span class="category-article-heading">Archive</span>
             <img [src]="categoryData?.archiveImg" width="300" height="300" />
         </div>
@@ -62,8 +65,28 @@
         }
     </div>
     }
+    } @else {
+    <div class="category-content">
+        <span class="category-name">{{categoryData?.title}} in {{selectedDecade}}</span>
+        
 
-    <div class="category-right-content">
+        @if (decadeWiseArticleList.length) {
+        <div class="category-article-summary">
+            @for (item of decadeWiseArticleList; track $index) {
+            <app-article-summary [articleSummary]="item"></app-article-summary>
+            }
+        </div>
+        }
 
+        @if (categoryData?.archiveImg) {
+        <div class="archive-img-wrapper" [ngClass]="{'mt-5': !categoryData?.articleList?.length}">
+            <span class="category-article-heading">Archive</span>
+            <img [src]="categoryData?.archiveImg" width="300" height="300" />
+        </div>
+        }
     </div>
+    }
+    <div class="category-right-content">
+    </div>
+    <app-category-pop></app-category-pop>
 </div>
