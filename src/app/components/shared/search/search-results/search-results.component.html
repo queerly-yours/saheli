@@ -14,14 +14,29 @@
         <div class="search-query-header">Search results:</div>
         }
 
-        <div *ngIf="pagedResults.length === 0" class="no-results">Sorry, we couldn’t find that. Let’s try searching differently.</div>
+        <div *ngIf="pagedResults.length === 0" class="no-results">Sorry, we couldn’t find that. Let’s try searching
+            differently.</div>
 
         <div class="paged-results-wrapper" [class.page-changing]="pageChanging">
-            <div *ngFor="let r of pagedResults" class="row" (click)="onClick(r)">
-                <div class="title" [innerHTML]="getHighlighted(r, 'title')"></div>
-                <div class="subtitle" *ngIf="r.item.subtitle" [innerHTML]="getHighlighted(r, 'subtitle')"></div>
-                <div class="meta">{{ r.item.payload.publishedDate }}</div>
-                <div class="snippet" *ngIf="getSnippet(r) as snip" [innerHTML]="snip"></div>
+            <div *ngFor="let r of pagedResults" class="row">
+                <div class="searched-row" (click)="onClick(r)">
+                    <div class="title" [innerHTML]="getHighlighted(r, 'title')"></div>
+                    <div class="subtitle" *ngIf="r.item.subtitle" [innerHTML]="getHighlighted(r, 'subtitle')"></div>
+                    <div class="meta">{{ r.item.payload.publishedDate }}</div>
+                    <div class="snippet" *ngIf="getSnippet(r) as snip" [innerHTML]="snip"></div>
+                </div>
+                <div class="tags-wrapper">
+                    @if (r.item.categoryIdList) {
+                    <div *ngFor="let categoryId of r.item.categoryIdList" class="tag" (click)="navigate(categoryId, paramTypes.Category)">
+                        {{getCategoryValue(categoryId)}}
+                    </div>
+                    }
+                    @if (r.item.categoryIdList) {
+                    <div *ngFor="let subcategoryId of r.item.subCategoryIdList" class="tag" (click)="navigate(subcategoryId, paramTypes.SubCategory)">
+                        {{getSubCategoryValue(subcategoryId)}}
+                    </div>
+                    }
+                </div>
             </div>
         </div>
 

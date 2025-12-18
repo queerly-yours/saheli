@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { afterNextRender, Component, Injector, Input, runInInjectionContext } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroChevronDown, heroChevronUp } from '@ng-icons/heroicons/outline';
 import { subCategory } from '../../../utils/data-model';
 import { ArticleSummaryComponent } from "../article-summary/article-summary.component";
 import { InnerAccordionComponent } from "../inner-accordion/inner-accordion.component";
+import { ParamType } from '../../../utils/utils';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-accordion',
@@ -15,19 +17,67 @@ import { InnerAccordionComponent } from "../inner-accordion/inner-accordion.comp
 })
 export class AccordionComponent {
 
-
   @Input() panels: subCategory[] = [];
-
   openPanelId: string | null = null;
+
+  constructor(private injector: Injector, private router: Router) { }
 
   ngOnChanges() {  }
 
 
-  toggle(panelId: string) {
+  toggle(panelId: string, headerEl: HTMLElement) {
+    this.visibleCount = 15;
+    const beforeTop = headerEl.getBoundingClientRect().top;
     this.openPanelId = this.openPanelId === panelId ? null : panelId;
+    runInInjectionContext(this.injector, () => {
+      afterNextRender(() => {
+        const afterTop = headerEl.getBoundingClientRect().top;
+        const delta = afterTop - beforeTop;
+
+        // 4️⃣ Undo the movement
+        window.scrollBy({
+          top: delta,
+          behavior: 'smooth'
+        });
+      });
+    });
   }
 
   isOpen(panelId: string) {
     return this.openPanelId === panelId;
+  }
+
+  visibleCount = 15;
+  incrementBy = 15;
+  
+  visibleArticles(articlesList: any[]) {
+    return articlesList.slice(0, this.visibleCount);
+  }
+
+  loadMore() {
+    const scrollTop = window.scrollY;
+    
+    this.visibleCount += this.incrementBy;
+
+    this.retainScrollPosition(scrollTop);
+  }
+
+  hasMore(articlesList: any[]): boolean {
+    return this.visibleCount < articlesList.length;
+  }
+
+  retainScrollPosition(scrollTop: number) {
+    runInInjectionContext(this.injector, () => {
+      afterNextRender(() => {
+        window.scrollTo({
+          top: scrollTop,
+          behavior: 'auto'
+        });
+      });
+    });
+  }
+
+   navigateToArticle(id: string | undefined) {
+    this.router.navigate(['/details', id, ParamType.Article]);
   }
 }

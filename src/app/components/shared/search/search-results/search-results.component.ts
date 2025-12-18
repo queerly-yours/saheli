@@ -6,7 +6,9 @@ import { SearchService, SearchItem } from '../../../../services/search/search.se
 import { FuseResult } from 'fuse.js';
 import { provideIcons, NgIcon } from '@ng-icons/core';
 import { heroArrowLeftCircle, heroArrowRightCircle } from '@ng-icons/heroicons/outline';
-import { ParamType } from '../../../../utils/utils';
+import { findById, ParamType } from '../../../../utils/utils';
+import { categories } from '../../../../utils/category';
+import { subcategoriesSummary } from '../../../../utils/all-subcategory-summary';
 
 @Component({
   selector: 'app-search-results',
@@ -25,7 +27,8 @@ export class SearchResultsComponent implements OnInit {
   pageSize = 10;
   totalPages = 1;
   loading = true;
-  pageChanging = false;;
+  pageChanging = false;
+  paramTypes = ParamType;
 
   constructor(
     private route: ActivatedRoute,
@@ -60,6 +63,7 @@ export class SearchResultsComponent implements OnInit {
     this.pageChanging = true;
 
     setTimeout(() => {
+      console.log(this.results);
       this.page = p;
       const start = (p - 1) * this.pageSize;
       this.pagedResults = this.results.slice(start, start + this.pageSize);
@@ -130,5 +134,17 @@ export class SearchResultsComponent implements OnInit {
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;');
+  }
+
+  getCategoryValue(id: string): string {
+    return findById(categories, id, 'id')?.title ?? '';
+  }
+
+  getSubCategoryValue(id: string): string {
+    return findById(subcategoriesSummary, id, 'id')?.title ?? '';
+  }
+
+  navigate(itemId: string, paramType: string) {
+    this.router.navigate(['/details/', itemId, paramType]);
   }
 }

@@ -9,13 +9,14 @@ import { subcategoriesSummary } from '../../utils/all-subcategory-summary';
 import { articles } from '../../utils/all-articles';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { CategoryPopComponent } from "../shared/category-pop/category-pop.component";
-import { NgClass } from '@angular/common';
+import { NgClass, UpperCasePipe } from '@angular/common';
 import { article, category, subCategory } from '../../utils/data-model';
 import { DateUtilsService } from '../../services/date-utils/date-utils.service';
+import { CapitalizePipe } from "../../services/pipes/capitalize/capitalize.pipe";
 
 @Component({
   selector: 'app-category',
-  imports: [AccordionComponent, ArticleSummaryComponent, HeaderLinesComponent, CategoryPopComponent, NgClass],
+  imports: [AccordionComponent, ArticleSummaryComponent, HeaderLinesComponent, CategoryPopComponent, NgClass, CapitalizePipe, UpperCasePipe],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss'
 })
@@ -38,16 +39,21 @@ export class DetailsComponent {
       this.selectedId = params.get('id');
       this.type = params.get('type') ?? '';
       this.fetchDetailsBasedOnParamType(this.selectedId, this.type);
+
     });
 
     this.route.queryParams.subscribe(params => {
       this.selectedDecade = params['decade'] || null;
-      if (this.selectedDecade) {
+      this.decadalViewOperations();
+    });
+  }
+
+  decadalViewOperations() {
+    if (this.selectedDecade) {
         this.applyDecadeFilter();
       } else {
         this.viewByDecade = false;
       }
-    });
   }
 
   fetchDetailsBasedOnParamType(id: string | null, type: string | null) {
@@ -76,6 +82,29 @@ export class DetailsComponent {
 
   fetchCategoryData(id: string, instance: any[]) {
     this.categoryData = filterByIds(instance, [id], 'id')[0];
+
+    if (this.categoryData.articleList?.length) {
+      this.categoryData.articleList = this.dateUtils.sortByPublishedDate(this.categoryData.articleList);
+    }
+    
+    if (this.categoryData.subCategoryList?.length) {
+      this.sortArticlesByDecade(this.categoryData.subCategoryList);
+    }
+
+    this.decadalViewOperations();
+    
+  }
+
+  sortArticlesByDecade(articleList: article[]) {
+      articleList.forEach((subCategory: any) => {
+        if (subCategory.articleList?.length) {
+          subCategory.articleList = this.dateUtils.sortByPublishedDate(subCategory.articleList);
+        }
+        
+        if (subCategory.innerCategories?.length) {
+          this.sortArticlesByDecade(subCategory.innerCategories);
+        }
+      })
   }
 
   getSanitizedValue(value: string): SafeHtml {
@@ -126,5 +155,8 @@ export class DetailsComponent {
     );
   }
 
-
+  navigateToArticle(id: string | undefined, isDecadeView = false) {
+    this.router.navigate(['/details', id, ParamType.Article]);
+  }
+  
 }

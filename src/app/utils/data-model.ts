@@ -4,9 +4,9 @@ export interface articleList {
     subtitle: string;
     publishedDate: string;
     isArticle: boolean;
-    categoryIdList?: string[];
-    subCategoryIdList?: string[];
-    decade?: string;
+    categoryIdList: string[];
+    subCategoryIdList: string[];
+    decade: string;
 }
 
 export interface subCategory {
@@ -47,6 +47,8 @@ export interface article {
     subtitle: string;
     title: string;
     value: string;
+    categoryIdList: string[];
+    subCategoryIdList: string[];
 }
 
 export interface SearchItem {

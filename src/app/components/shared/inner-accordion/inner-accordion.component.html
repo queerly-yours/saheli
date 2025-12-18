@@ -14,7 +14,7 @@
         <div class="panel-body" id="{{'panel-body-' + p.id}}" role="region"
             [attr.aria-labelledby]="'panel-header-' + p.id" [class.open]="isOpen(p.id)">
             @for (item of p.articleList; track $index) {
-                <app-article-summary [articleSummary]="item"></app-article-summary>
+                <app-article-summary [articleSummary]="item" (navigateToArticleEvent)="navigateToArticle($event)"></app-article-summary>
             }
         </div>
     </div>

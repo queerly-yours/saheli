@@ -3,7 +3,7 @@
 <div class="article-summary-wrapper" (click)="navigateToArticle(articleSummary?.id)">
     <span class="article-title"> {{articleSummary?.title}} </span>
     @if (articleSummary?.subtitle) {
-        <span class="article-subtitle"> {{articleSummary?.subtitle}} </span>
+        <span class="article-subtitle"> {{articleSummary?.subtitle | customCapitalize }} </span>
     }
     <span class="article-date"> {{articleSummary?.publishedDate}} </span>
 </div>

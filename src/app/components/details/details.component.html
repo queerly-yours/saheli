@@ -11,18 +11,18 @@
     @if (!viewByDecade) {
     @if (type === paramTypes.Article) {
     <div class="article-content">
-        <span class="article-title">{{categoryData?.title}}</span>
+        <span class="article-title">{{categoryData?.title  | customCapitalize}}</span>
         @if (categoryData?.subtitle) {
-        <span class="article-subtitle">{{categoryData?.subtitle}}</span>
+        <span class="article-subtitle">{{categoryData?.subtitle | uppercase }}</span>
         }
-        <div class="article-dates-wrapper">
+        <div class="article-dates-wrapper" [ngClass]="{'mt-10': !categoryData?.subtitle}">
             <div>{{categoryData?.publishedDate}}</div>
         </div>
         <div [innerHTML]="getSanitizedValue(categoryData?.value)" class="article-content-wrapper"></div>
     </div>
     } @else {
     <div class="category-content">
-        <span class="category-name">{{categoryData?.title}}</span>
+        <span class="category-name">{{categoryData?.title | customCapitalize }}</span>
         <div class="category-description-wrapper">
             @for (item of categoryData?.description; track $index) {
             <span class="category-description">{{item}}</span>
@@ -41,7 +41,7 @@
         @if (categoryData?.articleList?.length) {
         <div class="category-article-summary">
             @for (item of categoryData?.articleList; track $index) {
-            <app-article-summary [articleSummary]="item"></app-article-summary>
+            <app-article-summary [articleSummary]="item" (navigateToArticleEvent)="navigateToArticle($event)"></app-article-summary>
             }
         </div>
         }
@@ -67,13 +67,13 @@
     }
     } @else {
     <div class="category-content">
-        <span class="category-name">{{categoryData?.title}} in {{selectedDecade}}</span>
+        <span class="category-name">{{categoryData?.title  | customCapitalize}} in {{selectedDecade}}</span>
         
 
         @if (decadeWiseArticleList.length) {
         <div class="category-article-summary">
             @for (item of decadeWiseArticleList; track $index) {
-            <app-article-summary [articleSummary]="item"></app-article-summary>
+            <app-article-summary [articleSummary]="item" (navigateToArticleEvent)="navigateToArticle($event, true)"></app-article-summary>
             }
         </div>
         }

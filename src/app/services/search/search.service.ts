@@ -12,6 +12,8 @@ export interface SearchItem {
   valueText?: string; // stripped plain text
   decades?: string[];
   payload: article;
+  categoryIdList: string[];
+  subCategoryIdList: string[];
 }
 
 @Injectable({ providedIn: 'root' })
@@ -34,7 +36,10 @@ export class SearchService {
       value: a.value ?? '',
       decades: a.decades ?? [],
       valueText: this.stripHtml(a.value), // plain text
-      payload: a
+      payload: a,
+      categoryIdList: a.categoryIdList,
+      subCategoryIdList: a.subCategoryIdList
+      
     }));
     this.results$.next([]);
   }

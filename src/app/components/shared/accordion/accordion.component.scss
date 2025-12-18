@@ -62,6 +62,7 @@
     max-height: fit-content;
 }
 
+
 .panel-body-inner {
     color: #333;
     font-size: 14px;
@@ -74,4 +75,23 @@
 
 .panel-header:hover .chev {
     color: #333;
+}
+
+.see-more {
+    background: transparent;
+    border: none;
+    color: #f2287f;
+    padding: 0px;
+    margin-bottom: 16px;
+    font-size: 15px;
+}
+
+.see-more:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.see-more:disabled {
+    opacity: 0.5;
+    cursor: not-allowed
 }

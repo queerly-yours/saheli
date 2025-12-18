@@ -2,9 +2,9 @@ import { r2FetchArticleImgURL } from "./constants";
 
 export const RawArticles = [
     /** First draft articles start **/
-    // Article136, Article137, Article214, Article215, Article216, Article279, Article281, Article319, Article357, Article358, Article359, Article380
+    // Article299, Article300, Article305, Article306, Article307, Article301, Article303, Article304, Article309, Article310, Article311, Article308
     {
-        id: 'Article359',
+        id: 'Article311',
         value: 
         `<div style="display: flex; flex-wrap: wrap; column-gap:14px; align-items: flex-start;">
                 <div style="display: flex; flex-direction: column; flex: 0 0 auto;">
@@ -53,7 +53,7 @@ export const RawArticles = [
         </div>`
     },
     {
-        id: 'Article358',
+        id: 'Article310',
         value: `
         <div style="display: flex; flex-wrap: wrap; column-gap:14px; align-items: flex-start; margin-bottom: 20px">
                 <div style="display: flex; flex-direction: column; flex: 0 0 auto;">
@@ -97,7 +97,7 @@ export const RawArticles = [
         `
     },
     {
-        id: 'Article357',
+        id: 'Article309',
         value: `
         <p>
             This remembrance note must start with an apology to Kalpana Mehta. One
@@ -328,7 +328,7 @@ export const RawArticles = [
         `
     },
     {
-        id: 'Article380',
+        id: 'Article308',
         value:`While bail of undertrials and decongestion has been a worldwide demand, Indian prisons remain
             overcrowded, so the spread of the Covid-19 Virus is causing a humanitarian crisis among inmates. Yet the
             Indian state is relentlessly denying political prisoners bail, protective measures within the jails, or basic
@@ -345,7 +345,7 @@ export const RawArticles = [
             </div>`
     },
     {
-        id: 'Article216',
+        id: 'Article307',
         value: `
         <div style="display: flex; flex-wrap: wrap; column-gap:14px; align-items: flex-start;">
                 <div style="display: flex; flex-direction: column; flex: 0 0 auto;">
@@ -575,7 +575,7 @@ export const RawArticles = [
         `
     },
     {
-        id: 'Article215',
+        id: 'Article306',
         value: `
         <div style="text-align: center;">
                 <img src="${r2FetchArticleImgURL}Article17/1.png" />
@@ -607,7 +607,7 @@ export const RawArticles = [
         `
     },
     {
-        id: 'Article214',
+        id: 'Article305',
         value: `
         <div style="display: flex; flex-wrap: wrap; column-gap:14px; align-items: center;">
                 <div style="display: flex; flex-direction: column; flex: 0 0 auto;">
@@ -1034,7 +1034,7 @@ export const RawArticles = [
         `
     },
     {
-        id: 'Article319',
+        id: 'Article304',
         value: `
         <div style="display: flex; flex-wrap: wrap; column-gap:14px; align-items: center;">
                 <div style="display: flex; flex-direction: column; flex: 0 0 auto;">
@@ -1662,7 +1662,7 @@ export const RawArticles = [
         `
     },
     {
-        id: 'Article281',
+        id: 'Article303',
         value: `
         <div style="display: flex; flex-wrap: wrap; column-gap:14px; align-items: flex-start;">
                 <div style="display: flex; flex-direction: column; flex: 0 0 auto;">
@@ -2132,7 +2132,7 @@ export const RawArticles = [
         `
     },
     {
-        id: 'Article190',
+        id: 'Article302',
         value: `
         As a women’s group that has been fighting violence against women for decades,
         seeking justice, safety and social awareness against crimes on women, we
@@ -2284,7 +2284,7 @@ export const RawArticles = [
         `
     },
     {
-        id: 'Article279',
+        id: 'Article301',
         value: `
         <a style="font-weight:400; text-decoration:none;" target="_blank" href="https://thefederal.com/news/surprised-to-see-gogoi-taking-up-rs-mp-post-says-justice-joseph">
                 “I am surprised as to how Justice Ranjan Gogoi,
@@ -2578,7 +2578,7 @@ export const RawArticles = [
         `
     },
     {
-        id: 'Article137',
+        id: 'Article300',
         value: `
         The meeting began with an introduction by Bebaak
             collective members. The meeting brought in women
@@ -2847,7 +2847,7 @@ export const RawArticles = [
         `
     },
     {
-        id: 'Article136',
+        id: 'Article299',
         value: `
         The un-lockdown is under way, and some privileged ones like us sit in our homes working and watching and
             reading day after day about the endless cruelty that is being heaped all around us. On migrant workers who walked
@@ -3502,9 +3502,954 @@ export const RawArticles = [
 
     // Article 1-10
     {
-        id:'Article1',
+        id:'Article7',
         value: `
-        
+        <img src="${r2FetchArticleImgURL}Article1/1.png" style="width: 100%; display: block; padding-top: 5px;" />
+        <div style="font-size:12px; color: #f2287f;">Weaving together the strands</div>
+        <br>
+        Saheli has had a challenging journey, and what better occasion than completing 25 years, to review and analyse our struggles in order to build on the strengths to move forward with renewed vigour.
+        <br><br>
+        We wanted to look at the experiences of a range of autonomous movements, and their experiences of being non-party and non-funded. These include – democratic rights movement, tribal/forest rights movements, Dalit movement, sexuality rights movement, autonomous rural women’s union (Sathins). The presentations explored the challenges faced; the limitations and as well as strengths of autonomous politics; experiences of allying with other like-minded movements, and the articulation of autonomous politics in these alliances and broad formations; experiences of mainstream electoral politics for autonomous mass organisations.
+        <br><br>
+        The presentations individually explored the articulation of women’s rights in these movements (for instance-Sathin union – women’s labour, forest movement – women’s rights over natural resources etc.), and examined whether these articulations had been shaped by autonomous politics. Most significantly, all presentations touched upon the relevance of autonomous politics in today’s political context.
+        <br><br>
+        So we had Uma Chakravarti, Delhi, speaking on the democratic rights’ movement; Chayanika Shah, Forum Against Oppression of Women and Labia, Mumbai, on the queer movement; Saraswathi on organising Dalit women workers in Karnataka; Shamim, Shramik Adivasi Sanghathan, M.P, on mass organising and political mobilisation and Kiran Dubey on the Sathin Union, Rajasthan.
+        <br><br><br>
+        <b style="font-weight: 700;">UMA CHAKRAVARTI, DELHI, ON THE DEMOCRATIC RIGHTS’ MOVEMENT</b>
+        <br><br>
+        <b>Uma</b>: As one of the older ones - am going to be 65-the history that I carry is perhaps out of the framework for many of you here. In the morning someone pointed out that she was younger than Saheli! I have a double location in the feminist movement. My politicisation and personal journey were both shaped in Miranda House College, where being a committed college teacher meant getting involved with issues around you. In the 1960s, the post-independence nation-state was in a crisis and the system was shaken by the Naxalite movement which raised issues of land rights and economic issues. More crises joined it – student movement in Bihar in the 1970s, and the Bodh Gaya movement.
+        <br><br>
+        To control all this upheaval, the Emergency was imposed. It was a traumatic moment in history, and the crisis was in the middle class. For instance, 200 teachers from Delhi University were jailed for being dissenters against Mrs Indira Gandhi and the party in power. Even the right to life was not conceded during the Emergency, but this was later challenged in court. When in 1977 the Emergency was lifted and elections announced, the most dramatic phenomenon was the emergence of civil society groups and civil rights groups. A huge meeting was held in 35 Ferozeshah Road. Sudesh (Vaid) of PUDR was one of the organisers. Sumanto (Banerjee) was there too. Groups like Peoples Union for Civil Liberties and Democratic Rights (PUCL and DR) came up as autonomous groups. Not branches of political parties, and they were forums for all kinds of people to come together.
+        <br><br>
+        Women’s groups broke away from political parties. Women also went to jail at that time, but we never thought that they experienced jail as women. In my personal archives I just found Snehlata Reddy’s prison diary, containing a daily account of her imprisonment. She was having a nervous breakdown in jail. It was clear that she was experiencing jail life as a woman. She also talks about the imprisonment of sex workers etc. After she came out, she got involved in prison reform.
+        <br><br>
+        In 1977-80, civil rights groups were powerfully located because it wasn’t sure in which direction the political situation was headed. The reports that came out were all about attacks of state repression, police atrocities etc. At the time of Rameeza Bi’s rape, women’s groups and democratic rights groups were functioning closely together. Women’s groups started with custodial violence, but moved into looking at violence in the personal sphere. The range of violence is increasing but we are stuck at an earlier understanding. Autonomous politics is sort of a division of labour, and some of us have feet in both camps. We don’t want to make hierarchies of oppression or gradations of exploitation. But we are forced into decisions – where we are divided into groups which take up specific issues.
+        <br><br>
+        Transformatory movements of cutting edge come from people from the double location - women like Sudesh (Vaid), for whom her primary identity was PUDR. But because of her, the old notion of democratic rights was challenged: you cannot look at democratic rights without looking at the violence and oppression that women face within the family. So ‘Inside the Family’ – a fantastic document, was an attempt to understand dowry violence. It is a formidable conceptualisation of the family, and came about after pushing the civil rights groups who were not taking this up on their own. Similarly, ‘Sadda Haq’, the report on widows. To this day, the job of holding up the mirror is coming from women in the Democratic Rights movement. But the frame has not shifted. Are we able to expand it to incorporate it with all contradictions? Women’s groups and democratic rights groups have fraternal relations and play complementary roles. There’s no problem in separateness, as long as we recognise that conceptually, there shouldn’t be a hierarchy of oppression. If we take the structure, we might see class, then caste, but patriarchy not that clearly. It is still assumed that patriarchy will vanish with the destruction of feudalism. But it will not. Patriarchy is as strong as class or caste.
+        <br><br>
+        Mindsets will not change unless there is structural change. Yet, hierarchies of oppression are created. For instance, sexuality – there is resistance to bring it into the framework. Autonomy should also mean autonomy to think outside the settled framework. That is the challenge before us. Both sets of groups need to conceptualise afresh so that all structures of oppression can be brought in, and that would help us to strategise better.
+        <br><br><br>
+        <b style="font-weight: 700;">CHAYANIKA SHAH, FORUM AGAINST OPPRESSION OF WOMEN AND LABIA, MUMBAI, ON THE QUEER MOVEMENT</b>
+        <br><br>
+        We need to talk about the history of Stree Sangam/LABIA since not many people know. In the 1990s, some people had started talking about their sexuality. In some conferences, these issues had come up to some extent. Within the women’s movement, sexuality, lesbianism had come up at a discussion and theoretical level. These are important discussions. But about living as a lesbian, there was very little talk even within the women’s movement. In Forum’s 10 year booklet we listed the issues we didn’t talk about – one was lesbianism. Even in our personal lives and even in the movement, the perspective came later. Often, even in personal life, the realisation of ‘who am I?’ comes very late, because one hardly ever thinks about who one is. To recognise that there were other women like us is how Stree Sangam started. It was not seen as a political organisation, but a space for dialogue between lesbian and bisexual women. Of course, some people from the movement and Forum Against Oppression of Women (FAOW) were part of it.
+        <br><br>
+        After 1975-80, women’s oppression has been an identified oppression, and it was given a political perspective. But here, we began from a space where women were scared of themselves and their needs. But they were clear that their needs were different. There was a long time when there was a struggle between making it a social or political space. There is a lack of support from society and family, so there is an acute need for social space. The notion that women experiencing domestic violence would join the movement and join us in the process for change, failed. Because the onus of radicalism on the most marginalised does not work. Similarly, why expect that women, simply because they were lesbian, would be political? In fact, being marginalised, just living one’s life the way one wants is very difficult – it is a struggle in itself. We saw this in the women’s movement, and even with our group it was evident that every lesbian did not necessarily want to transform it into a political group.
+        <br><br>
+        It has been a unique journey over the past few years. The difficulty in getting other women’s groups to talk about it, and creating spaces has been a struggle. So it is good to have spaces like this one, where one can say that one is working with dalit, adivasi women, or lesbian women in the same breath. That space too has not come overnight - it has come through knocking by women from within, from outside, and also thinking through by the groups themselves.
+        <br><br>
+        Talking about autonomy - the group was autonomous because initially, no one wanted to be associated with it! So we automatically were autonomous. Slowly, a helpline started. Campaign groups like Caleri started, gay formations started. Around 2002, women who were with Stree Sangam in a political way felt they couldn’t run a social space. So then LABIA – Lesbians and Bisexuals in Action came up – clearly saying what we are about. In your face, no shying away. We are a feminist queer group. It’s difficult to translate queer in Hindi. There is no one word – only a paragraph! But it means a diverse range of sexuality. We like to call ourselves ‘Humjinsi’, not ‘samlaingik’. The structure of heteronormativity and compulsory heterosexuality – whoever questions it or breaks it is queer.
+        <br><br>
+        We fight both patriarchy and heteronormativity. Through the lesbian women’s movement, there are questions for the women’s movement. If women’s groups run a helpline, then issues of lesbian women should be part of the agenda. We are called to speak on sexuality, because we have a good understanding of the structures of sexuality and can critique it. But being queer, we might have something different to say about other aspects of the structure (not only about sexuality). But that is not as well recognised. When groups organise with a particular identity (like Muslim women), it becomes easy to simply ask Muslim women what they think, and go along with that, and sideline our own responsibility to think about Muslim women’s issues. The good thing is that we don’t want to speak on behalf of anyone. But the bad thing is that we are ghettoising them. A similar thing is happening with lesbian women.
+        <br><br>
+        There are instances from all over the country of wanting to marry/not wanting to marry, how to live together. Concept of ‘one true love’, problems of gender behaviour within these couples etc. ­issues we are not looking at. We are told marriage is such a patriarchal institution. We feel till it is an institution/model available to everyone, we want it too. It has to be available to all. We say - say ‘no’ to marriage for all, then we say no to marriage for lesbian women. When this is the only model available and women want it, what do we do? The queer movement, and women’s movement, are not taking up this issue? We need to look at families differently, new structures of living.
+        <br><br>
+        LABIA has taken a conscious decision to be autonomous, non-funded. We keep all other funded groups working on sexuality on their toes. There is a lot of funding coming in for sexuality – HIV/AIDS etc. But to what extent is this work questioning the structures of heteronormativity? What are the limitations put by funders? Nowadays, nobody takes a position that there should not be funding. There is a need to have funded groups. But then what is the role of groups like ours? Being what we are – loose structure…young people...with very little time except to live their lives, do their jobs, and to do this work along with that is very difficult. We have a small voice, we know, but even then we want to stay autonomous and make our voices heard. We play an important role in the women’s movement as well as the queer movement. The challenge is how to maintain that?
+        <br><br><br>
+        <b style="font-weight: 700;">SARASWATHI ON ORGANISING DALIT WOMEN WORKERS IN KARNATAKA</b>
+        <br><br>
+        <div>
+        "I am nervous about talking in English and Hindi, so I will sing now to ease my tension. This Kannada song is by a famous Dalit poet, and I am very proud to be singing this song. It is about letting our silences speak. It’s called ‘Hejje Maatadu’, written by the Dalit poet Ramaiyya."
+        </div>
+        <br><br>
+        <b>Hejje Maatadu</b> (text when translated in English reads somewhat like this)<br>
+        <i>
+        Let our footsteps speak<br>
+        Let our anklets speak<br>
+        Let the fragrance of the jasmine speak<br>
+        Let our silences speak<br>
+        The garden of flowers is distant.<br>
+        The path is full of thorns.<br>
+        The night is cold.<br>
+        Even if an army of swords should come upon us<br>
+        One lamp is enough to light another and another<br>
+        Until the path is bright with the glow of any lamps.<br>
+        Our eyes will dream of the garden of flowers<br>
+        We will sing and dance on the journey<br>
+        The rainbow will reappear<br>
+        The world with be regenerated, radiant.<br>
+        We will follow the pebbles that others left to mark the unmapped journey<br>
+        Our loving care will heal the sword wounds and through the ashy barren land<br>
+        The youthful earth will sprout again.<br>
+        </i>
+        <br><br>
+
+        Rather than a ‘speaker’, I am here as a friend who has come from Bangalore to share. I want to talk about two incidents. When in 5th standard, a story was told in my class about Gandhiji, who spun his own yarn. I was very moved, and on going home, began stitching my shoe, but got a beating from my father. I wondered why my father was hitting me, when I was doing a great thing like Gandhi. And the second was when I joined the powrakarmikas (municipal cleaners) – there was a strong resistance from my father. These two answers came to me at the age of 42, that my father also came from the same community – that picks up dead animals, cleans them and makes chappals. It is like a curse – to hide one’s origins.
+        <br><br>
+        I have two identities – one as a woman and one as a Dalit from the Madiga caste, which is one of the lowest untouchable castes. Within the Dalit movement, I was always asked why I interacted with non-Dalit, upper-caste, short-haired, English-speaking women in the feminist movement. And when I came to these women I was told that apart from caste there were other issues to be raised and talked about also, like patriarchy. I have solidarity with various movements. Otherwise, there is a huge wall between Dalits and non-Dalits.
+        <br><br>
+        After I left my bank job, I joined the powrakarmikas. For me, as a Dalit, the entry to work with powrakarmikas was relatively easy. I joined the sweepers’ union with all my autonomous politics and energy, all my resources. No funding, no political affiliations. But I did not have much clarity about my own role. I just wanted to do something, but not sure what and how. But I knew that the trade union movement of Dalits was very important. They were denied basic rights. Worked in very bad conditions – no gloves, no gumboots. There are more than 10,000 cleaners, who work like donkeys without any facilities from 7 am till 2 in the afternoon. The so called civilised people don’t even give them water to drink. More than 80% of the workers were women of my community. Class, gender, caste – made it very important to work there.
+        <br><br>
+        There were issues about (1) part time and full time activists, and raising money for them (2) collective democratic leadership, particularly that of women was very difficult and (3) lack of moral and emotional support. If I have emotional support, I can work like a donkey. But without it, can’t work. Got a lot of support from Manasa. I worked, but I had no official position. Therefore in decision-making, I found participation problematic. (4) Dealing with male ego was terrible, especially trade unionists with 40 years experience! It is very difficult to get women into collective decision-making. So it was very difficult for me to participate and justify my involvement in both Dalit and women’s movement.
+        <br><br>
+        The positive bit was being part of these movements. We started a support group, in which there were autonomous, non-funded groups, and they supported our movement (of powrakarmikas). In the morning, it was said that funding is justified for salaries of grassroots women. But I come from Karnataka where the movement of Dalits was started by penniless Dalits. What were their assets? The anger in their bellies, the songs in their hearts and their art – they are fantastic drummers. We can question what stage has it reached etc. – but that is a separate issue. The Dalit movement was autonomous unto the 80s and even 90s. And it was very gender sensitive.
+        <br><br>
+        And the women’s groups of 1970s and 1980s were also sensitive to Dalit issues. But I also feel that the women’s movement has not used the wit, the strength and potential of the Dalit women very well. Also it has not understood the different ways in which patriarchy and sexuality issues operate in Dalit communities. The feminist movement has been very important to me and autonomous politics is very precious. It has helped me to understand human contradictions and human complexities. When we talk of democracy and equality or collectivity and we collect even one rupee for work, that is very important. For me, activism is very spiritual. Spirituality minus gods and goddesses and religions. Gods in my community are not up there. Gods are talked to, shouted at, fed, cajoled. I need gods like that!
+        <br><br><br>
+        <b style="font-weight: 700;">SHAMIM, SHRAMIK ADIVASI SANGHATHAN, MADHYA PRADESH, ON MASS ORGANISING AND POLITICAL MOBILISATION</b>
+        <br><br>
+        <img src="${r2FetchArticleImgURL}Article1/2.png" style="width: 100%; display: block; padding-top: 5px;" />
+        <br><br>
+        I first started working in MP in Bargi – the site of the first dam on the Narmada river. I met Anurag, and we got married and moved to Betul district to work with adivasis, mostly Korkus and Gonds. We have spread now to Harda and Khandwa. There is a lot of injustice and oppression. We went to this area precisely because we did not want to work with any established organisation with a hierarchy. We wanted to work in our own way.
+        <br><br>
+        When we started working people said we would be playing vote-bank politics. So we promised we won’t. We also had a middle class aversion to elections. We wanted to keep away from ‘dirty’ electoral politics because we were ‘good’ people. That was our first mistake. But now we feel that in a democracy one cannot bring about change without becoming a part of electoral politics. We did not want to be ‘tainted’ by politics, but at the same time realised that the people we were working with, were ending up bringing the same corrupt people to power. We were in this dilemma for four years. We simply could not join any of the established parties who used the marginalised people for their own vested interests, and played communal politics. We wanted a society without inequality of any kind – between rural and urban, educated and uneducated, adivasis, Dalits, women.
+        <br><br>
+        We decided to forge a new path, and decided to make our own party – Samajwadi Jan Parishad. We have branches in 14 states and are working with marginalised people and adivasis. We have been working for 14 years. For the first three years, no one supported us. We were often called Naxalites and thrown into jail. And then we realised that our energies are getting frittered away and we must channelise them and become part of the most effective medium – electoral politics. If you believe in democracy, then this is the only system available today, and one must utilise it, and imbue it with your own progressive values. To get out of the swamp of current electoral politics with all its murkiness, evolve a new political culture and build a new revolutionary electoral politics, that is the challenge.
+        <br><br>
+        Of course, it’s not easy. Everyone (all parties, bureaucracy, media) are out to malign the activists, especially the women. If you take a rally to the Collector and get your demands met, then the media says you are having an affair with the Collector. If you get imprisoned, then you are a Naxalite. There is no third option. I am supposed to have had an affair with every SP and Collector in the district! We stood in Harda, for MLA, against a whole bunch of goondas and mafia. But I feel that it has made us more powerful in many ways. Also, we are non-funded. So fighting an election was not easy. But we feel that it was very important that we even fought an election. Because it posed an alternative in front of people. It is even more important than winning. This we did despite the fact that bigger parties used goons to harass our activists, beat them up, got our jeep impounded, put us in jail. But in many such cases people sympathised and empathised with us, as honest people. When we were arrested, some women in a basti, who had never earlier supported us, refused to eat food that night.
+        <br><br>
+        We had started knowing we will win after a long time and we were ready to lose in preparation for that victory. There are five aspects: organisation building; agitation/protest; ideological change - in mindsets and perspectives; mass movement and political mobilisation: electoral politics. With globalisation and money becoming available and all important, our strategy has to be multi-pronged. Politics means we have to think of alternatives for everything and everyone. We have to work on our own funding, and that is going to be our strength. Only then will the embers be fanned and flames rise. Thank you, Zindabad.
+        <br><br><br>
+        <b style="font-weight: 700;">KIRAN DUBEY ON THE SATHIN UNION, RAJASTHAN</b>
+        <br><br>
+        Since morning, I have seen the people who have laid the foundation of this organisation. A pillar that has given us strength from time to time. On behalf of the Sathins of Rajasthan, I congratulate Saheli. I am also thankful for the opportunity to share the struggle of the Sathins on this historic day.
+        <br><br>
+        Here, the focus will be more on the union process. This union is an independent trade union of the Sathin workers of the Women’s Development Programme (WDP), Rajasthan. The agenda of the union addresses workers rights, as well as women’s rights, and other women’s issues.
+        <br><br>
+        Through the WDP, women were activated and their participation at the grass roots increased. Women began breaking out of the shackles of traditional bondage and raised issues that had till now been socially prohibited. They took part in the jati (caste) panchayat; protested against domestic and other forms of violence; demanded property and other rights etc. Information was shared with the village women, about government schemes related to health, education, public distribution, etc. as well as the rules about wages and measurements in famine works; minimum wages; land records; property and other legal rights etc. As women’s power at the grassroots found an identity and the issues being raised started affecting the existing power equation, department started to exercise control.
+        <br><br>
+        There was growing discontent. The Sathin grew increasingly aware of the exploitative nature of her employment and the blatant inequalities in the salary structure within the hierarchy of WDP. Added to this, the Sathins experienced the true nature of the state, by witnessing the response to some specific situations. Some Sathins and village women of Kekri panchayat, had participated in the National Women’s Conference at Calicut in December 1990, under an independent banner. This was not tolerated by the department, and punitive action was taken and their jobs terminated on their return. They however continued their struggle for justice and fought a legal battle right up to the Supreme Court.
+        <br><br>
+        The class character of WDP became clearer and there were tensions between the functionaries at the different levels of the programme. Contradictions of the programme had surfaced forcing a split in the movement. Those in positions of power now sided with the government and the Sathins sided with the village women. The Sathins had support from a very small section of the women’s movement.
+        <br><br>
+        The irony was, that a programme initiated to empower rural women, not only failed to give recognition to the contribution of those very women, but it was on the contrary exploiting Sathins’ labour. In early 1990 the Sathins went on strike in the Sathin mela at Padmpura, and they placed a demand for an increase in the honorarium before the chief minister. Initial discussions and some initiative for unionising also took place in Bhilwara. Follwing a strike, the CM was forced to increase the honorarium by Rs 50. This was a turning point for the union process – and greatly strengthened the Sathins.
+        <br><br>
+        There was stiff opposition from the government, as well as from a very large segment of the women’s organisations and the NGO sector within the state. Because they felt that the anganwadi union gave minimal attention to women’s issues, the Sathins decided a separate union would be a better option to that of joining the existing ones. Theirs was an attempt to widen the trade union agenda with a focus on workers’ rights, to now also include the issues and concerns of the rural women. Finally, the union was registered in Ajmer.
+        <br><br>
+        The WDP occupied a central place within the women’s movement in Rajasthan. It had a dual ownership shared between the movement and the state. This sometimes led to a possessive attachment to the programme, on the part of the movement, and is perhaps an explanation for the strongly emotional reaction to some conflict situations. The hierarchical inequities within the structure were blurred through processes of collective functioning and through the projection of a united front. It was paradoxical that women from within the women’s movement when they were in situations of authority and control justified exploitative structures which grossly undervalued women’s work and contribution.
+        <br><br>
+        The strong opposition from representatives of the women’s movement within the programme to the Sathins decision to unionise needs to be looked at in the light of the above. The Sathins were accused of undermining the spirit of the programme: of moving away from the spirit of ‘sewa’ and community service, to one of focusing on their own selfish interests. They were also accused of splitting the movement; of indulging in ‘netagiri’; breaching mutual trust and so on. The Sathin union began to be viewed as a threat not only because it widened the notion of empowerment, but also by having a spill over effect involving the vast category of the voluntary worker.
+        <br><br>
+        The registration of the Sathin union in January 1993 was followed by efforts to spread the union to all the districts, a process met with a lot of opposition. The action plan of the union included the framing of the charter of demands and working out strategies to get the demands met by the government.
+        <br><br> 
+        The first annual state level convention of the union was held in May 1993 against strong resistance from the government. The denial of their basic rights as workers within WDP and the anti women policies of the state were recognised by the Sathins and articulated as core issues that needed to be addressed. The slogans reflected the thrust. For example: “Maan aur adhikaar chahiye, Kaam ka pura daam chahiye” (a demand for rights, respect and a just wage); <i>“Karamchari ka dharja do, sewa ke liya suraksha do”</i> ( a demand for status and security).     
+        <br><br>
+        The Sathin union received its first jolt from the government in January 1995, when it was decided to retrench the existing Sathins and recruit new ones in different gram panchayats; to limit the tenure of appointment of the new Sathins to five years and to fix an age limit for the Sathins. The Sathins replied in song: Atal Bihari Vajpayee – an old man running the country, and Bhairon Singh Shekhawat, an old man running Rajasthan. So why not retrench them first?!
+        <br><br>
+        The Sathins demanded to know: Did the government now expect us to empower rural women (who were entrenched in traditions that were centuries old), within a period of five years? The government with all the resources at its disposal had hardly made a dent in the situation of poverty in the country in the last fifty years; how then did it expect the Sathins, who were at the lowest rung of society, to perform such wonders in just five years?
+        <br><br>
+        However, in 2003 the state elections were due, and by now the government had realised the potential of the Sathins for drawing votes. There was hence a complete shift in the governments’policy. There was a total reversal of the earlier decisions The government now announced expansion of WDP to all 32 districts, i.e. a total of 9189 Sathins.
+        <br><br>
+        There was confusion as to whether the union had benefited or had lost ground. The numbers of the Sathins had increased manifold, but the empowerment component of the programme was completely shelved. The Sathins in isolation were quite ineffective. Further, many of the original Sathins had discontinued work as they were over age. Meetings only took place in small groups, and the entire original group of Sathins did not meet at all.
+        <br><br>
+        However finally it became amply clear that while autonomy from funding and maintaining politically independent stance helped consolidate and build public opinion, it was the relationship to the state that was ultimately what really mattered. The course of things was to a very large extent defined by the state. The relationship of the women’s movement with the state perhaps needs to be looked at while dealing with the question of the nature of autonomy. That the autonomous women’s movement defines itself by its source of funding and political alliances needs to be reviewed and widened to include an understanding of the state. Mahila Shakti – Zindabad!
+        <br><br><br>
+        <b style="font-weight: 700;">DISCUSSION FOLLOWING THE PRESENTATIONS</b>
+        <br><br>
+        <b>Sai Kodai</b>, working with NIIT in Delhi shared her personal experience of growing up in a Dalit family that was very brahminical in its thinking. “I count myself fortunate that my feminism started in the Dalit movement. It didn’t start with a very academic approach. It was very natural, very organic. There was energy in the movement which is not there in the literature/academic mode where you discuss Virginia Woolf, you discuss Kamla Bhasin, you discuss and analyse. But you don’t question structures that are part of you. Which is actually more difficult to do. When Sarsi was talking, I identified with her honesty. Always confused whether to question Dalit oppression or patriarchal oppression.”
+        <br><br>
+        Taking forward the debate on entering electoral politics, <b>Malika</b> said, “In the Uttarakahand Mahila Manch, we feel that taking part in electoral politics means we are propping up a very weak democracy. The mechanisms to make leaders accountable, and the political consciousness among people, are not fully developed. In today’s electoral politics, you get sucked in. You are positing all your faith and power in a few elected representatives. UMM feels that through a people’s movement we bring about political consciousness so that if and when we enter the political arena, it is done with strength and when one is fully prepared.”
+        <br><br>
+        In response, <b>Shamim</b> reiterated, “Organisations like ours will never win elections the first time round. It takes a long time, and this is an extended period of political struggle. While it is necessary to get into politics fully prepared, with ideological clarity and maturity, these processes are not mutually exclusive. Unless you actually enter politics, you are never fully aware of what the dangers and pressures are. You have to take the plunge, despite the apprehensions. It’s like on-the-job-training.”
+        <br><br>
+        “Why do we not know the dangers, even before entering electoral politics? Do the voters not know in what kind of system they are operating? Don’t they understand who is honest and who is corrupt? It’s the compulsions of the system that makes them vote for the goons, despite recognising them,” responded <b>Malika</b>.
+        <br><br>
+        <b>Rajni</b> asks Uma, “How does the autonomous women’s movement view the anti-reservation movement in Delhi and all of India? After the anti-reservation stir, the harassment of Dalit doctors and students increased. The example of Dr Ajita who was thrown out of her job. We are hearing many incidents also of several Dalit girls being failed in medical exams by one or two marks.” Rajni also asked Saraswathi how she did not know which community she belonged to. “Despite middle class, or education, there are some things which tell you the discrimination you face.” She also asked her to point out the differences in attitude to Dalit writing in south India.
+        <br><br>
+        Said <b>Saraswathi</b>, “Of course, from my birth, I knew that I was Dalit. I have enjoyed reservation, had a caste certificate. There are various divisions, only I did not know that I belong to the cleaning community. I laughed and told my father, it is an organic link – I will ultimately reach where I have to reach i.e. to the cleaning community.”
+        <br><br>
+        Saraswathi went on to raise the question of funding. “For me, it is possible to raise money for Dalit issues and remain non-funded. We have four full timers, and are able to raise funds to support them. About writing, you cannot really call it ‘Dalit feminist writing’. There are some women Dalit writers who have started theorising – but for the larger world theorising and articulation is lacking. There is no documentation of this strong and vibrant movement. The whole Dalit question needs to be framed in a different way, in the context of reservation, globalisation and privatisation, liberalisation. Women’s groups should look at how patriarchy works differently in different caste structures. The wit and the wisdom of Dalit women are very important for women’s movement.
+        <br><br>
+        And responding to Rajni, <b>Uma</b> said, “There is a difference in the anti-reservation movement of the 1990s and now. Even in north India, there has been a difference. During the anti-Mandal stir, there was a confusion among women’s groups. In 1990, there was a visibility in the national media to the caste issue. There are several streams of the women’s movement, and some groups, like AIDWA did raise the issue. But I do agree that the connections that should have been made between women’s groups and Dalit women’s groups did not take place. The caste issue has made a critical input into the women’s movement. There has been some positive development, and this needs to be sharpened. Despite this, the sharp reaction to reservation is there. We need to change the terminology. Reservation sounds patronising, like a dole, and the baggage of this terminology should go. We should say either ‘affirmative action’, or ‘proportional representation’.”
+        <br><br>
+        Differing with Uma was <b>Ajita</b>, associated with Saheli. “When the Democratic Front was made on the reservation issue, with views slightly different from the hardcore Dalitwadis, I had a lot of expectations. But I had not a single friend from the progressive crowd come and stand by us.”
+        <br><br>
+        <b>Saraswathi</b>, sharing that this was a similar situation in Karnataka too, said, “There is an indifference. In Karnataka, many Dalit comrades asked – “When Sharanavva was made nude and paraded, where were the feminists?” They give lot instances. But I feel all these things can be addressed with a lot of patience and lot of respect. I always tell my Dalit (especially male) friends – who was Mathura, who was Bhanwari, who was Shah Banu? Who fought for them? Women’s groups in the whole country fought for them. In Karnataka, the first rape case taken up by Dalits groups was a non-Dalit woman. Whatever is positive, healthy and democratic in each movement, must be carried to other movement.”
+        <br><br>
+        <img src="${r2FetchArticleImgURL}Article1/3.png" style="width: 100%; display: block; padding-top: 5px;" />
+        <br><br>
+        <b>Janaki</b> too added that although we have come a long way, there is there is a sense of loneliness. “The anti-reservation agitation has done so much damage to people’s lives. The movement has to show its engagement with what we do.”
+        <br><br>
+        <b>Dr Ajita Gill</b>, speaking about her expulsion from her research job in AIIMS for participating in the pro-reservation rally, made a poignant intervention about the trauma of Dalit students. “Joined AIIMS in 1995. I have been made to feel that I come from the reserved category and suffered from an inferiority complex and like other Dalit students, I also used to get supplementary. The anti-reservation stir gave an outlet for all my anger over many years. I got into trouble with my supervisor, who didn’t accept arguments from a Dalit person. They as it is had grudges against me, alleging that I was not working hard. The issue was that I was not willing to unethically recruit people in the research!”
+        <br><br>
+        Moving from the reservation issue, <b>Sandhya</b> from Forum highlighted the fact that marginalised communities like Muslims or Dalits have men from their community standing by them. And the entire community can question the women’s movement for not standing by them. But lesbian women and gay men, or men who are not considered men – who will raise their issues? No questions are being addressed even in this audience, and we need to think why.”
+        <br><br>
+        <b>Kiran</b>, responding to Sandhya’s query about whether a union of the informal sector (like the Sathin Union) now needs to transform into a women’s organisation, said, “We are exploring possibilities about how to take the issue forward. We are also discussing with all of you, and want inputs from everyone. The Sathins have undergone a process of deep politicisation, and this needs to be taken forward, along with others who support the Sathins.”
+        <br><br>
+        Coming to the question of funding, <b>Nilanjana</b> said, “When working in Bangalore in Manasa, and also with sexuality rights groups, we used to get stuck on the issue of funding and autonomy. We were told “you must ask this question later”. But when will ‘later’ come?”
+        <br><br>
+        In response, <b>Chayanika</b> replied, “Today, the campaign against Section 377 has come up in a very important way. It is doubtless an important issue. But for us (lesbians, trans) it is not a big issue. We listed three issues – (1) decriminalisation (2) protection from discrimination – is a very big issue if one can’t even come out. Repression, violence, leading to migration, displacement etc. (3) And the third issue is – what are the positive rights we want to ask for? We have not talked about that. We are stuck at just trying to say we are citizens. But there was no hierarchy of the levels – we had to struggle at all levels. But the 377 campaign is focussed on a legal campaign alone.
+        <br><br>
+        Everybody is talking about sexual behaviours only, which is linked to the issue of funding. Men, and queer men too, still have space (in public) available. There’s lots of discrimination for queer men too, but still they have more public space. Various identities are being defined for men based on class, sexual behaviour etc, defined due to funding. According to us, that is not the issue. For lesbian women, we don’t have even one word. For gay men, there are hundreds of words, based on behaviours. These words – kothis, panthis etc. is very problematic, because it is also class based. But it denies these categories a choice of lifestyle.
+        <br><br>
+        We have lost the language of sexuality rights. We talked of reproductive rights in the women’s movement. And in Beijing, sexual rights. What is the agenda and understanding of sexual rights?”
+        <br><br>
+        Ranjana and Laxmi summed up the discussion... the presentations, each so rich, had raised many questions. Questions that the movement would have to tackle with criticality and sharp analysis, as well as solidarity with different autonomous movements.
+        <br><br>
+        Given the job of thank yous, <b>Deepti</b> said, “When we started this whole process, documenting history, our friends and well wishers said to us ‘Why are you so self critical’. So now we are going to break from tradition and say thank you only to us Sahelis! So thank you all Sahelis! There are many people we want to thank. All of you who have come here today to share this occasion, those who could not come but are here in spirit, all our speakers, those who came up and shared your thoughts. I don’t know what to say – it was overwhelming and humbling.” She also thanked our printers – Sandeep, Shafi and Dhananjay, who ‘worked like crazy with us crazy women’ to bring out this document literally overnight; Anindita for the posters she made; Anjali Deshpande for translation, Chopraji our electrician for the free fan in our office, and Lakshmi who came and cleaned our office everyday with a smile. And to all the founder members and all the women who have made the place and this day what it is – to all of them – Zindabad!!”
+        <br><br>
+        And <b>Nilanjana</b> added, “I know everyone would like to thank the volunteers of Saheli for all the hard work and putting this together. It’s been wonderful! A fantastic opportunity. Thank you so much!
+        <br><br>
+        After the song Sanghathith Ho, everyone made their way to the Saheli office under the flyover for a dinner of Deez Biryani (of course!).
+        <br><br>
+        And as the evening turned into night, and the days into weeks, the memories, the warmth, the togetherness of that day lives on… and the hope that we can move forward together with renewed strength.
         `
+    },
+    {
+        id: 'Article8',
+        value: `
+        <img src="${r2FetchArticleImgURL}Article2/1.png" style="width: 100%; display: block; padding-top: 5px;" />
+        <div style="font-size:12px; color: #f2287f;">A morning to remember...</div>
+        <br>
+        An indignant, “Hey, where’s my name?!”… followed by a pleased, “Aha, there it is…!” Women peering over each other’s shoulders, stretching up to find their names inscribed on a white banner in various colours, in different handwritings. Names of all the women who have ever been in Saheli. Names gleaned from old daily diaries, minutes books, letters, e-mails and word of mouth. An attempt to record what was hitherto only oral history.
+        <br><br>
+        Bal Bhawan on August 12, 2006, was witness to a historic occasion: Saheli completes 25 years of activism. As Kalpana, one of the founder members succinctly put it, “One of our main achievements is that 25 years have gone by, and we are still here. When Saheli started in 1981, we did not know how far we would come. The values have not changed. The faces have changed, of course. The flyover is the same…we keep thinking it will fall, but it still hasn’t. I want to congratulate ourselves, those who have gone by and those who are here, as well as those who will come, for keeping us going for a long long time.”
+        <br><br>
+        Almost two hundred women came – 3 months old to 80 years, from Mumbai and Munsiyari, Betul and Bangalore, Hyderabad, Jaipur, Pune, Kolkata and Canada. The invitations had gone more than four months earlier, and everyone made time to be with Saheli. And it was a day for matters of the heart, of politics, of memories…of togetherness. Some the past, some the present, and all the future of Saheli. Old friends and new, milling around and sipping tea, some taking a quick bath, until they were ushered into the hall, decorated with glorious posters and banners that we had put together for the occasion.
+        <br><br>
+        <i>“Hey Jee Re .. Hey Jee Re ..”</i> the sounds of the old favourite song filled the room, as more people filtered in to take their seats on the steps of the amphitheatre.
+        <br><br>
+        The meeting to mark 25 years was an occasion to take stock of what kind of autonomy we had dreamed of in 1981 and what is the practice in the reality of today’s changing world – seen through presentations by Saheli as well as a sharing of experiences and analyses by friends from other autonomous movements.
+        <br><br>
+        And with Vani conducting the show, the morning had begun!
+        <br><br>
+        Shweta, who confessed that she was very nervous, gave a brief introduction to what Saheli is, and who we are, along with showing pictures projected on a screen on stage. Photographs of the first office in Gouri’s garage, with the cane chairs and table, drew appreciative laughs from the audience – not to mention the gasps when we told everyone that we still sit on the very same chair underthe flyover today! Shweta stressed that there has been a continuity in our political perspective, while we have changed in response to newer challenges.
+        <br><br>
+        “Every member of Saheli has come with different hopes, and expectations… some emotional, others political and yet others…something else… Everyone’s life situation has been different. The attempt has always been to move forward keeping in mind differing needs, talents, skills, weaknesses and strengths,” she added.
+        <br><br>
+        The source of our strength has been our friends, supporters and co-travellers, who have always stood by us – right from the very beginning until now. There are some who may have never stepped into our office, but feel linked to Saheli’s politics, and sometimes demand accountability from us!
+        <br><br>
+        Saheli has touched many lives… and who knows where, how and which Saheli one will encounter! When we asked some of the women who do not or cannot come to Saheli for whatever reasons, why they had left Saheli, they replied, “Who said we have left Saheli? We have NOT left Saheli!”
+        <br><br><br>
+        <b style="font-weight: 700;">CHALLENGING INEQUALITIES...</b>
+        <br><br>
+        Vani illustrated how Saheli’s significant contribution has been to visibilise and challenge inequalities. “Saheli has never been a very large organisation, and the question, for generations of Sahelis has been: is smallness a weakness, or a strength? Can we make a difference?
+        <br><br>
+        We started as a ‘women’s space’ – a campaign group that sought to reach out to women facing domestic violence. And from our handling of this we learnt that there is a deeper silence that needs to be broken. Today, an autorickshaw driver knows what a ‘mahila sanghathan’ is – but 25 years ago the concept of a ‘women’s space’ was novel. For women to come out of the domestic space and claim public space, was almost revolutionary. To draw connections between domestic violence and the societal sanction for it, and the inequalities in law that serve to isolate women, as well as the links between unequal property laws and community identity.
+        <br><br>
+        Similarly it was a group of women in Patancheru who discovered unethical trials of the injectable contraceptive Net En. Saheli has played a role to make visible the linkages between health policies and violence against women, hazardous contraceptives, the national agenda of population control and its impact on women.
+        <br><br>
+        And so also for communalism - to make the connections between the trauma that women were going through in a private space like the family… and its connections with larger questions of religious and community identity, social and judicial processes… seeking change… seeking accountability from the state and its institutions, the discrimination in laws, especially personal laws. We sought to make ‘women’s issues’ public issues.
+        <br><br>
+        At the same time… we believe we need to constantly push for change, while also learning from various other movements. If visibilising is the first step, we also know there is much more to fight for… in our strategies, the changes we hope for… the world we dream of.
+        <br><br><br>
+        <b style="font-weight: 700;">VISIBILISING VIOLENCE AGAINST WOMEN</b>
+        <br><br>
+        With photographs to illustrate, Vani continued to talk about Saheli’s work on violence. Saheli started in 1981 out of the campaigns against dowry and custodial rape in the late 1970s, which shook the country and catalysed the emergence of women’s groups in several cities. Mathura, Rameeza Bi, Maya Tyagi, Sudha Goel… became symbols of the women’s movement these issues and the issue of domestic violence remained the focus of Saheli’s work... like much of Saheli work... is not just ours... it is all of ours, especially the many women in the room, whose history/legacy we were sharing with each other!
+        <br><br>
+        Rallies against violence were unheard of until we began breaking the silence around issues like domestic violence. Violence inside homes that had social sanction… the sanction of the state and the police. In the early years, Saheli’s work with women in crisis was marked by direct/street action. From demonstrations outside in-laws homes where women had been murdered for dowry; going and retrieving stri-dhan and a woman’s belongings from her marital home; demanding accountability in workplaces where women had been harassed... shaming men who beat their wives… there were many ways Saheli responded to situations. So much so that some women approached Saheli to ‘demonstrate on demand!’
+        <br><br>
+        Our work on rape has not been restricted to policy level alone. Street protests, reaching out to the public, and attempting to change the culture of acceptance of rape as a ‘normal’ part of society, has been an important aspect of our campaign. ‘DILLI, CHUPPI TODO, HINSA ROKO’ (Break the Silence! Stop the Violence!) was how we appealed to the silent spectators on the street. We also distributed leaflets in crowded bazaars, in street corners and on the University campus. Stickers declaring ‘NO MORE VIOLENCE’ made their presence felt in many parts of Delhi, on cars and scooters. Through rallies and ‘TAKE BACK THE NIGHT’ actions, we have attempted to reclaim our space, and our right to move around freely on the streets of Delhi – by day or by night. Trying to reach out in public spaces, using posters etc. Yet, as women’s groups, we have been unable to tackle the spiralling violence against women in the city. There is a growing tolerance to violence, even within women’s groups. There perhaps needs to be a re-look and perhaps change in strategy.
+        <br><br>
+        Simultaneously, like other groups, we have engaged with law reform, and using the judiciary. Knowing fully well the limitations, and that the law and judiciary are entrenched in patriarchy. Yet, we have had to engage with the legal system, which does set some benchmarks for what is right and wrong, and provides some access for redressal for women. This has been a problematic question, with which all activist groups, and women’s groups have continued to engage. We continue to fight for laws, fight with the NCW, and fight for implementation, while being aware of what a limited impact legal reform can have – whether in the case of 498A, domestic violence, amendment to rape and dowry laws.
+        <br><br>
+        One of the main areas we have worked on recently is sexual harassment at the workplace. We have engaged with it at many levels. After the Vishakha judgement in the Supreme Court, we realised that most women were not even aware of the judgement. So we did a survey – going to and talking to women about the issue, raising awareness - and brought out a report called ‘Another Occupational Hazard’. After that, we developed a play <i>Mahaul Badalna Hai</i>. But our engagement with the issue has been long standing. When we looked at old daily diaries of the 1980s, we came across cases of women coming and telling us how their male colleagues would harass them.
+        <br><br>
+        We also did crisis intervention, individual handling of cases, and ran a shelter for four years. Simultaneously, we have always felt we must reach out. One of the areas we have had a strong linkage with is universities in Delhi. With Delhi University …linkages with Gender Studies Group - DU, Forum Against Sexual Harassment, Campaign for a Safe University; with JNU Gender Sensitization Committee Against Sexual Harassment. And on a positive note, we also do feminist self-defence workshops or Wenlido, with college students, activists, transgendered, women working in corporations etc.
+        <br><br>
+        The play, Om Swaha was sort of a marker in the movement. There was another spontaneous street play following a rape in a nearby school in Lajpat Nagar. Our play on sexual harassment, Mahaul Badalna Hai, involved a longer process – developing a play out of the survey, out of women’s experiences; developing it, and taking it out. We took it to a variety of places – from a May Day rally, to a domestic workers’ union, to a college event.
+        <br><br>
+        We also dealt with dilemmas along the way. Working on sexual harassment, in a context where there is a proliferation of NGOs poses a peculiar problem. For public sector companies, there is a state, or a management. Confronting is relatively easy – you can put pressure, tell them there is a law, etc. When it comes to NGOs, how do you exert that same pressure? To some extent they are ‘our’ people, with ‘our’ politics. How do we evolve strategies without getting divided? These are some of the questions we face.
+        <br><br>
+        How do we cope with the scale of violence that is growing –from sex selective abortion to communal violence to individual cases of rape, violence on lesbian women… the range is enormous, and we are also coming across nuances. Like many other groups, we too are grappling with these questions.
+        <img src="${r2FetchArticleImgURL}Article2/2.png" style="width: 100%; display: block; padding-top: 5px;" />
+        <br><br>
+        <b style="font-weight: 700;">WOMEN AND HEALTH CAMPAIGNS IN SAHELI</b>
+        <br><br>
+        Going on to talk about Saheli’s work on women’s health, Vineeta mentioned that campaigns on women and health have always had an important place in Saheli. She focused on the strategies we adopted, and the methods we used to reach out to people. Reaching out to the public however was not the only method used – we also filed court cases, attended public hearings, raised questions in Parliament, lobbied with MPs, released press statements and wrote articles. We also dialogued with the government, and attempted to pressurise them – be it the ICMR or Health Ministry, or occasionally the Drugs Controller – with whom we have never had a good relationship! We have gheraoed him, shouted slogans, and probably made him wish these women would go away and leave him alone. But we had a responsibility to protest about hazardous contraceptives and drugs for women, and we did!
+        <br><br>
+        Besides this, we work along with several groups – both within the country and internationally. In fact, there are many of you here who, along with us, became decoy customers to expose the illegal sale of drugs. Other forms we used were - intervening in meetings and raising questions and protesting, signature campaigns – in early days on paper and now on e-mail. The use of e-mail petitions, while undoubtedly helping to garner support fast, has also come in for its share of criticism and they have their weaknesses and strengths. We have been using the newsletter and reports from time to time, and the document such as the one brought out specially to commemorate Saheli’s 25 years to publicise our views.
+        <br><br>
+        We also developed a play on Norplant. To take to the streets with a play on hazardous contraceptives was not easy. The subject of contraceptives is not easy to broach face to face – such was the situation 15 years ago, and it continues till date. We have also sung songs – whether or not they were tuneful! Parchis, leaflets have also been used.
+        <br><br>
+        The slides Vineeta showed kept the audience rapt. The picture of Saheli’s ‘Red Book’ on contraception and women’s health, the poster against population policy, the poster demanding a ban on sex determination tests, and an old parchi (pamphlet) about a workshop on women and health, with the contact address as Gouri and Buchy and the old Nizamuddin address!
+        <br><br>
+        Summing up our work on women’s health, Vineeta said, “25 years is a long time, and it is tempting to ask what we have achieved.”
+        <br><br>
+        Estrogen-Progesterone drugs was one of the early campaigns. The drug was used for a variety of reasons. There was a ban in the 1980s, but EP drugs are now being used for hormone replacement.
+        <br><br>
+        Sex determination, after a long struggle, was banned in Maharashtra, and then a central law in 1994. After a PIL, the PCPNDT amendments were passed. But even now, we don’t know if the Act has teeth.There has been just one conviction so far.
+        <br><br>
+        Hazardous drugs – it is a long and complicated story. The list is long -Net En, Depo Provera, Norplant, Quinacrine sterilisation, and there are anti-fertility vaccines. With Net En and Depo, many things have happened since Patancheru (where the first illegal trials were exposed). A case in the Supreme Court was successful in stalling the introduction of Net En into the family planning programme for 14 years.
+        <br><br>
+        Norplant too is about to be introduced and Quinacrine sterilisation is still being illegally used, particularly in Bengal. Trials on anti-fertility vaccines have been indefinitely shelved – perhaps due to the weight of the campaign, and also due to scientific objections. This too can be counted as a success.
+        <br><br>
+        But as far as clinical trials go, we also raised the ethical dimensions. Matters of informed consent in clinical trials have been an important aspect about which we have written and also protested.
+        <br><br>
+        The importance of autonomous politics in the sphere of women’s health cannot be emphasised more. To remain independent of government as well as funding agencies, and stick to our views is crucial. This independent stand in the women’s health movement (vis-a-vis funding) has been severely jeopardised over the past 10-15 years, and this is a question before us.
+        <br><br><br>
+        <b style="font-weight: 700;">CAMPAIGNING AGAINST COMMUNALISM</b>
+        <br><br>
+        Sadhna recounted some of Saheli’s work on communalism, the strategies used and the challenges we face. When Saheli started, no one could have known what was in store for us. While we began to fight against rape, domestic violence and dowry, and even against the building of sati temples, we began to realise that it is not sufficient to fight against these alone. The forces of communalism are very strong and complex, and a huge challenge before us. This challenge continues till date. The way in which religion is used/manipulated, customs, traditions and culture - it is extremely complex.
+        <br><br>
+        Saheli’s struggle against communalism has been at various levels. First, the campaign against communalism involved understanding the way in which family, community and marriage exerted their control on women. Relief and rehabilitation during communal violence has always been an area of our response, right from the 1984 anti-Sikh carnage. Second, fighting against communal hatred in society and working towards peace. Our work has also focussed on punishing the guilty in communal riots. Another important aspect, especially since 1992, which women’s groups in particular have raised, is the manner in which communal forces have used women’s bodies to spread communal hatred, especially the sexual violence in Gujarat in 2002.
+        <br><br>
+        In 1984, we concentrated on relief and rehabilitation, and spreading the message of communal harmony. The specific ways in which communal violence affects women was not so central to our work or perspective. But the ways in which women’s lives were specifically impacted, and the manner in which communal forces were getting more and more strengthened, and the consequent impact on women’s lives, eventually became central to our understanding. Gradually, we saw the way in which communalism began to play a central role in Indian politics – and the nexus between religion and politics began to play itself out on women’s lives. Be it Shah Banu or the debate on the ‘Egalitarian Civil Code’(ECC). Another disturbing aspect was the way in which women increasingly were being used by communal forces, and becoming ‘communal agents’, spreading communal hatred. In 2002 in Gujarat, women’s bodies were directly used to dishonour the other community by raping and murdering women.
+        <br><br>
+        Through case work too, we could clearly see how communities and religion controlled women’s lives. We intervened in inter-caste, inter-religious marriages, dealt with inequalities in personal laws, and confronted the lack of rights for women in the family. The manner in which personal laws reinforced the unequal status of women in the family became apparent, and it was clear that we had to struggle for women’s rights within the family. Even as the impact of communalism in society began to increase, it became more and more difficult to raise the issue of women and personal laws. At Saheli, our perspective has been to articulate women’s rights within the family, understanding women’s unequal status within the family, as well as inequality in religious laws. We felt that this issue had to be taken out of the framework of minority and majority religions, and looked at as one of women’s domestic labour. Second, we felt that to disentangle the issue from the religious debate, we had to take a perspective of democracy and citizenship. That women must have equal rights as citizens in this society. The women’s movement has faced these pressures, and with the growth of communalism, has come even more under pressure. Without going into the debate in detail here, it is enough to say that by now, it appears that the women’s movement has somewhat settled to a position of reform within personal laws, through which women’s lives will improve.
+        <br><br>
+        The sati issue was portrayed as one of ‘tradition’ vs ‘modernity’, ‘Indian’ vs ‘Western’. We were always small in numbers – 12 or 20, even in rallies, and the pro-sati forces always had huge numbers with them. We have always had to face this backlash that we are out to ‘spoil’ ordinary women, and the anti-sati campaign was also seen in this light. This engagement, since 1987, was a long campaign not only against sati, but also against the glorification of sati, the building of sati temples etc. We see that laws are quick in coming, but implementation is not effective. This too has been a question for us.
+        <br><br>
+        These campaigns are a solid example of joint alliances and working together – on the anti-sati campaign, and the campaign for ECC. We have drawn a lot of strength working together, and have also given a lot to joint campaigns. Of late, inter-caste marriages and the resultant caste-based violence has come up in a big way.
+        <br><br>
+        Our attempt has always been to have a clear position on various issues – through campaigns and alliances. But in terms of strategies, we are still grappling with how to confront the growing impact of tradition, religion, community and family on women’s lives. Not only at the level of politics, but in civil society, media, the market – rituals and customs are being used in a big way. It’s really difficult to make any breakthrough in that. How do we see religion in our own lives? At a political level, and social level? And how do ordinary people look at religion? How do we bridge this gap? What kind of strategies can we use? It is a big challenge before us. We need more clarity in our thoughts, and clear strategies to deal with this very complex situation we are in.
+        <br><br><br>
+        <b style="font-weight: 700;">RELEVANCE OF AUTONOMOUS POLITICS</b>
+        <br><br>
+        Laxmi went on to outline the relevance of autonomous politics today. Many historic documents of Saheli state that Saheli did not start with any manifesto or blueprint for the revolution. Our own experiences were the starting point of our analysis…linking personal to political, a slogan that has been crucial for the movement. Autonomous politics is usually defined in the negative – that we are not affiliated to a party or government, we don’t take funds, but what is the meaning of autonomous politics? What is the fundamental core?
+        <br><br>
+        Whatever change we want to bring about in society, we begin the transformation within the organisation itself. We start from a notion of collective functioning, non-hierarchy and democracy within the organisation. Oppressed people – whether women, Dalits, workers, adivasis, homosexuals… if we want to give everyone equal opportunities in society, where no one dominates, imposes their views on others, or crushes the other, we have to apply these principles even within the organisation. We have tried to follow these principles, even if we may not have been successful all the time. We cannot say there is absolutely no hierarchy or power. But we can definitely say that this is our dream, and we keep discussing, acting and trying to find ways to make it a reality.
+        <br><br>
+        We work together with others to bring this change – within ourselves, our organisation and within society. There are many autonomous groups here – from Mumbai, and also from Delhi. We make no bones about the fact that we have to work with others. And we do not apologise for being small (though we do lament in secret!). But whichever campaigns we have taken up it is clear that although a small group, we are able to make a lot of noise. It has been a very natural part of our politics. While conducting a campaign against violence recently with the ‘Dilli Chuppi Todo’ placard, only seven of us were on the flyover, and thousands of people could see what we were saying. Even in health campaigns –right from the early 1980s, we dared to stand up and say that population was not the reason for poverty, but the other way round. No one wanted to hear it at the time. We also protested against hazardous contraceptives and how women’s bodies were being targeted – no one wanted to hear that either. We slowly managed to convince the Left, the socialists, and other progressives, to see our point of view. And now there is a consensus, 25 years later, that we must all fight against population control. So when we talk of strategic alliances, who do we work with – issue-based alliances with broad range of progressive organisations. In communalism, we were part of Nagrik Ekta Manch, SVA, PMS and Aman Ekta Manch. We participate in joint forms, taking with us our feminist politics.
+        <br><br>
+        Another important point of autonomy is funding. We raise money from individuals for our work, survive on volunteer power and do not take institutional funding, of which we have a very deep critique. It’s not that we have never taken institutional funding – we have taken, for some projects. This too was the subject of much debate. But for the past 20 years, we have not taken any institutional funding for our work.
+        <br><br>
+        This critique of institutional funding evolves from our critique of institutionalised feminism. It comes from the government – whether the Women’s Development Programmes of Rajasthan and UP, or the Women’s Commission’s set up. There are many people associated with these programs here in this room – and we would like to keep the discussion going, the dialogue open on this issue. Our critique has often been misinterpreted to mean that we will not work with these institutions. But we engage with them with all our criticality – whether the National Commission for Women or the UN or the Beijing processes.
+        <br><br>
+        Current challenges – communalism, militarisation and the market economy overshadow our reality. In the context of these larger forces, can we make a difference?
+        <br><br>
+        The answer is a big YES! We will definitely bring change. And this faith is because we do not see our politics in terms of big or small, but in terms of the sharpness of our perspectives – where do we fight, and what strategies to adopt. We also have faith that we will bring about change because you are all with us, and together we will bring change.
+        <br><br>
+        And this was an ideal point to laugh at ourselves, through the song <i>‘Naarivaad behna dhire dhire aayi’</i> (Feminism …. A long time coming!), a take off on <i>‘Samajwaad Babua’</i> – Gorakh Pande’s hard hitting satire of socialism. Through this song, we take pot shots at the labels of ‘Western’, ‘city-bred’, funded feminists; the co-option of women’s issues by all political parties, and the State; and also make digs at the confusion of collective functioning arising out of our allergy to domination! The Left too comes in for its share of spoof, as we satirise their fear of the ‘L’ word and marginalisation of lesbians.
+        <br><br>
+        <div style="display:flex; justify-content:space-between;">
+            <div>
+                <u style="font-weight: 500;">Naarivaad behna dhire dhire aayi</u><br><br>
+                <i>Naarivaad behna dhire dhire aayi (2)<br>
+                England se aayi; Amrica se aayi<br>
+                Dilli se aayi; Mumbai se aayi<br>
+                Jan Andolan to ban hi naa paayi<br>
+                Naarivaad behna dhire dhire aayi<br>
+                World Bank se aayi; McArthur se aayi<br>
+                Oxfam se aayi; Norad se aayi<br>
+                Phir bhi autonomous kahlaai<br>
+                Naarivaad behna dhire dhire aayi<br>
+                Nafrat netagiri se aur dikkat hai hierarchy se<br>
+                Nafrat netagiri se aur dikkat hai hierarchy se<br>
+                Par Collective ne sab ko rulaayi<br>
+                Naarivaad behna dhire dhire aayi<br>
+                Sarkaar se aayi, Mahila Aayog se aayi<br>
+                U.N. se aayi, Beijingva se aayi<br>
+                Sab milke khichri pakai<br>
+                Naarivaad behna dhire dhire aayi<br>
+                Congress ne uthayi, Bha.Ja.Pa. bhi utahayi<br>
+                Mulayam, Laloo ne bhi doharayi<br>
+                Par arakshan ne band bajayi<br>
+                Naarivaad unka dhire dhire aayi<br>
+                Nirasha Left se paayi, Saat Behne apnayi<br>
+                Aath March manayi, morcha khub chalayi<br>
+                Par woh lesbian saawal se sharmayi<br>
+                Yeh kaisi naarivad aayi?!<br>
+                Naarivaad behna dhire dhire aayi!<br>
+                Naarivaad behna dhire dhire aayi</i><br>   
+            </div>
+           <div 
+                style="
+                    display: grid;
+                    grid-template-areas:
+                    'square1 vertical'
+                    'square2 vertical'
+                    'horizontal horizontal';
+                    grid-template-columns: 1fr 1fr;
+                    gap: 12px;
+                    width: 100%;
+                    max-width: 400px;
+                    margin: auto;
+                "
+                >
+
+                <!-- Square Image 1 -->
+                <div 
+                    style="
+                    grid-area: square1;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    aspect-ratio: 1 / 1;
+                    "
+                >
+                    <img src="${r2FetchArticleImgURL}Article2/3.png" alt="Square image 1"
+                    style="width: 100%; height: 100%; object-fit: cover; display:block;">
+                </div>
+
+                <!-- Vertical Rectangle -->
+                <div 
+                    style="
+                    grid-area: vertical;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    aspect-ratio: 3 / 5;
+                    "
+                >
+                    <img src="${r2FetchArticleImgURL}Article2/4.png" alt="Vertical rectangle"
+                    style="width: 100%; height: 100%; object-fit: cover; display:block;">
+                </div>
+
+                <!-- Square Image 2 -->
+                <div 
+                    style="
+                    grid-area: square2;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    aspect-ratio: 1 / 1;
+                    "
+                >
+                    <img src="${r2FetchArticleImgURL}Article2/5.png" alt="Square image 2"
+                    style="width: 100%; height: 100%; object-fit: cover; display:block;">
+                </div>
+
+                <!-- Horizontal Rectangle -->
+                <div 
+                    style="
+                    grid-area: horizontal;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    aspect-ratio: 5 / 3;
+                    "
+                >
+                    <img src="${r2FetchArticleImgURL}Article2/6.png" alt="Horizontal rectangle"
+                    style="width: 100%; height: 100%; object-fit: cover; display:block;">
+                </div>
+
+            </div>
+        </div>
+        <br><br>
+        Thunderous applause, continuing as we all filed out for much needed tea.
+        <br><br>
+        And we came back to a lighter look at collective functioning – a spoof on Saheli’s group process while trying to develop a play on sexual harassment at the workplace. Enacting a typical scene at a weekly organisational meeting touched a chord in all of the veteran meeting goers and drew many laughs.
+        <br><br>
+        The finale, singing ‘Mahaul Badalna Hai’ from the play had the audience clapping along.
+        <br><br><br>
+        <b style="font-weight: 700;">RELEASE OF THE HISTORY DOCUMENT</b>
+        <br><br>
+        Akshara, summing up the past few months as the ‘horrors of the collective’, gave a brief background into the process of documenting the history of Saheli. “We went back to the Daily Diaries and minutes books for the past 25 years. For people who have not been in Saheli for very long, it was very exciting looking at conversations by people who we had only heard about but not met and as for older Sahelis, they got completely side tracked because they would be looking at minutes books and saying ‘Oh, I said that that day?’ or ‘When did I ever say that’. Some of the new people felt a little left out!” Relating her discovery in a file of a parchi of the first anti-sati rally in early November 1987, Akshara had the audience in splits when she admitted, “It struck me yesterday... that of everyone here, I’m the only one who is younger than Saheli!”
+        <br><br>
+        Talking about one of the other sources of information for the history document was a series of interviews with old Sahelis and new. She pointed to Ashima, now sitting silently in the audience, who for the last few months had been dedicatedly following up and making sure we got responses – thanks to her now famous, ‘wee reminders’. We spoke to a lot of people, met whoever we could meet. And they told us about their interpretation of Saheli history. And as is the case with any history which has interpretations, we had varied responses. We’ve had nostalgic ones, regretful ones, bitter ones. So we put together a document which presents a broad history of the autonomous women’s movement over the past 25 years, with regard to Saheli’s role in it. And there’s no way that such a document can hope to be exhaustive, nor can we claim that our interpretation of Saheli’s history is truer or more valid than any other. We’ve also tried to put together this history as faithfully as possible because we were, and still are in the process of creating it.
+        <br><br>
+        Nidhi then went on to translate what Akshara said into Hindi.
+        <br><br>
+        Taking the mike, Deepti reiterated that making the document has been the result of the effort of many many people – a genuine collective effort. So its release too must be collective. “I would like to call some people up to the stage. The founder members present here: Gouri, Rukmini, Kalpana, Vichitra.. please come up,” called Deepti, amidst much hooting and clapping.
+        <br><br>
+        And others associated since 1981 were also called on the stage - Abha, Chandra, Prabeen, Malika, Savita, Urmil, Elizabeth, Jayashri, Nilanjana, Ranjana, Runu, Ajita.
+        <br><br>
+        “Two people without whom this document would not have been possible. Who worked hard, helped us to maintain our sanity and took on major responsibilities on their shoulders – Ashima and Nalini. A special thank you to them!”
+        <br><br>
+        Calling on the camera-shy Sahelis also to come: Divya, Shweta, Vani, Sarvesh, Vimla, Vidya, Jyotika, Rajni, Kamla, Radha and many more, without whom we cannot be on the stage!
+        <br><br>
+        And any of those who want to join Saheli – all of you come up too! And someone comes!
+        <br><br>
+        Adds Deepti, “The Sahelis you see on stage here, it is not a complete picture. One of our close comrades, Satnam, is ill, so cannot be here. And Davi is sitting in Durban and Lata in London. We are missing all of them acutely on this occasion!”
+        <br><br>
+        Holding hands, in a circle, the purple history document, still hot off the press, is waved in the air. Some of us can hardly believe that it’s printed! We were proof reading it just two days ago!
+        <br><br>
+        And with everyone on stage, we sing “Hey jee rey” again.
+        <br><br><br>
+        <b style="font-weight: 700;">A TIME FOR SHARING</b>
+        <br><br>
+        Says Vani, “Now is the time we would like to hear from you about Saheli, about yourselves, about the dosti, the fights, the work, the action… everything.” And the perfect person to start with is, Kalpana.
+        <br><br>
+        Beginning with congratulating everyone for keeping Saheli going all these years, <b>Kalpana</b>, a founder member also said that these are very difficult days. “The links with younger people have lessened. Many have gone to NGOs, since you can do revolution and also get paid for it. Voluntary efforts have gone down. We need to think how to go ahead in this scenario. Another change is that in the beginning, it was important to establish our identity as the women’s movement. But the sweeping changes and challenges we need to respond to – the biggest challenge is how can feminism bring another dimension to larger society?”
+        <br><br>
+        She also regretted that Delhi and Mumbai are deaf to issues outside of metros. Unfortunately, if the government is centralised in Delhi, the movement also tends to get centralised. Delhi has the media, the courts, the contacts, far more resources to raise issues. Saheli needs to extend its support and solidarity to movements in smaller towns.
+        <br><br>
+        <b>Rukmini</b>, also a founder member, who had left Saheli in 1989 to go to Hyderabad and work with rural women, responded to Kalpana’s comment about working in NGOs. “All of us have to do jobs,” she said. “Saheli is a very important part of our lives – we squabbled a lot, but we knew we could call people up anytime, when you needed them. Our love and support for each other was immense.”
+        <br><br>
+        “About autonomy – on the one hand we are supposed to be autonomous. On the other hand, we live in a society, where we are not at all autonomous. The conference in Kolkata – women coming from NGOs, and their aspirations are that they want to work in an autonomous way. The work and understanding I got in Saheli I have applied wherever I went. All my learning is from Saheli. Saheli is like a source of inspiration. Leadership for women, and male support is the focus of our work in mixed organisations. I am especially happy to see so many youngsters. And I hope the spirit of Saheli will go on very strongly.”
+        <br><br>
+        And then a butterfly fluttered on to the stage, in the shape of <b>Saraswati</b> from Bangalore. “For me, the politics we are talking about, is very precious. I will act out and show what I feel. Whatever are our ideals, they are like butterflies. We are seeing that.. but it is very difficult to catch. And when you do catch, you just have to put it inside, and it keeps fluttering. Without speaking, I want to show it.” She goes on the stage and catches a butterfly, and becomes one herself!
+        <br><br>
+        <b>Mallika</b>, who was around 21 when she joined Saheli and became part of the movement in Delhi, said, “We also have our roots in Saheli and then took different routes… moved on to translate our politics into practice.” Now living in the mountains and the Sarpanch of her Van (forest) Panchayat, Malika farms the land and is also part of a women’s group - Maati. Now our struggle is different. ‘Personal is political’ is something that we understand. But the political is also personal! What is happening to people in the mountains? Our lives are linked to the mountains/forests/water/grass. Now we are getting to experience first hand the impact of globalisation on women’s lives. How, when there is no ownership of resources, life and livelihood is devastated. We keep coming back to Saheli, because we hope that you become the face of our struggle, our voice.. and keep alive a relationship that goes back 25 years. And go on for 50..100 years!”
+        <br><br>
+        From Nainital, <b>Uma Pant</b> brings out a quarterly newsletter, Uttara. Following the Kanpur conference of the autonomous women’s movement in 1993, she went back and began a small organisation – Maitri, working on women’s issues and social issues. In 1994, during the struggle for Uttarakhand state, Maitri joined the movement, and Uttarakhand Mahila Manch (UMM) emerged. “The Manch is not in good shape…we keep meeting, having discussions, we do some work...keep leaving...and then joining again. And coming here, we hope to get strength from all of you, and be part of the laughter, the spirit and solidarity” she said.
+        <br><br>
+        <b>Jamuna</b>, speaking in Telugu, with Rukmini translating, related how, in 1986 she used to come from 40 km away in Ghaziabad, but would find it useful and valuable to come for even one hour. She spoke of her own journey from a political secretary to a leader in the ML movement, to gaining feminist consciousness through her own personal struggle. She now runs Gramya, a women’s group in Hyderabad.
+        <br><br>
+        Well known feminist writer <b>Vidya Bal</b> from Pune, drew many laughs when she said, “There are many reasons for me to be here, but one of the main ones is that Vineeta is my daughter. And in this crowd, I would like to introduce myself as Vineeta’s mother. I remember days 20-30 years back, when everybody asked her, because she was always introduced as my daughter, whether she writes. And she was disgusted with this question!” Vidya Tai also shared that her organisation back home ‘Nari Samata Manch, is also going to complete 25 years next year.
+        <br><br>
+        <b>Kalpana</b> who was known as ‘Kalpana of Jagori’ because there was a Kalpana of Saheli, said, “At such gatherings we have the founding mothers of these organisations, and they come up and say “It’s so nice to see young people”. And people like us are not founders of anything. And we no longer qualify as ‘young’. But a whole lot of us here are very much part of the movement, who have grown up in the movement. It’s a different space we occupy. Not founders, and no longer young.” For me, it has been a friendship with Saheli in many ways. Individual activists – Sadhna, Ranjana, Vani, Laxmi –have been my friends, and we have grown together in many movements. For us from Jagori, being two women’s organisations in Delhi, if anything happens, the first person you call up is Saheli. And I hope Saheli also calls us up first! (yes.. yes.. someone murmurs)
+        <br><br>
+        “Being part of a women’s organisation that is also an NGO, having a group like Saheli to work with keeps us on our toes, and that is the role that Saheli has played. Though they are irritating at times, it’s nice to have groups like Saheli, and other such groups to work with and consistently keep discussing our politics and figure out where we are going as a movement. And to be able to reflect honestly, at the times when we feel we are down. Whatever the history between Jagori and Saheli and many other groups, we need spaces to reflect together on where we are going...what are the issues, what is our politics, who are our alliances. But at the end of it all…Saheli, you are an inspiration to all of us and we value your friendship tremendously,” added Kalpana.
+        <br><br>
+        “I don’t know what to say... You are all one of us... This is not the time to get tangled up in debates and issues. We are all carrying a big chunk of history. .. and to keep that history going, to carry that history on...” said <b>Abha</b>. Relating the experience of anti-war in Lebanon rally with very few protesters, Abha said, “We were acutely feeling that we should broaden, get more inclusive. And the questions about autonomous politics – yes, all that is true. But for our voices to get stronger, we need to go beyond. I want to think together about how to build a movement.”
+        <br><br>
+        Said Abha, while volunteering to come for a Saturday meeting in Saheli, after not climbing up the stairs since the split, “A little bending down is not so bad. For our politics, for the purpose of building a wider, stronger movement. We have to discuss issues threadbare... but let’s not despair, but take this time to build together.”
+        <br><br>
+        After Gouri too added that she would come on Saturdays, Vani remarked that such gestures are some of the best gifts we could get.
+        <br><br>
+        <b>Anchal</b>, now in Kriti, a non-funded resource centre, came to Saheli in her first year of college. “Saheli was my first word into feminism, in the way it stood for autonomous politics. I took the way Saheli was set up back to LSR and set up the Women’s Development Cell,” she said. “Saheli for me has been a form where different people, doing different kinds of jobs can put their creative energies and their politics and create something solid. Saheli stands for a solid women’s group across the board, across the country. Four chairs, 9 volunteers is what we started out with 7 years ago in Kriti. I think it’s really possible to not take grants and put our energies to create something that is beautiful and politically strong.”
+        <br><br>
+        <b>Sarojini</b>, who was in Jagori for 7-8 years, and now in Sama, regaled the audience with her re-telling of the first time she came to Saheli. “When I first came, for the screening of ‘In the name of medicine’, I was so tense. I don’t know how I climbed those steps. I thought everyone would tear me apart because I was from Jagori! I had heard so much about Kalpana from Saheli – and I was scared. But the film was interesting, and I relaxed, and then I went back.” Abha encouraged Sarojini to interact with Saheli on issues of population and contraceptives. “I learnt a lot. Kalpana insisted I develop rigour in my work and made me read multi-centre trials! Now I can critique very well!”
+        <br><br>
+        Echoing the spirit of collectivity, <b>Prabeen</b> said, “Firstly, we must all congratulate ourselves. The one thought that led to the formation of Saheli – this thought is still carried forward: that our doors, and our minds will always be open to all women.” Bringing up serious matters of cleaning, Prabeen continued, “I would do jhadoo very conscientiously (maybe because I’m a Virgo), and Gouri would do it. But the rest would leave the place in a dump! A huge big debate – do all feminists have to be dirty, and do all feminists not have to tweeze their eyebrows? And that’s an ongoing debate.”
+        <br><br>
+        <b>Chayanika</b> from Forum, Mumbai called the relationship with Saheli “like twin organisations, but non-identical twins in two different cities. We call each other up all the time. When there is a difference of opinion with Saheli, it makes us very restless. It forces us to think.”
+        <br><br>
+        Another compliment from <b>Jaya</b> of Nirantar and Prism was that Saheli’s involvement in anything has both depth and enthusiasm/ vigour. “PRISM has a special relationship with Saheli. There are very few such groups that function as a forum and not institution. There are many challenges – how to combine activism and the pressures of daily life, earning money. Saheli stands as an example of what is possible. For queer issues – and their connections with class, caste, sexuality – are apparent in Saheli’s work and politics. Saheli office has been very important to us in PRISM and Voices. Several meetings take place there. Saheli space is one where you feel a sense of belonging – you don’t feel an outsider. So we can’t even say we thank Saheli, because we feel a sense of belonging in that space.”
+        <br><br>
+        <b>Kavita Srivastava</b> from Jaipur, who described herself as a ‘hard core feminist’ lamented that she often is left out of feminist spaces because she works with mixed forums like civil liberties groups. “Saheli represents the fountainhead of the ideology of feminism which we all got attracted to. We began in the government-run WDP. But if groups like Saheli and Jagori did not exist, we would have had no connection to the women’s movement. I love feminist spaces and I love what Saheli represents. We need to see – what are the threads that connect non-feminist progressives to the women’s movement. The ‘dilli walli’ feminist no longer intimidates. Has there been a change in idiom - are ‘dilli walli’ feminists (which Saheli represents) really imbibing the changes that feminisms across the country are inspiring?”
+        <br><br>
+        <b>Hasina</b> from Awaaz-e-Niswan and Forum, Mumbai made a strong case for Saheli to extend support to Muslim women’s issues. “It is a responsibility to see that after 25 years, has our movement touched on the issues of Muslim women?”
+        <br><br>
+        <b>Ranjana</b>, sharing her political confusion, said, “I feel increasingly the sense of the world changing – sense of devastating changes. Watching TV, the soap operas etc...the early fervour I felt – where my feet would not touch the ground in my enthusiasm, I now feel the ground is being pulled from under my feet. Recently in Delhi – lakhs of people have been displaced due to factory closures and evictions. I shared with Uma that a well known male progressive had made a very good presentation. She said – this is the sexual division of labour! They can be experts on one thing, but we have to be everywhere – against communalism, militarisation, raise the women’s question everywhere. The challenges before us are much more than we can conceptualise or theorise or even talk of it. We need to take stock of them. It would not be honest to not share that today I am feeling lost.”
+        <br><br>
+        Congratulating Saheli for being ‘Old and Gold’, <b>Naseem</b> from Action India said that today was a learning experience to get a sense of history of the women’s movement.
+        <br><br>
+        Said <b>Manoranjan Mohanty</b>, professor at Delhi University, “It’s an absolutely wonderful occasion. I have been absolutely outraged in the last few months after Kalinganagar killings and Salwa Judum, but moments like this give me strength. I am the beneficiary of the movement – of groups like Saheli and PUDR. Saheli is a defining symbol of the women’s movement. A particular characteristic of such autonomous and political people’s movement like Saheli is that it discovers dimensions of domination and oppression hitherto not known. And that has been the contribution of the women’s movement. And the methodological and theoretical contribution is that we still don’t know all dimensions of oppression. Three cheers to Saheli.”
+        <br><br>
+        “Congrats and best wishes from Stree Adhikar Sanghatan,” greeted <b>Anjali</b>, who has been a friend of Saheli since her days of working in Uttar Pradesh.
+        <br><br>
+        <b>Chandra Kanjilal</b>, an old associate of Saheli, now in Andhra Pradesh, remarked that it was wonderful to see so many new faces, and suggested that Saheli use this platform to network throughout the country to look at rights/livelihoods issues of rural women.
+        <br><br>
+        <b>Gouri</b> wondered aloud if Action India, which was soon to celebrate 30 years of existence, could give the same richness that Saheli has been able to give. “But all morning, I have been feeling envious, frankly. Truly. I wonder why can we not replicate the kind of relationships we had in Saheli? I don’t think such a thing is possible in an NGO. Why it is not possible I can’t say. But it is true that that kind of sisterhood is not there. And I have really been feeling very envious. So I will come on Saturday. Again. Who am I to congratulate, when I am a founding member of Saheli?!” Gouri also added that she did not leave Saheli, but was told to choose between Saheli and Action India. “The split in Saheli should never have happened. The work with grassroots through Action India is also needed. These activists also need paid work. Question is how to combine these politically. Would like Sabla Sangh to reconnect with Saheli. How to widen it? The Mahila Panchayat network, and the other women leaders though in NGOs, are talking about women’s issues. My request is – can Jagori, Action India, Sabla Sangh, Saheli take the lead and celebrate March 8th?”
+        <br><br>
+        <b>Vidya</b> from Sabla Sangh, admitted that when some Sahelis had come to interview them, she fought! “When we have been working together since 1984, why are we divided? You people are working in the air – unless you join with the grassroots and work, how can we bring feminism? How can the flames of feminism be fanned and spread?,” she asked passionately.
+        <br><br>
+        The song by Sabla Sangh: “Mein Tum Ko Vishwas Doon, Tum Mujh Ko Vishwas Do…” had everyone clapping to the beat.
+        <br><br>
+        Lunch was the next item on the agenda, and everyone went out to eat the excellent poori, aloo sabzi, pulav, raita and gulab jamun. Wandering around, reading the excerpts of interviews on the walls, catching up with old friends, exclaiming over how long it had been...it could have gone on forever. But the audience was coaxed into the hall for an afternoon of serious discussion.
+        `
+    },
+    {
+        id: 'Article13',
+        value: `
+        <img src="${r2FetchArticleImgURL}Article3/1.png" style="width: 100%; display: block; padding-top: 5px;" /><br>
+        <i>Yes, we lost equipment, furniture, doors and windows, we lost books, published material documenting our ideas, debates and struggles, we lost our hand written notes to each other, we lost many important documents and many other things in the fire that engulfed Saheli office on that unbelievable morning of 13 May 2011 when a fire raged through the Defence Colony Flyover Market in New Delhi, reducing about 60 establishments to cinders. But what we have not lost is the fire inside us and the spirit to move forward.</i>
+        <br><br>
+        It was in the early hours of morning when we heard that there was a fire in the market. Doubtful of the intensity, certain that nothing but marginal damage could have occurred, we rushed to the office, thinking all the time about who could reach faster, who had the key to enter and assess the damage… but we found nothing but gaping holes where once there had been doors. Soot and smoke and black sludge as the firemen worked their way around the fire till late in the evening. Embers rising into small fires intermittently through the day. And through it all, our eager eyes searching to understand the damage, seeking what could be salvaged.
+        <br><br>
+        No doubt it has been devastating to see our colourful, 27 year old office, our walls, cupboards, filing cabinets, documents, files, reports and other publications, reduced to soot and ash… everything turned into shades of black. But over these last few weeks, we have been trying to come to terms with this ‘event’ in the life of Saheli and move on. Material that could be saved in whatever state it was, is being sorted and stored, some very basic repair of the office is already finished and we are soon hoping that it will be in some shape so we can use it for a while, till repair work from Public Works Department (PWD) gets over and we can think of a more permanent renovation of the office… but all this will take maybe six months or more.
+        <br><br>
+        As we chug along with various tasks that need to be done before we can get back to our ‘real’ work as activists, we are also dealing with our small/big but precious losses within this collective loss. The hand written minutes books and daily dairies, saved for 30 years, detailing... the political and personal journeys we’ve all made are the ones we will miss the most. These are documents that can never be recreated. Though we have managed to save some, most is lost… and rest we are hoping will not disintegrate with time… half burnt and smudged with water as they are.
+        <br><br>
+        We will also miss all those letters and cards we used to get each year on Saheli day… in addition to all the small notes and messages we left in the  daily diary… loves, fights, fall-outs and make ups documented to reflect that ‘we feminists are human too’!
+        <br><br><br>
+        <b style="font-weight: 700;">Many hands holding it all up</b>
+        <br><br>
+        But through all the loss, the support that we have received in the last few weeks has been incredible, amazing, humbling… and that’s what has kept us going.
+        <br><br>
+        On that ‘fiery day’, as we like to remember it, as word of the disaster spread, along with many past, present and future Sahelis like Divya, Sree, Vani, Shweta, Sadhna, Ramani, Nalini, Janaki, Jaishree, Savita; a lot of others friends and supporters like Pooja, Rudra, Shomona, Suro, Gurjeet, Param and Pamela; Mukesh from Hazards Centre; Mario, Shalini, Anusha and Shubham from Nigah; Preeti, Anupriya from Jagori; Jaya from Nirantar; Sarojini, Binu, Anjali and Deepa from Sama… all showed up to help in whatever way they could. To hold our hand as we gazed upon the devastation in front of us, to share our shock, to weep with us, to determinedly start working our way through the rubble to salvage files, reports, almirahs… anything that could be saved, working tirelessly in that smoke filled office by torches and candlelight.
+        <br><br>
+        Messages from friends and co-travellers poured in from wherever in the country or the globe they were at that point of time. Others showed up with food, water and love. Still others rushed to save the photographs from the red cupboard (and yes they did manage to save quite some!) And when we were too tired to handle any more soot filled, ash-ridden papers and ready to throw them all out to the kabadiwala, others quietly set us aside and made decisions on what must be preserved, or what decisions to discard must be delayed. Individuals, friends from other women’s groups, members of other NGOs, old Sahelis and new… on that very day, thanks to help from all of you, we managed to store and dry and stack our things in the office of Partners for Law in Development (PLD) in nearby Jangpura, a friend, Kajal’s basement in Nizamuddin and Ranjana’s garage. A ’Thank you’ is simply not enough!
+        <br><br>
+        In addition to the people who showed up that day, we have also had many emails and phone calls  from fellow feminists, comrades and friends expressing their grief... for us and also for themselves – for their own relationships with Saheli the group, the space, the idea.
+        <br><br>
+        <img src="${r2FetchArticleImgURL}Article3/2.png" style="width: 100%; display: block; padding-top: 5px;" />
+        <br><br>
+        So the last few weeks, have been a tizzy. Kalpana, Satnam and Janaki dashing to banks and chasing the accountant. Vani, Deepti and Kalpana finding structural engineers and people in PWD to evaluate the place. Jaishree, Nalini, Savita, Nidhi, Deepti and Sadhna running in circles around electricians and masons. Satnam meticulously keeping records of donations and receipts. Vineeta holding up the e-end of things and keeping everyone informed. Teena, Kriti, Harshita, Sadhna, Prabhat, Maya, Radha, Deepti, Lata, Rahul, Akshara, Shubham, Charan, Sophie, Anjali, Myna, Nandini, Susanna (NTUI), Elakshi, Shalini and so many more relentlessly breathing the soot-filled air and braving the exhausting summer heat as they separated documents destroyed by the fire or the water from the tenders, from those that can still be read/ stored/ handled!
+        <br><br>
+        In addition, many more Sahelis like Shweta, Ranjana,  Ashima,  Laxmi ,  Nilanjana and Davi have been offering to take on specifics tasks like making an inventory of  material  and raising funds, etc.  And at  this point ,  how can we not  mention the amazing support  we have got  from Dalip, Shaheen and Suresh of  Deez Biryani  just below our office!
+        <br><br><br>
+        <b style="font-weight: 700;">An afternoon of collective energy, ideas, songs and determination!</b>
+        <br><br>
+        Saheli had to move on. We thought that the best way for us to do this would be to actually reclaim the office with friends old and new for an afternoon of some singing, talking, chai and samosas under the flyover!
+        <br><br>
+        So we invited our friends and supporters to come to Saheli on 28th May 2011... “to talk, to share, to sing, to feel our loss, to feel our strength together, to float ideas on how to plan for that mountain of a task called ‘rebuilding’ and even how we could collectively re-imagine those two rooms anew!”
+        <br><br>
+        Before people came, a major clean up of the office was done, we hired fans, durries and chairs from a tent house. We hung fancy, colourful fairy lights on the frame of the false ceiling that was hanging burnt, from the roof! We even got a new Saheli name board! As people started dropping in, we almost forgot the circumstances under which we were meeting… it seemed like any other Saheli event (only better organised!)… warm, crowded, noisy… all of us, together again!
+        <br><br>
+        <img src="${r2FetchArticleImgURL}Article3/3.png" style="width: 100%; display: block; padding-top: 5px;" />
+        <br><br>
+        Starting with songs, many of those who came spoke as to what Saheli as a space has meant to them. The song <i>…mein zindagi ka saath nibhata chala gaya… har fikr ko dhuyen mein udata chala gaya…</i> was sung with amusement at its pertinence to the moment.  Amidst fun and humour and feeling of togetherness we went on to discuss some practical things too. We talked about the issues of repairs within the office and dealing with government departments like PWD, MTNL and other agencies like the BSES, etc. and the need for human and financial resources. Many came with ideas as to how to start with the process of rebuilding and also volunteered to give time for anything from sitting in the office for repairs to sorting, to actually running around the government offices. Needless to say, the afternoon was light, full of humour…simply electrifying! And that’s just what we needed because the very next day, repair work was started in the office, the false ceiling frame was pulled down and used to make a door for the office, and we got temporary walls built to cover the space that was left after the broken down windows and the plumbing was repaired, amongst many other small, small things.
+        <br><br>
+        We are hopeful that in the coming weeks, we’ll have some basics in place so we’ll be able to use the office soon. We have already started opening the place for our Wednesday meetings and Saturdays.
+        <br><br><br>
+        <b style="font-weight: 700;">Some obituaries</b>
+        <br><br>
+        <div style="display:flex;">
+                <div style="flex:.5">
+                    <img src="${r2FetchArticleImgURL}Article3/4.png" style="width: 100%; display: block; padding-top: 5px;" />
+                </div>
+                <div style="flex:1; padding: 10px;">
+                    Oh, famed red file and white chair from our very first office, we used you and often just abused you … you were a constant presence at all our meetings… many a times you protested and wanted to be ‘set free’ but every time some Saheli or the other pulled you out of the dustbin or from the kabariwala’s stack. Goodbye beloveds, rest easy or whatever it is that a file and a chair are supposed to do!
+                    <br><br>
+                    You six young wall mounted fans had the big responsibility of keeping us hot headed Sahelis cool! We marvelled at how you moved around every time we pulled a string… wishfully thinking how wonderful if you could turn the same magic to stir the many other things we are constantly trying to move, at the pull of a string! Now you are gone and a new pedestal fan is trying to take your place. Beware, fading memory!
+                </div>
+        </div>
+        <div style="display:flex;">
+                <div style="flex:1; padding: 10px; display: flex; align-items: center;">
+                    A blue fridge with an identity crisis was the storer of many a packets of chips, mithai, roohafza and keys! When we first gifted you to ourselves in 2005, it brought much joy and cheers to the lives of sweat-drenched and heat-hit Sahelis. Breaking down was not an option because you had overheard the fate of the previous fridge that was turned into a file storage cabinet! But, no matter how badly we treated you, you never once protested! How ironic that you, the maker of ice, melted.
+                    <br><br>
+                    We could write many many more about the various filing cabinets, the newsletter rack, the bottle rack, and the computer (oh, our comp with its overcrowded desktop) but let us say no more!    
+                </div>
+                <br>
+                <div>
+                    <img src="${r2FetchArticleImgURL}Article3/5.png" style="width: 100%; display: block; padding-top: 5px;" />
+                </div>
+        </div>
+        <b style="font-weight: 700;">And an ode to some survivors!</b>
+        <br><br>
+        The red laminate had sizzled to a crisp, but shades of it still peeped through the black crust. The cupboard is opened tentatively. A hand goes in to explore in the dark. Shelves and shelves of hardened spines. Amid them a cool, soft package. Pudgy, synthetic.  We step out into the balcony to see what’s in it. A safe, clean packet of sanitary towels. Periods, anyone?
+        <br><br>
+        In another old wooden shelf, remnant of an officious table that once occupied a large part of the office, we struggle to open a drawer. Inside, everything looks glisteningly new and clean (all things being relative, you see!). An untouched roll of scotch tape… still sticky and workable, tumbles out... mocking us?! Or was it the good-as-new red and black marker pens that were having the last laugh?
+        <br><br>
+        Out of an old Burma teak box, our stock of posters largely survives relentless water-hosing by the firemen. Saved by a mattress which used to be on top of it. As we sort, out come a set of colourful masks – from the queer pride march last year!
+        <br><br>
+        And then, we venture into the toilet, built in 1995 after many years of feminist practice of holding bladders and suchlikes. The roof is burnt. The walls are fragile. The water tank has melted, as has the flush tank. But behold the green and white buckets and mug! Pristine. Glistening. Survivors.
+        <br><br><br>
+        <img src="${r2FetchArticleImgURL}Article3/7.png" style="width: 100%; display: block; padding-top: 5px;" />
+        <div style="margin:40px auto; max-width:1100px; font-family:Georgia, serif;">
+
+  <!-- ===== TIMELINE SECTION ===== -->
+        <div style="margin:16px 0 28px; padding-bottom:8px; border-bottom:2px solid #eee;">
+            <div style="font-size:14px; letter-spacing:1px; text-transform:uppercase; color:#777;">
+            Salaams & Solidarity
+            </div>
+        </div>
+
+  <!-- ROW -->
+        <div style="display:flex; flex-wrap:wrap; gap:16px; margin-bottom:24px;">
+
+            <div style="
+            flex:1 1 48%;
+            background:#fff7f0;
+            padding:16px;
+            border-left:4px solid #e07a5f;
+            transition:all .25s ease;
+            "
+            onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 20px rgba(0,0,0,0.08)';"
+            onmouseout="this.style.transform='';this.style.boxShadow='';">
+            Saheli office had been a place for friendly chat and discussion and of course the rounds of tea and samosas. But we shall overcome.
+            <div style="margin-top:10px; font-style:italic;">— Neeraj Malik</div>
+        </div>
+
+        <div style="
+        flex:1 1 48%;
+        background:#f9fafb;
+        padding:16px;
+        border:1px solid #ddd;
+        transition:all .25s ease;
+        "
+        onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 20px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.transform='';this.style.boxShadow='';">
+        Shocked is all I can say right now. It is horrible news. Under the flyover has been an address that all of us feel such a belonging to and needless to say we shall rebuild it again for all our sakes.
+        <div style="margin-top:10px; font-weight:600;">— Chayanika Shah</div>
+        </div>
+
+    </div>
+
+    <!-- ROW -->
+    <div style="display:flex; flex-wrap:wrap; gap:16px; margin-bottom:24px;">
+
+        <div style="
+            flex:1 1 30%;
+            background:#fff;
+            padding:14px;
+            border-left:3px solid #999;
+            font-style:italic;
+            transition:all .25s ease;
+            "
+            onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 6px 16px rgba(0,0,0,0.06)';"
+            onmouseout="this.style.transform='';this.style.boxShadow='';">
+            I have no words to express the shock. I feel a very important part of me also has gone with the other things that Saheli lost in the fire.
+            <div style="margin-top:8px;">— Runu Chakraborty</div>
+        </div>
+
+        <div style="
+        flex:1 1 30%;
+        background:#fffaf5;
+        padding:14px;
+        transition:all .25s ease;
+        "
+        onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 6px 16px rgba(0,0,0,0.06)';"
+        onmouseout="this.style.transform='';this.style.boxShadow='';">
+        No fire can stop us from being a Saheli let us plan together for the future.
+        <div style="margin-top:8px;">Lots of Love in Sisterhood<br/>— Rukmini Rao</div>
+        </div>
+
+        <div style="
+        flex:1 1 30%;
+        background:#f0f4f8;
+        padding:14px;
+        transition:all .25s ease;
+        "
+        onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 6px 16px rgba(0,0,0,0.06)';"
+        onmouseout="this.style.transform='';this.style.boxShadow='';">
+        I was in Delhi when Saheli was set up and have many memories of trying to build a broad platform of women’s groups. Then patriarchy was a bad word. It was tough to build broad platform, many efforts were from Saheli. Those were struggles for meanings.
+        <div style="margin-top:8px;">— Meera Velayudhan</div>
+        </div>
+
+    </div>
+
+
+    <!-- SINGLE FOCUS BLOCK -->
+        <div style="
+            background:#fff;
+            padding:22px;
+            margin-bottom:32px;
+            border-top:2px dashed #ccc;
+            border-bottom:2px dashed #ccc;
+            transition:all .3s ease;
+        "
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';">
+            Dear friends,<br>
+            Saheli has been one of the most inclusive spaces, full of warmth, laughter, singing and jokes, where you feel a distinct sense of belonging and stop feeling like an outsider. We in the queer community understand how valuable such spaces are to us. It’s terrible that Delhi has lost the space and history which Saheli holds.  We at Nigah extend our support to everyone at Saheli.
+            <div style="margin-top:12px;">Love n tears thru a big smile,<br/>— The Nigah team</div>
+        </div>
+    </div>
+
+    <!-- ===== Saheli Voices Memory Wall ===== -->
+        <div style="display:flex; flex-wrap:wrap; gap:16px; margin-bottom:24px;">
+
+            <div style="
+            flex:1 1 48%;
+            background:#fff7f0;
+            padding:16px;
+            border-left:4px solid #e07a5f;
+            transition:all .25s ease;
+            "
+            onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 20px rgba(0,0,0,0.08)';"
+            onmouseout="this.style.transform='';this.style.boxShadow='';">
+            We as FAOW never had place neither any documentation... and hence always found solace that all that is important is there in Saheli....
+            So this is great collective loss to all of us... But, may be this will give us opportunity to resolve towards creating more history,
+            making even more vital contributions to feminist movement...
+            overcome.
+            <div style="margin-top:10px; font-style:italic;">— Sandhya Gokhale</div>
+        </div>
+
+        <div style="background:#f9fafb;border:1px solid #ddd;padding:12px 14px;border-radius:6px;margin:14px auto;max-width:420px;
+        font-size:14px;line-height:1.5;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+            I am sure Saheli will be<br> on its feet soon. I pray to a non-existent god that this happens fast.
+        <div style="margin-top:8px;text-align:right;font-weight:600;">— Hannah Jayapriya</div>
+        </div>
+
+        <div style="border-top:2px dashed #bbb;border-bottom:2px dashed #bbb;padding:16px 20px;margin:20px 0;font-size:15px;
+        font-style:italic;color:#222;max-width:360px;transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        I feel like I have lost something precious of mine too even though I haven’t been a volunteer for long enough.
+        <div style="margin-top:8px;font-size:13px;color:#666;">— Roshni Kochhar</div>
+        </div>
+
+        <div style="background:#fff;padding:18px;margin:18px auto;max-width:420px;
+        font-family:'Segoe Script',cursive;font-size:14px;
+        line-height:1.7;border-left:3px solid #999;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        I ask myself many times what is lost. I ask myself many times what can be restored. I ask myself many times how long will it take to finally dim the image of the terrible fire licking up all those precious docs and papers and files and registers and publications. And I still persist to ask what has it taken away... Really. And I tell myself there is no fire really that can rip apart what saheli has given to us all.
+        <div style="margin-top:12px;">Love n tears thru a big smile,<br>— Ranjana Padhi</div>
+        </div>
+
+        <div style="background:#f0f4f8;padding:14px;margin:16px 0;font-size:14px;max-width:300px;transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        We are deeply shocked with this news. The Saheli office has been such a happening place. There are just so many memories. The loss of documents and files etc is going to be irreplaceable. This is a huge loss not only for all of you but the entire movement..
+        <div style="margin-top:6px;font-style:italic;">— Arti and Kiran</div>
+        </div>
+
+        <div style="background:#fff3cd;padding:15px;border-radius:8px;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        Terrible news. Many of you have spent half your lives under that flyover!! I wish you strength and know that the spirit of Saheli can never be gutted! In Solidarity,
+        <div style="margin-top:6px;font-weight:bold;">— Meena Saraswathi Seshu</div>
+        </div>
+
+        <div style="border-left:4px solid #999;
+        padding:12px 14px;margin:14px 0;font-size:13px;max-width:360px;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        ... just want to say that you are most welcome to use our space at Jagori for whatever you may  want to do - meet, write, make calls, send materials, etc. and we will only be too happy to support in ways you wish best.
+        <div style="margin-top:6px;">Loves,<br>— Suneeta Dhar </div>
+        </div>
+
+        <div style="background:#fdfefe;padding:16px;margin:18px auto;max-width:340px;font-family:serif;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        How are you guys holding up?  From so far off, one can only imagine what the situation is like and share in the grief... Take care all.
+        <div style="margin-top:8px;font-style:italic;">Love,<br>— Nilanjana Biswas</div>
+        </div>
+
+        <div style="background:#f6f6f6;padding:14px;margin:16px 0;font-size:14px; max-width:480px;
+         transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        We are so sorry to hear your sad news... We will pray for you all and to rebuild your office... let us know how we can help.
+        <div style="margin-top:6px;">— All of us at Burmese Women Delhi</div>
+        </div>
+
+        <div style="background:#fff7f0;padding:12px;margin:14px auto;max-width:300px;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        I still remember the first time I visited the place and how welcoming it is. With you in these difficult times.
+        <div style="margin-top:6px;">— Vrishnika Singh</div>
+        </div>
+
+        <div style="background:#f9fafb;border:1px solid #e5e5e5;padding:14px;margin:18px 0;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        Can a movement be gutted by a fire? Can a collective be gutted by a fire? Can our space/s be gutted by a fire? Definitely not. On the contrary, the fact that recorded memories are gutted by the fire may provide an opportunity for all or force all Sahelis and the rest of us to reflect and jog memories and put down a history/her stories together looking back from where we stand today rather than merely a static history or just moving on and on.
+        <div style="margin-top:6px;font-style:italic;">Love,<br>— Albertina Almeida</div>
+        </div>
+
+        <div style="border-bottom:1px dashed #ccc;padding:12px;margin:16px auto;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        Peoples who have functioned for years in hot summers under the flyover with no coolers and no loo - indomitable spirit! Saheli will rise like the Phoenix from the ashes to confront misogynist patriarchal forces! In solidarity, 
+        <div style="margin-top:6px;">— Rakesh Shukla</div>
+        </div>
+
+        <div style="background:#f0f8ff;padding:16px;margin:20px 0;font-size:15px;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        All of us out-of-towners awaiting orders from under the flyover.. yes, it still exists..charred maybe, but bouncing back. I am sure it is still too overwhelming to plan and delegate tasks, but the sooner that happens, the sooner the momentum will carry the organization forward. The support pouring in is so heartwarming...
+        <div style="margin-top:6px;">— Laxmi Murthy</div>
+        </div>
+
+        <div style="
+            flex:1 1 48%;
+            background:#fff7f0;
+            padding:16px;
+            border-left:4px solid #e07a5f;
+            transition:all .25s ease;
+            "
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        What a wonderful idea!!  If you need someone to host a small workshop for this. Count on all of us at Krantijyoti Savitribai Phule Women’s Studies Centre. Pune University campus is lovely  in monsoons and it could be  a  wonderful time to think thru   ‘History and Labour of memory’...
+        <div style="margin-top:6px;">— Vidyut, Sharmila, Swati and Anagha</div>
+        </div>
+
+        <div style="background:#fff;padding:18px;margin:18px auto;max-width:420px;
+        font-family:'Segoe Script',cursive;font-size:14px;
+        line-height:1.7;border-left:3px solid #999;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        ... so I was wondering if we could use this moment, all of us, particularly those who remember the early history of Saheli, its campaigns, its publications, to record in writing or on tape, what we remember, to do it individually and collectively, and to make this then part of Saheli’s new archive - a remembered history, but a history nonetheless.
+        <div style="margin-top:6px;">— The Zubaan Team</div>
+        </div>
+
+        <!-- Repeat varied styles to reach 35 -->
+
+        <div style="background:#f7f7f7;padding:14px;margin:16px auto;max-width:350px;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        I want to say how very sad I’m feeling... PRISM meetings, Voices meetings, mourning the death of friends in the movement, celebrations... but I am sure the new Saheli space will grow to be as wonderful...
+        <div>— Jaya Sharma</div></div>
+
+        <div style="border-left:3px solid #ccc;padding:12px;margin:14px 0;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        You all are simply wonderful—so full of love, enthusiasm, passion and integrity. It makes me believe that this is just a new beginning...
+        <div>— Neha Kagal</div></div>
+        <div style="background:#fff3e0;padding:14px;margin:16px auto;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        Dear all at Saheli, For many of us, like me, who may not have been to the Saheli office very often, just knowing that it was there, doing all that it has been doing, the site of a history to be proud of, felt like having a rock to lean on. Always,
+        <div>— Mukul Mangalik</div></div>
+        <div style="background:#f0f4f8;padding:12px;margin:14px 0;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        Even if it seems so ephemeral and vulnerable now, please regain the confidence that it’s there in all our hearts, our work, our offices, our struggles on the streets, in homes and in courts, everywhere.
+        <div>— Jashodhara Das</div></div>
+        <div style="background:#fff3cd;padding:15px;border-radius:8px;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        For many of us Saheli has been a space which nurtured us, and also which has been such an integral part of the Women’s movement. Yes, the loss of documents means the loss of a generation of activism’s records. Well, one needs to look at it perhaps philosophically. Saheli lives on in the hearts and minds of so many. You people have a tough task at hand... 
+        <div><b>— Jaya Srivastava</b></div></div>
+        <div style="background:#fafafa;padding:12px;margin:14px 0;
+        transition:all .3s ease; max-width:320px;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        Really sorry to read this. I am afraid can’t help in what has been lost. You are most welcome to use Anhad office and telephone internet etc as base till things settle down.
+        <div>— Shabnam Hashmi</div></div>
+        <div style="border-left:4px solid #e07a5f;padding:14px;margin:16px auto;
+        transition:all .3s ease;max-width:475px;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        It’s a disaster if all the historic documents are lost! All I can contribute is to go through my albums and copy my old photographs, - and I believe I have some posters, reports, etc. -
+        <div>— Rønnaug Hartz</div></div>
+        <div style="background:#f9fafb;padding:12px;margin:14px 0;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        Sahelis, I’m not in Delhi, and it’s all much more worrying when you’re far away... Lots of love and hugs, Saheli means too too much, yaar, to all of us! Thank the goddess nobody was hurt.
+        <div>— Nivedita Menon</div></div>
+        <div style="background:#fff7f0;padding:12px;margin:14px auto;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        I am attaching Saheli related documents that we have at our centre — a small contribution towards a movement of sorts in retrieving our collective history... Love
+        <div>— Mary John</div></div>
+        <div style="background:#f0f8ff;padding:14px;margin:16px 0;
+        transition:all .3s ease;max-width:420px;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        Its important to document the history of the women’s movement and the organisations while we still have our faculties. Loss can occur even without fire or floods..
+        <div>— Lakshmi Menon</div></div>
+        <div style="background:#fff;padding:12px;margin:14px auto;
+        transition:all .3s ease; max-width:300px; border-bottom:1px dashed;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        This is a sad news. I hope it was really an accident.
+        <div>— Dhruv Mankad</div></div>
+        <div style="background:#f9f9f9;padding:14px;margin:16px 0;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        Never mind the hazy pix, but it is good to see some old faces, some familiar ones and some new ones who I have never met.
+        <div>— Ashima Roychowdhury</div></div>
+        </div>
+        <div style="border-top:2px dashed #bbb;border-bottom:2px dashed #bbb;padding:16px 20px;margin:20px 0;font-size:15px;
+        font-style:italic;color:#222;transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        Yesterday at Saheli was wonderful; before we change its look back to a Saheli office we really should do a disco party since it looks like a very stylish New York bar at the moment and that too will pass into history— pretty soon we hope when we repair the premises.
+        <br>
+        Much feeling—of all kinds
+        <div style="margin-top:8px;font-size:13px;color:#666;">— Uma Chakavarti</div>
+        </div>
+        <div style="display:flex;">
+        <div style="background:#fff;padding:18px;margin:18px auto;max-width:420px;
+        font-family:'Segoe Script',cursive;font-size:14px;
+        line-height:1.7;border-left:3px solid #999;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        Very sorry to hear about this grave loss. remembering when NBA office in Vadodara being gutted down twice in past by mob and we helplessly  watching burning of files. Very sorry to hear this.
+        <div style="margin-top:6px;">— Arundhati  Dhuru</div>
+        </div>
+
+        <div style="background:#f7f7f7;padding:14px;margin:16px auto;max-width:350px;
+        transition:all .3s ease;"
+        onmouseover="this.style.boxShadow='0 10px 24px rgba(0,0,0,0.08)';"
+        onmouseout="this.style.boxShadow='';"
+        >
+        This is an immeasurable loss for all of us. Please hang on in there and tell us what we can do.
+        <div>— Anuja and RAHI team</div></div>
+        </div>
+        <!-- ===== End of 35 Messages ===== -->
+    `
     }
 ]

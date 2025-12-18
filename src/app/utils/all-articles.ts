@@ -10,5 +10,7 @@ export const articles: article[] = articlesSummary.map(summary => ({
     title: summary.title,
     subtitle: summary.subtitle,
     publishedDate: summary.publishedDate,
-    value: findById(RawArticles, summary.id, 'id')?.value ?? ''
+    value: findById(RawArticles, summary.id, 'id')?.value ?? '',
+    categoryIdList: summary.categoryIdList,
+    subCategoryIdList: summary.subCategoryIdList
 }));
