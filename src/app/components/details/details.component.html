@@ -6,12 +6,21 @@
                     (selectDecade)="onDecadeClick($event)"></app-header-lines>
             </div>
         </div>
+        @if (this.type === paramTypes.Article && fromId) {
+        <div class="article-arrow-wrapper" [ngClass]="{'disable-nav': disableArticleNav('PREV')}"
+            (click)="getNavArticle('PREV')">
+            <div class="arrow bg-gold">
+                <ng-icon name="heroChevronLeft" size="20" class="arrow-right"></ng-icon>
+            </div>
+            <span class="article-nav-text">Previous Article</span>
+        </div>
+        }
     </div>
 
     @if (!viewByDecade) {
     @if (type === paramTypes.Article) {
     <div class="article-content">
-        <span class="article-title">{{categoryData?.title  | customCapitalize}}</span>
+        <span class="article-title">{{categoryData?.title | customCapitalize:['Net-En']}}</span>
         @if (categoryData?.subtitle) {
         <span class="article-subtitle">{{categoryData?.subtitle | uppercase }}</span>
         }
@@ -40,8 +49,14 @@
 
         @if (categoryData?.articleList?.length) {
         <div class="category-article-summary">
-            @for (item of categoryData?.articleList; track $index) {
-            <app-article-summary [articleSummary]="item" (navigateToArticleEvent)="navigateToArticle($event)"></app-article-summary>
+            @for (item of visibleArticles(categoryData?.articleList); track $index) {
+            <app-article-summary [articleSummary]="item"
+                (navigateToArticleEvent)="navigateToArticle($event)"></app-article-summary>
+            }
+
+            @if (categoryData.articleList.length > initialVisibilityCount && categoryData.articleList.length >
+            visibleCount) {
+            <button class="see-more" (click)="loadMore()"><b>View More ></b></button>
             }
         </div>
         }
@@ -49,7 +64,7 @@
         @if (categoryData?.archiveImg) {
         <div class="archive-img-wrapper" [ngClass]="{'mt-5': !categoryData?.articleList?.length}">
             <span class="category-article-heading">Archive</span>
-            <img [src]="categoryData?.archiveImg" width="300" height="300" />
+            <img [src]="categoryData?.archiveImg" width="300" height="300" class="category-archive-img" />
         </div>
         }
 
@@ -67,13 +82,17 @@
     }
     } @else {
     <div class="category-content">
-        <span class="category-name">{{categoryData?.title  | customCapitalize}} in {{selectedDecade}}</span>
-        
+        <span class="category-name">{{categoryData?.title | customCapitalize}} in {{selectedDecade}}</span>
+
 
         @if (decadeWiseArticleList.length) {
         <div class="category-article-summary">
-            @for (item of decadeWiseArticleList; track $index) {
-            <app-article-summary [articleSummary]="item" (navigateToArticleEvent)="navigateToArticle($event, true)"></app-article-summary>
+            @for (item of visibleArticles(decadeWiseArticleList); track $index) {
+            <app-article-summary [articleSummary]="item"
+                (navigateToArticleEvent)="navigateToArticle($event, true)"></app-article-summary>
+            }
+            @if (decadeWiseArticleList.length > initialVisibilityCount && decadeWiseArticleList.length > visibleCount) {
+            <button class="see-more" (click)="loadMore()"><b>View More ></b></button>
             }
         </div>
         }
@@ -87,6 +106,15 @@
     </div>
     }
     <div class="category-right-content">
+        @if (this.type === paramTypes.Article && fromId) {
+        <div class="article-arrow-wrapper" [ngClass]="{'disable-nav': disableArticleNav('NEXT')}"
+            (click)="getNavArticle('NEXT')">
+            <span class="article-nav-text">Next Article</span>
+            <div class="arrow bg-gold">
+                <ng-icon name="heroChevronRight" size="20" class="arrow-right"></ng-icon>
+            </div>
+        </div>
+        }
     </div>
     <app-category-pop></app-category-pop>
 </div>

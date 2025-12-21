@@ -1,17 +1,19 @@
 import { Component, HostListener } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
-import { heroBars3, heroChevronDown, heroMagnifyingGlass, heroChevronUp } from '@ng-icons/heroicons/outline';
+import { heroBars3, heroChevronDown, heroMagnifyingGlass, heroChevronUp, heroLanguage } from '@ng-icons/heroicons/outline';
 import { Router, RouterModule } from '@angular/router';
 import { categories } from '../../../utils/category';
 import { category, subCategory } from '../../../utils/data-model';
 import { ParamType } from '../../../utils/utils';
 import { SearchDropdownComponent } from "../search/search.component";
+import { LanguageService } from '../../../services/language/language.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgIconComponent, RouterModule, SearchDropdownComponent],
-  providers: [provideIcons({ heroBars3, heroMagnifyingGlass, heroChevronDown, heroChevronUp })],
+  imports: [NgIconComponent, RouterModule, SearchDropdownComponent, CommonModule],
+  providers: [provideIcons({ heroBars3, heroMagnifyingGlass, heroChevronDown, heroChevronUp, heroLanguage })],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
@@ -19,7 +21,7 @@ export class HeaderComponent {
   dropdownOpen = false;
   menu = categories;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public languageService: LanguageService) { }
 
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
@@ -49,14 +51,19 @@ export class HeaderComponent {
 
   decideNavigateOrExpand(item: category | subCategory) {
     if ('isSubcategory' in item && item.isSubcategory) {
-      this.router.navigate(['/details/', item.id, ParamType.SubCategory]);
+      this.languageService.isEnglish() ?
+       this.router.navigate(['/details/', item.id, ParamType.SubCategory]) :
+       this.router.navigate(['hi/details/', item.id, ParamType.SubCategory]);
     }
     if ('isCategory' in item && item.isCategory && item.subCategoryList.length > 0) {
       this.toggleCategory(item);
     }
 
     if ('isCategory' in item && item.isCategory && item.subCategoryList.length === 0) {
-        this.router.navigate(['/details/', item.id, ParamType.Category]);
+       this.languageService.isEnglish() ?
+       this.router.navigate(['/details/', item.id, ParamType.Category]) :
+       this.router.navigate(['hi/details/', item.id, ParamType.Category]);
     }
   }
+
 }

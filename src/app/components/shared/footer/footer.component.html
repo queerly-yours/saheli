@@ -3,18 +3,34 @@
 </div>
 <div class="bg-primary font-white footer-wrapper">
     <div class="footer-info-left">
+        @if(languageService.isEnglish()) {
         <p>You are free to quote or use any materials from <br> our site, and it would be great to hear if you do.</p>
-        <p class="fs-18">saheli women's resource centre. <br>
-            above 105-108 defence colony flyover market, new delhi 110024 <br>
-            connect with us at <a href="mailto:saheliwomen@gmail.com" class="font-white">saheliwomen&#64;gmail.com</a>
+        <p class="connect-info">Saheli Women's Resource Centre. <br>
+            Above 105-108 Defence Colony Flyover Market, New Delhi 110024 <br>
+            <a href="mailto:saheliwomen@gmail.com" class="font-white">saheliwomen&#64;gmail.com</a>
         </p>
+        } @else {
+            <strong>
+            <p>आप हमारी साइट से कोई भी सामग्री कोट करने या इस्तेमाल करने के लिए आज़ाद हैं,<br> और अगर आप ऐसा करते हैं तो हमें सुनकर बहुत अच्छा लगेगा।</p>
+            <p class="connect-info">सहेली महिला संसाधन केंद्र <br>
+            105-108 डिफेंस कॉलोनी फ्लाईओवर मार्केट के ऊपर, नई दिल्ली 110024 <br>
+            <a href="mailto:saheliwomen@gmail.com" class="font-white">saheliwomen&#64;gmail.com</a>
+            </p>
+            </strong>
+        }
     </div>
     <div class="footer-info-right">
         <p>
             @for (footerItem of footerLinkList; track $index) {
         <div class="footerLinkItem">
-            <a (click)="navigate(footerLinkList[$index].routeLink, footerLinkList[$index].type)"
-                class="font-white">{{footerItem.label}}</a>
+            <a (click)="navigate(footerLinkList[$index], footerLinkList[$index].type)"
+                class="font-white">
+                @if(languageService.isEnglish()) {
+                    {{footerItem.label}}
+                } @else {
+                   <b> {{footerItem.labelHindi}} </b>
+                }
+            </a>
         </div>
         }
         </p>

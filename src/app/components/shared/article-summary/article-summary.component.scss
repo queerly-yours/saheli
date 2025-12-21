@@ -10,13 +10,14 @@
     .article-title {
         text-transform: uppercase;
         color: #5c2d91;
-        padding-top: 5px;
+        // padding-top: 5px;
+        font-weight: 500;
     }
 
     .article-title,
     .article-subtitle,
     .article-date {
-        padding-bottom: 5px;
+        padding-bottom: 10px;
     }
 
     .article-subtitle {

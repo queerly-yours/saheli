@@ -7,11 +7,12 @@
             (click)="toggle(p.id, headerBtn)" 
             [attr.aria-expanded]="isOpen(p.id)"
             [attr.aria-controls]="'panel-body-' + p.id" id="{{'panel-header-' + p.id}}"
+            [ngClass]="{'fw-heavy': p.id === openPanelId}"
              type="button">
-            <span class="title">{{ p.title }}</span>
+            <span class="title">{{ p.title }} </span>
 
             <!-- chevron: down when closed, up when open -->
-            <ng-icon class="chev" [name]="isOpen(p.id) ? 'heroChevronUp' : 'heroChevronDown'" size="18"
+            <ng-icon class="chev thick" [name]="isOpen(p.id) ? 'heroChevronUp' : 'heroChevronDown'" size="18"
                 aria-hidden="true"></ng-icon>
         </button>
 
@@ -25,8 +26,8 @@
                 <app-article-summary [articleSummary]="item" (navigateToArticleEvent)="navigateToArticle($event)"></app-article-summary>
             }
 
-            @if (p.articleList.length > 15) {
-                <button class="see-more" (click)="loadMore()" [disabled]="p.articleList.length < visibleCount">...see more articles</button>
+            @if (p.articleList.length > initialVisibilityCount && p.articleList.length > visibleCount) {
+                <button class="see-more" (click)="loadMore()" [disabled]="p.articleList.length < visibleCount"><b>View More ></b></button>
             }
         </div>
     </div>

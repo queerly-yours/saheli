@@ -147,4 +147,50 @@ export class SearchResultsComponent implements OnInit {
   navigate(itemId: string, paramType: string) {
     this.router.navigate(['/details/', itemId, paramType]);
   }
+
+
+  get visiblePages(): (number | 'ellipsis')[] {
+    const total = this.totalPages;
+    const current = this.page;
+
+    // Small case → show all
+    if (total <= 7) {
+      return Array.from({ length: total }, (_, i) => i + 1);
+    }
+
+    // Collect pages to show
+    const pages = new Set<number>();
+
+    // First & last
+    pages.add(1);
+    pages.add(2);
+    pages.add(total - 1);
+    pages.add(total);
+
+    // Current window
+    pages.add(current - 1);
+    pages.add(current);
+    pages.add(current + 1);
+
+    // Normalize
+    const sorted = [...pages]
+      .filter(p => p >= 1 && p <= total)
+      .sort((a, b) => a - b);
+
+    // Insert ellipsis only if gap > 1
+    const result: (number | 'ellipsis')[] = [];
+
+    for (let i = 0; i < sorted.length; i++) {
+      result.push(sorted[i]);
+
+      if (sorted[i + 1] && sorted[i + 1] - sorted[i] > 1) {
+        result.push('ellipsis');
+      }
+    }
+
+    return result;
+  }
+
+
+
 }

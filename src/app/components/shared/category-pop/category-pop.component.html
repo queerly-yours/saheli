@@ -11,77 +11,143 @@
     </div>
 
     <div class="content">
-        <div class="circle c-1" (click)="navigateToCategory('Sexualities & Gender')">
+        <div class="circle c-1" (click)="navigateToCategory('Sexualities and Gender')">
             <img class="primary" src="../../../../assets/home/home-banner/c-1.png" alt="Sexualities and Gender" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label l1">SEXUALITIES<br />AND GENDER</div>
+            <div class="label l1">
+                @if(languageService.isEnglish()) {
+                 SEXUALITIES<br />AND GENDER
+                } @else {
+                    लैंगिकता<br />और लिंग
+                }
+            </div>
         </div>
 
-        <div class="circle c-2" (click)="navigateToCategory('Women\'s Health')">
-            <img class="primary" src="../../../../assets/home/home-banner/c-2.png" alt="Women\'s Health" />
+        <div class="circle c-2" (click)="navigateToCategory('Women\u2019s Health')">
+            <img class="primary" src="../../../../assets/home/home-banner/c-2.png" alt="Women\u2019s Health" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label">WOMEN'S<br />HEALTH</div>
+            <div class="label">
+                @if(languageService.isEnglish()) {
+                    WOMEN&apos;S<br />HEALTH
+                } @else {
+                    महिला<br />स्वास्थ्य
+                }
+            </div>
         </div>
 
         <div class="circle c-3" (click)="navigateToCategory('Legal Struggles')">
             <img class="primary" src="../../../../assets/home/home-banner/c-3.png" alt="Legal Struggles" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label">LEGAL<br />STRUGGLES</div>
+            <div class="label">
+                @if(languageService.isEnglish()) {
+                    LEGAL<br />STRUGGLES
+                } @else {
+                    कानूनी<br />संघर्ष
+                }
+            </div>
         </div>
 
 
         <div class="circle c-4" (click)="navigateToCategory('Countering Communalism')">
             <img class="primary" src="../../../../assets/home/home-banner/c-4.png" alt="Countering Communalism" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label">COUNTERING<br />COMMUNALISM</div>
+            <div class="label">
+                @if(languageService.isEnglish()) {
+                    COUNTERING<br />COMMUNALISM
+                } @else {
+                    सांप्रदायिकता<br />का मुकाबला
+                }
+            </div>
         </div>
 
 
         <div class="circle c-5" (click)="navigateToCategory('Resisting Violence')">
             <img class="primary" src="../../../../assets/home/home-banner/c-5.png" alt="Resisting Violence" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label">RESISTING<br />VIOLENCE</div>
+            <div class="label">
+                @if(languageService.isEnglish()) {
+                    RESISTING<br />VIOLENCE
+                } @else {
+                    हिंसा<br />का विरोध
+                }
+            </div>
         </div>
 
 
-        <div class="circle c-6" (click)="navigateToCategory('Other debates & concerns')">
+        <div class="circle c-6" (click)="navigateToCategory('Other debates and concerns')">
             <img class="primary" src="../../../../assets/home/home-banner/c-6.png" alt="Other debates" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label">OTHER DEBATES<br />AND CONCERNS</div>
+            <div class="label">
+                @if(languageService.isEnglish()) {
+                    OTHER DEBATES<br />AND CONCERNS
+                } @else {
+                    अन्य बहस<br />और मुद्दे
+                }
+            </div>
         </div>
 
 
         <div class="circle c-7" (click)="navigateToCategory('Contesting caste')">
             <img class="primary" src="../../../../assets/home/home-banner/c-7.png" alt="Contesting caste" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label l2">CONTESTING<br />CASTE</div>
+            <div class="label l2">
+                @if(languageService.isEnglish()) {
+                    CONTESTING<br />CASTE
+                } @else {
+                    जाति<br />का मुकाबला
+                }
+            </div>
         </div>
 
 
         <div class="circle c-8" (click)="navigateToCategory('CONFERENCES')">
             <img class="primary" src="../../../../assets/home/home-banner/c-8.png" alt="Conferences" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label">CONFERENCES</div>
+            <div class="label">
+                @if(languageService.isEnglish()) {
+                    CONFERENCES
+                } @else {
+                    सम्मेलन
+                }
+            </div>
         </div>
 
 
         <div class="circle c-9" (click)="navigateToCategory('Solidarity')">
             <img class="primary" src="../../../../assets/home/home-banner/c-9.png" alt="Solidarity" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label">Solidarity</div>
+            <div class="label">
+                @if(languageService.isEnglish()){
+                    Solidarity
+                } @else {
+                    सोलिडैरिटी
+                }
+            </div>
         </div>
 
 
         <div class="circle c-10" (click)="navigateToCategory('Celebrations')">
             <img class="primary" src="../../../../assets/home/home-banner/c-10.png" alt="Celebrations" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label">Celebrations</div>
+            <div class="label">
+                @if(languageService.isEnglish()){
+                    Celebrations
+                } @else {
+                    उत्सव
+                }
+            </div>
         </div>
 
         <div class="circle c-11" (click)="navigateToCategory('State Repression')">
             <img class="primary" src="../../../../assets/home/home-banner/c-11.png" alt="State Repression" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label">State Repression</div>
+            <div class="label">
+                @if(languageService.isEnglish()){
+                    State Repression
+                } @else {
+                    राज्य दमन
+                }
+            </div>
         </div>
 
         <!-- silhouettes (reused assets) -->

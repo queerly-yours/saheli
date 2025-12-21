@@ -10,7 +10,8 @@
         flex: .2;
 
         .footerLinkItem {
-            padding-bottom: 5px;
+            padding-bottom: 8px;
+            text-transform: uppercase;
 
             a {
                 text-decoration: none;
@@ -23,6 +24,11 @@
             }
         }
     }
+}
+
+.connect-info {
+  margin-top: 23px;
+  line-height: 20px;
 }
 
 

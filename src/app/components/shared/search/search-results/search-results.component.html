@@ -27,12 +27,14 @@
                 </div>
                 <div class="tags-wrapper">
                     @if (r.item.categoryIdList) {
-                    <div *ngFor="let categoryId of r.item.categoryIdList" class="tag" (click)="navigate(categoryId, paramTypes.Category)">
+                    <div *ngFor="let categoryId of r.item.categoryIdList" class="tag"
+                        (click)="navigate(categoryId, paramTypes.Category)">
                         {{getCategoryValue(categoryId)}}
                     </div>
                     }
                     @if (r.item.categoryIdList) {
-                    <div *ngFor="let subcategoryId of r.item.subCategoryIdList" class="tag" (click)="navigate(subcategoryId, paramTypes.SubCategory)">
+                    <div *ngFor="let subcategoryId of r.item.subCategoryIdList" class="tag"
+                        (click)="navigate(subcategoryId, paramTypes.SubCategory)">
                         {{getSubCategoryValue(subcategoryId)}}
                     </div>
                     }
@@ -42,17 +44,20 @@
 
 
         <div class="pager" *ngIf="totalPages > 1">
-            <button class="arrow" (click)="setPage(page - 1)" [disabled]="page === 1">
-                <ng-icon name="heroArrowLeftCircle" size="28"></ng-icon>
+            <button class="arrow" aria-label="Previous page" (click)="setPage(page - 1)" [disabled]="page === 1">
+                <ng-icon name="heroArrowLeftCircle" size="20"></ng-icon>
             </button>
 
-            <button class="number" *ngFor="let p of [].constructor(totalPages); let i = index" (click)="setPage(i + 1)"
-                [class.active]="page === i + 1">
-                {{ i + 1 }}
-            </button>
+            <ng-container *ngFor="let p of visiblePages">
+                <button *ngIf="p !== 'ellipsis'" class="number" [class.active]="page === p" (click)="setPage(p)">
+                    {{ p }}
+                </button>
 
-            <button class="arrow" (click)="setPage(page + 1)" [disabled]="page === totalPages">
-                <ng-icon name="heroArrowRightCircle" size="28"></ng-icon>
+                <span *ngIf="p === 'ellipsis'" class="ellipsis">…</span>
+            </ng-container>
+
+            <button class="arrow" aria-label="Next page" (click)="setPage(page + 1)" [disabled]="page === totalPages">
+                <ng-icon name="heroArrowRightCircle" size="20"></ng-icon>
             </button>
         </div>
     </ng-container>

@@ -361,7 +361,7 @@ export const subcategoriesSummary: subCategory[] = [
         ],
         innerCategories: [],
         isSubcategory: true,
-        title: 'NET-EN',
+        title: 'Net-En',
     },
     {
         id: 'InnerCategory5',

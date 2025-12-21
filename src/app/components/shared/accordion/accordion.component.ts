@@ -7,6 +7,7 @@ import { ArticleSummaryComponent } from "../article-summary/article-summary.comp
 import { InnerAccordionComponent } from "../inner-accordion/inner-accordion.component";
 import { ParamType } from '../../../utils/utils';
 import { Router } from '@angular/router';
+import { initialVisibilityCount } from '../../../utils/constants';
 
 @Component({
   selector: 'app-accordion',
@@ -19,6 +20,8 @@ export class AccordionComponent {
 
   @Input() panels: subCategory[] = [];
   openPanelId: string | null = null;
+  initialVisibilityCount = initialVisibilityCount;
+
 
   constructor(private injector: Injector, private router: Router) { }
 
@@ -26,7 +29,7 @@ export class AccordionComponent {
 
 
   toggle(panelId: string, headerEl: HTMLElement) {
-    this.visibleCount = 15;
+    this.visibleCount = 10;
     const beforeTop = headerEl.getBoundingClientRect().top;
     this.openPanelId = this.openPanelId === panelId ? null : panelId;
     runInInjectionContext(this.injector, () => {
@@ -47,8 +50,8 @@ export class AccordionComponent {
     return this.openPanelId === panelId;
   }
 
-  visibleCount = 15;
-  incrementBy = 15;
+  visibleCount = 10;
+  incrementBy = 10;
   
   visibleArticles(articlesList: any[]) {
     return articlesList.slice(0, this.visibleCount);
@@ -60,10 +63,6 @@ export class AccordionComponent {
     this.visibleCount += this.incrementBy;
 
     this.retainScrollPosition(scrollTop);
-  }
-
-  hasMore(articlesList: any[]): boolean {
-    return this.visibleCount < articlesList.length;
   }
 
   retainScrollPosition(scrollTop: number) {
@@ -78,6 +77,14 @@ export class AccordionComponent {
   }
 
    navigateToArticle(id: string | undefined) {
-    this.router.navigate(['/details', id, ParamType.Article]);
+    this.router.navigate(
+      ['/details', id, ParamType.Article],
+      {
+        queryParams: {
+          from: this.openPanelId
+        },
+        queryParamsHandling: 'merge'
+      }
+    );
   }
 }

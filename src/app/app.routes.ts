@@ -22,4 +22,20 @@ export const routes: Routes = [
       import('./components/shared/search/search-results/search-results.component')
         .then(m => m.SearchResultsComponent)
   },
+
+  // Hindi
+  {
+    path: 'hi',
+    children: [
+      { path: '', component: HomeComponent },
+      { path: 'details/:id/:type', component: DetailsComponent },
+      { path: 'details/:id/:type/:articleId', component: ArticleComponent },
+      {
+        path: 'search',
+        loadComponent: () =>
+          import('./components/shared/search/search-results/search-results.component')
+            .then(m => m.SearchResultsComponent),
+      },
+    ],
+  },
 ];

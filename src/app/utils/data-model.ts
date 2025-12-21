@@ -26,9 +26,11 @@ export interface category {
     archiveImg: string;
     archiveList?: archive[];
     articleList: articleList[];
+    hindiTitle: string;
     title: string;
     decades: string[];
     description: string[];
+    hindiDescription?: string[];
     subCategoryList: subCategory[];
     isOpen: boolean;
     isCategory: boolean;

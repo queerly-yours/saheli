@@ -1,30 +1,38 @@
 <header class="header">
   <div class="header-block">
-    <!-- Logo -->
-    <div class="logo" [routerLink]="'/'">
+    <div class="logo" [routerLink]="languageService.isEnglish() ? '/' : '/hi'">
       <img src="../../../../assets/logo/header-logo.png" alt="Logo" />
     </div>
 
-    <!-- Right Section -->
     <div class="right-section">
-      <!-- Search Box -->
       <div class="search-container">
         <app-search-dropdown></app-search-dropdown>
       </div>
 
+      <div class="lang-toggle" tabindex="0" (click)="languageService.toggle()" (keydown.enter)="languageService.toggle()">
+        <div class="slider" [class.right]="languageService.lang() === 'hi'"></div>
+      
+        <span [class.active]="languageService.lang() === 'en'">EN</span>
+        <span [class.active]="languageService.lang() === 'hi'">हिंदी</span>
+      </div>
+
+
       <div class="hamburger-menu">
         <div (mouseenter)="resetMenu()">
-          <ng-icon name="heroBars3" size="26" class="icon"></ng-icon>
+          <ng-icon name="heroBars3" size="30" class="icon menu-icon"></ng-icon>
         </div>
 
         <ul class="dropdown">
           @for (item of menu; track $index) {
           @if (item.id !== '14') {
           <li class="dropdown-item">
-            <!-- (click)="toggleCategory(item)" -->
             <div class="category-item" (click)="decideNavigateOrExpand(item)">
               <a class="parent-link">
-                {{ item.title }}
+                 @if(languageService.isEnglish()) {
+                 {{item.title}}
+                } @else { 
+                  <b>{{ item.hindiTitle }} </b>
+                }
               </a>
               @if (item.subCategoryList.length) {
               @if (item.isOpen) {

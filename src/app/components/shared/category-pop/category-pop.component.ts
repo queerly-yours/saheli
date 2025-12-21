@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { categories } from '../../../utils/category';
 import { Router } from '@angular/router';
 import { ParamType } from '../../../utils/utils';
+import { LanguageService } from '../../../services/language/language.service';
 
 @Component({
   selector: 'app-category-pop',
@@ -15,12 +16,15 @@ export class CategoryPopComponent {
   closeTimer: any;
   menu = categories;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public languageService: LanguageService) { }
 
   navigateToCategory(title: string) {
     const itemId = this.menu.find(item => item.title.toUpperCase() === title.toUpperCase())?.id;
 
-    this.router.navigate(['/details/', itemId, ParamType.Category]);
+    this.languageService.isEnglish() ?
+    this.router.navigate(['/details/', itemId, ParamType.Category]) :
+    this.router.navigate(['hi/details/', itemId, ParamType.Category])
+    ;
   }
 
   openPanel() {

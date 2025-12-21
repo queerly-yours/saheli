@@ -8,7 +8,7 @@
 }
 
 .search-query-header {
-    color: #c1a32d;
+    color: #c8941a;
     font-size: 40px;
     font-weight: 400;
     margin-bottom: 20px;
@@ -57,6 +57,7 @@
 
     .searched-row:hover {
         cursor: pointer;
+
         .title {
             text-decoration: underline;
         }
@@ -90,99 +91,133 @@
 }
 
 ::ng-deep .title mark {
-  background-color: transparent !important;
-  color: #5c2d91 !important;
-  font-weight: 700;
+    background-color: transparent !important;
+    color: #5c2d91 !important;
+    font-weight: 700;
 }
 
 ::ng-deep .subtitle mark {
-  background-color: transparent !important;
-  font-weight: 700;
+    background-color: transparent !important;
+    font-weight: 700;
 }
 
 ::ng-deep .snippet mark {
-  background-color: transparent !important;
-  color: #4a4040 !important;
-  font-weight: 700;
+    background-color: transparent !important;
+    color: #4a4040 !important;
+    font-weight: 700;
 }
 
 /* ========== PAGER ========== */
-
 .pager {
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    gap: 6px;
     margin-top: 40px;
+    user-select: none;
 
-    .number {
-        padding: 8px 8px;
-        border-radius: 4px;
-        border: transparent;
+    button {
+        border: none;
         background: transparent;
         cursor: pointer;
-        border-radius: 50%;
-        color: #c1a32d;
-        font-weight: 500;
-        font-size: 16px;
+        transition: all 0.2s ease;
+    }
 
-        &:disabled {
-            opacity: 0.5;
-            cursor: default;
+    .number {
+        min-width: 36px;
+        height: 36px;
+        padding: 0 12px;
+        border-radius: 999px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #c8941a;
+        font-weight: 600;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background: rgba(193, 163, 45, 0.12);
         }
 
         &.active {
-            // background: #c1a32d;
-            border: 2px solid #c1a32d;
-            // color: white;
-            font-weight: 500;
+            background: #c8941a;
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(193, 163, 45, 0.35);
+        }
+
+        &:disabled {
+            opacity: 0.4;
+            cursor: default;
         }
     }
 
     .arrow {
-        border: transparent;
-        background: transparent;
-        display: flex;
-        align-items: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
         color: #c1a32d;
 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover:not(:disabled) {
+            background: rgba(193, 163, 45, 0.12);
+            transform: scale(1.05);
+        }
+
         &:disabled {
-            opacity: 0.5;
+            opacity: 0.4;
             cursor: default;
-            border-color: transparent;
-            background: transparent;
-            display: flex;
-            align-items: center;
+            transform: none;
         }
     }
 }
 
-.paged-results-wrapper {
-  transition: opacity 0.2s ease-in-out;
-  opacity: 1;
+.ellipsis {
+    min-width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c1a32d;
+    font-size: 18px;
+    pointer-events: none;
+    opacity: 0.6;
+}
 
-  &.page-changing {
-    opacity: 0;
-  }
+/* ========== PAGER ========== */
+
+.paged-results-wrapper {
+    transition: opacity 0.2s ease-in-out;
+    opacity: 1;
+
+    &.page-changing {
+        opacity: 0;
+    }
 }
 
 .tags-wrapper {
     display: flex;
     gap: 12px;
     margin: 10px 0px;
+    flex-wrap: wrap;;
 
     .tag {
-            border: 1px solid #f2287f;
-            border-radius: 25px;
-            padding: 7px;
-            font-size: 12px;
-            color: #f2287f;
-            font-weight: 500;
-            transition: transform 0.25s ease;
-            display: flex;
-            align-items: center;
-        }
-    
-    .tag:hover{
+        border: 1px solid #f2287f;
+        border-radius: 25px;
+        padding: 7px;
+        font-size: 12px;
+        color: #f2287f;
+        font-weight: 500;
+        transition: transform 0.25s ease;
+        display: flex;
+        align-items: center;
+    }
+
+    .tag:hover {
         transform: scale(1.05);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         cursor: pointer;
