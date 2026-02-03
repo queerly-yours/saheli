@@ -1,0 +1,79 @@
+// General Styling starts
+
+.no-top-margin {
+  margin-top: 0 !important;
+}
+
+.no-bottom-margin {
+  margin-bottom: 0 !important;
+}
+
+// General Styling ends
+
+
+.image-text {
+  display: flex;
+  gap: 16px;
+  margin: 16px 0;
+  align-items: flex-start;
+}
+
+.image-text.left .image {
+  order: 1;
+}
+
+.image-text.left .text {
+  order: 2;
+}
+
+.image-text.right .image {
+  order: 2;
+}
+
+.image-text.right .text {
+  order: 1;
+}
+
+.image-text .image {
+  width: 180px;
+  flex-shrink: 0;
+}
+
+.image-text img {
+  width: 100%;
+  display: block;
+}
+
+.credit {
+  display: inline-block;
+  font-size: 12px;
+  color: #f2287f;
+  margin-top: 4px;
+  text-decoration: none;
+}
+
+/* PARAGRAPH */
+.article-paragraph {
+  margin-top: 16px;
+  line-height: 1.4;
+  font-size: 16px;
+}
+
+/* QUOTE */
+.article-quote {
+  border-left: 4px solid #f2287f;
+  padding-left: 12px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #444;
+}
+
+/* IMAGE FULL WIDTH */
+.article-image {
+  margin: 24px 0;
+}
+
+.article-image img {
+  width: 100%;
+  border-radius: 6px;
+}

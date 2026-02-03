@@ -51,13 +51,23 @@
                 text-transform: uppercase;
                 font-size: 18px;
                 font-weight: 400;
-                letter-spacing: 2px;
+                letter-spacing: 1px;
+                display: inline-block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 100%;
+                white-space: nowrap;
             }
 
             .card-content {
                 font-size: 16px;
                 padding: 5px 0px;
                 font-weight: 400;
+                display: -webkit-box;
+                overflow: hidden;
+                word-break: break-word;
+                text-transform: uppercase;
+                color: #666666;
             }
 
             .card-date {
@@ -68,7 +78,7 @@
         }
 
         .card-footer {
-            padding-top: 15px;
+            padding-top: 20px;
             font-size: 16px;
             font-weight: 400;
             display: flex;
@@ -80,6 +90,7 @@
 
             .card-footer-category {
                 color: #5c2d91;
+                text-transform: lowercase;
             }
         }
     }

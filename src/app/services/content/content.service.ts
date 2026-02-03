@@ -12,4 +12,8 @@ export class ContentService {
   getContent(language: string): Observable<any> {
     return this.http.get(`../../../assets/content/home/home.${language}.json`);
   }
+
+  getArticleContent(id: string): Observable<any> {
+    return this.http.get(`../../../assets/content/article-content/${id}.json`);
+  }
 }

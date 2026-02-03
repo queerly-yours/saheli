@@ -18,10 +18,11 @@ import { LanguageService } from '../../services/language/language.service';
 import { articlesSummary } from '../../utils/all-articles-summary';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { heroChevronLeft, heroChevronRight } from '@ng-icons/heroicons/outline';
+import { ArticleComponent } from '../article/article.component';
 
 @Component({
   selector: 'app-category',
-  imports: [AccordionComponent, ArticleSummaryComponent, HeaderLinesComponent, CategoryPopComponent, NgClass, CapitalizePipe, UpperCasePipe, NgIcon],
+  imports: [AccordionComponent, ArticleSummaryComponent, HeaderLinesComponent, CategoryPopComponent, NgClass, CapitalizePipe, UpperCasePipe, NgIcon, ArticleComponent],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss',
   providers: [provideIcons({ heroChevronLeft, heroChevronRight })]

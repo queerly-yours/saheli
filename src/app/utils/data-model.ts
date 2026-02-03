@@ -17,6 +17,7 @@ export interface subCategory {
     innerCategories?: subCategory[];
     isSubcategory: boolean;
     title: string;
+    hindiTitle: string,
     decade?: string[];
     subCategoryList?: subCategory[];
 }
@@ -59,3 +60,12 @@ export interface SearchItem {
 }
 
 export type CategoryItem = category | subCategory;
+
+export interface cardDetails {
+    id: string;
+    title: string;
+    subtitle: string;
+    date: string;
+    category: string;
+    image: string
+}

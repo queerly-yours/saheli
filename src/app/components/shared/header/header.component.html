@@ -1,7 +1,7 @@
 <header class="header">
   <div class="header-block">
     <div class="logo" [routerLink]="languageService.isEnglish() ? '/' : '/hi'">
-      <img src="../../../../assets/logo/header-logo.png" alt="Logo" />
+      <img src="../../../../assets/logo/header-logo-inverted.jpeg" alt="Logo" />
     </div>
 
     <div class="right-section">
@@ -47,12 +47,24 @@
             <ul class="sub-dropdown">
               @for (child of item.subCategoryList; track $index) {
               <li>
-                <a (click)="decideNavigateOrExpand(child)">&bull;&nbsp;&nbsp;{{ child.title }}</a>
+                <a (click)="decideNavigateOrExpand(child)">&bull;&nbsp;&nbsp;
+                  @if(languageService.isEnglish()) {
+                  {{child.title}}
+                  } @else { 
+                    <b>{{ child.hindiTitle }} </b>
+                  }
+                </a>
                 @if (child.innerCategories?.length) {
                 <ul class="sub-sub-dropdown">
                   @for (subChild of child.innerCategories; track $index) {
                   <li>
-                    <a (click)="decideNavigateOrExpand(subChild)">&bull;&nbsp;&nbsp;{{ subChild.title }}</a>
+                    <a (click)="decideNavigateOrExpand(subChild)">&bull;&nbsp;&nbsp;
+                      @if(languageService.isEnglish()) {
+                      {{subChild.title}}
+                      } @else { 
+                        <b>{{ subChild.hindiTitle }} </b>
+                      }
+                    </a>
                   </li>
                   }
                 </ul>

@@ -7,6 +7,7 @@ import { Subscription } from 'rxjs';
 import { SearchService } from '../../../services/search/search.service';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { NgIcon } from "@ng-icons/core";
+import { LanguageService } from '../../../services/language/language.service';
 
 @Component({
   selector: 'app-search-dropdown',
@@ -24,6 +25,7 @@ export class SearchDropdownComponent implements OnDestroy {
     private sanitizer: DomSanitizer,
     private router: Router,
     private route: ActivatedRoute,
+    public languageService: LanguageService
   ) {
     this.router.events.subscribe(event => {
     if (event instanceof NavigationEnd) {

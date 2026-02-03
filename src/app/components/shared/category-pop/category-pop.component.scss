@@ -11,7 +11,7 @@
 
 .floating-dot img {
     width: 150px;
-    border-radius: 50%;
+    // border-radius: 50%;
 }
 
 .side-panel {
@@ -231,9 +231,9 @@ Values tuned to visually match the provided mock. Adjust per-asset sizes and pos
 }
 
 .s-8 {
-    left: 23%;
-    top: 77%;
-    width: 20%;
+    left: 25%;
+    top: 75%;
+    width: 18%;
 }
 
 .s-9 {
@@ -267,7 +267,7 @@ Values tuned to visually match the provided mock. Adjust per-asset sizes and pos
 }
 
 .s-14 {
-    left: 49%;
+    left: 47%;
     top: 79%;
     width: 30%;
 }
@@ -288,6 +288,12 @@ Values tuned to visually match the provided mock. Adjust per-asset sizes and pos
     left: 82.75%;
     top: 45%;
     width: 5%;
+}
+
+.s-18 {
+    left: 80%;
+    top: 82%;
+    width: 28%;
 }
 
 

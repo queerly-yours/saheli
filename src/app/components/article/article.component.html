@@ -1,1 +1,78 @@
-<p>article works!</p>
+<div class="article-container">
+
+    @for (section of articleContent; track $index) {
+
+        @switch (section.type) {
+
+            @case (elements.PARAGRAPH) {
+            <p class="article-paragraph">
+                {{ section.content[currentLang] }}
+            </p>
+            }
+
+            @case (elements.IMAGETEXT) {
+                <div class="image-text" [ngClass]="section.layout">
+
+                    <div class="image">
+                        <img [src]="section.image.url" [alt]="section.image.alt[currentLang]" />
+
+                        <a class="credit" [href]="section.image.creditUrl" target="_blank">
+                            {{ section.image.credit }}
+                        </a>
+                    </div>
+
+                    <div class="text">
+                        <p [class]="section.content.class">{{ section.content[currentLang] }}</p>
+                    </div>
+                </div>
+            }
+
+            <!-- HEADING -->
+             @case (elements.HEADING) {
+                <ng-container>
+                    @if (section.level === 2) {
+                        <h2>{{ section.content[currentLang] }}</h2>
+                    }
+                    @if (section.level === 3) {
+                        <h3>{{ section.content[currentLang] }}</h3>
+                    }
+                </ng-container>
+             }
+    
+
+            <!-- QUOTE -->
+            @case (elements.QUOTE) {
+                <blockquote class="article-quote">
+                    {{ section.content[currentLang] }}
+                </blockquote>
+            }
+
+            <!-- IMAGE FULL WIDTH -->
+            @case (elements.IMAGE) {
+                <figure class="article-image">
+                    <img [src]="section.url" />
+                    <figcaption>{{ section.caption[currentLang] }}</figcaption>
+                </figure>
+            }
+
+            <!-- LIST -->
+            @case (elements.LIST) {
+                @if (section.style === 'bullet') {
+                    <ul>
+                        @for (item of section.items[currentLang]; track $index) {
+                            <li>{{ item }}</li>
+                        }
+                    </ul>
+                }
+
+                @if (section.style === 'number') {
+                    <ol>
+                        @for (item of section.items[currentLang]; track $index) {
+                            <li>{{ item }}</li>
+                        }
+                    </ol>
+                }
+            }
+        }
+    }
+</div>

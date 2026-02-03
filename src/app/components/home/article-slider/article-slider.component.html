@@ -8,19 +8,19 @@
     <!-- Cards container -->
     <div class="cards-container" #scrollContainer (scroll)="checkArrows()">
         @for (c of cards; track $index) {
-        <div class="card">
+        <div class="card" (click)="navigateToArticle(c.id)">
             <div class="image-wrap">
                 <img [src]="c.image" />
             </div>
             <div class="content-wrapper">
                 <div class="content-wrap">
-                    <span class="card-header">{{ c.title }}</span>
-                    <span class="card-content">{{ c.subtitle }}</span>
+                    <span class="card-header" title={{c.title}}>{{ c.title }}</span>
+                    <span class="card-content" title={{c.subtitle}}>{{ c.subtitle }}</span>
                     <span class="card-date">{{ c.date }}</span>
                 </div>
             
                 <div class="card-footer">
-                    <span class="card-footer-read">Read more in</span>
+                    <!-- <span class="card-footer-read">Read more in</span> -->
                     <span class="card-footer-category"> {{c.category}} >> </span>
                 </div>
             </div>

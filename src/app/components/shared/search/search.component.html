@@ -1,6 +1,6 @@
 <div class="search-container">
     <div class="search-wrapper">
-        <input class="search-input" [formControl]="q" (keyup.enter)="onSearch()" placeholder="Search articles..." />
+        <input class="search-input" [formControl]="q" (keyup.enter)="onSearch()" placeholder="{{ languageService.isEnglish() ? 'Search...' : 'खोजें...'}}" />
         <button class="clear-btn" *ngIf="q.value?.length" (click)="clearSearch()">
             ✕
         </button>

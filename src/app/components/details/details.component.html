@@ -27,7 +27,8 @@
         <div class="article-dates-wrapper" [ngClass]="{'mt-10': !categoryData?.subtitle}">
             <div>{{categoryData?.publishedDate}}</div>
         </div>
-        <div [innerHTML]="getSanitizedValue(categoryData?.value)" class="article-content-wrapper"></div>
+        <app-article [articleId]="categoryData.id"></app-article>
+        <!-- <div [innerHTML]="getSanitizedValue(categoryData?.value)" class="article-content-wrapper"></div> -->
     </div>
     } @else {
     <div class="category-content">
@@ -62,18 +63,18 @@
         }
 
         @if (categoryData?.archiveImg) {
-        <div class="archive-img-wrapper" [ngClass]="{'mt-5': !categoryData?.articleList?.length}">
+        <div class="archive-img-wrapper mb-5" [ngClass]="{'mt-5': !categoryData?.articleList?.length}">
             <span class="category-article-heading">Archive</span>
             <img [src]="categoryData?.archiveImg" width="300" height="300" class="category-archive-img" />
         </div>
         }
 
         @if (categoryData?.archiveList?.length) {
-        <div class="archive-list-wrapper">
+        <div class="archive-list-wrapper mb-5">
             @for (item of categoryData.archiveList; track $index) {
             <div class="archive-wrapper">
-                <img [src]="item.archiveImg" width="250" height="250" alt="">
                 <span class="archive-title">{{item.title}}</span>
+                <img [src]="item.archiveImg" alt="" class="archive-image">
             </div>
             }
         </div>
@@ -98,7 +99,7 @@
         }
 
         @if (categoryData?.archiveImg) {
-        <div class="archive-img-wrapper" [ngClass]="{'mt-5': !categoryData?.articleList?.length}">
+        <div class="archive-img-wrapper mb-5" [ngClass]="{'mt-5': !categoryData?.articleList?.length}">
             <span class="category-article-heading">Archive</span>
             <img [src]="categoryData?.archiveImg" width="300" height="300" />
         </div>

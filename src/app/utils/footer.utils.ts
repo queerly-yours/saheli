@@ -13,14 +13,14 @@
     },
     {
       label: 'Archive',
-      labelHindi: 'पुरालेख',
+      labelHindi: 'संग्रह',
       hindiRouteLink: '/hi/details/13/category',
       routeLink: '/details/13/category',
       type: FooterType.REDIRECT
     },
     {
       label: 'Publications',
-      labelHindi: 'प्रकाशनों',
+      labelHindi: 'प्रकाशन',
       hindiRouteLink: '/hi/details/14/category',
       routeLink: '/details/14/category',
       type: FooterType.REDIRECT
@@ -34,7 +34,7 @@
     },
     {
       label: 'Connect',
-      labelHindi: 'संपर्क करें',
+      labelHindi: 'संपर्क',
       hindiRouteLink: '',
       routeLink: '/',
       type: FooterType.OPEN

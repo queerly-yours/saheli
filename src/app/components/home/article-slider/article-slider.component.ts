@@ -1,5 +1,8 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { cardDetailsList } from '../../../utils/articles-slider';
+import { ParamType } from '../../../utils/utils';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-article-slider',
@@ -10,20 +13,12 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class ArticleSliderComponent {
   @ViewChild('scrollContainer') scrollContainer!: ElementRef;
 
-  cards = [
-    { title: 'AFSPA DOWN DOWN', subtitle: 'Remembering Manorama. In Solidarity with Sharmila', date:'2014', category:'solidarity', image: '../../../../assets/home/articles-slider/1.png' },
-    { title: "'Kaun jaat' gets a new avatar", subtitle: 'At Hyderabad Central University', date:'2011', category:'contesting caste', image: '../../../../assets/home/articles-slider/2.png' },
-    { title: 'Miniscule Minority', subtitle: 'Supreme Court Recriminalises homosexuality', date:'2013', category:'sexualities and gender', image: '../../../../assets/home/articles-slider/3.png' },
-    { title: 'Our Struggle against communalism', subtitle: 'Forefronting Women’s Rights', date:'2006', category:'countering communalism', image: '../../../../assets/home/articles-slider/4.png' },
-    { title: 'AFSPA DOWN DOWN', subtitle: 'Remembering Manorama. In Solidarity with Sharmila', date:'2014', category:'solidarity', image: '../../../../assets/home/articles-slider/1.png' },
-    { title: "'Kaun jaat' gets a new avatar", subtitle: 'At Hyderabad Central University', date:'2011', category:'contesting caste', image: '../../../../assets/home/articles-slider/2.png' },
-    { title: 'Miniscule Minority', subtitle: 'Supreme Court Recriminalises homosexuality', date:'2013', category:'sexualities and gender', image: '../../../../assets/home/articles-slider/3.png' },
-    { title: 'Our Struggle against communalism', subtitle: 'Forefronting Women’s Rights', date:'2006', category:'countering communalism', image: '../../../../assets/home/articles-slider/4.png' },
-    { title: 'AFSPA DOWN DOWN', subtitle: 'Remembering Manorama. In Solidarity with Sharmila', date:'2014', category:'solidarity', image: '../../../../assets/home/articles-slider/1.png' },
-  ];
+  cards = cardDetailsList;
 
   showLeftArrow = false;
   showRightArrow = false;
+
+  constructor(private router: Router) {}
 
   ngAfterViewInit() {
     this.checkArrows();
@@ -49,4 +44,10 @@ export class ArticleSliderComponent {
     this.showLeftArrow = el.scrollLeft > 0;
     this.showRightArrow = el.scrollLeft + el.clientWidth < el.scrollWidth;
   }
+
+  navigateToArticle(id: string | undefined) {
+      this.router.navigate(
+        ['/details', id, ParamType.Article]
+      );
+    }
 }

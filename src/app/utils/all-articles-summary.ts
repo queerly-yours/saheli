@@ -486,7 +486,7 @@ export const articlesSummary: articleList[] = [
         id: "Article49",
         title: "CAMPAIGN UPDATE",
         subtitle: "QUINACRINE STERILISATION",
-        decade: "1980s",
+        decade: "1990s",
         publishedDate: "Newsletter Mar 1998",
         categoryIdList: [],
         subCategoryIdList: ["InnerCategory6"]
@@ -616,7 +616,7 @@ export const articlesSummary: articleList[] = [
         id: "Article62",
         title: "CONDEMNING CRACKDOWN ON WOMEN ACTIVISTS IN DELHI",
         subtitle: "",
-        decade: "2010s",
+        decade: "2020s",
         publishedDate: "Statement on 3rd May 2020",
         categoryIdList: ["7"],
         subCategoryIdList: ["Subcategory7", "Subcategory19"]
@@ -781,16 +781,16 @@ export const articlesSummary: articleList[] = [
         categoryIdList: ["9", "5"],
         subCategoryIdList: ["Subcategory24"]
     },
-    {
-        isArticle: true,
-        id: "Article79",
-        title: "WHERE IS THE MONEY GOING TO COME FROM?",
-        subtitle: "",
-        decade: "1980s",
-        publishedDate: "First Four Years Souvenir 1981 - 1985",
-        categoryIdList: ["1"],
-        subCategoryIdList: []
-    },
+    // {
+    //     isArticle: true,
+    //     id: "Article79",
+    //     title: "WHERE IS THE MONEY GOING TO COME FROM?",
+    //     subtitle: "",
+    //     decade: "1980s",
+    //     publishedDate: "First Four Years Souvenir 1981 - 1985",
+    //     categoryIdList: ["1"],
+    //     subCategoryIdList: []
+    // },
     {
         isArticle: true,
         id: "Article80",
@@ -876,7 +876,7 @@ export const articlesSummary: articleList[] = [
         id: "Article88",
         title: "Execution is NOT the Solution",
         subtitle: "JOINT FEMINIST STATEMENT on the December 2012 case",
-        decade: "2010s",
+        decade: "2020s",
         publishedDate: "Statement - January 2020",
         categoryIdList: ["9", "7"],
         subCategoryIdList: ["Subcategory3", "Subcategory18"]
@@ -2376,7 +2376,7 @@ export const articlesSummary: articleList[] = [
         id: "Article238",
         title: "THE GOVERNMENT’S NEW GIMMICK",
         subtitle: "People’s participation in family welfare programme",
-        decade: "1980s",
+        decade: "1990s",
         publishedDate: "Newsletter April 1996",
         categoryIdList: [],
         subCategoryIdList: ["Subcategory11"]

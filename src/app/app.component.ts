@@ -18,6 +18,6 @@ export class AppComponent implements OnInit {
   constructor( private searchSvc: SearchService) { }
 
   ngOnInit(): void {
-    this.searchSvc.setArticles(articles)
+    this.searchSvc.setArticles(articles);
   }
 }

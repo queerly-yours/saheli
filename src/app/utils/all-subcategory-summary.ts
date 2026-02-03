@@ -11,7 +11,8 @@ export const subcategoriesSummary: subCategory[] = [
             `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.`
         ],
         isSubcategory: true,
-        title: 'Crisis Intervention'
+        title: 'Crisis Intervention',
+        hindiTitle: 'संकट में सहयोग'
     },
     {
         id: 'Subcategory25',
@@ -21,7 +22,8 @@ export const subcategoriesSummary: subCategory[] = [
             `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.`
         ],
         isSubcategory: true,
-        title: 'Communalism'
+        title: 'Communalism',
+        hindiTitle: 'साम्प्रदायिकता'
     },
     {
         id: 'Subcategory1',
@@ -31,7 +33,8 @@ export const subcategoriesSummary: subCategory[] = [
             `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.`
         ],
         isSubcategory: true,
-        title: 'Communal Violence'
+        title: 'Communal Violence',
+        hindiTitle: 'सांप्रदायिक हिंसा'
     },
     {
         id: 'Subcategory2',
@@ -41,7 +44,8 @@ export const subcategoriesSummary: subCategory[] = [
             `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.`
         ],
         isSubcategory: true,
-        title: 'Domestic Violence'
+        title: 'Domestic Violence',
+        hindiTitle: 'घरेलू हिंसा'
     },
     {
         id: 'Subcategory3',
@@ -51,7 +55,8 @@ export const subcategoriesSummary: subCategory[] = [
             `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.`
         ],
         isSubcategory: true,
-        title: 'Rape/Sexual Assault'
+        title: 'Rape/Sexual Assault',
+        hindiTitle: 'बलात्कार/यौनिक हिंसा'
     },
     {
         id: 'Subcategory4',
@@ -62,6 +67,7 @@ export const subcategoriesSummary: subCategory[] = [
         ],
         isSubcategory: true,
         title: 'Sati',
+        hindiTitle: 'सती'
     },
     {
         id: 'Subcategory5',
@@ -72,6 +78,7 @@ export const subcategoriesSummary: subCategory[] = [
         ],
         isSubcategory: true,
         title: 'Self Defence',
+        hindiTitle: 'आत्म-रक्षा'
     },
     {
         id: 'Subcategory6',
@@ -82,6 +89,7 @@ export const subcategoriesSummary: subCategory[] = [
         ],
         isSubcategory: true,
         title: 'Sexual Harrasment',
+        hindiTitle: 'यौन उत्पीड़न'
     },
     {
         id: 'Subcategory7',
@@ -92,6 +100,7 @@ export const subcategoriesSummary: subCategory[] = [
         ],
         isSubcategory: true,
         title: 'State Violence',
+        hindiTitle: 'राजकीय हिंसा'
     },
     {
         id: 'Subcategory8',
@@ -102,6 +111,7 @@ export const subcategoriesSummary: subCategory[] = [
         ],
         isSubcategory: true,
         title: 'Campaigns',
+        hindiTitle: 'अभियान'
     },
     {
         id: 'Subcategory9',
@@ -112,6 +122,7 @@ export const subcategoriesSummary: subCategory[] = [
         ],
         isSubcategory: true,
         title: 'Personal Law Debates',
+        hindiTitle: 'निजी कानून'
     },
     {
         id: 'Subcategory10',
@@ -122,6 +133,7 @@ export const subcategoriesSummary: subCategory[] = [
         ],
         isSubcategory: true,
         title: 'Rising Fundamentalisms',
+        hindiTitle: 'बढता कट्टरवाद'
     },
     {
         id: 'Subcategory31',
@@ -132,6 +144,7 @@ export const subcategoriesSummary: subCategory[] = [
         ],
         isSubcategory: true,
         title: 'Health',
+        hindiTitle: 'स्वास्थ्य'
     },
     {
         id: 'Subcategory11',
@@ -142,6 +155,7 @@ export const subcategoriesSummary: subCategory[] = [
         ],
         isSubcategory: true,
         title: 'Population Control',
+        hindiTitle: 'जनसंख्या नियंत्रण'
     },
     {
         id: 'Subcategory12',
@@ -152,7 +166,8 @@ export const subcategoriesSummary: subCategory[] = [
         ],
         innerCategories: [], // Initialize as empty, will be populated later
         isSubcategory: true,
-        title: 'Hazardous Contraceptives', // This subcategory has inner categories
+        title: 'Hazardous Contraceptives', // This subcategory has inner categories,
+        hindiTitle: 'खतरनाक गर्भनिरोधक'
     },
     {
         id: 'Subcategory29',
@@ -164,6 +179,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'EP Drugs',
+        hindiTitle: 'ई पी ड्रग्स'
     },
     {
         id: 'Subcategory28',
@@ -175,6 +191,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'HPV Vaccines',
+        hindiTitle: 'एच पी वी टीका'
     },
     {
         id: 'Subcategory13',
@@ -186,6 +203,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Sex Selection',
+        hindiTitle: 'लिंग चुनाव'
     },
     {
         id: 'Subcategory26',
@@ -195,7 +213,8 @@ export const subcategoriesSummary: subCategory[] = [
             `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.`
         ],
         isSubcategory: true,
-        title: 'Medical Ethics'
+        title: 'Medical Ethics',
+        hindiTitle: 'चिकित्सीय नैतिकता'
     },
     {
         id: 'Subcategory14',
@@ -208,6 +227,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Emerging Challenges',
+        hindiTitle: 'उभरती चुनौतियाँ'
     },
     {
         id: 'Subcategory15',
@@ -219,6 +239,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Communalism',
+        hindiTitle: 'साम्प्रदायिकता'
     },
     {
         id: 'Subcategory16',
@@ -230,6 +251,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Health',
+        hindiTitle: 'स्वास्थ्य'
     },
     {
         id: 'Subcategory17',
@@ -241,6 +263,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Sexuality',
+        hindiTitle: 'यौनिकता'
     },
     {
         id: 'Subcategory18',
@@ -252,6 +275,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Violence',
+        hindiTitle: 'हिंसा'
     },
     {
         id: 'Subcategory19',
@@ -263,6 +287,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Issues',
+        hindiTitle: 'मुददे'
     },
     {
         id: 'Subcategory20',
@@ -274,6 +299,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Salaam Saathi!',
+        hindiTitle: 'सलाम साथी'
     },
     {
         id: 'Subcategory21',
@@ -285,6 +311,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Autonomous Women\'s Conferences',
+        hindiTitle: 'स्वायत्त महिला सम्मलेन'
     },
     {
         id: 'Subcategory22',
@@ -297,6 +324,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Other Conferences',
+        hindiTitle: 'अन्य सम्मलेन'
     },
     {
         id: 'Subcategory23',
@@ -308,6 +336,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'International Women\'s Day',
+        hindiTitle: 'अंतर्राष्ट्रीय महिला दिवस'
     },
     {
         id: 'Subcategory24',
@@ -319,6 +348,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Saheli Day',
+        hindiTitle: 'सहेली दिवस'
     },
     {
         id: 'Subcategory27',
@@ -328,7 +358,8 @@ export const subcategoriesSummary: subCategory[] = [
             `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.`
         ],
         isSubcategory: true,
-        title: 'Others'
+        title: 'Others',
+        hindiTitle: 'अन्य'
     },
     {
         id: 'InnerCategory1',
@@ -340,6 +371,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Anti Fertility Vaccines',
+        hindiTitle: 'प्रजनन विरोधी टीका'
     },
     {
         id: 'InnerCategory2',
@@ -351,6 +383,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Depo Provera',
+        hindiTitle: 'डेपो प्रोवेरा'
     },
     {
         id: 'InnerCategory4',
@@ -362,6 +395,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Net-En',
+        hindiTitle: 'नेट-एन'
     },
     {
         id: 'InnerCategory5',
@@ -373,6 +407,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Norplant',
+        hindiTitle: 'नोरप्लांट'
     },
     {
         id: 'InnerCategory6',
@@ -384,6 +419,7 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Quinacrine Sterilisation',
+        hindiTitle: 'क्विनाक्रिन नसबंदी'
     },
 ];
 
