@@ -2244,7 +2244,7 @@ export const articlesSummary: articleList[] = [
     {
         isArticle: true,
         id: "Article225",
-        title: "TARGETTING THE SCIENTIFIC COMMUNITY:",
+        title: "TARGETTING THE SCIENTIFIC COMMUNITY",
         subtitle: "The Campaign Against Anti-Fertility Vaccines",
         decade: "1990s",
         publishedDate: "Newsletter Feb 1999",

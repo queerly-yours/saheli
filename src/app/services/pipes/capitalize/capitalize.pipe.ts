@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class CapitalizePipe implements PipeTransform {
 
   allLowerCase = ['a', 'an', 'of', 'to', 'the', 'on', 'in', 'and', 'from', 'its', 'by', 'at', 'for', 'is', 'was', 'with', 'it', 'it\'s'];
-  allupperCase = ['FAOW', 'AMU', 'NET-EN', 'UCC', 'UAPA', 'IIJ', 'IIJ.', 'DAVSS', 'AFSPA', 'NPR-CAA-NRC', 'WSS', 'KG', 'NGO', 'IAWS', 'EP', 'HPV'];
+  allupperCase = ['FAOW', 'AMU', 'NET-EN', 'UCC', 'UAPA', 'IIJ', 'IIJ.', 'DAVSS', 'AFSPA', 'NPR-CAA-NRC', 'WSS', 'KG', 'NGO', 'IAWS', 'EP', 'HPV', 'CAA-NRC-NPR'];
   sentenceEndPunctuations = ['.', '?', '!', '-']
 
   transform(value: string | undefined, exceptionWords: string[] = []): unknown {

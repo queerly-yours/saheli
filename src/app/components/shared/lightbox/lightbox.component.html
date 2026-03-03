@@ -1,0 +1,49 @@
+@if (isOpen) {
+<div class="overlay" (click)="closeLightbox()">
+  <div class="modal-container" (click)="$event.stopPropagation()">
+
+    <button class="close-btn" (click)="closeLightbox()">✕</button>
+
+    <div class="modal-body">
+
+      @for (block of data; track $index) {
+
+      <!-- TITLE BLOCK -->
+      @if (block.title) {
+      <div class="modal-title">
+        {{ block.title }}
+      </div>
+      }
+
+      <!-- PARAGRAPH BLOCK -->
+      @if (block.type === 'paragraph') {
+      <p class="modal-paragraph">
+        {{ block.content }}
+      </p>
+      }
+
+      @if(block.type === blocks.IMAGECOMBO) {
+      <div [class]="'image-combo' + ' ' + block?.class">
+        @for (item of block.content; track $index) {
+        <div class="image-combo-item">
+          <img [src]="imageURL + articleId + item.url" [alt]="item.alt[currentLang]" [class]="item?.class" />
+          @if(item.creditType === blocks.TEXT){
+          <span class="credit">
+            {{ item.credit }}
+          </span>
+          }
+          @else {
+          <a class="credit" [href]="item.creditUrl" target="_blank">
+            {{ item.credit }}
+          </a>
+          }
+        </div>
+        }
+      </div>
+      }
+      }
+
+    </div>
+  </div>
+</div>
+}

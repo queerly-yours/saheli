@@ -2,77 +2,314 @@
 
     @for (section of articleContent; track $index) {
 
-        @switch (section.type) {
+    @switch (section.type) {
 
-            @case (elements.PARAGRAPH) {
-            <p class="article-paragraph">
-                {{ section.content[currentLang] }}
-            </p>
-            }
+    @case (elements.PARAGRAPH) {
+    <p class="article-paragraph" [ngClass]="section.class">
+        {{ section.content[currentLang] }}
+    </p>
 
-            @case (elements.IMAGETEXT) {
-                <div class="image-text" [ngClass]="section.layout">
-
-                    <div class="image">
-                        <img [src]="section.image.url" [alt]="section.image.alt[currentLang]" />
-
-                        <a class="credit" [href]="section.image.creditUrl" target="_blank">
-                            {{ section.image.credit }}
-                        </a>
-                    </div>
-
-                    <div class="text">
-                        <p [class]="section.content.class">{{ section.content[currentLang] }}</p>
-                    </div>
-                </div>
-            }
-
-            <!-- HEADING -->
-             @case (elements.HEADING) {
-                <ng-container>
-                    @if (section.level === 2) {
-                        <h2>{{ section.content[currentLang] }}</h2>
-                    }
-                    @if (section.level === 3) {
-                        <h3>{{ section.content[currentLang] }}</h3>
-                    }
-                </ng-container>
-             }
-    
-
-            <!-- QUOTE -->
-            @case (elements.QUOTE) {
-                <blockquote class="article-quote">
-                    {{ section.content[currentLang] }}
-                </blockquote>
-            }
-
-            <!-- IMAGE FULL WIDTH -->
-            @case (elements.IMAGE) {
-                <figure class="article-image">
-                    <img [src]="section.url" />
-                    <figcaption>{{ section.caption[currentLang] }}</figcaption>
-                </figure>
-            }
-
-            <!-- LIST -->
-            @case (elements.LIST) {
-                @if (section.style === 'bullet') {
-                    <ul>
-                        @for (item of section.items[currentLang]; track $index) {
-                            <li>{{ item }}</li>
-                        }
-                    </ul>
-                }
-
-                @if (section.style === 'number') {
-                    <ol>
-                        @for (item of section.items[currentLang]; track $index) {
-                            <li>{{ item }}</li>
-                        }
-                    </ol>
-                }
-            }
-        }
+    @if (section.content.popover) {
+    <sup class="triangle" [appPopover]="dynamicPopover" [popoverData]="section.content.popover"></sup>
     }
+    }
+
+    @case (elements.PARAGRAPHCOMBO) {
+    <div class="paragraph-combo" [ngClass]="section.class">
+        @for (item of section.content[currentLang]; track $index) {
+        @if (item.type !== elements.SUPERSCRIPT) {
+        @if (item.type === elements.PARAGRAPH) {
+        <span [ngClass]="item.class">
+            {{ item.content[currentLang] }}
+        </span>
+        } @if (item.type === elements.LINK) {
+        <a [href]="item.url" target="_blank"> {{item.content[currentLang]}}</a>
+        }
+        @if (item.type === elements.QUOTE) {
+        <span class="article-quote">
+            {{ item.content[currentLang] }}
+        </span>
+        }
+        @if (item.type === elements.LIGHTBOX) {
+        <span class="lightbox" (click)="openLightbox(item.content.lightboxContent)">
+            {{ item.content[currentLang] }}
+        </span>
+        }
+        } @else {
+        <sup class="triangle neg-margin-left-2" [appPopover]="dynamicPopover"
+            [popoverData]="item.content.popover"></sup>
+        }
+        }
+    </div>
+    }
+
+    @case (elements.BANNERIMAGE) {
+    <div class="banner-image" [ngClass]="section.class">
+        <div class="banner-image-block">
+            <img [src]="imageURL + articleId + section.image.url" [alt]="section.image.alt[currentLang]" />
+
+            @if(section.image.creditType === elements.TEXT){
+            <span class="credit">
+                {{ section.image.credit }}
+            </span>
+            }
+            @else {
+            <a class="credit" [href]="section.image.creditUrl" target="_blank">
+                {{ section.image.credit }}
+            </a>
+            }
+        </div>
+    </div>
+    }
+
+    @case (elements.IMAGECOMBO) {
+    <div class="image-combo" [ngClass]="section.class">
+        @for (item of section.content; track $index) {
+        <div class="image-combo-item">
+            <img [src]="imageURL + articleId + item.url" [alt]="item.alt[currentLang]" />
+            @if(item.creditType === elements.TEXT){
+            <span class="credit">
+                {{ item.credit }}
+            </span>
+            }
+            @else {
+            <a class="credit" [href]="item.creditUrl" target="_blank">
+                {{ item.credit }}
+            </a>
+            }
+        </div>
+        }
+    </div>
+    }
+
+    @case (elements.IMAGETEXT) {
+    <div class="image-text" [ngClass]="section.layout">
+
+        <div class="image">
+            <img [src]="imageURL + articleId + section.image.url" [alt]="section.image.alt[currentLang]" />
+
+            <a class="credit" [href]="section.image.creditUrl" target="_blank">
+                {{ section.image.credit }}
+            </a>
+        </div>
+
+        <div class="text">
+            <p [class]="section.content.class">{{ section.content[currentLang] }}</p>
+        </div>
+    </div>
+    }
+
+    @case (elements.PULLQUOTE) {
+    @if (section.layout === 'left') {
+    <div class="pullquote">
+        <span class="quote">“</span>
+        <p class="quote-text">{{ section.content[currentLang] }}</p>
+    </div>
+    } @else if(section.layout === 'withImage') {
+    <div class="pullquote-wrapper">
+        <div class="pullquote-image">
+            <img [src]="imageURL + articleId + section.image.url" [alt]=" section.image.alt[currentLang]" />
+            @if( section.image.creditType === elements.TEXT){
+            <span class="credit">
+                {{ section.image.credit }}
+            </span>
+            }
+            @else {
+            <a class="credit" [href]="section.image.creditUrl" target="_blank">
+                {{ section.image.credit }}
+            </a>
+            }
+        </div>
+        <div class="pullquote">
+            <span class="quote">“</span>
+            <p class="quote-text">{{ section.content[currentLang] }}</p>
+        </div>
+    </div>
+    }
+    }
+
+    <!-- HEADING -->
+    @case (elements.HEADING) {
+    <ng-container>
+        @if (section.level === 2) {
+        <h2>{{ section.content[currentLang] }}</h2>
+        }
+        @if (section.level === 3) {
+        <h3>{{ section.content[currentLang] }}</h3>
+        }
+    </ng-container>
+    }
+
+
+    <!--- SUBHEADING --->
+    @case (elements.SUBHEADING) {
+    <div class="article-subheading" [ngClass]="section.class">
+        {{ section.content[currentLang] }}
+    </div>
+    }
+
+
+    <!--- POETRY --->
+    @case (elements.POETRY) {
+    <div>
+        @for(item of section.content[currentLang]; track $index) {
+        <div class="article-poetry">{{item}}</div>
+        }
+    </div>
+    }
+
+    @case (elements.POETRYAUTHOR) {
+    <div [ngClass]="section.content.popover ? 'flex-display': ''">
+        <div class="article-poetry-author">{{section.content[currentLang]}}</div>
+        @if (section.content.popover) {
+        <sup class="triangle" [appPopover]="dynamicPopover" [popoverData]="section.content.popover"></sup>
+        }
+    </div>
+    }
+
+    @case (elements.DICTIONARY) {
+    <div class="dictionary-wrapper">
+            @for (item of section.content[currentLang]; track $index) {
+            <div class="dictionary-entry">
+                <div class="word">{{item.word}}</div>
+                <div class="part-of-speech">{{item.partOfSpeech}}</div>
+
+                <div class="definition">
+                    {{item.meaning}}
+                </div>
+            </div>
+            }
+    </div>
+    }
+
+    <!-- QUOTE -->
+    @case (elements.QUOTE) {
+    <blockquote class="article-quote">
+        {{ section.content[currentLang] }}
+    </blockquote>
+    }
+
+    <!-- IMAGE FULL WIDTH -->
+    @case (elements.IMAGE) {
+    <figure class="article-image">
+        <img [src]="section.url" />
+        <figcaption>{{ section.caption[currentLang] }}</figcaption>
+    </figure>
+    }
+
+    <!-- LIST -->
+    @case (elements.LIST) {
+    @if (section.style === 'bullet') {
+    <ul>
+        @for (item of section.items[currentLang]; track $index) {
+        <li class="mb-5">
+            @if (item.type === elements.LINK) {
+            <a [href]="item.url" target="_blank" class="li-link">
+                {{ item.text }}
+            </a>
+            } @else {
+            {{ item.text }}
+            }
+        </li>
+        }
+    </ul>
+    }
+
+    @if (section.style === 'number') {
+    <ol>
+        @for (item of section.items[currentLang]; track $index) {
+        <li class="mb-5">{{ item.text }}</li>
+        }
+    </ol>
+    }
+    }
+
+    <!-- CUSTOM YELLOW BOX -->
+    @case (elements.CUSTOMYELLOWBOX) {
+    <div class="custom-yellow-box">
+        @for (item of section.items; track $index) {
+        @if (item.type === elements.BANNERIMAGE) {
+        <div class="banner-image">
+            <div class="banner-image-block">
+                <img [src]="imageURL + articleId + item.image.url" [alt]="item.image.alt[currentLang]" />
+
+                @if(item.image.creditType === elements.TEXT){
+                <span class="credit">
+                    {{ item.image.credit }}
+                </span>
+                }
+                @else {
+                <a class="credit" [href]="item.image.creditUrl" target="_blank">
+                    {{ item.image.credit }}
+                </a>
+                }
+            </div>
+        </div>
+        }
+
+        @if (item.type === elements.SUBHEADING) {
+        <div class="article-subheading" [ngClass]="item.class">
+            {{ item.content[currentLang] }}
+        </div>
+        }
+
+        @if (item.type === elements.PARAGRAPHCOMBO) {
+        <div class="paragraph-combo">
+            @for (item of item.content[currentLang]; track $index) {
+            @if (item.type !== elements.SUPERSCRIPT) {
+            @if (item.type === elements.PARAGRAPH) {
+            <span [ngClass]="item.class">
+                {{ item.content[currentLang] }}
+            </span>
+            } @if (item.type === elements.LINK) {
+            <a [href]="item.url" target="_blank"> {{item.content[currentLang]}}</a>
+            }
+            @if (item.type === elements.QUOTE) {
+            <span class="article-quote">
+                {{ item.content[currentLang] }}
+            </span>
+            }
+            } @else {
+            <sup class="triangle neg-margin-left-2" [appPopover]="dynamicPopover"
+                [popoverData]="item.content.popover"></sup>
+            }
+            }
+        </div>
+        }
+
+        @if (item.type === elements.PARAGRAPH) {
+        <p class="article-paragraph" [ngClass]="item.class">
+            {{ item.content[currentLang] }}
+        </p>
+        }
+        }
+    </div>
+    }
+
+    <!-- EMPTY SPACE -->
+    @case (elements.EMPTYSPACE) {
+    <div [style.margin.px]="section.margin"></div>
+    }
+    }
+    }
+
+    <ng-template #dynamicPopover let-data>
+        <div class="popover-content">
+            @for (item of data; track $index) {
+
+            @if (item.type === elements.LINK) {
+            <a [href]="item.url" target="_blank" class="">
+                {{item.text}}
+            </a>
+            }
+
+            @if (item.type === elements.TEXT) {
+            <span>{{ item.text }}</span>
+            }
+            }
+        </div>
+    </ng-template>
+
+    <app-lightbox [isOpen]="modalOpen" [imageURL]="imageURL" [articleId]="articleId" [data]="modalData"
+        [currentLang]="currentLang" (close)="closeLightbox()" />
 </div>
