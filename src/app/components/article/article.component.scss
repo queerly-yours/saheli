@@ -184,6 +184,14 @@ a:active {
   margin-bottom: 5px !important;
 }
 
+.h-250 {
+  height: 250px;
+}
+
+.h-200 {
+  height: 200px;
+}
+
 .image-combo {
   display: flex;
   gap: 16px;
@@ -203,6 +211,14 @@ a:active {
 
 .fw-bold {
   font-weight: 700;
+}
+
+.fw-light-bold {
+  font-weight: 400;
+}
+
+.fs-italic {
+  font-style: italic;
 }
 
 .pullquote-wrapper {

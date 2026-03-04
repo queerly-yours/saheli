@@ -66,7 +66,7 @@
     <div class="image-combo" [ngClass]="section.class">
         @for (item of section.content; track $index) {
         <div class="image-combo-item">
-            <img [src]="imageURL + articleId + item.url" [alt]="item.alt[currentLang]" />
+            <img [src]="imageURL + articleId + item.url" [alt]="item.alt[currentLang]" [class]="item.class" />
             @if(item.creditType === elements.TEXT){
             <span class="credit">
                 {{ item.credit }}
@@ -106,7 +106,7 @@
         <p class="quote-text">{{ section.content[currentLang] }}</p>
     </div>
     } @else if(section.layout === 'withImage') {
-    <div class="pullquote-wrapper">
+    <div [class]="'pullquote-wrapper' + ' ' + section.class">
         <div class="pullquote-image">
             <img [src]="imageURL + articleId + section.image.url" [alt]=" section.image.alt[currentLang]" />
             @if( section.image.creditType === elements.TEXT){
@@ -160,7 +160,7 @@
 
     @case (elements.POETRYAUTHOR) {
     <div [ngClass]="section.content.popover ? 'flex-display': ''">
-        <div class="article-poetry-author">{{section.content[currentLang]}}</div>
+        <div [class]="'article-poetry-author' + ' ' + section.class">{{section.content[currentLang]}}</div>
         @if (section.content.popover) {
         <sup class="triangle" [appPopover]="dynamicPopover" [popoverData]="section.content.popover"></sup>
         }

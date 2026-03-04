@@ -1,0 +1,43 @@
+{
+    "sections": [
+        {
+            "type": "imageText",
+            "layout": "left",
+            "image": {
+                "url": "/1.png",
+                "alt": {
+                    "en": "",
+                    "hi": ""
+                },
+                "credit": "vagabomb.com",
+                "creditUrl": "https://vagabomb.com/"
+            },
+            "content": {
+                "en": "Vidya Bal, or Vidya tai to many, especially in Maharashtra, was a feminist icon, popular magazine editor and founder of several political initiatives in her long and eventful life. But for us in Saheli, she was simply and amazingly, just Vidya. Loved by all of us not just because her daughter Vineeta has been a long time Saheli, but because Vidya’s warm and loving persona was a perfect complement to her sharp political convictions. As a tiny group that struggles to publish a bi-annual newsletter, we were totally floored when she shared how she and her group publish the monthly magazine, Miloon Saryajani, consistently since 9 August 1989 (coincidentally on Saheli’s eight anniversary!). ",
+                "hi": "",
+                "class": "article-paragraph no-top-margin"
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "en": "We felt the strength of her spirit when she spoke out fearlessly against the targeted killing of the eminent rationalist, Narendra Dabholkar, only to find herself facing death threats at almost the age of 80! Vidya was inspiring in many ways too. She reconfigured the famed feminist slogan of ‘personal is political’ by proving that ‘political can go far beyond the personal’.",
+                "hi": ""
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "en": "Many instances come to mind. When Vidya realised she didn’t know enough about emerging LGBTQI+ issues, she chose to engage with those who could help her understand and teach her, before she stepped out in support and even led the Pune Pride. Vidya also led a legal battle for women’s right to enter the sanctum sanctorum of the Shani Shingnapur temple, even though she was herself an avowed atheist. That’s the kind of feminism not everyone can believe in, much less, live. But Vidya did, and we’ll always be inspired by that.",
+                "hi": ""
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "en": "You are missed far beyond the state of Maharashtra, Vidya. With much love, from all of us in Saheli, New Delhi.",
+                "hi": ""
+            }
+        }
+    ]
+}
