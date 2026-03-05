@@ -200,9 +200,9 @@
     <!-- LIST -->
     @case (elements.LIST) {
     @if (section.style === 'bullet') {
-    <ul>
+    <ul [class]="section.class">
         @for (item of section.items[currentLang]; track $index) {
-        <li class="mb-5">
+        <li [class]="'mb-5' + ' ' + item.class">
             @if (item.type === elements.LINK) {
             <a [href]="item.url" target="_blank" class="li-link">
                 {{ item.text }}
@@ -216,9 +216,9 @@
     }
 
     @if (section.style === 'number') {
-    <ol>
+    <ol [class]="section.class">
         @for (item of section.items[currentLang]; track $index) {
-        <li class="mb-5">{{ item.text }}</li>
+        <li [class]="'mb-5' + ' ' + item.class">{{ item.text }}</li>
         }
     </ol>
     }
@@ -254,7 +254,7 @@
         }
 
         @if (item.type === elements.PARAGRAPHCOMBO) {
-        <div class="paragraph-combo">
+        <div [class]="'paragraph-combo' + ' ' + section.class">
             @for (item of item.content[currentLang]; track $index) {
             @if (item.type !== elements.SUPERSCRIPT) {
             @if (item.type === elements.PARAGRAPH) {

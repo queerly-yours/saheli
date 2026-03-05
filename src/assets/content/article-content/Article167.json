@@ -1,0 +1,1255 @@
+{
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "When we set up Saheli we did not know whether we would get around to registering it or not. We preposed this Constitution after months of discussion, so that it reflected our collective opinion as well as met the lows of the land. It was not easy to get this flexible structure registered, but we succeeded.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraphCombo",
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "class": "fw-bold",
+            "content": {
+              "en": "(I)",
+              "hi": ""
+            }
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "en": "These rules may be called ",
+              "hi": ""
+            }
+          },
+          {
+            "type": "paragraph",
+            "class": "fw-bold",
+            "content": {
+              "en": "\"Rules of Saheli Women’s Resource Centre\".",
+              "hi": ""
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraphCombo",
+      "class": "mb-0",
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "class": "fw-bold",
+            "content": {
+              "en": "(II)",
+              "hi": ""
+            }
+          },
+          {
+            "type": "paragraph",
+            "class": "fw-bold",
+            "content": {
+              "en": "Definitions: ",
+              "hi": ""
+            }
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "en": "In these rules unless the context otherwise requires:",
+              "hi": ""
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "list",
+      "style": "number",
+      "class": "mb-24",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "Saheli \"means\" Saheli Women’s Resource Centre."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "\"The Committee\" means the Executive Committee of Saheli."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "\"The Internal Coordinator\" means the internal coordinator of the Executive Committee."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "\"A Member\" means a member admitted under these Rules."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "\"The Rules\" means any of the rules, regulations and the bye-laws of Saheli."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraphCombo",
+      "class": "mb-0",
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "class": "fw-bold",
+            "content": {
+              "en": "(III)",
+              "hi": ""
+            }
+          },
+          {
+            "type": "paragraph",
+            "class": "fw-bold",
+            "content": {
+              "en": "Members: ",
+              "hi": ""
+            }
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "en": "There will be the following classes of members:",
+              "hi": ""
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "list",
+      "style": "number",
+      "class": "hide-marker",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "1. Individual Members"
+          }
+        ]
+      }
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "class": "ml-15",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "Ordinary Members"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "Associate Members"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "Support Members"
+          }
+        ]
+      }
+    },
+    {
+      "type": "list",
+      "style": "number",
+      "class": "hide-marker mb-24",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "2. Institutional Members"
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fw-bold",
+      "content": {
+        "en": "(IV) Qualifications for Membership:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "mb-0 ml-25",
+      "content": {
+        "en": "A. Individual Members",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "mb-0 ml-35",
+      "content": {
+        "en": "(i) Ordinary Members are those women who work actively with Saheli for the attainment of its objectives and are enrolled as such by the decision of the Committee upon satisfying the following conditions:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "class": "ml-25",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "Associate membership of Saheli for a period of not less than one year."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "Have worked actively with Saheli for a period of one year."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "mb-0 ml-35",
+      "content": {
+        "en": "(ii) Associate Members are those women who are enrolled as such by the decision of the Committee.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "mb-0 ml-35",
+      "content": {
+        "en": "(iii) Support Members are those men who are actively associated with Saheli work and are enrolled as such by the decision of the Committee.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "ml-25",
+      "content": {
+        "en": "B. Institutional Members are those institutions/ groups which collaborate in achieving the objectives of Saheli and are enrolled as such by the decision of the Committee.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraphCombo",
+      "class": "mb-0",
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "class": "fw-bold",
+            "content": {
+              "en": "(V) Subscription: ",
+              "hi": ""
+            }
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "en": "Subscription will be paid at the following rates by the various classes of members:",
+              "hi": ""
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "class": "ml-5 mb-24",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "Ordinary Members: Rs. 24/- per year payable in advance annually, quarterly or monthly."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fw-bold",
+      "content": {
+        "en": "(VI) Privileges of Members:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "ml-25",
+      "content": {
+        "en": "(i) Individual Members:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "class": "ml-15",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "Ordinary Members: Ordinary members will be entitled to the use of all the facilities of Saheli as per rules framed by the Committee in this regard, and would have the right to vote at the General Body Meetings and the Bi-Annual Conferences."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "Associate Members: Associate members shall be entitled to the use of all facilities of Saheli as per rules framed by the committee and to vote at the Bi-Annual Conferences."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "Support Members: The privileges of the Support Members shall be decided from time to time by the Committee but shall not include voting right."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "ml-25",
+      "content": {
+        "en": "(ii) Institutional Members:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "class": "ml-15 mb-24",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "All the members of an individual institution shall be allowed the use of the facilities of Saheli as per the Rules framed by the Committee."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "Only one representative of the Institutional Members shall have the right to cast a vote at the Bi-Annual Conference."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraphCombo",
+      "class": "mb-0",
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "class": "fw-bold",
+            "content": {
+              "en": "(VII) Office Bearers:",
+              "hi": ""
+            }
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "en": "Saheli shall have the following office bearers:",
+              "hi": ""
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "list",
+      "style": "number",
+      "class": "mb-24 ml-5",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "Internal Coordinator"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "A minimum of three coordinators in addition to 1 above."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraphCombo",
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "class": "fw-bold",
+            "content": {
+              "en": "(VIII) General Body:",
+              "hi": ""
+            }
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "en": "The General Body of Saheli shall be composed of Ordinary Members.",
+              "hi": ""
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraphCombo",
+      "class": "mb-0",
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "class": "fw-bold",
+            "content": {
+              "en": "(IX) Bi-Annual Conference:",
+              "hi": ""
+            }
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "en": "The Bi-Annual Conference shall be composed of the following:",
+              "hi": ""
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "list",
+      "style": "number",
+      "class": "mb-24 ml-5",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "Ordinary Members"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "Associate Members"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "Representatives of Institutional Members."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fw-bold",
+      "content": {
+        "en": "(X) Executive Committee:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "ml-25",
+      "content": {
+        "en": "A. The Executive Committee shall consist of seven women elected by the General Body at its annual meeting. The composition of the Committee shall be as follows:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "list",
+      "style": "number",
+      "class": "ml-25",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "Internal Coordinator"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "Coordinator Finance"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "Coordinator - Cases"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "Coordinator - Publications"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "Coordinator - Library and Documentation"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "Committee Member"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "Committee Member"
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "ml-25",
+      "content": {
+        "en": "B. Any casual vacancy arising in the Committee shall be Hlled up by nomination by the remaining members of the Committee—pr0vided that such nominated members shall hold oflice only for the remaining term of the outgoing Executive Committee.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fw-bold",
+      "content": {
+        "en": "(XI) Rights, Powers, Duties of the Executive Committee",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "ml-25",
+      "content": {
+        "en": "1. All properties, moveable, immoveable or of any other kind shall stand vested in the committee.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "ml-25",
+      "content": {
+        "en": "2. The business and affairs of Saheli. shall be carried on and managed by the Committee who shall exercise all such powers and authority of Saheli as are not specifically and expressly vested by the Rules in the General Body and Bi-Annual Conference.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "ml-25",
+      "content": {
+        "en": "3. Without prejudice to the generality of the foregoing provisions, the Committee shall have the following powers:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "class": "ml-25",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "To acquire by gift, purchase, exchange, lease or otherwise, lands building or other immoveable property together with all rights appertaining thereto;"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "To manage the properties of Saheli;"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "To accept the management of any trust; fund or endowment of any other body in which Saheli is interested;"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "To raise funds for Saheli, by gifts, donations or otherwise;"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "To raise loans;"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "To receive monies, securities, instruments and/or any other moveable property for and on behalf of Saheli;"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "To enter into Agreements for and on behalf of Saheli;"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "To sue and defend all legal proceedings on behalf of Saheli;"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "To grant receipts, to sign and execute instruments and to endorse or discount cheques or other negotiable instruments on behalf of Saheli;"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "To make, sign and execute such documents and instruments as may be necessary or proper for carrying on the management of the property and affairs of Saheli;"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "To manage, serve, transfer or otherwise dispose of any property moveable or immoveable of Saheli;"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "To prescribe the number (subject to Rule - VII (2)], powers, functions and duties of the Office Bearers of Saheli;"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "To appoint an auditor or auditors for auditing the accounts of Saheli and to report thereon;"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": " To appoint from time to time, such and so many employees and on such terms and conditions, as may be tit for carrying on the management and the affairs of Saheli as also for conducting studies or any other work undertaken by Saheli."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "To exercise, control over the employees of Saheli including the power of terminating the employment."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "ml-25",
+      "content": {
+        "en": "4. The committee shall have powers to make bye- laws in respect of the following matters:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "class": "ml-25",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "The management of the properties, funds, affairs and work of Saheli;"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "The conditions and the procedure under and according to which the several classes of members of Saheli may be enrolled;"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "The procedure for the convening and the conduct of meeting as may be set up from time to time;"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "Such other purpose as may be found necessary."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "The Committee shall have the power to appoint sub-Committees for the disposal of any business or for advice in any matter pertaining to Saheli;"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "The Committee shall have power to repeal, amend and modify the bye-laws."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "The Committee shall have power to delegate the grant or receipts for any funds collected to any of the members of Saheli."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "The Committee shall have the power to set up centres/bodies to take up work for the furtherance of any of the objectives of Saheli."
+          }
+        ]
+      }
+    },
+     {
+      "type": "paragraph",
+      "class": "fw-bold",
+      "content": {
+        "en": "(XII) Rights, Powers & Duties of the Office Bearers:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "ml-25",
+      "content": {
+        "en": "1. Internal Coordinator:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "class": "ml-25",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "shall convene and minute all meetings of the Committee, General Body and the Bi-Annual Conference,"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "shall coordinate day to day internal functioning of Saheli."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "shall be accountable to the Committee for this function."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "ml-25",
+      "content": {
+        "en": "2. Other Coordinators:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "class": "ml-25",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "each Coordinator shall be responsible for planning and implementing of activities in their area through collective efforts and shall be accountable to the Committee for the same."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "shall approve expenditure related to activities in the area."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "ml-25",
+      "content": {
+        "en": "3. The committee shall decide in the lirst meeting after its election the number of coordinators under Rule-VII(2) and allot the areas of activity to each of the Coordinators under Rule-VII(2).",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fw-bold",
+      "content": {
+        "en": "(XIII) Terms of Office:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "list",
+      "style": "number",
+      "class": "mb-24",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "The term of office of the initial Committee shall be two years from the date of registration. They will be eligible for re-election."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "The subsequent Committee shall have a term of office of one year."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "Any vacancy in the office arising in the middle of the year shall be filled up by the remaining members of the Committee."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": " Elections will be held every year during the Annual General Meeting using secret ballot."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fw-bold",
+      "content": {
+        "en": "(XIV) MEETINGS:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "ml-25",
+      "content": {
+        "en": "1. Place of Meetings: All meetings of the Committee, the Bi-Annual Conference and the General Body shall be held in Delhi.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "ml-25",
+      "content": {
+        "en": "2. Frequency of Meetings:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "class": "ml-25",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "The Committee shall meet at least once in two months."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "The General Body shall meet at least once a year."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "The Bi—Annual Conference shall meet twice a year."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "ml-25",
+      "content": {
+        "en": "3. Procedure for convening Meetings:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "class": "ml-25",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "The meetings of the Committee shall be convened by the Internal Coordinator. Any special meetings can be called by one fourth of the members of the Committee."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "The annual meeting of the General Body shall be convened by the Internal Coordinator. Any special meetings can be called by either one half of the Committee Members or by one fourth of the General Body."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "The Bi-Annual Conference shall be convened by the Internal Coordinator. Any special meetings can be called by one half of the Committee Members or one fourth of the General Body."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "ml-25",
+      "content": {
+        "en": "4. Notice of Meetings:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "class": "ml-25",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "There shall be ten days, clear notice for Committee Meetings. For special meetings three days’ notice shall suffice."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "There shall be fifteen days, clear notice for Bi-Annual Conferences and Annual General Body meetings. For special meetings seven days, clear notice shall suffice."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "ml-25",
+      "content": {
+        "en": "5. Quorum:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "list",
+      "style": "bullet",
+      "class": "ml-25",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "For a meeting of the Committee the quorum shall be one third of its members."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "For a meeting of the General Body the quorum shall be one third of its members."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "For a meeting of the Bi-Annual Conference the quorum shall be one fourth of its members."
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "ml-35",
+      "content": {
+        "en": "Provided that the quorums prescribed above shall not be necessary for an adjourned meeting.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fw-bold",
+      "content": {
+        "en": "(XV) Rights, Powers and Duties of the General Body and the Bi-Annual Conferences:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "list",
+      "style": "number",
+      "class": "mb-24 ml-5",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "The General Body: The General Body shall meet to consider the Annual Audit Report and to elect members to the Committee."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "Bi-Annual Conference: The Bi-Annual Conference shall meet to recommend policy to the Committee."
+          }
+        ],
+        "hi": []
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fw-bold",
+      "content": {
+        "en": "(XVI) Funds of Saheli:",
+        "hi": ""
+      }
+    },
+    {
+      "type": "list",
+      "style": "number",
+      "class": "mb-24 ml-5",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "Saheli shall have its own funds and all the receipts of Saheli through grants, donations, subscriptions, income from investments and publications shall be carried to the fund and all the payments by Saheli shall be made there from,"
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "The banking account of Saheli shall be maintained in the name of \"SAHELI\". The account shall be operated by any two members of the Committee, authorised in this behalf by the Committee."
+          }
+        ],
+        "hi": []
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fw-bold",
+      "content": {
+        "en": "(XVII) Accounts and Audits",
+        "hi": ""
+      }
+    },
+    {
+      "type": "list",
+      "style": "number",
+      "class": "mb-24 ml-5",
+      "items": {
+        "en": [
+          {
+            "type": "text",
+            "url": "",
+            "text": "Saheli shall cause to be maintained such books of Accounts and related other books as may be prescribed by the Committee."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "The Financial year of Saheli shall begin from 1st April and shall end on 31st March of the following calendar year."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "The accounts of Saheli shall be audited by such persons as the Committee shall appoint."
+          },
+          {
+            "type": "text",
+            "url": "",
+            "text": "The annual accounts of Saheli shall be laid before the annual meeting of the General Body in such form as may be decided by the Committee in consultation with the Auditors."
+          }
+        ],
+        "hi": []
+      }
+    },
+    {
+      "type": "paragraphCombo",
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "class": "fw-bold",
+            "content": {
+              "en": "(XVIII)",
+              "hi": ""
+            }
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "en": "Any member who has committed a breach of any of the rules of Saheli or who has refused or neglected to abide by any such rules, or has not cleared the dues of Saheli (other than the membership dues) within stipulated time or who has committed any act which in the opinion of the Committee is calculated or likely to bring discredit to Saheli may be removed from the membership of Saheli by a resolution supported by at least three fifth members of the Committee at a special meeting thereof convened for the purpose after at least twenty one days, notice.",
+              "hi": ""
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "Provided that no such resolution shall be passed unless the member concerned is informed by a registered letter (A/D) at least twenty one days before such a meeting; of the date, time and place of the meeting; and of the grounds on which it is proposed to remove him/her from membership of Saheli and is given an opportunity to explain her/his conduct to the Committee in writing or in person at such a meeting.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "Any member who has not cleared her/his membership dues for a continuous period exceeding three months stands automatically removed from the roll of members of Saheli under XVIII (2) and her membership shall be restored thereto only on payment of such sum as the Committee may deter mine in each case.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraphCombo",
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "class": "fw-bold",
+            "content": {
+              "en": "(IX) Amendments: ",
+              "hi": ""
+            }
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "en": "Amendments to the Rules & Regulations of Saheli may be made by the Committee only by three-fifths of the members present and voting subject to the approval of the General Body by a majority of voters at a meeting convened for this purpose.",
+              "hi": ""
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraphCombo",
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "class": "fw-bold",
+            "content": {
+              "en": "(XX) Dissolution: ",
+              "hi": ""
+            }
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "en": "The society shall be dissolved as per section XIII and XIV of Societies Registration Act of 1860.",
+              "hi": ""
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraphCombo",
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "class": "fw-bold",
+            "content": {
+              "en": "(XXI) ",
+              "hi": ""
+            }
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "en": "Saheli shall sue or be sued in the name of the Internal Coordinator of Saheli.",
+              "hi": ""
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraphCombo",
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "class": "fw-bold",
+            "content": {
+              "en": "(XXII) ",
+              "hi": ""
+            }
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "en": "All provisions of the Societies Registration Act of 1860 shall apply to heli.",
+              "hi": ""
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraphCombo",
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "class": "fw-bold",
+            "content": {
+              "en": "(XXIII) ",
+              "hi": ""
+            }
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "en": "Once in every year a list of the members of the Committee shall be filed with the Registrar of Societies as required under Section 4 of the Societies Registration Act, 1860.",
+              "hi": ""
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraphCombo",
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "class": "fw-bold",
+            "content": {
+              "en": "(XXIV) ",
+              "hi": ""
+            }
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "en": "The Memorandum of Association (Objects) can be amended as per Section 12 and 12A of Societies Registration Act, 1860.",
+              "hi": ""
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "paragraphCombo",
+      "content": {
+        "en": [
+          {
+            "type": "paragraph",
+            "class": "fw-bold",
+            "content": {
+              "en": "(XXV) ",
+              "hi": ""
+            }
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "en": "Certified that this is the corrected copy of the Rules and Regulations of Saheli.",
+              "hi": ""
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
