@@ -1,0 +1,165 @@
+{
+  "sections": [
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "Saheli is now into her 22nd year, looking back and yet thinking forward, ready to bring in something new under the flyover. With reducing numbers of volunteers, increasing NGOisation and the virtual disappearance of autonomous women’s groups like Saheli, we thought it's time for a few organisational changes. And the results have been exhilarating.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "Like every year, we began by planning our annual meeting in February – to re-view the good, the bad, the ugly! But this time around we wanted not only to discuss what we did or did not do; should or should not take up; but how we were going to do it and who would be our support base. For the first time, we opened up a part of our Annual Meeting to women who have believed in our work and vision, those who have been part of our struggles, and many who have shown interest in joining us.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "Many questions abounded. How many would were interested in looking at new ways of interacting with Saheli? What would opening up mean for Saheli as a group?; What would we call them/how would they see themselves? Will they even turn up? What about men who have been as much part of our support network... and many more. Yet some risks are worth it, so we took a deep breath and ventured right in!",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "What we have seen over the past few weeks have reaffirmed our conviction that there is strength in numbers. The overwhelming response has been encouraging, and needless to say, it has nudged us into action - both to streamline areas of work and tackle organisational issues. The term \"Friends of Saheli\" emerged during the discussions and we continue with it. Currently, it is a loose grouping of women who may want to associate more closely and become full-fledged members of the group. For those of you who want to join in, Saturdays are open - for work, discussions, workshops, song-practice and other creative activities, so do drop in.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "There are some serious issues we need to deal with and one of them is the challenge of defining working guidelines for membership in the changing scenario that lies ahead of us. To be flexible and open and yet maintain a political identity as an autonomous women's group is no mean task. Beyond \"Friends of Saheli\" we still continue to count on our support network of men and women who sustain our work in many ways. Simultaneously, we continue to work with other women's groups, NGOs, democratic rights groups, mass organisations and trade unions on campaign issues and joint protest.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "What can we say about the afternoon of 9th February? Cheer, support, validation, criticism... and so many women sitting in one room who, oh-so-naturally began to call themselves, ‘Friends of Saheli’. Can’t think of a better way to sum up the day than a little rhyme that probably doesn’t rhyme too much.",
+        "hi": ""
+      }
+    },
+        {
+            "type": "emptySpace",
+            "margin": "24"
+        },
+    {
+      "type": "poem-document",
+      "title": "Friends of Saheli",
+      "stanzas": [
+        {
+          "type": "stanza",
+          "align": "right",
+          "image": "/1.png",
+          "alt": "illustration",
+          "class": "mb-0",
+          "lines": [
+            "So much to do,",
+            "Many dreams we've seen.",
+            "Less hands we are,",
+            "and legs? even less!"
+          ]
+        },
+        {
+          "type": "stanza",
+          "lines": [
+            "But grey matter we have",
+            "And ideas galore.",
+            "Why not call friends and supporters,",
+            "and open some doors?"
+          ]
+        },
+        {
+          "type": "stanza",
+          "lines": [
+            "Fears and apprehensions too,",
+            "But POTENTIAL stands out",
+            "Let's multiply our numbers,",
+            "and try setting some scores."
+          ]
+        },
+        {
+          "type": "stanza",
+          "lines": [
+            "Yes, many scores to settle,",
+            "with patriarchy, communalism and oppression.",
+            "Many voices to be raised,",
+            "For peace, equality and optimism."
+          ]
+        },
+        {
+          "type": "stanza",
+          "lines": [
+            "With emails and calls, we took the plunge.",
+            "Reaching out to women of all kinds -",
+            "Friends and allies,",
+            "critics and supporters alike!"
+          ]
+        },
+        {
+          "type": "stanza",
+          "lines": [
+            "And then they came,",
+            "What a gathering it was,",
+            "A balm for the soul to see a full house.",
+            "'Cause a tough contest it was,",
+            "Saheli Annual Meeting Vs. Lazy Sunday Afternoon!"
+          ]
+        },
+        {
+          "type": "stanza",
+          "align": "right",
+          "image": "/2.png",
+          "alt": "group illustration",
+          "class": "mb-0",
+          "lines": [
+            "Some old, some new.",
+            "Some seasoned, some fresh.",
+            "Some vocal, some quiet...",
+            "But the ideas came in plenty.",
+            "Things for Saheli to do,",
+            "Things to do with Saheli..."
+          ]
+        },
+        {
+          "type": "stanza",
+          "lines": [
+            "I'll set up the library.",
+            "The media is my target.",
+            "Someone's got to clean the office!",
+            "Pick up the phone and say... \"Hello, Saheli.\""
+          ]
+        },
+        {
+          "type": "stanza",
+          "lines": [
+            "Hot chai and namkeens did all of us good,",
+            "Talk of feeding feminist leanings.",
+            "Discussions, workshops and more..."
+          ]
+        },
+        {
+          "type": "stanza",
+          "class": "mb-0",
+          "lines": [
+            "A roomful of energy, a million dreams.",
+            "Invigorating.",
+            "Enthusing.",
+            "And making it official:"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "class": "mb-0 mt-0 fw-light-bold",
+      "content": {
+        "en": "Friends of Saheli",
+        "hi": ""
+      }
+    }
+  ]
+}

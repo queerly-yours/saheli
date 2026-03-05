@@ -158,6 +158,44 @@
     </div>
     }
 
+    @case (elements.POEMDOCUMENT) {
+
+    <div class="poem-container">
+
+        <!-- <h2 class="poem-title">{{ section.title }}</h2> -->
+
+        @for (stanza of section.stanzas; track $index) {
+
+        <div [class]="'poem-row' + ' ' + stanza.class" [ngClass]="stanza.align">
+
+            @if (stanza.align === 'left' && stanza.image) {
+            <img class="stanza-image" [src]="imageURL + articleId + stanza.image" [alt]="stanza.alt || ''">
+            }
+
+            <div>
+                @for (line of stanza.lines; track $index) {
+                <p class="mt-0 mb-0">{{ line }}</p>
+                }
+            </div>
+
+            @if (stanza.align === 'right' && stanza.image) {
+            <img class="stanza-image" [src]="imageURL + articleId + stanza.image" [alt]="stanza.alt || ''">
+            }
+
+        </div>
+
+        @if (stanza.align === 'center' && stanza.image) {
+        <div class="image-block center">
+            <img [src]="imageURL + articleId + stanza.image" [alt]="stanza.alt || ''">
+        </div>
+        }
+
+        }
+
+    </div>
+
+    }
+
     @case (elements.POETRYAUTHOR) {
     <div [ngClass]="section.content.popover ? 'flex-display': ''">
         <div [class]="'article-poetry-author' + ' ' + section.class">{{section.content[currentLang]}}</div>
@@ -169,16 +207,16 @@
 
     @case (elements.DICTIONARY) {
     <div class="dictionary-wrapper">
-            @for (item of section.content[currentLang]; track $index) {
-            <div class="dictionary-entry">
-                <div class="word">{{item.word}}</div>
-                <div class="part-of-speech">{{item.partOfSpeech}}</div>
+        @for (item of section.content[currentLang]; track $index) {
+        <div class="dictionary-entry">
+            <div class="word">{{item.word}}</div>
+            <div class="part-of-speech">{{item.partOfSpeech}}</div>
 
-                <div class="definition">
-                    {{item.meaning}}
-                </div>
+            <div class="definition">
+                {{item.meaning}}
             </div>
-            }
+        </div>
+        }
     </div>
     }
 
@@ -281,6 +319,24 @@
         <p class="article-paragraph" [ngClass]="item.class">
             {{ item.content[currentLang] }}
         </p>
+        }
+
+        @if (item.type === elements.LIST) {
+        @if (item.style === 'bullet') {
+        <ul [class]="item.class">
+            @for (item of item.items[currentLang]; track $index) {
+            <li [class]="'mb-5' + ' ' + item.class">
+                @if (item.type === elements.LINK) {
+                <a [href]="item.url" target="_blank" class="li-link">
+                    {{ item.text }}
+                </a>
+                } @else {
+                {{ item.text }}
+                }
+            </li>
+            }
+        </ul>
+        }
         }
         }
     </div>

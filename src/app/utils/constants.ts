@@ -22,5 +22,6 @@ export const contentElement = {
     IMAGECOMBO: 'imageCombo',
     PULLQUOTE: 'pullQuote',
     LIGHTBOX: 'lightbox',
-    DICTIONARY: 'dictionary'
+    DICTIONARY: 'dictionary',
+    POEMDOCUMENT: 'poem-document'
 }

@@ -331,3 +331,43 @@ a:active {
   list-style: none;
   margin-left: -15px;
 }
+
+
+/********* Poetry design starts *********/
+
+.poem-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.poem-row.left {
+  flex-direction: row;
+}
+
+.poem-row.right {
+  flex-direction: row;
+}
+
+.poem-block {
+  flex: 1;
+}
+
+.stanza-image {
+  width: 150px;
+  height: auto;
+}
+
+.image-block.center {
+  text-align: center;
+  margin: 16px 0;
+}
+
+.image-block.center img {
+  width: 200px;
+}
+
+/********* Poetry design ends *********/
+
+

@@ -1,0 +1,76 @@
+{
+  "sections": [
+    {
+      "type": "bannerImage",
+      "layout": "center",
+      "image": {
+        "url": "/1.png",
+        "alt": {
+          "en": "",
+          "hi": ""
+        },
+        "credit": "",
+        "creditUrl": "",
+        "creditType": "text"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "Is e-activism here to stay? Some of us in Saheli are more comfortable with email while others are not. In fact, even opening an e-mail account for Saheli went through months of intense debates. So you can imagine there is always a tug of war on this front.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "poetryAuthor",
+      "class": "mb-5",
+      "content": {
+        "en": "“I can't express over e-mail”",
+        "hi": ""
+      }
+    },
+    {
+      "type": "poetryAuthor",
+      "class": "mb-5",
+      "content": {
+        "en": "“It's not possible for everyone to access e-mail”",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "...etc. etc. are all usual responses that fly in our office and our inbox from time to time. Not to mention the agony over technological glitches, bad connectivity, having your entire 'revised' version of the newsletter vanish into cyber space, never to return and of course all the 'fun' that follows when an e-mail is sent to an 'un-intended recipient'!!",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "There is certainly a sea change because of the extensive use of e-mail and internet... what with petitions being signed online and e-groups fast becoming the mode of exchanging information. While email cannot replace personal contact, in this fast changing scenario many of us do find it a convenient medium to share information that cuts down a lot of running around and also cuts down costs. Willy nilly we have become part of an e-gang.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "Though it is doubtless a fast and inexpensive way of communicating our ideas, planning activities and decision making, the fact remains that a vast majority of people do not have access to e-mail. We strongly feel that the people we need to reach out to are out of the e-mail network, and are increasingly getting left out of activities and decisions.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "At another level, the medium does have potential of democratising information/opinions/decisions in a scenario where everyone has access. One piece of information/opinion can reach several people at the same time, and everyone can get to see each other's response ('reply-all' button Zindabad!). The ease with which messages can be sent to others, forwarded, cc-ed and bcc-ed, is also a bit alarming at times. A stray thought or casual comment banged out suddenly acquires all kinds of meaning when it is sent out en masse. Privacy is at a premium, when the labour of photocopying and addressing is replaced by the click of a mouse.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "Even as we use the system we continue to question this whole business of electronic mails. We do see the need to evolve norms/ethics of e-activism, so that the medium doesn't get the upper hand. Any comments or suggestions? Will you e-mail us or do you prefer to make a call? ...or better still drop in on one of the Saturdays... We have many mice in our office!",
+        "hi": ""
+      }
+    }
+  ]
+}
