@@ -4141,16 +4141,16 @@ export const articlesSummary: articleList[] = [
         categoryIdList: ["9"],
         subCategoryIdList: []
     },
-    {
-        isArticle: true,
-        id: "Article415",
-        title: "Saheli Calendar 2000: A Visual History of Struggle",
-        subtitle: "An Announcement",
-        decade: "2000s",
-        publishedDate: "Newsletter Jan 2000",
-        categoryIdList: ["1"],
-        subCategoryIdList: []
-    },
+    // {
+    //     isArticle: true,
+    //     id: "Article415",
+    //     title: "Saheli Calendar 2000: A Visual History of Struggle",
+    //     subtitle: "An Announcement",
+    //     decade: "2000s",
+    //     publishedDate: "Newsletter Jan 2000",
+    //     categoryIdList: ["1"],
+    //     subCategoryIdList: []
+    // },
     {
         isArticle: true,
         id: "Article416",
@@ -4161,16 +4161,16 @@ export const articlesSummary: articleList[] = [
         categoryIdList: [],
         subCategoryIdList: ["Subcategory3", "Subcategory6", "Subcategory18"]
     },
-    {
-        isArticle: true,
-        id: "Article417",
-        title: "A Request to out Readers",
-        subtitle: "",
-        decade: "1990s",
-        publishedDate: "Newsletter Feb 1999",
-        categoryIdList: ["1"],
-        subCategoryIdList: []
-    },
+    // {
+    //     isArticle: true,
+    //     id: "Article417",
+    //     title: "A Request to out Readers",
+    //     subtitle: "",
+    //     decade: "1990s",
+    //     publishedDate: "Newsletter Feb 1999",
+    //     categoryIdList: ["1"],
+    //     subCategoryIdList: []
+    // },
     {
         isArticle: true,
         id: "Article418",

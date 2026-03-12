@@ -1,0 +1,68 @@
+{
+  "sections": [
+    {
+      "type": "bannerImage",
+      "layout": "center",
+      "class": "mt-16",
+      "image": {
+        "url": "/1.png",
+        "alt": {
+          "en": "",
+          "hi": ""
+        },
+        "credit": "",
+        "creditUrl": "",
+        "creditType": "text"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "The last few months at Saheli have been a period of intense fund-raising. As most of our readers know, we work on volunteer power, individual donations and the strength of our convictions. The encouragement and criticism of our supporters has been a major source of sustenance. The recent fund raising drive has been an overwhelming demonstration of the faith of countless friends and associates. The spontaneous and generous responses and monetary contributions from friends, supporters, family, and even newer (sometimes unexpected) quarters, have been matched by offers of subsidised printing, enthusiastic distribution of passes for the concert, decoration and installation of a ramp to ensure wheelchair access to the venue, and many others served as an immense source of strength and encouragement, and an affirmation of our work and politics. A booklet giving a glimpse of our work and vision published on the occasion, encapsulates the essence of the entire process: “Because there are so many reasons to go on…”",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "The spirit of solidarity with autonomous politics was apparent too in Neela Bhagwat’s warm and enthusiastic offer to perform a benefit concert for us. For Mumbai-based Neela, senior exponent of the Gwalior gharana, Hindustani music is not only a heritage to be carried forward, but a living art form that must play its role in contemporary society. Neela is one of the rare artistes who envision music and society together - each becoming more meaningful when interwoven with the other. Challenging notions of the typical image of a woman singer, and composing feminist khayals expressing the ethos of the modern woman, Neela’s art emerges from the context of her lived experiences. The trauma of communal riots in Mumbai following the demolition of the Babri Masjid in 1992, made Neela re-look at Kabir, since the philosophy of this 5th century saint is as relevant today. In fact, Neela specially composed Kabir’s couplet, “Tu Jaag Sakey to Jaag,” from which we had drawn the title of the event.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "pullQuote",
+      "layout": "withImage",
+      "class": "mt-24",
+      "content": {
+        "en": "जैसे तिल में तेल है, ज्यों चकमक में आग, तेरा साईं तुझ में है, तू जाग सके तो जाग",
+        "hi": "",
+        "class": ""
+      },
+      "image": {
+        "type": "image",
+        "url": "/2.png",
+        "alt": {
+          "en": "",
+          "hi": ""
+        },
+        "credit": "",
+        "creditUrl": "",
+        "creditType": "text"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "The concert, held on 5th December, the eve of the day the Babri Masjid was demolished by Hindu fanatics in 1992, was a momentous day to assert our collective secular spirit. Of special significance was also the fact that the same day was celebrated as Dalit Samman Diwas, strengthening the resistance against upper caste, Hindu majoritarianism that has posed a severe challenge to all marginalised groups. A challenge we have responded to with alacrity and vigour, jointly with progressive groups in the city and outside.",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "Neela’s social concerns were apparent throughout, with her compositions using Chokhamela and Mahatma Phule’s poetry. The spirit and fervour of Neela’s rendition were more inspiring than can be expressed in words. Neela’s feisty interpretation of a piece on ‘vitaal’ – the Marathi word for both, menstrual blood and ‘untouchability’, touched all the female hearts in the audience!",
+        "hi": ""
+      }
+    }
+  ]
+}

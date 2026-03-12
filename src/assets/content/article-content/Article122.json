@@ -42,10 +42,10 @@
         "hi": ""
       }
     },
-        {
-            "type": "emptySpace",
-            "margin": "24"
-        },
+    {
+      "type": "emptySpace",
+      "margin": "24"
+    },
     {
       "type": "poem-document",
       "title": "Friends of Saheli",

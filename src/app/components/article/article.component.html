@@ -44,9 +44,9 @@
     }
 
     @case (elements.BANNERIMAGE) {
-    <div class="banner-image" [ngClass]="section.class">
+    <div [class]="'banner-image' + ' ' + section.class" [ngClass]="section.class">
         <div class="banner-image-block">
-            <img [src]="imageURL + articleId + section.image.url" [alt]="section.image.alt[currentLang]" />
+            <img [src]="imageURL + articleId + section.image.url" [alt]="section.image.alt[currentLang]" [class]="section.image.class" />
 
             @if(section.image.creditType === elements.TEXT){
             <span class="credit">
@@ -102,7 +102,7 @@
     @case (elements.PULLQUOTE) {
     @if (section.layout === 'left') {
     <div class="pullquote">
-        <span class="quote">“</span>
+        <span class="quote">‘‘</span>
         <p class="quote-text">{{ section.content[currentLang] }}</p>
     </div>
     } @else if(section.layout === 'withImage') {
@@ -262,6 +262,43 @@
     }
     }
 
+    <!-- TWO COLUMN -->
+    @case (elements.TWOCOLUMN) {
+    <div class="two-column-layout">
+
+        <!-- TEXT COLUMN -->
+        @if (section.columns[0].type === 'text') {
+        <div class="text-column">
+
+            <u class="title">
+                {{ section.columns[0].title }}
+            </u>
+            <div class="poem" [ngClass]="section.columns[0].italic ? 'fs-italic' : ''">
+                @for (line of section.columns[0].content; track $index) {
+                <ng-container>
+                    <span>{{ line }}</span><br>
+                </ng-container>
+                }
+
+            </div>
+        </div>
+        }
+
+
+        <!-- IMAGE GRID COLUMN -->
+        @if (section.columns[1].type === 'imageGrid') {
+        <div class="image-grid">
+            @for (img of section.columns[1].images; track $index) {
+            <div class="grid-item" [ngClass]="img.area">
+                <img [src]="imageURL + articleId + img.src" [alt]="img.alt" />
+            </div>
+            }
+        </div>
+        }
+
+    </div>
+    }
+
     <!-- CUSTOM YELLOW BOX -->
     @case (elements.CUSTOMYELLOWBOX) {
     <div class="custom-yellow-box">
@@ -348,6 +385,7 @@
     }
     }
     }
+
 
     <ng-template #dynamicPopover let-data>
         <div class="popover-content">

@@ -26,6 +26,10 @@ a:active {
   margin-bottom: 0 !important;
 }
 
+.light-img-border {
+  border: 1px solid #D6D6D6;
+}
+
 // General Styling ends
 
 
@@ -188,6 +192,10 @@ a:active {
   margin-bottom: 5px !important;
 }
 
+.mb-16 {
+  margin-bottom: 16px !important;
+}
+
 .mb-24 {
   margin-bottom: 24px !important;
 }
@@ -214,6 +222,26 @@ a:active {
 
 .ml-35 {
   margin-left: 35px !important;
+}
+
+.pb-5 {
+  padding-bottom: 5px !important;
+}
+
+.pt-5 {
+  padding-top: 5px !important;
+}
+
+.pl-5 {
+  padding-left: 5px !important;
+}
+
+.pr-5 {
+  padding-right: 5px !important;
+}
+
+.round-border {
+  border-radius: 10px;
 }
 
 .h-250 {
@@ -275,6 +303,7 @@ a:active {
     // color: #f2287f;
     color: #ae84e8;
     height: 100px;
+    font-family: sans-serif;
   }
 
   .quote-text {
@@ -371,3 +400,71 @@ a:active {
 /********* Poetry design ends *********/
 
 
+.two-column-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  align-items: flex-start;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+}
+
+.text-column {
+  flex: 1;
+
+  .title {
+    font-weight: 500;
+  }
+
+  .poem {
+    line-height: 1.8;
+  }
+}
+
+.image-grid {
+  flex: 1;
+  display: grid;
+
+  grid-template-areas:
+    "square1 vertical"
+    "square2 vertical"
+    "horizontal horizontal";
+
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  max-width: 400px;
+
+  .grid-item {
+    overflow: hidden;
+    border-radius: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .square1 {
+    grid-area: square1;
+    aspect-ratio: 1 / 1;
+  }
+
+  .square2 {
+    grid-area: square2;
+    aspect-ratio: 1 / 1;
+  }
+
+  .vertical {
+    grid-area: vertical;
+    aspect-ratio: 3 / 5;
+  }
+
+  .horizontal {
+    grid-area: horizontal;
+    aspect-ratio: 5 / 3;
+  }
+}

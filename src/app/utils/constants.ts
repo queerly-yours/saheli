@@ -23,5 +23,6 @@ export const contentElement = {
     PULLQUOTE: 'pullQuote',
     LIGHTBOX: 'lightbox',
     DICTIONARY: 'dictionary',
-    POEMDOCUMENT: 'poem-document'
+    POEMDOCUMENT: 'poem-document',
+    TWOCOLUMN: "twoColumn"
 }
