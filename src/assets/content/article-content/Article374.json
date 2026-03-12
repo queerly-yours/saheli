@@ -1,0 +1,76 @@
+{
+    "sections": [
+        {
+            "type": "bannerImage",
+            "layout": "center",
+            "image": {
+                "class": "light-img-border round-border",
+                "url": "/1.png",
+                "alt": {
+                    "en": "",
+                    "hi": ""
+                },
+                "credit": "",
+                "creditUrl": "",
+                "creditType": "text"
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "en": "After the fire Saheli got a lot of support - love that we can not keep accounts of, help with running around and a lot of financial support too! In all we received Rs 6,95,440 for rebuilding our office, to have it furnished and for replenishing our materials.",
+                "hi": ""
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "en": "For a long time we were waiting for a go ahead by the pWD who was to repair and declare the superstructure safe. We waited for more than one year but the PWD did not even start any repairs and of course we had no permission to go ahead. In the meanwhile the remaining establishments under the flyover rebuilt their offices and shops.",
+                "hi": ""
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "en": "After waiting for one year we also renovated our office. Instead of the two rooms earlier we now have one large space with a moveable partition, that can be used for big meetings and when necessary we can use the space as two rooms. You may recall that immediately after the fire we had made a temporary structure and put up windows to prevent vandalism and takeover and we had sent you pictures of the same. some of the money was used at that time. The full account of what has been spent is as follows:",
+                "hi": ""
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "en": "To secure the office with windows door and wall - RS 66,357.",
+                "hi": ""
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "en": "2012-13 For reconstruction and furnishing - RS 4,09,432.",
+                "hi": ""
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "en": "We are yet to buy a computer and some furniture but since last saheli day we have been using the office space. since most of the major expenses have been taken care of we are sharing this information and once again thanking you all. Here is a glimpse of our office now.",
+                "hi": ""
+            }
+        },
+        {
+            "type": "bannerImage",
+            "layout": "center",
+            "image": {
+                "class": "light-img-border round-border",
+                "url": "/2.png",
+                "alt": {
+                    "en": "",
+                    "hi": ""
+                },
+                "credit": "",
+                "creditUrl": "",
+                "creditType": "text"
+            }
+        }
+    ]
+}

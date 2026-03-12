@@ -1,0 +1,130 @@
+{
+  "sections": [
+    {
+      "type": "bannerImage",
+      "layout": "center",
+      "image": {
+        "class": "light-img-border round-border",
+        "url": "/1.png",
+        "alt": {
+          "en": "",
+          "hi": ""
+        },
+        "credit": "",
+        "creditUrl": "",
+        "creditType": "text"
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fs-italic",
+      "content": {
+        "en": "Are you a feminist, or do you wonder whether you are?",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fs-italic",
+      "content": {
+        "en": "Does the phrase 'question authority' make you raise your fist in the air?",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fs-italic",
+      "content": {
+        "en": "Do you sing badly?",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fs-italic",
+      "content": {
+        "en": "Does the idea of being a part of an autonomous women's group (and finally the movement) excite you?",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fs-italic",
+      "content": {
+        "en": "Do you think independently, but can work collectively?",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fs-italic",
+      "content": {
+        "en": "Do you see political work as extending to the upkeep of a certain hot-dusty-quivering-under-the-traffic-flyover office?",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fs-italic",
+      "content": {
+        "en": "Do you believe that our struggles are intrinsically intertwined, and the liberation of women lies in the liberation of all from brahminical, patriarchal forces?",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fs-italic",
+      "content": {
+        "en": "1+1 = 11, right?",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fs-italic",
+      "content": {
+        "en": "Is alliance-building/solidarity with others who are struggling, a central part of your politics?",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fs-italic",
+      "content": {
+        "en": "Are you willing to question yourself and us about dearly-held beliefs?",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fs-italic",
+      "content": {
+        "en": "Do you want to work on campaigns and not projects?",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fs-italic",
+      "content": {
+        "en": "Do you have nothing better to do on a Saturday?",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "class": "fs-italic",
+      "content": {
+        "en": "Do you think some of the above are inside jokes that you want in on?",
+        "hi": ""
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "en": "We could go on... but if you like where the above questions take you, then it's time for you to drop us an email and come by under the flyover on any Saturday so we can get to know each other over chai, licking stamps, bill payments, heated discussions, menstrual cramps and other such joys.",
+        "hi": ""
+      }
+    }
+  ]
+}

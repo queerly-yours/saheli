@@ -46,7 +46,8 @@
     @case (elements.BANNERIMAGE) {
     <div [class]="'banner-image' + ' ' + section.class" [ngClass]="section.class">
         <div class="banner-image-block">
-            <img [src]="imageURL + articleId + section.image.url" [alt]="section.image.alt[currentLang]" [class]="section.image.class" />
+            <img [src]="imageURL + articleId + section.image.url" [alt]="section.image.alt[currentLang]"
+                [class]="section.image.class" />
 
             @if(section.image.creditType === elements.TEXT){
             <span class="credit">
@@ -264,6 +265,7 @@
 
     <!-- TWO COLUMN -->
     @case (elements.TWOCOLUMN) {
+
     <div class="two-column-layout">
 
         <!-- TEXT COLUMN -->
@@ -273,30 +275,39 @@
             <u class="title">
                 {{ section.columns[0].title }}
             </u>
+
             <div class="poem" [ngClass]="section.columns[0].italic ? 'fs-italic' : ''">
+
                 @for (line of section.columns[0].content; track $index) {
-                <ng-container>
-                    <span>{{ line }}</span><br>
-                </ng-container>
+                <span>{{ line }}</span><br>
                 }
 
             </div>
+
         </div>
         }
 
-
-        <!-- IMAGE GRID COLUMN -->
+        <!-- IMAGE COLUMN -->
         @if (section.columns[1].type === 'imageGrid') {
-        <div class="image-grid">
+
+        <div class="image-grid" [ngClass]="section.columns[1].layout">
+
             @for (img of section.columns[1].images; track $index) {
+
             <div class="grid-item" [ngClass]="img.area">
-                <img [src]="imageURL + articleId + img.src" [alt]="img.alt" />
+
+                <img [src]="imageURL + articleId + img.src" [alt]="img.alt || ''" />
+
             </div>
+
             }
+
         </div>
+
         }
 
     </div>
+
     }
 
     <!-- CUSTOM YELLOW BOX -->

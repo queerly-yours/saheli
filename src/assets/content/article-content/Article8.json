@@ -546,7 +546,7 @@
             {
               "area": "vertical",
               "src": "/4.png",
-              "alt": "Vertical rectangle"
+              "alt": "Vertical image"
             },
             {
               "area": "square2",
@@ -556,7 +556,7 @@
             {
               "area": "horizontal",
               "src": "/6.png",
-              "alt": "Horizontal rectangle"
+              "alt": "Horizontal image"
             }
           ]
         }
