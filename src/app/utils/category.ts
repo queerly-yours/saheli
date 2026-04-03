@@ -213,6 +213,7 @@ if (archiveCategory) {
     archiveCategory.archiveList = categories.filter(category => !excludedFromArchives.includes(category.id)).map(category => ({
         id: category.id,
         title: category.title,
+        hindiTitle: category.hindiTitle,
         archiveImg: category.archiveImg
     }));
 }

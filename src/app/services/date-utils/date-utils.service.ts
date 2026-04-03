@@ -49,10 +49,10 @@ export class DateUtilsService {
   }
 
   // Sort articles by parsed date
-  sortByPublishedDate<T extends { publishedDate?: string }>(items: T[]): T[] {
+  sortByPublishedDate<T extends { publishedDate?: {en: string, hi: string } }>(items: T[]): T[] {
     return [...items].sort((a, b) => {
-      const dateA = this.parsePublishedDate(a.publishedDate ?? '');
-      const dateB = this.parsePublishedDate(b.publishedDate ?? '');
+      const dateA = this.parsePublishedDate(a.publishedDate!.en ?? '');
+      const dateB = this.parsePublishedDate(b.publishedDate!.en ?? '');
 
       if (!dateA && !dateB) return 0;
       if (!dateA) return 1;

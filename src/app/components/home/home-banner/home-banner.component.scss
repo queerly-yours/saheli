@@ -48,10 +48,28 @@
     pointer-events: none;
     // color: #ee94bb;
     color: #fff;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 18px;
     letter-spacing: 1px;
     text-transform: uppercase;
+    line-height: 26px;
+}
+
+.circle .label-hi {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
+    // color: #ee94bb;
+    color: #fff;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 30px;
 }
 
 .circle .l1 {
@@ -60,12 +78,18 @@
     padding-top: 40px;
 }
 
+.circle .l1-hi {
+    align-items: flex-start;
+    text-transform: uppercase;
+    padding-top: 32px;
+}
+
 .circle .l2 {
     justify-content: flex-start;
     padding-left: 45px;
 }
 
-.circle .l2-hindi {
+.circle .l2-hi {
     justify-content: flex-start;
     padding-left: 60px;
 }
@@ -270,6 +294,10 @@ Values tuned to visually match the provided mock. Adjust per-asset sizes and pos
         font-size: 2.6vw;
     }
 
+    .circle .label-hi {
+        font-size: 3.6vw;
+    }
+
     .sil {
         width: 11%;
     }
@@ -284,6 +312,11 @@ Values tuned to visually match the provided mock. Adjust per-asset sizes and pos
     .circle .label {
         font-size: 3.8vw;
     }
+
+    .circle .label-hi {
+        font-size: 3.6vw;
+    }
+
 
     .sil {
         width: 14%;
@@ -321,5 +354,9 @@ Values tuned to visually match the provided mock. Adjust per-asset sizes and pos
 }
 
 .circle:hover div.label {
+    color: #fff
+}
+
+.circle:hover div.label-hi {
     color: #fff
 }

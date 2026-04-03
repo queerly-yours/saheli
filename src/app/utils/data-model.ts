@@ -1,8 +1,17 @@
 export interface articleList {
     id: string;
-    title: string;
-    subtitle: string;
-    publishedDate: string;
+    title: {
+        en: string;
+        hi: string;
+    };
+    subtitle: {
+        en: string;
+        hi: string;
+    };
+    publishedDate: {
+        en: string;
+        hi: string;
+    };
     isArticle: boolean;
     categoryIdList: string[];
     subCategoryIdList: string[];
@@ -46,9 +55,18 @@ export interface archive {
 export interface article {
     id: string;
     decades?: string[];
-    publishedDate: string;
-    subtitle: string;
-    title: string;
+    publishedDate: {
+        en: string,
+        hi: string
+    };
+    subtitle: {
+        en: string,
+        hi: string
+    };
+    title: {
+        en: string,
+        hi: string
+    };
     value: string;
     categoryIdList: string[];
     subCategoryIdList: string[];

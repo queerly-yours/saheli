@@ -5,7 +5,7 @@
     @switch (section.type) {
 
     @case (elements.PARAGRAPH) {
-    <p class="article-paragraph" [ngClass]="section.class">
+    <p class="article-paragraph" [ngClass]="section.class + ' ' + (currentLang === 'hi' ? 'lh-16' : '')">
         {{ section.content[currentLang] }}
     </p>
 
@@ -19,7 +19,7 @@
         @for (item of section.content[currentLang]; track $index) {
         @if (item.type !== elements.SUPERSCRIPT) {
         @if (item.type === elements.PARAGRAPH) {
-        <span [ngClass]="item.class">
+        <span [ngClass]="item.class + ' ' + (currentLang === 'hi' ? 'lh-16' : '')">
             {{ item.content[currentLang] }}
         </span>
         } @if (item.type === elements.LINK) {
@@ -103,7 +103,7 @@
     @case (elements.PULLQUOTE) {
     @if (section.layout === 'left') {
     <div class="pullquote">
-        <span class="quote">‘‘</span>
+        <span class="quote">`</span>
         <p class="quote-text">{{ section.content[currentLang] }}</p>
     </div>
     } @else if(section.layout === 'withImage') {
@@ -122,7 +122,7 @@
             }
         </div>
         <div class="pullquote">
-            <span class="quote">“</span>
+            <span class="quote">`</span>
             <p class="quote-text">{{ section.content[currentLang] }}</p>
         </div>
     </div>
@@ -144,7 +144,7 @@
 
     <!--- SUBHEADING --->
     @case (elements.SUBHEADING) {
-    <div class="article-subheading" [ngClass]="section.class">
+    <div class="article-subheading {{'subh-'+[currentLang]}}" [ngClass]="section.class">
         {{ section.content[currentLang] }}
     </div>
     }
@@ -344,7 +344,7 @@
             @for (item of item.content[currentLang]; track $index) {
             @if (item.type !== elements.SUPERSCRIPT) {
             @if (item.type === elements.PARAGRAPH) {
-            <span [ngClass]="item.class">
+            <span [ngClass]="item.class + ' ' + (currentLang === 'hi' ? 'lh-16' : '')">
                 {{ item.content[currentLang] }}
             </span>
             } @if (item.type === elements.LINK) {
@@ -364,7 +364,7 @@
         }
 
         @if (item.type === elements.PARAGRAPH) {
-        <p class="article-paragraph" [ngClass]="item.class">
+        <p class="article-paragraph" [ngClass]="item.class + ' ' + (currentLang === 'hi' ? 'lh-16' : '')">
             {{ item.content[currentLang] }}
         </p>
         }

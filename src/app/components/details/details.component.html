@@ -20,19 +20,30 @@
     @if (!viewByDecade) {
     @if (type === paramTypes.Article) {
     <div class="article-content">
-        <span class="article-title">{{categoryData?.title | customCapitalize:['Net-En']}}</span>
+        <span class="article-title {{'title-'+[currentLang]}}">{{categoryData?.title[currentLang] |
+            customCapitalize:['Net-En']}}</span>
         @if (categoryData?.subtitle) {
-        <span class="article-subtitle">{{categoryData?.subtitle | uppercase }}</span>
+        <span class="article-subtitle {{'subtitle-'+[currentLang]}}">
+            {{
+                currentLang === 'en'
+                ? (categoryData?.subtitle[currentLang] | uppercase)
+                : (categoryData?.subtitle[currentLang] )
+            }}
+        </span>
         }
-        <div class="article-dates-wrapper" [ngClass]="{'mt-10': !categoryData?.subtitle}">
-            <div>{{categoryData?.publishedDate}}</div>
+        <div class="article-dates-wrapper {{'dates-'+[currentLang]}}" [ngClass]="{'mt-10': !categoryData?.subtitle}">
+            <div>{{categoryData?.publishedDate[currentLang]}}</div>
         </div>
         <app-article [articleId]="categoryData.id"></app-article>
         <!-- <div [innerHTML]="getSanitizedValue(categoryData?.value)" class="article-content-wrapper"></div> -->
     </div>
     } @else {
     <div class="category-content">
+        @if (currentLang === 'en') {
         <span class="category-name">{{categoryData?.title | customCapitalize }}</span>
+        } @else {
+        <span class="category-name">{{categoryData?.hindiTitle | customCapitalize }}</span>
+        }
         <div class="category-description-wrapper">
             @for (item of categoryData?.description; track $index) {
             <span class="category-description">{{item}}</span>
@@ -51,6 +62,7 @@
         @if (categoryData?.articleList?.length) {
         <div class="category-article-summary">
             @for (item of visibleArticles(categoryData?.articleList); track $index) {
+            {{$index + 1}}
             <app-article-summary [articleSummary]="item"
                 (navigateToArticleEvent)="navigateToArticle($event)"></app-article-summary>
             }
@@ -73,7 +85,11 @@
         <div class="archive-list-wrapper mb-5">
             @for (item of categoryData.archiveList; track $index) {
             <div class="archive-wrapper">
+                @if (currentLang === 'en') {
                 <span class="archive-title">{{item.title}}</span>
+                } @else {
+                <span class="archive-title">{{item.hindiTitle}}</span>
+                }
                 <img [src]="item.archiveImg" alt="" class="archive-image">
             </div>
             }
@@ -83,7 +99,11 @@
     }
     } @else {
     <div class="category-content">
+        @if (currentLang === 'en') {
         <span class="category-name">{{categoryData?.title | customCapitalize}} in {{selectedDecade}}</span>
+        } @else {
+        <span class="category-name">{{categoryData?.hindiTitle | customCapitalize}} in {{selectedDecade}}</span>
+        }
 
 
         @if (decadeWiseArticleList.length) {

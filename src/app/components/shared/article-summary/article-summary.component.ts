@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, effect, EventEmitter, Input, Output } from '@angular/core';
 import { articleList } from '../../../utils/data-model';
 import { CapitalizePipe } from '../../../services/pipes/capitalize/capitalize.pipe';
+import { LanguageService } from '../../../services/language/language.service';
 
 @Component({
   selector: 'app-article-summary',
@@ -11,8 +12,14 @@ import { CapitalizePipe } from '../../../services/pipes/capitalize/capitalize.pi
 export class ArticleSummaryComponent {
   @Input() articleSummary: articleList | null = null;
   @Output() navigateToArticleEvent = new EventEmitter();
+   currentLang = 'en';
 
-  constructor() { }
+  constructor(private languageService: LanguageService) {
+     effect(() => {
+      console.log('Language changed to:', this.languageService.lang());
+      this.currentLang = this.languageService.lang();
+    });
+   }
 
   navigateToArticle(id: string | undefined) {
     this.navigateToArticleEvent.emit(id);

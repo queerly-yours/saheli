@@ -63,17 +63,35 @@
 
         .article-title {
             color: #c8941a;
-            font-size: 40px;
             font-weight: 400;
+            
+            &.title-en {
+                font-size: 40px;
+                margin-top: 5px;
+            }
+
+            &.title-hi {
+                font-size: 45px;
+                margin-top: -5px;
+            }
         }
 
         .article-subtitle {
             color: #666666;
-            font-size: 20px;
+            // font-size: 20px;
             font-weight: 400;
             width: 90%;
-            padding: 10px 0px;
             line-height: 30px;
+            
+            &.subtitle-en {
+                padding: 10px 0px;
+                font-size: 20px;
+            }
+
+            &.subtitle-hi {
+                font-size: 25px;
+                padding: 0px 0px 10px 0px;
+            }
         }
 
         .article-dates-wrapper {
@@ -82,8 +100,16 @@
             padding: 0px 0px 10px 0px;
             color: #a87be6;
             letter-spacing: .25px;
-            font-weight: 500;
-            ;
+            
+            &.dates-en {
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            &.dates-hi {
+                font-size: 18px;
+                font-weight: 600;
+            }
         }
 
         .article-content-wrapper {

@@ -1,0 +1,12 @@
+<div class="search-box">
+  <input
+    type="text"
+    [(ngModel)]="query"
+    (keydown)="onKeydown($event)"
+    [placeholder]="languageService.isEnglish() ? 'Search...' : 'खोजें...'"
+    class="search-input"
+  />
+  <button class="search-btn" (click)="onSearch()" aria-label="Search">
+    <ng-icon name="heroMagnifyingGlass" size="18"></ng-icon>
+  </button>
+</div>

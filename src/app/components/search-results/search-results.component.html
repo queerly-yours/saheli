@@ -1,0 +1,93 @@
+<div class="search-results-page">
+  <div class="breadcrumb">
+    <span class="home-link" (click)="goHome()">
+      {{ languageService.isEnglish() ? 'Home' : 'होम' }}
+    </span>
+    <span class="separator"> » </span>
+    <span>
+      {{ languageService.isEnglish() ? 'You searched for - ' : 'आपने खोजा - ' }}
+      <strong>{{ query() }}</strong>
+    </span>
+  </div>
+
+  <h1 class="results-heading">
+    {{ languageService.isEnglish() ? 'Search Results for: ' : 'खोज परिणाम: ' }}
+    <span class="query-highlight">{{ query() }}</span>
+  </h1>
+
+  @if (searchService.isLoading()) {
+    <p class="status-msg">
+      {{ languageService.isEnglish() ? 'Loading...' : 'लोड हो रहा है...' }}
+    </p>
+  } @else if (searched() && allResults().length === 0) {
+    <p class="status-msg no-results">
+      {{ languageService.isEnglish()
+        ? 'No results found for "' + query() + '"'
+        : '"' + query() + '" के लिए कोई परिणाम नहीं मिला' }}
+    </p>
+  } @else if (searched()) {
+    <p class="results-count">
+      {{ languageService.isEnglish()
+        ? allResults().length + ' results found'
+        : allResults().length + ' परिणाम मिले' }}
+    </p>
+
+    <ul class="results-list">
+      @for (result of paginatedResults(); track result.id) {
+        <li class="result-item" (click)="goToArticle(result)">
+          <h2 class="result-title"
+              [innerHTML]="result.title | highlight:query():languageService.lang()">
+          </h2>
+          <p class="result-date">{{ result.publishedDate }}</p>
+          @if (result.subtitle) {
+            <p class="result-subtitle"
+               [innerHTML]="result.subtitle | highlight:query():languageService.lang()">
+            </p>
+          }
+          @if (result.matchedIn === 'content') {
+            <p class="result-snippet"
+               [innerHTML]="result.snippet | highlight:query():languageService.lang()">
+            </p>
+          }
+        </li>
+      }
+    </ul>
+
+    @if (totalPages() > 1) {
+      <nav class="pagination">
+        <button
+          class="page-btn nav-btn"
+          [disabled]="currentPage() === 1"
+          (click)="goToPage(currentPage() - 1)">
+          ‹
+        </button>
+
+        @for (page of pageNumbers(); track $index) {
+          @if (page === '...') {
+            <span class="page-ellipsis">…</span>
+          } @else {
+            <button
+              class="page-btn"
+              [class.active]="page === currentPage()"
+              (click)="goToPage(page)">
+              {{ page }}
+            </button>
+          }
+        }
+
+        <button
+          class="page-btn nav-btn"
+          [disabled]="currentPage() === totalPages()"
+          (click)="goToPage(currentPage() + 1)">
+          ›
+        </button>
+      </nav>
+
+      <p class="page-info">
+        {{ languageService.isEnglish()
+          ? 'Page ' + currentPage() + ' of ' + totalPages()
+          : 'पृष्ठ ' + currentPage() + ' / ' + totalPages() }}
+      </p>
+    }
+  }
+</div>

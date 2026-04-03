@@ -42,6 +42,7 @@ export class DetailsComponent {
   visibleCount = 10;
   incrementBy = 10;
   articleNavList: any[] = [];
+  currentLang = 'en';
 
 
 
@@ -53,6 +54,7 @@ export class DetailsComponent {
     private languageService: LanguageService) {
     effect(() => {
       console.log('Language changed to:', this.languageService.lang());
+      this.currentLang = this.languageService.lang();
     });
   }
 
@@ -109,6 +111,8 @@ export class DetailsComponent {
 
   fetchCategoryData(id: string, instance: any[]) {
     this.categoryData = filterByIds(instance, [id], 'id')[0];
+    console.log('************', this.categoryData);
+    
 
     if (this.categoryData.articleList?.length) {
       this.categoryData.articleList = this.dateUtils.sortByPublishedDate(this.categoryData.articleList);

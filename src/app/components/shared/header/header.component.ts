@@ -5,14 +5,14 @@ import { Router, RouterModule } from '@angular/router';
 import { categories } from '../../../utils/category';
 import { category, subCategory } from '../../../utils/data-model';
 import { ParamType } from '../../../utils/utils';
-import { SearchDropdownComponent } from "../search/search.component";
 import { LanguageService } from '../../../services/language/language.service';
 import { CommonModule } from '@angular/common';
+import { SearchBoxComponent } from '../../search-box/search-box.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgIconComponent, RouterModule, SearchDropdownComponent, CommonModule],
+  imports: [NgIconComponent, RouterModule, CommonModule, SearchBoxComponent],
   providers: [provideIcons({ heroBars3, heroMagnifyingGlass, heroChevronDown, heroChevronUp, heroLanguage })],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
