@@ -2,10 +2,11 @@ import { Component, effect, EventEmitter, Input, Output } from '@angular/core';
 import { articleList } from '../../../utils/data-model';
 import { CapitalizePipe } from '../../../services/pipes/capitalize/capitalize.pipe';
 import { LanguageService } from '../../../services/language/language.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-article-summary',
-  imports: [CapitalizePipe],
+  imports: [CapitalizePipe, CommonModule],
   templateUrl: './article-summary.component.html',
   styleUrl: './article-summary.component.scss'
 })

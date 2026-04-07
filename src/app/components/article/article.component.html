@@ -5,7 +5,7 @@
     @switch (section.type) {
 
     @case (elements.PARAGRAPH) {
-    <p class="article-paragraph" [ngClass]="section.class + ' ' + (currentLang === 'hi' ? 'lh-16' : '')">
+    <p class="article-paragraph" [ngClass]="section.class + ' ' + (currentLang === 'hi' ? 'lh-16 fs-18' : '')">
         {{ section.content[currentLang] }}
     </p>
 
@@ -19,7 +19,7 @@
         @for (item of section.content[currentLang]; track $index) {
         @if (item.type !== elements.SUPERSCRIPT) {
         @if (item.type === elements.PARAGRAPH) {
-        <span [ngClass]="item.class + ' ' + (currentLang === 'hi' ? 'lh-16' : '')">
+        <span [ngClass]="item.class + ' ' + (currentLang === 'hi' ? 'lh-16 fs-18' : '')">
             {{ item.content[currentLang] }}
         </span>
         } @if (item.type === elements.LINK) {
@@ -344,7 +344,7 @@
             @for (item of item.content[currentLang]; track $index) {
             @if (item.type !== elements.SUPERSCRIPT) {
             @if (item.type === elements.PARAGRAPH) {
-            <span [ngClass]="item.class + ' ' + (currentLang === 'hi' ? 'lh-16' : '')">
+            <span [ngClass]="item.class + ' ' + (currentLang === 'hi' ? 'lh-16 fs-18' : '')">
                 {{ item.content[currentLang] }}
             </span>
             } @if (item.type === elements.LINK) {
@@ -364,7 +364,7 @@
         }
 
         @if (item.type === elements.PARAGRAPH) {
-        <p class="article-paragraph" [ngClass]="item.class + ' ' + (currentLang === 'hi' ? 'lh-16' : '')">
+        <p class="article-paragraph" [ngClass]="item.class + ' ' + (currentLang === 'hi' ? 'lh-16 fs-18' : '')">
             {{ item.content[currentLang] }}
         </p>
         }

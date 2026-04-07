@@ -1,13 +1,15 @@
 <div class="article-summary-wrapper" (click)="navigateToArticle(articleSummary?.id)">
     @if (articleSummary?.title) {
-        <span class="article-title"> {{$any(articleSummary?.title)[currentLang] ?? ''}} </span>
+        <span [ngClass]="currentLang === 'en' ? 'article-title' : 'article-title hi'"> {{$any(articleSummary?.title)[currentLang] ?? ''}} </span>
     }
     @if (articleSummary?.subtitle) {
-        <span class="article-subtitle"> 
+        <span [ngClass]="currentLang === 'en' ? 'article-subtitle' : 'article-subtitle hi'"> 
             @if (currentLang === 'en') {
                 {{$any(articleSummary?.subtitle)[currentLang] ?? '' | customCapitalize }} 
+            } @else {
+                {{$any(articleSummary?.subtitle)[currentLang] ?? ''}} 
             }
         </span>
     }
-    <span class="article-date"> {{articleSummary?.publishedDate}} </span>
+    <span [ngClass]="currentLang === 'en' ? 'article-date' : 'article-date hi'"> {{$any(articleSummary?.publishedDate)[currentLang] ?? ''}} </span>
 </div>

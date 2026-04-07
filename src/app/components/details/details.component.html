@@ -62,7 +62,7 @@
         @if (categoryData?.articleList?.length) {
         <div class="category-article-summary">
             @for (item of visibleArticles(categoryData?.articleList); track $index) {
-            {{$index + 1}}
+            <!-- {{$index + 1}} -->
             <app-article-summary [articleSummary]="item"
                 (navigateToArticleEvent)="navigateToArticle($event)"></app-article-summary>
             }
