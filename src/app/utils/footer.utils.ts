@@ -28,8 +28,8 @@
     {
       label: 'Gallery',
       labelHindi: 'गैलरी',
-      hindiRouteLink: '',
-      routeLink: '/',
+      hindiRouteLink: '/hi/gallery',
+      routeLink: '/gallery',
       type: FooterType.REDIRECT
     },
     {

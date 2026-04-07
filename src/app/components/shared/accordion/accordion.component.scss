@@ -51,6 +51,19 @@
   stroke-width: 3 !important;
 }
 
+/* Nested (inner) accordion — inverted color scheme */
+:host(.is-nested) .panel-header {
+    border-bottom-color: #a87be6;
+}
+
+:host(.is-nested) .chev {
+    color: #c8941a;
+}
+
+:host(.is-nested) .panel-header:hover .chev {
+    color: #c8941a;
+}
+
 
 /* panel body — collapsed by default */
 .panel-body {

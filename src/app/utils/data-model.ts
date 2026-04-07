@@ -46,10 +46,18 @@ export interface category {
     isCategory: boolean;
 }
 
+export interface ArchiveImage {
+    url: string;
+    caption: string;
+    alt?: string;
+}
+
 export interface archive {
     id: string;
     title: string;
+    hindiTitle?: string;
     archiveImg?: string;
+    images?: ArchiveImage[];
 }
 
 export interface article {

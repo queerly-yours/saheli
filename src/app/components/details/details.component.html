@@ -83,16 +83,7 @@
 
         @if (categoryData?.archiveList?.length) {
         <div class="archive-list-wrapper mb-5">
-            @for (item of categoryData.archiveList; track $index) {
-            <div class="archive-wrapper">
-                @if (currentLang === 'en') {
-                <span class="archive-title">{{item.title}}</span>
-                } @else {
-                <span class="archive-title">{{item.hindiTitle}}</span>
-                }
-                <img [src]="item.archiveImg" alt="" class="archive-image">
-            </div>
-            }
+            <app-archive-slider [archiveList]="categoryData.archiveList" [currentLang]="currentLang"></app-archive-slider>
         </div>
         }
     </div>
@@ -110,7 +101,7 @@
         <div class="category-article-summary">
             @for (item of visibleArticles(decadeWiseArticleList); track $index) {
             <app-article-summary [articleSummary]="item"
-                (navigateToArticleEvent)="navigateToArticle($event, true)"></app-article-summary>
+                (navigateToArticleEvent)="navigateToArticle($event)"></app-article-summary>
             }
             @if (decadeWiseArticleList.length > initialVisibilityCount && decadeWiseArticleList.length > visibleCount) {
             <button class="see-more" (click)="loadMore()"><b>View More ></b></button>

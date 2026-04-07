@@ -1,8 +1,6 @@
-import { NgFor, NgIf } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { cardDetailsList } from '../../../utils/articles-slider';
-import { ParamType } from '../../../utils/utils';
-import { Router } from '@angular/router';
+import { NavigationService } from '../../../services/navigation/navigation.service';
 
 @Component({
   selector: 'app-article-slider',
@@ -18,7 +16,7 @@ export class ArticleSliderComponent {
   showLeftArrow = false;
   showRightArrow = false;
 
-  constructor(private router: Router) {}
+  constructor(private navService: NavigationService) {}
 
   ngAfterViewInit() {
     this.checkArrows();
@@ -46,8 +44,6 @@ export class ArticleSliderComponent {
   }
 
   navigateToArticle(id: string | undefined) {
-      this.router.navigate(
-        ['/details', id, ParamType.Article]
-      );
-    }
+    this.navService.toArticle(id);
+  }
 }
