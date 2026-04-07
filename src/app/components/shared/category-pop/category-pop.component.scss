@@ -98,16 +98,34 @@
     text-transform: uppercase;
 }
 
+.circle .label-hi {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
+    // color: #ee94bb;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 25px;
+}
+
 .circle .l1 {
     align-items: flex-start;
     text-transform: uppercase;
     padding-top: 40px;
 }
 
-// .circle .l2 {
-//     justify-content: flex-start;
-//     padding-left: 45px;
-// }
+.circle .l1-hi {
+    align-items: flex-start;
+    text-transform: uppercase;
+    padding-top: 25px;
+}
 
 /* Silhouette common style */
 .sil {
