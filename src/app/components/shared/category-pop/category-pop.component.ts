@@ -3,10 +3,11 @@ import { categories } from '../../../utils/category';
 import { Router } from '@angular/router';
 import { ParamType } from '../../../utils/utils';
 import { LanguageService } from '../../../services/language/language.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-category-pop',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './category-pop.component.html',
   styleUrl: './category-pop.component.scss'
 })

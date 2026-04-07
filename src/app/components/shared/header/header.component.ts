@@ -1,11 +1,11 @@
 import { Component, HostListener } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroBars3, heroChevronDown, heroMagnifyingGlass, heroChevronUp, heroLanguage } from '@ng-icons/heroicons/outline';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { categories } from '../../../utils/category';
 import { category, subCategory } from '../../../utils/data-model';
-import { ParamType } from '../../../utils/utils';
 import { LanguageService } from '../../../services/language/language.service';
+import { NavigationService } from '../../../services/navigation/navigation.service';
 import { CommonModule } from '@angular/common';
 import { SearchBoxComponent } from '../../search-box/search-box.component';
 
@@ -21,7 +21,7 @@ export class HeaderComponent {
   dropdownOpen = false;
   menu = categories;
 
-  constructor(private router: Router, public languageService: LanguageService) { }
+  constructor(private navService: NavigationService, public languageService: LanguageService) { }
 
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
@@ -51,18 +51,13 @@ export class HeaderComponent {
 
   decideNavigateOrExpand(item: category | subCategory) {
     if ('isSubcategory' in item && item.isSubcategory) {
-      this.languageService.isEnglish() ?
-       this.router.navigate(['/details/', item.id, ParamType.SubCategory]) :
-       this.router.navigate(['hi/details/', item.id, ParamType.SubCategory]);
+      this.navService.toLangAwareSubCategory(item.id);
     }
     if ('isCategory' in item && item.isCategory && item.subCategoryList.length > 0) {
       this.toggleCategory(item);
     }
-
     if ('isCategory' in item && item.isCategory && item.subCategoryList.length === 0) {
-       this.languageService.isEnglish() ?
-       this.router.navigate(['/details/', item.id, ParamType.Category]) :
-       this.router.navigate(['hi/details/', item.id, ParamType.Category]);
+      this.navService.toLangAwareCategory(item.id);
     }
   }
 

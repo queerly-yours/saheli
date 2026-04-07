@@ -1,6 +1,6 @@
 import { articlesSummary } from "./all-articles-summary";
 import { subcategoriesSummary } from "./all-subcategory-summary";
-import { archive, category } from "./data-model";
+import { archive, ArchiveImage, category } from "./data-model";
 import { publicationsCategory } from "./publications";
 import { filterByArrayKeyAndIds, filterByIds } from "./utils";
 
@@ -206,6 +206,81 @@ export const categories: category[] = [
     }
 ]
 
+const A = '../../../assets/archive/1.png';
+const B = '../../../assets/archive/2.png';
+const C = '../../../assets/archive/3.png';
+
+const categoryArchiveImages: Record<string, ArchiveImage[]> = {
+    '1': [
+        { url: C, caption: 'Saheli members at the Delhi office, early 1980s', alt: 'About Saheli' },
+        { url: A, caption: 'Collective meeting at Saheli resource centre', alt: 'Collective meeting' },
+        { url: B, caption: 'Founding members of Saheli, 1981', alt: 'Founding members' },
+        { url: C, caption: 'Volunteers at Saheli during an outreach programme', alt: 'Outreach programme' },
+    ],
+    '2': [
+        { url: A, caption: 'Campaign against domestic violence, New Delhi', alt: 'Anti-violence campaign' },
+        { url: B, caption: 'Street play on dowry harassment', alt: 'Street play on dowry' },
+        { url: C, caption: 'Protest march for women\'s safety', alt: 'Protest march' },
+        { url: A, caption: 'Self-defence workshop for women', alt: 'Self-defence workshop' },
+        { url: B, caption: 'Awareness event on workplace sexual harassment', alt: 'POSH awareness event' },
+        { url: B, caption: 'Street play on dowry harassment', alt: 'Street play on dowry' },
+        { url: C, caption: 'Protest march for women\'s safety', alt: 'Protest march' },
+        { url: A, caption: 'Self-defence workshop for women', alt: 'Self-defence workshop' },
+        { url: B, caption: 'Awareness event on workplace sexual harassment', alt: 'POSH awareness event' },
+    ],
+    '3': [
+        { url: B, caption: 'Solidarity gathering after communal violence, 1993', alt: 'Solidarity gathering' },
+        { url: C, caption: 'Joint meeting with women\'s groups on communal politics', alt: 'Joint meeting' },
+        { url: A, caption: 'Documentation of communal violence against women', alt: 'Documentation' },
+        { url: B, caption: 'Public discussion on religion, law and women\'s rights', alt: 'Public discussion' },
+    ],
+    '4': [
+        { url: C, caption: 'Campaign against coercive population control policies', alt: 'Population control campaign' },
+        { url: A, caption: 'Seminar on hazardous contraceptives', alt: 'Contraceptives seminar' },
+        { url: B, caption: 'Protest against sex determination tests', alt: 'Sex determination protest' },
+        { url: C, caption: 'Campaign against HPV vaccine trials', alt: 'HPV vaccine campaign' },
+        { url: A, caption: 'Women\'s health awareness drive at Saheli', alt: 'Health awareness drive' },
+    ],
+    '5': [
+        { url: A, caption: 'Delhi Queer Pride march — Saheli contingent', alt: 'Delhi Queer Pride' },
+        { url: B, caption: 'Campaign for Lesbian Rights (CALERI), 1999', alt: 'CALERI campaign' },
+        { url: C, caption: 'Voices Against 377 coalition meeting, 2004', alt: 'Against 377 meeting' },
+        { url: A, caption: 'Discussion on sexuality and gender at Saheli', alt: 'Sexuality discussion' },
+    ],
+    '6': [
+        { url: B, caption: 'Study group on gender and caste intersections', alt: 'Gender-caste study group' },
+        { url: A, caption: 'Community meeting on caste-based violence', alt: 'Community meeting' },
+        { url: C, caption: 'Street play Kaun Jaat — exploring caste and identity', alt: 'Kaun Jaat play' },
+        { url: B, caption: 'Release of publication on marriage, caste and community', alt: 'Publication release' },
+    ],
+    '7': [
+        { url: B, caption: 'Fact-finding on state repression in conflict areas', alt: 'Fact-finding mission' },
+        { url: C, caption: 'Campaign for repeal of AFSPA', alt: 'AFSPA campaign' },
+        { url: A, caption: 'Meeting of Women Against Sexual Violence and State Repression', alt: 'WSS meeting' },
+        { url: B, caption: 'Protest against arbitrary arrests and torture', alt: 'Protest against arrests' },
+    ],
+    '10': [
+        { url: C, caption: 'Joint forum with peoples\' movements, New Delhi', alt: 'Joint forum' },
+        { url: A, caption: 'Solidarity event with Dalit and Adivasi groups', alt: 'Solidarity event' },
+        { url: B, caption: 'Networking with queer and democratic rights groups', alt: 'Rights networking' },
+        { url: C, caption: 'Support rally for peoples\' movements from New Delhi', alt: 'Support rally' },
+    ],
+    '11': [
+        { url: A, caption: 'Autonomous Women\'s Conference — Saheli delegation', alt: 'Women\'s Conference' },
+        { url: B, caption: 'Women\'s Studies Conference panel discussion', alt: 'Women\'s Studies panel' },
+        { url: C, caption: 'Issue-based seminar hosted at Saheli', alt: 'Seminar at Saheli' },
+        { url: A, caption: 'Conference on women\'s rights and the law', alt: 'Rights and law conference' },
+        { url: B, caption: 'Inter-organisational deliberation on feminist strategy', alt: 'Feminist strategy session' },
+    ],
+    '12': [
+        { url: C, caption: '25th anniversary of Saheli celebrations, 2006', alt: '25th anniversary' },
+        { url: A, caption: 'Annual gathering of Saheli collective members', alt: 'Annual gathering' },
+        { url: B, caption: 'Cultural evening with music, dance and food', alt: 'Cultural evening' },
+        { url: C, caption: 'Diwali celebration at the Saheli office', alt: 'Diwali celebration' },
+        { url: A, caption: 'Farewell for a beloved long-time Saheli member', alt: 'Farewell gathering' },
+    ],
+};
+
 // Populate archiveList for 'Archives' after categories is fully defined
 const archiveCategory = categories.find(category => category.id === '13');
 if (archiveCategory) {
@@ -214,6 +289,7 @@ if (archiveCategory) {
         id: category.id,
         title: category.title,
         hindiTitle: category.hindiTitle,
-        archiveImg: category.archiveImg
+        archiveImg: category.archiveImg,
+        images: categoryArchiveImages[category.id] ?? []
     }));
 }

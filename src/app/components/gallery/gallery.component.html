@@ -1,0 +1,153 @@
+<div class="gallery-wrapper">
+
+  <!-- Left column with decorative header lines -->
+  <div class="gallery-left">
+    <div class="gallery-left-inner">
+      <div class="w-100">
+        <app-header-lines [years]="[]"></app-header-lines>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="gallery-content">
+
+    <span class="gallery-page-title">Gallery</span>
+
+    <div class="gallery-description-wrapper">
+      <span class="gallery-description">
+        A visual journey through four decades of Saheli's work — protests and plays,
+        meetings and milestones, celebrations and solidarity. These images capture the
+        people, moments, and movements that have shaped our collective.
+      </span>
+    </div>
+
+    <span class="gallery-section-heading">GALLERY</span>
+
+    <!-- Accordion sections -->
+    <div class="gallery-accordion">
+      @for (section of sections; track section.id) {
+
+      <div class="accordion-item">
+        <button
+          class="accordion-header"
+          [ngClass]="{ 'is-open': isOpen(section.id) }"
+          (click)="toggleSection(section.id)"
+          type="button"
+          [attr.aria-expanded]="isOpen(section.id)"
+          [attr.aria-controls]="'gallery-panel-' + section.id">
+          <span class="accordion-title">{{ section.title }}</span>
+          <ng-icon
+            class="chev"
+            [name]="isOpen(section.id) ? 'heroChevronUp' : 'heroChevronDown'"
+            size="18"
+            aria-hidden="true">
+          </ng-icon>
+        </button>
+
+        <div
+          class="accordion-panel"
+          [class.open]="isOpen(section.id)"
+          [id]="'gallery-panel-' + section.id"
+          role="region">
+
+          <div class="slider-container">
+            <!-- Left scroll arrow -->
+            <button
+              class="scroll-btn scroll-btn-left"
+              (click)="scrollSlider(sliderTrack, 'left')"
+              aria-label="Scroll left"
+              type="button">
+              <ng-icon name="heroChevronLeft" size="20"></ng-icon>
+            </button>
+
+            <!-- Image track -->
+            <div class="slider-track" #sliderTrack>
+              @for (image of section.images; track $index) {
+              <div
+                class="slider-item"
+                (click)="openLightbox(section.id, $index)"
+                [title]="image.caption"
+                role="button"
+                [attr.aria-label]="'View: ' + image.caption"
+                tabindex="0"
+                (keydown.enter)="openLightbox(section.id, $index)">
+                <img
+                  [src]="image.url"
+                  [alt]="image.alt"
+                  class="slider-img"
+                  loading="lazy" />
+              </div>
+              }
+            </div>
+
+            <!-- Right scroll arrow -->
+            <button
+              class="scroll-btn scroll-btn-right"
+              (click)="scrollSlider(sliderTrack, 'right')"
+              aria-label="Scroll right"
+              type="button">
+              <ng-icon name="heroChevronRight" size="20"></ng-icon>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      }
+    </div>
+  </div>
+
+  <!-- Right column with category pop dot -->
+  <div class="gallery-right">
+    <app-category-pop></app-category-pop>
+  </div>
+
+</div>
+
+
+<!-- Lightbox overlay -->
+@if (lightboxOpen && lightboxImage) {
+<div class="lightbox-overlay" (click)="closeLightbox()" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div class="lightbox-container" (click)="$event.stopPropagation()">
+
+    <!-- Close button -->
+    <button class="lightbox-close" (click)="closeLightbox()" aria-label="Close lightbox" type="button">
+      <ng-icon name="heroXMark" size="22"></ng-icon>
+    </button>
+
+    <!-- Prev arrow -->
+    <button
+      class="lightbox-nav lightbox-nav-prev"
+      (click)="prevImage()"
+      [disabled]="!lightboxHasPrev"
+      aria-label="Previous image"
+      type="button">
+      <ng-icon name="heroChevronLeft" size="28"></ng-icon>
+    </button>
+
+    <!-- Image -->
+    <div class="lightbox-image-wrapper">
+      <img
+        [src]="lightboxImage.url"
+        [alt]="lightboxImage.alt"
+        class="lightbox-img" />
+      <p class="lightbox-caption">{{ lightboxImage.caption }}</p>
+      <span class="lightbox-counter">
+        {{ lightboxImageIndex + 1 }} / {{ lightboxSection!.images.length }}
+      </span>
+    </div>
+
+    <!-- Next arrow -->
+    <button
+      class="lightbox-nav lightbox-nav-next"
+      (click)="nextImage()"
+      [disabled]="!lightboxHasNext"
+      aria-label="Next image"
+      type="button">
+      <ng-icon name="heroChevronRight" size="28"></ng-icon>
+    </button>
+
+  </div>
+</div>
+}

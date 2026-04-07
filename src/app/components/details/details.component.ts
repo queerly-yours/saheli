@@ -1,6 +1,7 @@
 import { afterNextRender, Component, effect, Injector, runInInjectionContext } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { filterByArrayKeyAndIds, filterByIds, ParamType } from '../../utils/utils';
+import { NavigationService } from '../../services/navigation/navigation.service';
 import { categories } from '../../utils/category';
 import { AccordionComponent } from "../shared/accordion/accordion.component";
 import { ArticleSummaryComponent } from "../shared/article-summary/article-summary.component";
@@ -10,7 +11,7 @@ import { articles } from '../../utils/all-articles';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { CategoryPopComponent } from "../shared/category-pop/category-pop.component";
 import { NgClass, UpperCasePipe } from '@angular/common';
-import { article } from '../../utils/data-model';
+import { articleList, subCategory } from '../../utils/data-model';
 import { DateUtilsService } from '../../services/date-utils/date-utils.service';
 import { CapitalizePipe } from "../../services/pipes/capitalize/capitalize.pipe";
 import { initialVisibilityCount } from '../../utils/constants';
@@ -19,10 +20,11 @@ import { articlesSummary } from '../../utils/all-articles-summary';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { heroChevronLeft, heroChevronRight } from '@ng-icons/heroicons/outline';
 import { ArticleComponent } from '../article/article.component';
+import { ArchiveSliderComponent } from '../shared/archive-slider/archive-slider.component';
 
 @Component({
   selector: 'app-category',
-  imports: [AccordionComponent, ArticleSummaryComponent, HeaderLinesComponent, CategoryPopComponent, NgClass, CapitalizePipe, UpperCasePipe, NgIcon, ArticleComponent],
+  imports: [AccordionComponent, ArticleSummaryComponent, HeaderLinesComponent, CategoryPopComponent, NgClass, CapitalizePipe, UpperCasePipe, NgIcon, ArticleComponent, ArchiveSliderComponent],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss',
   providers: [provideIcons({ heroChevronLeft, heroChevronRight })]
@@ -30,30 +32,29 @@ import { ArticleComponent } from '../article/article.component';
 export class DetailsComponent {
 
   categoryData!: any;
-  articleData!: any;
   type!: string;
   paramTypes = ParamType;
   viewByDecade = false;
   selectedDecade: string | null = null;
   selectedId: string | null = null;
   fromId: string | null = null;
-  decadeWiseArticleList: any[] = [];
+  decadeWiseArticleList: articleList[] = [];
   initialVisibilityCount = initialVisibilityCount;
   visibleCount = 10;
   incrementBy = 10;
-  articleNavList: any[] = [];
+  articleNavList: string[] = [];
   currentLang = 'en';
 
 
 
-  constructor(private route: ActivatedRoute, 
-    private sanitizer: DomSanitizer, 
-    private injector: Injector, 
-    private router: Router, 
+  constructor(private route: ActivatedRoute,
+    private sanitizer: DomSanitizer,
+    private injector: Injector,
+    private router: Router,
     private dateUtils: DateUtilsService,
-    private languageService: LanguageService) {
+    private languageService: LanguageService,
+    private navService: NavigationService) {
     effect(() => {
-      console.log('Language changed to:', this.languageService.lang());
       this.currentLang = this.languageService.lang();
     });
   }
@@ -111,7 +112,6 @@ export class DetailsComponent {
 
   fetchCategoryData(id: string, instance: any[]) {
     this.categoryData = filterByIds(instance, [id], 'id')[0];
-    console.log('************', this.categoryData);
     
 
     if (this.categoryData.articleList?.length) {
@@ -140,11 +140,11 @@ export class DetailsComponent {
     const instanceKey = fromId.toLowerCase().startsWith('subcategory') || fromId.toLowerCase().startsWith('innercategory') ?
         'subCategoryIdList' : 'categoryIdList';
       let articleNavList = this.dateUtils.sortByPublishedDate(filterByArrayKeyAndIds(articlesSummary, [fromId], instanceKey));
-      this.articleNavList = articleNavList.map((article: any) => article.id);
+      this.articleNavList = articleNavList.map(a => a.id);
   }
   
   getArticlNavContentForDecade(fromId: string) {
-    const categoryContent = filterByIds(categories, [fromId], 'id')[0] as any;
+    const categoryContent = filterByIds(categories, [fromId], 'id')[0];
     let articleList = [];
     if (categoryContent.articleList?.length) {
       categoryContent.articleList = this.dateUtils.sortByPublishedDate(categoryContent.articleList);
@@ -186,7 +186,7 @@ export class DetailsComponent {
   }
 
   getNavArticle(type: 'PREV' | 'NEXT') {
-    const index = this.articleNavList.indexOf(this.selectedId);
+    const index = this.articleNavList.indexOf(this.selectedId ?? '');
     let navId = '';
     if (type === 'PREV') {
       navId = this.articleNavList[index - 1];
@@ -194,12 +194,12 @@ export class DetailsComponent {
       navId = this.articleNavList[index + 1];
     }
     if (this.fromId) {
-      this.navigateToArticle(navId, false, this.fromId);
+      this.navigateToArticle(navId, this.fromId);
     }
   }
 
-  sortArticlesByDate(articleList: article[]) {
-      articleList.forEach((subCategory: any) => {
+  sortArticlesByDate(articleList: subCategory[]) {
+      articleList.forEach((subCategory) => {
         if (subCategory.articleList?.length) {
           subCategory.articleList = this.dateUtils.sortByPublishedDate(subCategory.articleList);
         }
@@ -258,19 +258,11 @@ export class DetailsComponent {
     );
   }
 
-  navigateToArticle(id: string | undefined, isDecadeView = false, fromId?: string) {
-    this.router.navigate(
-      ['/details', id, ParamType.Article],
-      {
-        queryParams: {
-          from: fromId ?? this.selectedId
-        },
-        queryParamsHandling: 'merge'
-      }
-    );
+  navigateToArticle(id: string | undefined, fromId?: string) {
+    this.navService.toArticle(id, fromId ?? this.selectedId);
   }
   
-  visibleArticles(articlesList: any[]) {
+  visibleArticles(articlesList: articleList[]) {
     return articlesList.slice(0, this.visibleCount);
   }
 

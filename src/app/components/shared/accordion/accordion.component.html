@@ -2,9 +2,9 @@
 
     @if (panels.length) {
     <div class="panel" *ngFor="let p of panels">
-        <button class="panel-header" 
+        <button class="panel-header"
             #headerBtn
-            (click)="toggle(p.id, headerBtn)" 
+            (click)="toggle(p.id, headerBtn)"
             [attr.aria-expanded]="isOpen(p.id)"
             [attr.aria-controls]="'panel-body-' + p.id" id="{{'panel-header-' + p.id}}"
             [ngClass]="{'fw-heavy': p.id === openPanelId}"
@@ -19,7 +19,7 @@
         <div class="panel-body" id="{{'panel-body-' + p.id}}" role="region"
             [attr.aria-labelledby]="'panel-header-' + p.id" [class.open]="isOpen(p.id)">
             @if (p.innerCategories?.length) {
-                <app-inner-accordion [panels]="p.innerCategories ?? []"></app-inner-accordion>
+                <app-accordion [panels]="p.innerCategories ?? []" [isNested]="true"></app-accordion>
             }
 
             @for (item of visibleArticles(p.articleList); track $index) {

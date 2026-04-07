@@ -4,87 +4,70 @@ import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroChevronDown, heroChevronUp } from '@ng-icons/heroicons/outline';
 import { subCategory } from '../../../utils/data-model';
 import { ArticleSummaryComponent } from "../article-summary/article-summary.component";
-import { InnerAccordionComponent } from "../inner-accordion/inner-accordion.component";
-import { ParamType } from '../../../utils/utils';
-import { Router } from '@angular/router';
+import { NavigationService } from '../../../services/navigation/navigation.service';
 import { initialVisibilityCount } from '../../../utils/constants';
 
 @Component({
   selector: 'app-accordion',
-  imports: [CommonModule, NgIconComponent, ArticleSummaryComponent, InnerAccordionComponent],
+  imports: [CommonModule, NgIconComponent, ArticleSummaryComponent, AccordionComponent],
   providers: [provideIcons({ heroChevronDown, heroChevronUp })],
   templateUrl: './accordion.component.html',
-  styleUrl: './accordion.component.scss'
+  styleUrl: './accordion.component.scss',
+  host: { '[class.is-nested]': 'isNested' }
 })
 export class AccordionComponent {
 
   @Input() panels: subCategory[] = [];
+  @Input() isNested = false;
   openPanelId: string | null = null;
   initialVisibilityCount = initialVisibilityCount;
+  visibleCount = 10;
+  incrementBy = 10;
 
+  constructor(private injector: Injector, private navService: NavigationService) { }
 
-  constructor(private injector: Injector, private router: Router) { }
+  ngOnChanges() { }
 
-  ngOnChanges() {  }
-
-
-  toggle(panelId: string, headerEl: HTMLElement) {
+  toggle(panelId: string, headerEl?: HTMLElement) {
     this.visibleCount = 10;
-    const beforeTop = headerEl.getBoundingClientRect().top;
-    this.openPanelId = this.openPanelId === panelId ? null : panelId;
-    runInInjectionContext(this.injector, () => {
-      afterNextRender(() => {
-        const afterTop = headerEl.getBoundingClientRect().top;
-        const delta = afterTop - beforeTop;
-
-        // 4️⃣ Undo the movement
-        window.scrollBy({
-          top: delta,
-          behavior: 'smooth'
+    if (!this.isNested && headerEl) {
+      const beforeTop = headerEl.getBoundingClientRect().top;
+      this.openPanelId = this.openPanelId === panelId ? null : panelId;
+      runInInjectionContext(this.injector, () => {
+        afterNextRender(() => {
+          const afterTop = headerEl.getBoundingClientRect().top;
+          const delta = afterTop - beforeTop;
+          window.scrollBy({ top: delta, behavior: 'smooth' });
         });
       });
-    });
+    } else {
+      this.openPanelId = this.openPanelId === panelId ? null : panelId;
+    }
   }
 
   isOpen(panelId: string) {
     return this.openPanelId === panelId;
   }
 
-  visibleCount = 10;
-  incrementBy = 10;
-  
-  visibleArticles(articlesList: any[]) {
+  visibleArticles(articlesList: subCategory['articleList']) {
     return articlesList.slice(0, this.visibleCount);
   }
 
   loadMore() {
     const scrollTop = window.scrollY;
-    
     this.visibleCount += this.incrementBy;
-
     this.retainScrollPosition(scrollTop);
   }
 
   retainScrollPosition(scrollTop: number) {
     runInInjectionContext(this.injector, () => {
       afterNextRender(() => {
-        window.scrollTo({
-          top: scrollTop,
-          behavior: 'auto'
-        });
+        window.scrollTo({ top: scrollTop, behavior: 'auto' });
       });
     });
   }
 
-   navigateToArticle(id: string | undefined) {
-    this.router.navigate(
-      ['/details', id, ParamType.Article],
-      {
-        queryParams: {
-          from: this.openPanelId
-        },
-        queryParamsHandling: 'merge'
-      }
-    );
+  navigateToArticle(id: string | undefined) {
+    this.navService.toArticle(id, this.openPanelId);
   }
 }

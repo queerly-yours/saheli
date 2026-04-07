@@ -14,7 +14,7 @@
         <div class="circle c-1" (click)="navigateToCategory('Sexualities and Gender')">
             <img class="primary" src="../../../../assets/home/home-banner/c-1.png" alt="Sexualities and Gender" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label l1">
+            <div [ngClass]="languageService.isEnglish() ? 'label l1' : 'label-hi l1-hi'">
                 @if(languageService.isEnglish()) {
                  SEXUALITIES<br />AND GENDER
                 } @else {
@@ -26,7 +26,7 @@
         <div class="circle c-2" (click)="navigateToCategory('Women\u2019s Health')">
             <img class="primary" src="../../../../assets/home/home-banner/c-2.png" alt="Women\u2019s Health" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label">
+            <div [ngClass]="languageService.isEnglish() ? 'label' : 'label-hi'">
                 @if(languageService.isEnglish()) {
                     WOMEN&apos;S<br />HEALTH
                 } @else {
@@ -38,7 +38,7 @@
         <div class="circle c-3" (click)="navigateToCategory('Legal Struggles')">
             <img class="primary" src="../../../../assets/home/home-banner/c-3.png" alt="Legal Struggles" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label">
+            <div [ngClass]="languageService.isEnglish() ? 'label' : 'label-hi'">
                 @if(languageService.isEnglish()) {
                     LEGAL<br />STRUGGLES
                 } @else {
@@ -51,7 +51,7 @@
         <div class="circle c-4" (click)="navigateToCategory('Countering Communalism')">
             <img class="primary" src="../../../../assets/home/home-banner/c-4.png" alt="Countering Communalism" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label">
+            <div [ngClass]="languageService.isEnglish() ? 'label' : 'label-hi'">
                 @if(languageService.isEnglish()) {
                     COUNTERING<br />COMMUNALISM
                 } @else {
@@ -64,7 +64,7 @@
         <div class="circle c-5" (click)="navigateToCategory('Resisting Violence')">
             <img class="primary" src="../../../../assets/home/home-banner/c-5.png" alt="Resisting Violence" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label">
+            <div [ngClass]="languageService.isEnglish() ? 'label' : 'label-hi'">
                 @if(languageService.isEnglish()) {
                     RESISTING<br />VIOLENCE
                 } @else {
@@ -77,7 +77,7 @@
         <div class="circle c-6" (click)="navigateToCategory('Other debates and concerns')">
             <img class="primary" src="../../../../assets/home/home-banner/c-6.png" alt="Other debates" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label">
+            <div [ngClass]="languageService.isEnglish() ? 'label' : 'label-hi'">
                 @if(languageService.isEnglish()) {
                     OTHER DEBATES<br />AND CONCERNS
                 } @else {
@@ -90,7 +90,7 @@
         <div class="circle c-7" (click)="navigateToCategory('Contesting caste')">
             <img class="primary" src="../../../../assets/home/home-banner/c-7.png" alt="Contesting caste" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label l2">
+            <div [ngClass]="languageService.isEnglish() ? 'label l2' : 'label-hi'">
                 @if(languageService.isEnglish()) {
                     CONTESTING<br />CASTE
                 } @else {
@@ -103,7 +103,7 @@
         <div class="circle c-8" (click)="navigateToCategory('CONFERENCES')">
             <img class="primary" src="../../../../assets/home/home-banner/c-8.png" alt="Conferences" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label">
+            <div [ngClass]="languageService.isEnglish() ? 'label' : 'label-hi'">
                 @if(languageService.isEnglish()) {
                     CONFERENCES
                 } @else {
@@ -116,7 +116,7 @@
         <div class="circle c-9" (click)="navigateToCategory('Solidarity')">
             <img class="primary" src="../../../../assets/home/home-banner/c-9.png" alt="Solidarity" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label">
+            <div [ngClass]="languageService.isEnglish() ? 'label' : 'label-hi'">
                 @if(languageService.isEnglish()){
                     Solidarity
                 } @else {
@@ -129,7 +129,7 @@
         <div class="circle c-10" (click)="navigateToCategory('Celebrations')">
             <img class="primary" src="../../../../assets/home/home-banner/c-10.png" alt="Celebrations" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label">
+            <div [ngClass]="languageService.isEnglish() ? 'label' : 'label-hi'">
                 @if(languageService.isEnglish()){
                     Celebrations
                 } @else {
@@ -141,7 +141,7 @@
         <div class="circle c-11" (click)="navigateToCategory('State Repression')">
             <img class="primary" src="../../../../assets/home/home-banner/c-11.png" alt="State Repression" />
             <img class="secondary" src="../../../../assets/home/home-banner/blob-large.png" />
-            <div class="label">
+            <div [ngClass]="languageService.isEnglish() ? 'label' : 'label-hi'">
                 @if(languageService.isEnglish()){
                     State Repression
                 } @else {

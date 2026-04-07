@@ -3,8 +3,8 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { SearchService, SearchResult } from '../../services/search/search.service';
 import { LanguageService } from '../../services/language/language.service';
+import { NavigationService } from '../../services/navigation/navigation.service';
 import { HighlightPipe } from '../../services/pipes/highlight/highlight.pipe';
-import { ParamType } from '../../utils/utils';
 
 const PAGE_SIZE = 10;
 
@@ -54,6 +54,7 @@ export class SearchResultsComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private router = inject(Router);
   public languageService = inject(LanguageService);
+  private navService = inject(NavigationService);
 
   ngOnInit() {
     this.route.queryParamMap.subscribe(params => {
@@ -83,8 +84,7 @@ export class SearchResultsComponent implements OnInit {
   }
 
   goToArticle(result: SearchResult) {
-    const base = this.languageService.isEnglish() ? '' : '/hi';
-    this.router.navigate([`${base}/details/${result.id}/${ParamType.Article}`]);
+    this.navService.toLangAwareArticle(result.id);
   }
 
   goHome() {
