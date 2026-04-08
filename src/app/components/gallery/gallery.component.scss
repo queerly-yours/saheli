@@ -187,8 +187,8 @@
   height: 36px;
   border-radius: 50%;
   border: none;
-  background: #c8941a;
-  color: #fff;
+  background: transparent;
+  color: #c8941a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,7 +197,7 @@
   z-index: 1;
 
   &:hover {
-    background: #a87be6;
+    color: #a87be6;
   }
 
   :host ::ng-deep svg {
