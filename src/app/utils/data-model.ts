@@ -22,7 +22,10 @@ export interface subCategory {
     id: string;
     articleList: articleList[];
     categoryIdList: string[];
-    description: string[];
+    description: {
+        en: string[],
+        hi: string[]
+    };
     innerCategories?: subCategory[];
     isSubcategory: boolean;
     title: string;
@@ -39,7 +42,10 @@ export interface category {
     hindiTitle: string;
     title: string;
     decades: string[];
-    description: string[];
+    description: {
+        en: string[],
+        hi: string[]
+    };
     hindiDescription?: string[];
     subCategoryList: subCategory[];
     isOpen: boolean;

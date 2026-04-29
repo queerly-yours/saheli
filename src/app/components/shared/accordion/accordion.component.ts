@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { afterNextRender, Component, Injector, Input, runInInjectionContext } from '@angular/core';
+import { afterNextRender, Component, effect, Injector, Input, runInInjectionContext } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroChevronDown, heroChevronUp } from '@ng-icons/heroicons/outline';
 import { subCategory } from '../../../utils/data-model';
 import { ArticleSummaryComponent } from "../article-summary/article-summary.component";
 import { NavigationService } from '../../../services/navigation/navigation.service';
 import { initialVisibilityCount } from '../../../utils/constants';
+import { LanguageService } from '../../../services/language/language.service';
 
 @Component({
   selector: 'app-accordion',
@@ -23,8 +24,14 @@ export class AccordionComponent {
   initialVisibilityCount = initialVisibilityCount;
   visibleCount = 10;
   incrementBy = 10;
+  currentLang = 'en';
 
-  constructor(private injector: Injector, private navService: NavigationService) { }
+  constructor(private injector: Injector, private navService: NavigationService, public languageService: LanguageService) { 
+    effect(() => {
+      console.log('Language changed to:', this.languageService.lang());
+      this.currentLang = this.languageService.lang();
+    });
+  }
 
   ngOnChanges() { }
 

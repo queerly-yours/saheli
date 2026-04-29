@@ -44,19 +44,19 @@ export const gallerySections: GallerySection[] = [
       { url: 'https://picsum.photos/seed/play05/800/600', caption: 'Interactive theatre in a Delhi school', alt: 'Interactive theatre in school' },
     ]
   },
-  {
-    id: 'celebrations',
-    title: 'Fun time / Celebrations',
-    images: [
-      { url: 'https://picsum.photos/seed/cel01/800/600', caption: '25 years of Saheli celebration, 2006', alt: '25 years celebration' },
-      { url: 'https://picsum.photos/seed/cel02/800/600', caption: 'Annual Diwali gathering at Saheli', alt: 'Diwali gathering' },
-      { url: 'https://picsum.photos/seed/cel03/800/600', caption: 'Team outing — a rare day off!', alt: 'Team outing' },
-      { url: 'https://picsum.photos/seed/cel04/800/600', caption: 'Birthday celebration for a long-time volunteer', alt: 'Birthday celebration' },
-      { url: 'https://picsum.photos/seed/cel05/800/600', caption: 'Farewell for a beloved member', alt: 'Farewell gathering' },
-      { url: 'https://picsum.photos/seed/cel06/800/600', caption: 'Potluck lunch at the office', alt: 'Potluck lunch' },
-      { url: 'https://picsum.photos/seed/cel07/800/600', caption: 'Cultural evening with music and dance', alt: 'Cultural evening' },
-    ]
-  },
+  // {
+  //   id: 'celebrations',
+  //   title: 'Fun time / Celebrations',
+  //   images: [
+  //     { url: 'https://picsum.photos/seed/cel01/800/600', caption: '25 years of Saheli celebration, 2006', alt: '25 years celebration' },
+  //     { url: 'https://picsum.photos/seed/cel02/800/600', caption: 'Annual Diwali gathering at Saheli', alt: 'Diwali gathering' },
+  //     { url: 'https://picsum.photos/seed/cel03/800/600', caption: 'Team outing — a rare day off!', alt: 'Team outing' },
+  //     { url: 'https://picsum.photos/seed/cel04/800/600', caption: 'Birthday celebration for a long-time volunteer', alt: 'Birthday celebration' },
+  //     { url: 'https://picsum.photos/seed/cel05/800/600', caption: 'Farewell for a beloved member', alt: 'Farewell gathering' },
+  //     { url: 'https://picsum.photos/seed/cel06/800/600', caption: 'Potluck lunch at the office', alt: 'Potluck lunch' },
+  //     { url: 'https://picsum.photos/seed/cel07/800/600', caption: 'Cultural evening with music and dance', alt: 'Cultural evening' },
+  //   ]
+  // },
   {
     id: 'fundraising',
     title: 'Fund Raising',

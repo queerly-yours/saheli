@@ -25,9 +25,9 @@
         @if (categoryData?.subtitle) {
         <span class="article-subtitle {{'subtitle-'+[currentLang]}}">
             {{
-                currentLang === 'en'
-                ? (categoryData?.subtitle[currentLang] | uppercase)
-                : (categoryData?.subtitle[currentLang] )
+            currentLang === 'en'
+            ? (categoryData?.subtitle[currentLang] | uppercase)
+            : (categoryData?.subtitle[currentLang] )
             }}
         </span>
         }
@@ -45,8 +45,14 @@
         <span class="category-name">{{categoryData?.hindiTitle | customCapitalize }}</span>
         }
         <div class="category-description-wrapper">
-            @for (item of categoryData?.description; track $index) {
+            @if (currentLang === 'en') {
+            @for (item of categoryData?.description['en']; track $index) {
             <span class="category-description">{{item}}</span>
+            }
+            } @else {
+            @for (item of categoryData?.description['hi']; track $index) {
+            <span class="category-description fs-18 lh-16">{{item}}</span>
+            }
             }
         </div>
 
@@ -83,7 +89,8 @@
 
         @if (categoryData?.archiveList?.length) {
         <div class="archive-list-wrapper mb-5">
-            <app-archive-slider [archiveList]="categoryData.archiveList" [currentLang]="currentLang"></app-archive-slider>
+            <app-archive-slider [archiveList]="categoryData.archiveList"
+                [currentLang]="currentLang"></app-archive-slider>
         </div>
         }
     </div>
