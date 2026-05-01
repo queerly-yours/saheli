@@ -2,10 +2,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
 
+:root {
+  --header-offset: 92px;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --header-offset: 100px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --header-offset: 150px;
+  }
+}
 
 body {
   margin: 0;
-  padding-top: 85px; /* adjust based on header height */
+  padding-top: var(--header-offset);
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
   font-size: 16px;

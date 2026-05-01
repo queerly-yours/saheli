@@ -1,5 +1,5 @@
 <div class="category-wrapper">
-    <div class="category-left-content">
+    <div class="category-left-content" [ngClass]="{'no-decades': !(categoryData?.decades?.length)}">
         <div class="category-decade-wrapper">
             <div class="w-100">
                 <app-header-lines [years]="categoryData?.decades ?? []" [selectedDecade]="selectedDecade"

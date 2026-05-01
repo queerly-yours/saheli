@@ -1,4 +1,14 @@
 // General Styling starts
+:host {
+  display: block;
+  min-width: 0;
+}
+
+.article-container {
+  width: 100%;
+  min-width: 0;
+}
+
 a {
   color: #c866ab;
   // color: #A05289;
@@ -35,6 +45,7 @@ a:active {
 
 .image-text {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   margin: 16px 0;
   align-items: flex-start;
@@ -57,8 +68,14 @@ a:active {
 }
 
 .image-text .image {
-  width: 180px;
-  flex-shrink: 0;
+  width: min(180px, 100%);
+  flex: 0 1 180px;
+  min-width: 0;
+}
+
+.image-text .text {
+  flex: 1 1 260px;
+  min-width: 0;
 }
 
 .image-text img {
@@ -79,6 +96,7 @@ a:active {
   margin-top: 16px;
   line-height: 1.4;
   font-size: 16px;
+  overflow-wrap: anywhere;
 }
 
 /* QUOTE */
@@ -88,6 +106,7 @@ a:active {
   margin: 20px 0;
   font-style: italic;
   color: #444;
+  overflow-wrap: anywhere;
 }
 
 /* IMAGE FULL WIDTH */
@@ -97,6 +116,7 @@ a:active {
 
 .article-image img {
   width: 100%;
+  height: auto;
   border-radius: 6px;
 }
 
@@ -145,6 +165,7 @@ a:active {
 .paragraph-combo {
   line-height: 1.4;
   margin-bottom: 24px;
+  overflow-wrap: anywhere;
 }
 
 .banner-image {
@@ -157,7 +178,7 @@ a:active {
   .banner-image-block {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: min(100%, 70%);
     max-width: 950px;
   }
 }
@@ -177,6 +198,7 @@ a:active {
   border: 1px solid #cccc;
   padding: 10px 20px;
   background: #f5f2e1;
+  min-width: 0;
 }
 
 .mt-0 {
@@ -267,14 +289,19 @@ a:active {
 
 .h-250 {
   height: 250px;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .h-200 {
   height: 200px;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .image-combo {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   justify-content: flex-start;
   margin: 24px 0;
@@ -282,10 +309,13 @@ a:active {
   .image-combo-item {
     display: flex;
     flex-direction: column;
-    width: 35%;
+    flex: 1 1 220px;
+    width: auto;
+    min-width: 0;
 
     img {
       width: 100%;
+      height: auto;
     }
   }
 }
@@ -305,12 +335,17 @@ a:active {
 .pullquote-wrapper {
   // border: 1px solid red;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 16px;
 
   .pullquote-image {
+    flex: 0 1 200px;
+
     img {
-      max-width: 200px;
-      margin-right: 16px;
+      width: min(100%, 200px);
+      max-width: 100%;
+      margin-right: 0;
     }
   }
 }
@@ -319,22 +354,24 @@ a:active {
   display: flex;
   align-items: flex-start;
   margin-top: -25px;
+  min-width: 0;
 
   .quote {
-    font-size: 250px;
+    font-size: clamp(120px, 16vw, 250px);
     // color: #f2287f;
     color: #ae84e8;
-    height: 100px;
+    height: clamp(64px, 9vw, 100px);
     // font-family: sans-serif;
     font-family: "Chokokutai", system-ui;
     margin-right: -35px;
   }
 
   .quote-text {
-    font-size: 25px;
+    font-size: clamp(20px, 2.8vw, 25px);
     margin-top: 65px;
     color: #656565;
     padding-right: 10px;
+    overflow-wrap: anywhere;
   }
 }
 
@@ -349,16 +386,17 @@ a:active {
 
 .dictionary-wrapper {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 16px;
 
   .dictionary-entry {
     font: 13px/1.4 Georgia, serif;
-    max-width: 30%;
+    max-width: none;
+    flex: 1 1 220px;
     padding: 8px 10px;
     background: #fafafa;
     border-left: 3px solid #333;
-    flex-grow: 1;
+    min-width: 0;
 
     .word {
       font-weight: 700;
@@ -390,6 +428,7 @@ a:active {
 
 .poem-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 20px;
   align-items: flex-start;
@@ -408,7 +447,7 @@ a:active {
 }
 
 .stanza-image {
-  width: 150px;
+  width: min(150px, 100%);
   height: auto;
 }
 
@@ -418,7 +457,7 @@ a:active {
 }
 
 .image-block.center img {
-  width: 200px;
+  width: min(200px, 100%);
 }
 
 /********* Poetry design ends *********/
@@ -436,6 +475,7 @@ a:active {
 
 .text-column {
   flex: 1;
+  min-width: 0;
 
   .title {
     font-weight: 500;
@@ -450,6 +490,7 @@ a:active {
 
 .image-grid {
   flex: 1;
+  min-width: 0;
   gap: 12px;
 }
 
@@ -464,7 +505,7 @@ a:active {
     "horizontal horizontal";
 
   grid-template-columns: 1fr 1fr;
-  max-width: 400px;
+  max-width: min(100%, 400px);
 }
 
 /* Auto grid for 5–10 images */
@@ -516,4 +557,104 @@ a:active {
 
 .fs-18 {
   font-size: 18px !important;
+}
+
+@media (max-width: 900px) {
+  .banner-image {
+    .banner-image-block {
+      width: 100%;
+    }
+  }
+
+  .pullquote {
+    margin-top: 0;
+
+    .quote-text {
+      margin-top: 28px;
+    }
+  }
+
+  .dictionary-wrapper {
+    .dictionary-entry {
+      flex-basis: calc(50% - 8px);
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .image-text {
+    flex-direction: column;
+  }
+
+  .image-text.left .image,
+  .image-text.left .text,
+  .image-text.right .image,
+  .image-text.right .text {
+    order: initial;
+  }
+
+  .image-text .image,
+  .image-text .text {
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  .custom-yellow-box {
+    padding: 10px 14px;
+  }
+
+  .image-combo {
+    gap: 12px;
+
+    .image-combo-item {
+      flex-basis: 100%;
+    }
+  }
+
+  .pullquote-wrapper {
+    align-items: flex-start;
+  }
+
+  .pullquote {
+    width: 100%;
+
+    .quote {
+      margin-right: -20px;
+    }
+
+    .quote-text {
+      margin-top: 22px;
+      padding-right: 0;
+    }
+  }
+
+  .dictionary-wrapper {
+    .dictionary-entry {
+      flex-basis: 100%;
+    }
+  }
+
+  .poem-row.left,
+  .poem-row.right {
+    flex-direction: column;
+  }
+
+  .image-grid.editorial {
+    grid-template-areas:
+      "square1"
+      "square2"
+      "vertical"
+      "horizontal";
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .image-grid.auto {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .h-250,
+  .h-200 {
+    height: auto;
+  }
 }
