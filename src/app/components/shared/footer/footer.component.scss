@@ -5,6 +5,7 @@
 
 .footer-wrapper {
     display: flex;
+    gap: 32px;
     padding: 15px 80px 10px 120px;
 
     .footer-info-left {
@@ -138,5 +139,35 @@
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-wrapper {
+    padding: 20px 24px;
+    gap: 24px;
+
+    .footer-info-left,
+    .footer-info-right {
+      flex: 1;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-wrapper {
+    flex-direction: column;
+    padding: 20px 16px 24px;
+    gap: 12px;
+
+    .footer-info-left,
+    .footer-info-right {
+      width: 100%;
+    }
+  }
+
+  .popup {
+    width: calc(100% - 24px);
+    padding: 16px;
   }
 }

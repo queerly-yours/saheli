@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { cardDetailsList } from '../../../utils/articles-slider';
 import { NavigationService } from '../../../services/navigation/navigation.service';
 
@@ -23,15 +23,17 @@ export class ArticleSliderComponent {
   }
 
   scrollLeft() {
+    const amount = this.getScrollAmount();
     this.scrollContainer.nativeElement.scrollBy({
-      left: -300,
+      left: -amount,
       behavior: 'smooth'
     });
   }
 
   scrollRight() {
+    const amount = this.getScrollAmount();
     this.scrollContainer.nativeElement.scrollBy({
-      left: 300,
+      left: amount,
       behavior: 'smooth'
     });
   }
@@ -45,5 +47,23 @@ export class ArticleSliderComponent {
 
   navigateToArticle(id: string | undefined) {
     this.navService.toArticle(id);
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.checkArrows();
+  }
+
+  private getScrollAmount(): number {
+    const container = this.scrollContainer?.nativeElement as HTMLElement | undefined;
+    const firstCard = container?.querySelector('.card') as HTMLElement | null;
+
+    if (!container || !firstCard) {
+      return 300;
+    }
+
+    const styles = window.getComputedStyle(container);
+    const gap = parseFloat(styles.gap || '0');
+    return firstCard.getBoundingClientRect().width + gap;
   }
 }

@@ -19,7 +19,7 @@
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     pointer-events: none;
 }
 
@@ -52,7 +52,7 @@
     font-size: 18px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    line-height: 26px;
+    line-height: 1.35;
 }
 
 .circle .label-hi {
@@ -66,10 +66,10 @@
     // color: #ee94bb;
     color: #fff;
     font-weight: 600;
-    font-size: 24px;
+    font-size: clamp(14px, 1.45vw, 20px);
     letter-spacing: 1px;
     text-transform: uppercase;
-    line-height: 30px;
+    line-height: 1.3;
 }
 
 .circle .l1 {
@@ -291,48 +291,377 @@ Values tuned to visually match the provided mock. Adjust per-asset sizes and pos
 /* Typography scaling for smaller screens */
 @media (max-width:900px) {
     .circle .label {
-        font-size: 2.6vw;
+        font-size: 12px;
     }
 
     .circle .label-hi {
-        font-size: 3.6vw;
+        font-size: clamp(12px, 2.6vw, 17px);
     }
 
     .sil {
         width: 11%;
     }
-}
 
-@media (max-width:480px) {
-    .banner-inner {
-        padding-top: 75%;
-        /* taller on very small devices */
-    }
-
-    .circle .label {
-        font-size: 3.8vw;
-    }
-
-    .circle .label-hi {
-        font-size: 3.6vw;
-    }
-
-
-    .sil {
+    .c-1 {
+        left: 2%;
+        top: 2%;
         width: 14%;
-    }
-
-    /* reduce some circles to avoid overlap on tiny screens */
-    .c-6 {
-        left: 26%;
-        top: 60%;
-        width: 20%;
     }
 
     .c-2 {
         left: 22%;
         top: 8%;
         width: 22%;
+    }
+
+    .c-3 {
+        left: 50%;
+        top: 8%;
+        width: 13%;
+    }
+
+    .c-4 {
+        left: 68%;
+        top: 8%;
+        width: 18%;
+    }
+
+    .c-5 {
+        left: 4%;
+        top: 48%;
+        width: 20%;
+    }
+
+    .c-6 {
+        left: 26%;
+        top: 70%;
+        width: 23%;
+    }
+
+    .c-7 {
+        left: 50%;
+        top: 47%;
+        width: 19%;
+    }
+
+    .c-8 {
+        left: 60%;
+        top: 78%;
+        width: 14%;
+    }
+
+    .c-9 {
+        left: 84%;
+        top: 34%;
+        width: 13%;
+    }
+
+    .c-10 {
+        left: 82%;
+        top: 78%;
+        width: 17%;
+    }
+
+    .c-11 {
+        left: 74%;
+        top: 52%;
+        width: 15%;
+    }
+
+    // .s-2,
+    // .s-5,
+    // .s-9,
+    // .s-14,
+    // .s-16,
+    // .s-17,
+    // .s-19 {
+    //     display: none;
+    // }
+
+    .s-1 {
+        left: 2%;
+        top: 13%;
+        width: 14%;
+    }
+
+    .s-3 {
+        left: 40%;
+        top: 19%;
+        width: 14%;
+    }
+
+    .s-4 {
+        left: 62%;
+        top: 9%;
+        width: 10%;
+    }
+
+    .s-6 {
+        left: 86%;
+        top: 66%;
+        width: 13%;
+    }
+
+    .s-7 {
+        left: 16%;
+        top: 32%;
+        width: 14%;
+    }
+
+    .s-8 {
+        left: 7%;
+        top: 69%;
+        width: 11%;
+    }
+
+    .s-10 {
+        left: 46%;
+        top: 67%;
+        width: 5%;
+    }
+
+    .s-11 {
+        left: 33%;
+        top: 39%;
+        width: 12%;
+    }
+
+    .s-12 {
+        left: 52%;
+        top: 31%;
+        width: 11%;
+    }
+
+    .s-13 {
+        left: 60%;
+        top: 56%;
+        width: 9%;
+    }
+
+    .s-15 {
+        left: 67%;
+        top: 26%;
+        width: 12%;
+    }
+
+    .s-18 {
+        left: 34%;
+        top: 2%;
+        width: 13%;
+    }
+}
+
+
+@media (max-width:480px) {
+    .banner-inner {
+        padding-top: 96%;
+    }
+
+    .circle img {
+        display: block;
+        width: 120%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .circle .label {
+        font-size: 12px;
+        line-height: 1.25;
+        padding-left: 18px;
+    }
+
+    .circle .label-hi {
+        font-size: clamp(10px, 3.1vw, 14px);
+        line-height: 1.25;
+    }
+
+    .circle .l1 {
+        align-items: flex-start;
+        text-transform: uppercase;
+        padding-top: 28px;
+        padding-left: 19px;
+    }
+
+    .circle .l2 {
+        justify-content: flex-start;
+        padding-left: 11px;
+    }
+
+
+    .sil {
+        width: 12%;
+    }
+
+    .c-1 {
+        left: 2%;
+        top: 0%;
+        width: 20%;
+    }
+
+    .c-6 {
+        left: 12%;
+        top: 66%;
+        width: 20%;
+    }
+
+    .c-2 {
+        left: 27%;
+        top: 17%;
+        width: 18%;
+    }
+
+    .c-3 {
+        left: 50%;
+        top: 4%;
+        width: 17%;
+    }
+
+    .c-4 {
+        left: 73%;
+        top: 8%;
+        width: 22%;
+    }
+
+    .c-5 {
+        left: 4%;
+        top: 40%;
+        width: 18%;
+    }
+
+    .c-7 {
+        left: 32%;
+        top: 47%;
+        width: 20%;
+    }
+
+    .c-8 {
+        left: 42%;
+        top: 72%;
+        width: 20%;
+    }
+
+    .c-9 {
+        left: 51%;
+        top: 31%;
+        width: 17%;
+    }
+
+    .c-10 {
+        left: 73%;
+        top: 72%;
+        width: 22%;
+    }
+
+    .c-11 {
+        left: 70%;
+        top: 44%;
+        width: 20%;
+    }
+
+    .s-1 {
+        display: block;
+        left: 4%;
+        top: 19%;
+        width: 25%;
+    }
+
+    .s-2 {
+        display: block;
+        left: 23%;
+        top: 10%;
+        width: 20%;
+    }
+
+    .s-3 {
+        display: block;
+        left: 65%;
+        top: 23%;
+        width: 25%;
+    }
+
+    .s-4 {
+        display: block;
+        left: 42%;
+        top: 2%;
+        width: 14%;
+    }
+
+    .s-5 {
+        width: 16%;
+    }
+
+    .s-6 {
+        display: block;
+        left: 81%;
+        top: 67%;
+        width: 20%;
+    }
+
+    .s-7 {
+        display: none;
+        left: 18%;
+        top: 36%;
+        width: 12%;
+    }
+
+    .s-8 {
+        display: block;
+        left: 2%;
+        top: 62%;
+        width: 18%;
+    }
+
+    .s-10 {
+        display: block;
+        left: 60%;
+        top: 70%;
+        width: 9%;
+    }
+
+    .s-11 {
+        display: block;
+        left: 25%;
+        top: 38%;
+        width: 15%;
+    }
+
+    .s-13 {
+        display: block;
+        left: 58%;
+        top: 50%;
+        width: 14%;
+    }
+
+    .s-15 {
+        display: block;
+        left: 68%;
+        top: 28%;
+        width: 10%;
+    }
+
+    .s-17 {
+        display: block;
+        top: 40%;
+        left: 86%;
+        width: 10%;
+    }
+
+    .s-18 {
+        display: block;
+        left: 19%;
+        top: 87%;
+        width: 31%;
+    }
+
+    .s-19 {
+        display: block;
+        left: 66%;
+        top: 87%;
+        width: 25%;
+    }
+    
+    .s-9, .s-12, .s-14, .s-15, .s-16 {
+        display: none;
     }
 }
 

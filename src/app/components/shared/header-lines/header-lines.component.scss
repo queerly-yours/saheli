@@ -95,3 +95,28 @@
     padding-right: 5px;
     border-right: 1px solid;
 }
+
+@media (max-width: 900px) {
+    .timeline-container {
+        width: 160px;
+    }
+
+    .timeline-line {
+        left: 40px;
+    }
+
+    .years {
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    .header-horizontal-bar,
+    .timeline-container {
+        display: none;
+    }
+
+    .header-lines-wrapper {
+        height: auto;
+    }
+}

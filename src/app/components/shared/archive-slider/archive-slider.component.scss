@@ -14,6 +14,7 @@
   flex-direction: column;
   gap: 32px;
   width: 100%;
+  min-width: 0;
 }
 
 .archive-section {
@@ -47,6 +48,7 @@
   display: flex;
   align-items: flex-start;
   gap: 8px;
+  min-width: 0;
 }
 
 .slider-track {
@@ -233,6 +235,10 @@
 /* ── Responsive ───────────────────────────────────────────────────── */
 
 @media (max-width: 600px) {
+  .archive-slider-wrapper {
+    gap: 24px;
+  }
+
   .slider-item {
     width: 120px;
   }
