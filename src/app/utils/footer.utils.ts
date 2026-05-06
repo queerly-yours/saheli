@@ -21,8 +21,8 @@
     {
       label: 'Publications',
       labelHindi: 'प्रकाशन',
-      hindiRouteLink: '/hi/details/14/category',
-      routeLink: '/details/14/category',
+      hindiRouteLink: '/hi/publications',
+      routeLink: '/publications',
       type: FooterType.REDIRECT
     },
     {

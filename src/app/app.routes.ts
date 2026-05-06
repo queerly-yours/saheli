@@ -11,6 +11,11 @@ export const routes: Routes = [
         component: HomeComponent,
     },
     {
+        path: 'publications',
+        redirectTo: 'details/14/category',
+        pathMatch: 'full',
+    },
+    {
         path: 'details/:id/:type',
         component: DetailsComponent,
     },
@@ -26,6 +31,7 @@ export const routes: Routes = [
     path: 'hi',
     children: [
       { path: '', component: HomeComponent },
+      { path: 'publications', redirectTo: 'details/14/category', pathMatch: 'full' },
       { path: 'details/:id/:type', component: DetailsComponent },
       { path: 'details/:id/:type/:articleId', component: ArticleComponent },
       { path: 'search', component: SearchResultsComponent },
