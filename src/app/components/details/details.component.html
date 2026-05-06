@@ -56,6 +56,20 @@
             }
         </div>
 
+        @if (isPublicationsPage && categoryData?.archiveList?.length) {
+        <div class="publications-section">
+            <div class="publications-grid">
+                @for (item of categoryData.archiveList; track item.id) {
+                <button type="button" class="publication-card" (click)="onPublicationClick(item)">
+                    <span class="publication-card-title" [title]="getPublicationTitle(item)">{{getPublicationTitle(item)}}</span>
+                    <div class="publication-thumbnail-wrapper">
+                        <img [src]="item.archiveImg" [alt]="getPublicationTitle(item)" class="publication-thumbnail" />
+                    </div>
+                </button>
+                }
+            </div>
+        </div>
+        } @else {
         @if (categoryData?.subCategoryList?.length || categoryData?.innerCategories?.length ||
         categoryData?.articleList?.length) {
         <span class="category-article-heading">ARTICLES</span>
@@ -92,6 +106,7 @@
             <app-archive-slider [archiveList]="categoryData.archiveList"
                 [currentLang]="currentLang"></app-archive-slider>
         </div>
+        }
         }
     </div>
     }

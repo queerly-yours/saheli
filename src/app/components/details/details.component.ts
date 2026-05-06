@@ -11,7 +11,7 @@ import { articles } from '../../utils/all-articles';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { CategoryPopComponent } from "../shared/category-pop/category-pop.component";
 import { NgClass, UpperCasePipe } from '@angular/common';
-import { articleList, subCategory } from '../../utils/data-model';
+import { archive, articleList, subCategory } from '../../utils/data-model';
 import { DateUtilsService } from '../../services/date-utils/date-utils.service';
 import { CapitalizePipe } from "../../services/pipes/capitalize/capitalize.pipe";
 import { initialVisibilityCount } from '../../utils/constants';
@@ -44,6 +44,8 @@ export class DetailsComponent {
   incrementBy = 10;
   articleNavList: string[] = [];
   currentLang = 'en';
+
+  private readonly publicationsCategoryId = '14';
 
 
 
@@ -260,6 +262,19 @@ export class DetailsComponent {
 
   navigateToArticle(id: string | undefined, fromId?: string) {
     this.navService.toArticle(id, fromId ?? this.selectedId);
+  }
+
+  get isPublicationsPage() {
+    return this.type === ParamType.Category && this.selectedId === this.publicationsCategoryId;
+  }
+
+  getPublicationTitle(item: archive) {
+    return this.currentLang === 'hi' && item.hindiTitle ? item.hindiTitle : item.title;
+  }
+
+  onPublicationClick(item: archive) {
+    // Placeholder for future publication detail routing.
+    void item;
   }
   
   visibleArticles(articlesList: articleList[]) {
