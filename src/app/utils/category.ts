@@ -27,7 +27,7 @@ export const categories: category[] = [
         archiveImg: '../../../assets/archive/1.png',
         articleList: filterByArrayKeyAndIds(articlesSummary, ['2'], 'categoryIdList'),
         title: 'Resisting Violence',
-        hindiTitle: 'हिंसा के खिलाफ',
+        hindiTitle: 'हिंसा के खिलाफ़',
         decades: ['1980s', '1990s', '2000s', '2010s'],
         description: {
             en: [
@@ -44,7 +44,7 @@ export const categories: category[] = [
         archiveImg: '../../../assets/archive/2.png',
         articleList: filterByArrayKeyAndIds(articlesSummary, ['3'], 'categoryIdList'),
         title: 'Countering Communalism',
-        hindiTitle: 'साम्प्रदायिकता के खिलाफ',
+        hindiTitle: 'साम्प्रदायिकता के खिलाफ़',
         decades: ['1980s', '1990s', '2000s', '2010s'],
         description: {
             en: [
@@ -101,7 +101,7 @@ export const categories: category[] = [
             en: [
                 `Over the last three decades, women’s oppression linked to religious and caste identity has become clearer, including how caste honour and privilege produce inequalities among women and sanction violence, especially sexual violence against lower caste women. Since the 1990s, Saheli has organised internal and open meetings to explore gender-caste intersections, share experiences, address challenges, and reflect on relationships between caste-based movements, caste-based women’s groups and the women’s movement. In 2008, we published Talking marriage, caste and community: Voices from within, based on a study of the intersection of marriage, sexuality, caste and community. We also evolved the play Kaun Jaat, using monologues to foreground women’s experiences of community control and trigger discussion. We have also engaged with the role of caste panchayats in controlling women’s sexuality and freedoms.`
             ],
-            hi: [`पिछले तीन दशकों से अधिक के दौरान यह स्पष्ट हुआ है कि किस प्रकार महिलाओं का दमन धार्मिक और जातीय पहचान के साथ जुडा है. किस प्रकार जातीय इज्ज़त और विशेषाधिकार औरतों के बीच में असमानताएं पैदा करते हैं और हिंसा, ख़ास तौर से निम्न जाति की महिलाओं के खिलाफ यौनिक हिंसा कों स्वीकृति देते हैं? 1990 के बाद से सहेली ने बहुत सी आंतरिक और खुली बैठकें की हैं, जिन में जेंडर-जाति के इंटरसेक्शन (प्रतिच्छेदन), अनुभवों को बांटना, जाति-आधारित आन्दोलनों, जाति-आधारित महिला समूहों और महिला आन्दोलनों के बीच के संबंधों को समझने की कोशिश की गई. 2008 में हम ने विवाह, जाति, यौनिकता और समुदाय के इंटरसेक्शन पर एक अध्ययन पर आधारित एक रिपोर्ट छापी थी – “Talking Marriage, Caste and Community: Voices from Within”. हम ने एक नाटक भी तैयार किया – ‘कौन जात’, जिस में एकालाप का इस्तेमाल करते हुए औरतों के सामुदायिक नियंत्रण के अनुभवों को दर्शाया गया और चर्चाएँ भी की गई. हम ने औरतो की यौनिकता और आज़ादियों पर नियंत्रण में जाति पंचायतों की भूमिका पर भी काम किया.  `]
+            hi: [`पिछले तीन दशकों से अधिक के दौरान यह स्पष्ट हुआ है कि किस प्रकार महिलाओं का दमन धार्मिक और जातीय पहचान के साथ जुडा है. किस प्रकार जातीय इज्ज़त और विशेषाधिकार औरतों के बीच में असमानताएं पैदा करते हैं और हिंसा, ख़ास तौर से निम्न जाति की महिलाओं के खिलाफ यौनिक हिंसा कों स्वीकृति देते हैं? 1990 के बाद से सहेली ने बहुत सी आंतरिक और खुली बैठकें की हैं, जिन में जेंडर-जाति के इंटरसेक्शन (प्रतिच्छेदन), अनुभवों को बांटना, जाति-आधारित आन्दोलनों, जाति-आधारित महिला समूहों और महिला आन्दोलनों के बीच के संबंधों को समझने की कोशिश की गई. 2008 में हम ने विवाह, जाति, यौनिकता और समुदाय के इंटरसेक्शन पर एक अध्ययन पर आधारित एक रिपोर्ट छापी थी – ‘विवाह, जाति और समुदाय की बातचीत : औरतों की आवाज़ें.’ हम ने एक नाटक भी तैयार किया जिसका नाम था, ‘कौन जात’, जिस में एकालाप का इस्तेमाल करते हुए औरतों के सामुदायिक नियंत्रण के अनुभवों को दर्शाया गया और चर्चाएँ भी की गई. हम ने औरतो की यौनिकता और आज़ादियों पर नियंत्रण में जाति पंचायतों की भूमिका पर भी काम किया.`]
         },
         subCategoryList: filterByArrayKeyAndIds(subcategoriesSummary, ['6'], 'categoryIdList'),
         isOpen: false,
@@ -146,7 +146,7 @@ export const categories: category[] = [
         archiveImg: '',
         articleList: filterByArrayKeyAndIds(articlesSummary, ['9'], 'categoryIdList'),
         title: 'Other Debates and Concerns',
-        hindiTitle: 'अन्य विमर्श',
+        hindiTitle: 'अन्य बहस और चिंताएं',
         decades: ['1990s', '2000s', '2010s'],
         description: {
             en: [

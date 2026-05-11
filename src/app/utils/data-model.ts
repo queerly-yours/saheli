@@ -66,6 +66,44 @@ export interface archive {
     images?: ArchiveImage[];
 }
 
+export type PublicationFileType = 'pdf' | 'jpeg' | 'png' | 'doc' | 'other';
+
+export interface PublicationDocPreview {
+    heading: string;
+    subheading?: string;
+    paragraphs: string[];
+}
+
+export interface PublicationFileItem {
+    id: string;
+    title: string;
+    caption: string;
+    fileUrl: string;
+    fileName: string;
+    fileType: PublicationFileType;
+    thumbnailUrl?: string;
+    docPreview?: PublicationDocPreview;
+}
+
+export interface PublicationDecadeSection {
+    id: string;
+    title: string;
+    items: PublicationFileItem[];
+}
+
+export interface PublicationDetail {
+    id: string;
+    title: string;
+    hindiTitle?: string;
+    description: {
+        en: string[];
+        hi: string[];
+    };
+    mode: 'grid' | 'accordion';
+    items?: PublicationFileItem[];
+    sections?: PublicationDecadeSection[];
+}
+
 export interface article {
     id: string;
     decades?: string[];

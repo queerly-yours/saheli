@@ -1,10 +1,11 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, effect } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroChevronDown, heroChevronUp, heroChevronLeft, heroChevronRight, heroXMark } from '@ng-icons/heroicons/outline';
 import { gallerySections, GallerySection, GalleryImage } from '../../utils/gallery-data';
 import { HeaderLinesComponent } from '../shared/header-lines/header-lines.component';
 import { CategoryPopComponent } from '../shared/category-pop/category-pop.component';
+import { LanguageService } from '../../services/language/language.service';
 
 @Component({
   selector: 'app-gallery',
@@ -17,10 +18,17 @@ export class GalleryComponent {
 
   sections: GallerySection[] = gallerySections;
   openSectionId: string | null = null;
+  currentLang = 'en';
 
   lightboxOpen = false;
   lightboxSectionId: string | null = null;
   lightboxImageIndex = 0;
+
+  constructor(private languageService: LanguageService) {
+    effect(() => {
+      this.currentLang = this.languageService.lang();
+    });
+  }
 
   get lightboxSection(): GallerySection | null {
     return this.sections.find(s => s.id === this.lightboxSectionId) ?? null;

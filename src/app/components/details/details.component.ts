@@ -273,8 +273,7 @@ export class DetailsComponent {
   }
 
   onPublicationClick(item: archive) {
-    // Placeholder for future publication detail routing.
-    void item;
+    this.navService.toPublication(item.id);
   }
   
   visibleArticles(articlesList: articleList[]) {

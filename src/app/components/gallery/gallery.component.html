@@ -15,8 +15,12 @@
     <span class="gallery-page-title">Gallery</span>
 
     <div class="gallery-description-wrapper">
-      <span class="gallery-description">
+      <span class="gallery-description" [class.gallery-description-hi]="currentLang === 'hi'">
+        @if (currentLang === 'hi') {
+        सहेली के चार दशकों से ज़्यादा के काम और सफर की झलक — रोज़मर्रा की गतिविधियाँ और खास अवसर, प्रदर्शन और नाटक, बैठकें और महत्वपूर्ण पड़ाव, जश्न और एकजुटता। ये तस्वीरें उन लोगों, पलों और आंदोलनों को दर्शाती हैं जिन्होंने हमारे सामूहिक स्वरूप को आकार दिया है।
+        } @else {
         A visual journey through over four decades of Saheli’s work — everyday interactions and occasions, protests and plays, meetings and milestones, celebrations and solidarity. These images capture the people, moments, and movements that have shaped our collective.
+        }
       </span>
     </div>
 

@@ -311,7 +311,7 @@ export const subcategoriesSummary: subCategory[] = [
             en: [
                 `In our struggle for women’s right to protection against hazardous contraceptives and technologies as well as coercive population control measures we took recourse to various legal measures. On the one hand, we took the fight against the introduction of Net-En and other hormonal injectables in the Family Planning Programme of the government all the way to the Supreme Court. On the other hand, we were part of a nationwide campaign and Parliamentary proceedings for the introduction of a law to prevent sex preselection, sex determination and sex selective abortions in the country. Likewise, we were part of an international campaign against the Anti-Fertility Vaccine for women as well as the HPV vaccine for cervical cancer. The struggle for ethical trials also required us to engage at a policy framework level with the premier research body in the country, the Indian Council for Medical Research.`
             ],
-            hi: []
+            hi: [`औरतों की खतरनाक गर्भ निरोधकों से और तकनीकों से सुरक्षा और दमनकारी जनसंख्या नियंत्रण कार्यवाहियों के खिलाफ संघर्षों में कानूनी रास्तों का भी उपयोग किया. एक तरफ हम नेट एन और दूसरे हार्मोनल गर्भ निरोधकों को सरकारी परिवार नियोजन कार्यक्रम में शामिल किये जाने से रोकने की लड़ाई को सर्वोच्च न्यायालय तक ले कर गए. दूसरी तरफ हम देश  में लिंग चयन, लिंग निर्धारण और लिंग चयनित गर्भपात को रोकने के लिए कानून बनाने की संसदीय कार्यवाहियों और राष्ट्र्वापी अभियान का हिस्सा बने.  इसी तरह से हम सर्वाइकल कैंसर के लिए एच पी व़ी वैक्सीन और औरतों के लिए प्रजनन विरोधी वैक्सीन के खिलाफ अंतर्राष्ट्रीय अभियान का भी हिस्सा रहे. नैतिक परीक्षणों के लिए संघर्ष के लिए यह ज़रूरी था कि हम देश की प्रमुख अनुसन्धान संस्था, द इंडियन काउंसिल फॉर मेडिकल रिसर्च के साथ नीतिगत स्तर पर भी जुड़े.`]
         },
         innerCategories: [],
         isSubcategory: true,
@@ -401,7 +401,7 @@ export const subcategoriesSummary: subCategory[] = [
             en: [
                 'To discuss and deliberate on issues we have been working on, we have  been part of  seminars and conferences on women’s health, safety, communalisation of society and polity, caste-structured society, state violence and repressions, media representation and censorship, war and nuclearisation. We have also presented numerous papers at women’s studies seminars and conferences on challenges facing organisations like Saheli, and also reflected on what sustains such groups despite all the constraints. These occasions offer space to think and rethink our politics, strategies and reasons for continuing our journey.'
             ],
-            hi: []
+            hi: ['जिन मुद्दों पर ह्म काम करते रहें हैं उन पर चर्चा और मनन करने के लिए हम औरतों के स्वास्थ्य, सुरक्षा, समाज और राजनीति के संप्रदायीकरण, जाति-संरचित समाज, राज्य हिंसा और दमन, मीडिया छवियाँ और सेंसरशिप, युद्ध और परमाणुकरण जैसे विषयों पर सेमिनार और सम्मेलनों में हिस्सा लेते रहे हैं. हम ने महिला अध्ययन सम्मेलनों और सेमिनारों में भी सहेली जैसे संगठनों के सामने क्या चुनौतियाँ हैं और अनेक प्रकार की बाध्यताओं/ दबावों के बावजूद ऐसे संगठन खुद कों कैसे जीवित रख पाते हैं, पर पर्चे प्रस्तुत किये हैं. ऐसे मौके हमें अपनी राजनीति, रणनीतियों और अपने सफ़र कों जारी रखने के कारणों पर चिंतन करने का मौका देते हैं.']
         },
         innerCategories: [],
         isSubcategory: true,
@@ -478,7 +478,7 @@ export const subcategoriesSummary: subCategory[] = [
         },
         isSubcategory: true,
         title: 'Funding Concerns',
-        hindiTitle: 'फंडिंग'
+        hindiTitle: 'फंडिंग के सवाल'
     },
     {
         id: 'InnerCategory1',

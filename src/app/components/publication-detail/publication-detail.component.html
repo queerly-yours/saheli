@@ -1,0 +1,267 @@
+<div class="publication-page-wrapper">
+  <div class="publication-page-left">
+    <div class="publication-page-left-inner">
+      <div class="w-100">
+        <app-header-lines [years]="[]"></app-header-lines>
+      </div>
+    </div>
+  </div>
+
+  <div class="publication-page-content">
+    @if (detail) {
+    <span class="publication-page-title">{{ pageTitle }}</span>
+
+    <div class="publication-page-description">
+      @for (item of descriptionList; track $index) {
+      <span class="publication-description-text">{{ item }}</span>
+      }
+    </div>
+
+    @if (isAccordionMode) {
+    <div class="publication-accordion">
+      @for (section of detail.sections ?? []; track section.id; let sectionIndex = $index) {
+      <div class="accordion-item">
+        <button
+          type="button"
+          class="accordion-header"
+          [ngClass]="{ 'is-open': isOpen(section.id) }"
+          (click)="toggleSection(section.id)"
+          [attr.aria-expanded]="isOpen(section.id)"
+          [attr.aria-controls]="'publication-panel-' + section.id">
+          <span class="accordion-title">{{ section.title }}</span>
+          <ng-icon
+            class="accordion-icon"
+            [name]="isOpen(section.id) ? 'heroChevronUp' : 'heroChevronDown'"
+            size="18">
+          </ng-icon>
+        </button>
+
+        <div
+          class="accordion-panel"
+          [class.open]="isOpen(section.id)"
+          [id]="'publication-panel-' + section.id"
+          role="region">
+          <div class="newsletter-slider-shell">
+            <button
+              type="button"
+              class="scroll-btn scroll-btn-left"
+              (click)="scroll(sectionIndex, 'left')"
+              aria-label="Scroll left">
+              <ng-icon name="heroChevronLeft" size="28"></ng-icon>
+            </button>
+
+            <div class="newsletter-slider-track" #sliderTrack>
+              @for (item of section.items; track item.id) {
+              <button type="button" class="pdf-card pdf-card-slider" (click)="openPreview(item)">
+                <div class="publication-thumb" [class.is-fallback]="!hasThumbnail(item)" aria-hidden="true">
+                  @if (hasThumbnail(item)) {
+                  <img [src]="getThumbnailUrl(item)" [alt]="item.title" class="publication-thumb-image" />
+                  } @else {
+                  <div class="publication-thumb-fallback">
+                    <ng-icon name="heroDocumentText" size="40"></ng-icon>
+                  </div>
+                  }
+                  <span class="pdf-badge">{{ getFileBadge(item) }}</span>
+                </div>
+                <span class="pdf-caption" [title]="item.caption">{{ item.caption }}</span>
+              </button>
+              }
+            </div>
+
+            <button
+              type="button"
+              class="scroll-btn scroll-btn-right"
+              (click)="scroll(sectionIndex, 'right')"
+              aria-label="Scroll right">
+              <ng-icon name="heroChevronRight" size="28"></ng-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+    } @else {
+    <div class="publication-pdf-grid">
+      @for (item of detail.items ?? []; track item.id) {
+      <button type="button" class="pdf-card" (click)="openPreview(item)">
+        <div class="publication-thumb" [class.is-fallback]="!hasThumbnail(item)" aria-hidden="true">
+          @if (hasThumbnail(item)) {
+          <img [src]="getThumbnailUrl(item)" [alt]="item.title" class="publication-thumb-image" />
+          } @else {
+          <div class="publication-thumb-fallback">
+            <ng-icon name="heroDocumentText" size="48"></ng-icon>
+          </div>
+          }
+          <span class="pdf-badge">{{ getFileBadge(item) }}</span>
+        </div>
+        <span class="pdf-caption two-line" [title]="item.caption">{{ item.caption }}</span>
+      </button>
+      }
+    </div>
+    }
+    } @else {
+    <div class="publication-empty-state">
+      <span class="publication-page-title">Publication Not Found</span>
+      <span class="publication-description-text">This publication page does not exist yet.</span>
+    </div>
+    }
+  </div>
+
+  <div class="publication-page-right">
+    <app-category-pop></app-category-pop>
+  </div>
+</div>
+
+@if (previewItem) {
+<div class="pdf-preview-overlay" (click)="closePreview()" role="dialog" aria-modal="true" aria-label="File preview">
+  <div class="pdf-preview-container" (click)="$event.stopPropagation()">
+    <div class="pdf-preview-toolbar">
+      <div class="pdf-preview-toolbar-left">
+        <div class="pdf-preview-meta">
+          <span class="toolbar-pdf-badge">{{ previewFileBadge }}</span>
+          <span class="pdf-preview-title">{{ previewFileName }}</span>
+        </div>
+      </div>
+
+      <div class="pdf-preview-actions">
+        <button type="button" class="preview-action-btn" (click)="downloadCurrentPreview()" aria-label="Download file">
+          <ng-icon name="heroArrowDownTray" size="18"></ng-icon>
+        </button>
+
+        <button type="button" class="preview-icon-btn" (click)="closePreview()" aria-label="Close preview">
+          <ng-icon name="heroXMark" size="20"></ng-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="pdf-preview-body">
+      <button
+        type="button"
+        class="preview-nav preview-nav-prev"
+        (click)="openPrevPreview()"
+        [disabled]="!previewHasPrev"
+        aria-label="Previous document">
+        <ng-icon name="heroChevronLeft" size="26"></ng-icon>
+      </button>
+
+      <div class="pdf-preview-frame-shell">
+        <div class="pdf-preview-frame-wrapper">
+          @if (isPdfPreview) {
+          @if (pdfPreviewLoading) {
+          <div class="file-preview-fallback-shell">
+            <div class="file-preview-fallback-card">
+              <ng-icon name="heroDocumentText" size="52"></ng-icon>
+              <span class="file-preview-fallback-type">PDF</span>
+              <p class="file-preview-fallback-text">Rendering PDF preview...</p>
+            </div>
+          </div>
+          } @else if (pdfPageImages.length) {
+          <div class="pdf-rendered-preview">
+            @for (pageImage of pdfPageImages; track $index) {
+            <img [src]="pageImage" [alt]="'PDF page ' + ($index + 1)" class="pdf-rendered-page" />
+            }
+          </div>
+          } @else if (previewObjectUrl) {
+          <div class="pdf-object-preview-shell">
+            <object [attr.data]="previewObjectUrl" type="application/pdf" class="pdf-object-preview">
+              <div class="file-preview-fallback-shell">
+                <div class="file-preview-fallback-card">
+                  <ng-icon name="heroDocumentText" size="52"></ng-icon>
+                  <span class="file-preview-fallback-type">PDF</span>
+                  <p class="file-preview-fallback-text">
+                    {{ pdfPreviewError || 'This browser could not render the PDF preview inline.' }}
+                  </p>
+                  <p class="file-preview-fallback-text">
+                    Please open it in a new tab or download it to view the file.
+                  </p>
+                  <div class="file-preview-fallback-actions">
+                    <button type="button" class="file-preview-fallback-btn" (click)="openCurrentPreviewInNewTab()">
+                      Open in new tab
+                    </button>
+                    <button type="button" class="file-preview-fallback-btn" (click)="downloadCurrentPreview()">
+                      Download
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </object>
+          </div>
+          } @else {
+          <div class="file-preview-fallback-shell">
+            <div class="file-preview-fallback-card">
+              <ng-icon name="heroDocumentText" size="52"></ng-icon>
+              <span class="file-preview-fallback-type">PDF</span>
+              <p class="file-preview-fallback-text">
+                {{ pdfPreviewError || 'This browser could not render the PDF preview inline.' }}
+              </p>
+              <p class="file-preview-fallback-text">
+                Please open it in a new tab or download it to view the file.
+              </p>
+              <div class="file-preview-fallback-actions">
+                <button type="button" class="file-preview-fallback-btn" (click)="openCurrentPreviewInNewTab()">
+                  Open in new tab
+                </button>
+                <button type="button" class="file-preview-fallback-btn" (click)="downloadCurrentPreview()">
+                  Download
+                </button>
+              </div>
+            </div>
+          </div>
+          }
+          } @else if (isImagePreview && previewUrl) {
+          <div class="file-preview-image-shell">
+            <img [src]="previewFileUrl" [alt]="previewFileTitle" class="file-preview-image" />
+          </div>
+          } @else if (isDocPreview) {
+          <div class="file-preview-fallback-shell">
+            <div class="file-preview-fallback-card">
+              <ng-icon name="heroDocumentText" size="52"></ng-icon>
+              <span class="file-preview-fallback-type">{{ previewFileBadge }}</span>
+              <p class="file-preview-fallback-text">
+                This {{ previewFileBadge.toLowerCase() }} file cannot be previewed here.
+              </p>
+              <p class="file-preview-fallback-text">
+                Please download it to view the file.
+              </p>
+            </div>
+          </div>
+          } @else {
+          <div class="file-preview-fallback-shell">
+            <div class="file-preview-fallback-card">
+              <ng-icon name="heroDocumentText" size="52"></ng-icon>
+              <span class="file-preview-fallback-type">{{ previewFileBadge }}</span>
+              <p class="file-preview-fallback-text">
+                This {{ previewFileBadge.toLowerCase() }} file cannot be previewed here.
+              </p>
+              <p class="file-preview-fallback-text">
+                Please download it to view the file.
+              </p>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+
+      <button
+        type="button"
+        class="preview-nav preview-nav-next"
+        (click)="openNextPreview()"
+        [disabled]="!previewHasNext"
+        aria-label="Next document">
+        <ng-icon name="heroChevronRight" size="26"></ng-icon>
+      </button>
+    </div>
+
+    <div class="pdf-preview-footer">
+      <div class="preview-footer-pill">
+        <span>Document</span>
+        <span class="preview-footer-count">
+          <b>{{ previewItemIndex + 1 }}</b>
+          <span>/</span>
+          <span>{{ previewItems.length }}</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+}
