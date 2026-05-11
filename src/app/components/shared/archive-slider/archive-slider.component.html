@@ -2,7 +2,7 @@
   @for (item of archiveList; track item.id; let i = $index) {
     @if (getImages(item).length) {
     <div class="archive-section">
-      <span class="archive-section-title">{{ getTitle(item) }}</span>
+      <span class="archive-section-title" [class.archive-section-title-hi]="currentLang === 'hi'">{{ getTitle(item) }}</span>
       <div class="slider-panel">
         <div class="slider-container">
           <button

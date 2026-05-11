@@ -31,7 +31,7 @@
                  @if(languageService.isEnglish()) {
                  {{item.title}}
                 } @else { 
-                  <b>{{ item.hindiTitle }} </b>
+                  <b class="hindi-menu-item">{{ item.hindiTitle }} </b>
                 }
               </a>
               @if (item.subCategoryList.length) {
@@ -51,7 +51,7 @@
                   @if(languageService.isEnglish()) {
                   {{child.title}}
                   } @else { 
-                    <b>{{ child.hindiTitle }} </b>
+                    <b class="hindi-menu-item">{{ child.hindiTitle }} </b>
                   }
                 </a>
                 @if (child.innerCategories?.length) {
@@ -62,7 +62,7 @@
                       @if(languageService.isEnglish()) {
                       {{subChild.title}}
                       } @else { 
-                        <b>{{ subChild.hindiTitle }} </b>
+                        <b class="hindi-menu-item">{{ subChild.hindiTitle }} </b>
                       }
                     </a>
                   </li>
