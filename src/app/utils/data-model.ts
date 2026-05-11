@@ -22,6 +22,10 @@ export interface subCategory {
     id: string;
     articleList: articleList[];
     categoryIdList: string[];
+    subtitle?: {
+        en: string;
+        hi: string;
+    };
     description: {
         en: string[],
         hi: string[]
@@ -40,6 +44,10 @@ export interface category {
     archiveList?: archive[];
     articleList: articleList[];
     hindiTitle: string;
+    subtitle?: {
+        en: string;
+        hi: string;
+    };
     title: string;
     decades: string[];
     description: {

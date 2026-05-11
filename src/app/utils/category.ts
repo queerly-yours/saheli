@@ -10,6 +10,10 @@ export const categories: category[] = [
         archiveImg: '../../../assets/archive/3.png',
         articleList: filterByArrayKeyAndIds(articlesSummary, ['1'], 'categoryIdList'),
         title: 'About Us',
+        subtitle: {
+            en: 'an idea is born',
+            hi: 'एक विचार का जन्म'
+        },
         hindiTitle: 'हमारे बारे में',
         decades: ['1980s', '2000s', '2010s'],
         description: {
@@ -27,6 +31,10 @@ export const categories: category[] = [
         archiveImg: '../../../assets/archive/1.png',
         articleList: filterByArrayKeyAndIds(articlesSummary, ['2'], 'categoryIdList'),
         title: 'Resisting Violence',
+        subtitle: {
+            en: 'the fight goes on',
+            hi: 'संघर्ष जारी है'
+        },
         hindiTitle: 'हिंसा के खिलाफ़',
         decades: ['1980s', '1990s', '2000s', '2010s'],
         description: {
@@ -44,6 +52,10 @@ export const categories: category[] = [
         archiveImg: '../../../assets/archive/2.png',
         articleList: filterByArrayKeyAndIds(articlesSummary, ['3'], 'categoryIdList'),
         title: 'Countering Communalism',
+        subtitle: {
+            en: 'a challenge that keeps growing',
+            hi: 'एक बढ़ती चुनौती'
+        },
         hindiTitle: 'साम्प्रदायिकता के खिलाफ़',
         decades: ['1980s', '1990s', '2000s', '2010s'],
         description: {
@@ -61,6 +73,10 @@ export const categories: category[] = [
         archiveImg: '../../../assets/archive/3.png',
         articleList: filterByArrayKeyAndIds(articlesSummary, ['4'], 'categoryIdList'),
         title: 'Women\u2019s Health',
+        subtitle: {
+            en: 'research, analyse, struggle',
+            hi: 'शोध, विश्लेषण, संघर्ष'
+        },
         hindiTitle: 'महिला स्वास्थ्य',
         decades: ['1980s', '1990s', '2000s', '2010s'],
         description: {
@@ -78,6 +94,10 @@ export const categories: category[] = [
         archiveImg: '../../../assets/archive/1.png',
         articleList: filterByArrayKeyAndIds(articlesSummary, ['5'], 'categoryIdList'),
         title: 'Sexualities and Gender',
+        subtitle: {
+            en: 'diversities, desires, dignity, rights',
+            hi: 'विविधिताएं, चाहतें, सम्मान, अधिकार'
+        },
         hindiTitle: 'यौनिकताएं व जेंडर',
         decades: ['2000s', '2010s'],
         description: {
@@ -95,6 +115,10 @@ export const categories: category[] = [
         archiveImg: '../../../assets/archive/2.png',
         articleList: filterByArrayKeyAndIds(articlesSummary, ['6'], 'categoryIdList'),
         title: 'Contesting Caste',
+        subtitle: {
+            en: 'structured violence and discrimination',
+            hi: 'ढांचागत हिंसा और भेदभाव'
+        },
         hindiTitle: 'जातिवाद के खिलाफ',
         decades: ['1990s', '2000s', '2010s'],
         description: {
@@ -112,6 +136,10 @@ export const categories: category[] = [
         archiveImg: '../../../assets/archive/3.png',
         articleList: filterByArrayKeyAndIds(articlesSummary, ['7'], 'categoryIdList'),
         title: 'State Repression',
+        subtitle: {
+            en: 'challenging the state as aggressor',
+            hi: 'राज्य की आक्रामकता को चुनौती'
+        },
         hindiTitle: 'राजकीय दमन',
         decades: ['1980s', '1990s', '2000s', '2010s'],
         description: {
@@ -129,6 +157,10 @@ export const categories: category[] = [
         archiveImg: '',
         articleList: filterByArrayKeyAndIds(articlesSummary, ['8'], 'categoryIdList'),
         title: 'Legal Struggles',
+        subtitle: {
+            en: '',
+            hi: ''
+        },
         hindiTitle: 'कानूनी संघर्ष',
         decades: ['1980s', '1990s', '2000s', '2010s'],
         description: {
@@ -147,6 +179,10 @@ export const categories: category[] = [
         articleList: filterByArrayKeyAndIds(articlesSummary, ['9'], 'categoryIdList'),
         title: 'Other Debates and Concerns',
         hindiTitle: 'अन्य बहस और चिंताएं',
+        subtitle: {
+            en: 'Not quite the usual feminist issue',
+            hi: ''
+        },
         decades: ['1990s', '2000s', '2010s'],
         description: {
             en: [
@@ -163,6 +199,10 @@ export const categories: category[] = [
         archiveImg: '../../../assets/archive/3.png',
         articleList: filterByArrayKeyAndIds(articlesSummary, ['10'], 'categoryIdList'),
         title: 'Solidarity',
+        subtitle: {
+            en: 'none are free till all are free',
+            hi: 'कोई आज़ाद नहीं, जब तक सब आज़ाद नहीं'
+        },
         hindiTitle: 'एकजुटता',
         decades: ['1980s', '1990s', '2000s', '2010s'],
         description: {
@@ -180,6 +220,10 @@ export const categories: category[] = [
         archiveImg: '../../../assets/archive/1.png',
         articleList: filterByArrayKeyAndIds(articlesSummary, ['11'], 'categoryIdList'),
         title: 'Conferences',
+        subtitle: {
+            en: 'Meeting to grow, think and rethink together',
+            hi: 'मिल कर सोचने, पुनर्विचार और आगे बदने के लिए बैठकें'
+        },
         hindiTitle: 'सम्मेलन',
         decades: ['1980s', '1990s', '2000s', '2010s'],
         description: {
@@ -197,6 +241,10 @@ export const categories: category[] = [
         archiveImg: '../../../assets/archive/2.png',
         articleList: filterByArrayKeyAndIds(articlesSummary, ['12'], 'categoryIdList'),
         title: 'Celebrations',
+        subtitle: {
+            en: '',
+            hi: ''
+        },
         hindiTitle: 'जश्न',
         decades: ['1980s', '2000s', '2010s'],
         description: {

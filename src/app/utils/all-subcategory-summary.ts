@@ -391,7 +391,11 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Autonomous Women\'s Conferences',
-        hindiTitle: 'स्वायत्त महिला सम्मलेन'
+        hindiTitle: 'स्वायत्त महिला सम्मलेन',
+        subtitle: {
+            en: 'deliberations among autonomous women’s movements',
+            hi: 'स्वायत्त महिला आंदोलनों के बीच चर्चाएँ'
+        }
     },
     {
         id: 'Subcategory22',
@@ -421,7 +425,11 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'International Women\'s Day',
-        hindiTitle: 'अंतर्राष्ट्रीय महिला दिवस'
+        hindiTitle: 'अंतर्राष्ट्रीय महिला दिवस',
+        subtitle: {
+            en: 'of solidarities and alliances',
+            hi: 'एकजुटता और गठबन्धनों का'
+        }
     },
     {
         id: 'Subcategory24',
@@ -436,7 +444,11 @@ export const subcategoriesSummary: subCategory[] = [
         innerCategories: [],
         isSubcategory: true,
         title: 'Saheli Day',
-        hindiTitle: 'सहेली दिवस'
+        hindiTitle: 'सहेली दिवस',
+        subtitle: {
+            en: 'how we celebrate, and ruminate',
+            hi: 'जश्न मानते हैं और चिंतन भी करते हैं'
+        }
     },
     {
         id: 'Subcategory27',

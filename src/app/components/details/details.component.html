@@ -44,6 +44,15 @@
         } @else {
         <span class="category-name">{{categoryData?.hindiTitle | customCapitalize }}</span>
         }
+        @if (categoryData?.subtitle) {
+        <span class="article-subtitle {{'subtitle-'+[currentLang]}}">
+            {{
+            currentLang === 'en'
+            ? (categoryData?.subtitle[currentLang] | uppercase)
+            : (categoryData?.subtitle[currentLang])
+            }}
+        </span>
+        }
         <div class="category-description-wrapper">
             @if (currentLang === 'en') {
             @for (item of categoryData?.description['en']; track $index) {
