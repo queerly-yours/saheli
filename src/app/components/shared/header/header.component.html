@@ -1,7 +1,11 @@
 <header class="header">
   <div class="header-block">
     <div class="logo" [routerLink]="languageService.isEnglish() ? '/' : '/hi'">
+      @if(languageService.isEnglish()) {
       <img src="../../../../assets/logo/header-logo-inverted.jpeg" alt="Logo" />
+      } @else {
+        <img src="../../../../assets/logo/header-logo-inverted-hi.jpeg" alt="Logo" />
+      }
     </div>
 
     <div class="right-section">
@@ -19,7 +23,7 @@
 
       <div class="hamburger-menu">
         <div (mouseenter)="resetMenu()">
-          <ng-icon name="heroBars3" size="30" class="icon menu-icon"></ng-icon>
+          <img src="../../../../assets/shared/burgerImageInverted.png" alt="Menu" class="menu-icon" />
         </div>
 
         <ul class="dropdown">

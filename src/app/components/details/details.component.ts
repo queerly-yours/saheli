@@ -1,4 +1,4 @@
-import { afterNextRender, Component, effect, Injector, runInInjectionContext } from '@angular/core';
+import { afterNextRender, Component, DestroyRef, effect, inject, Injector, runInInjectionContext } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { filterByArrayKeyAndIds, filterByIds, ParamType } from '../../utils/utils';
 import { NavigationService } from '../../services/navigation/navigation.service';
@@ -21,6 +21,7 @@ import { NgIcon, provideIcons } from '@ng-icons/core';
 import { heroChevronLeft, heroChevronRight } from '@ng-icons/heroicons/outline';
 import { ArticleComponent } from '../article/article.component';
 import { ArchiveSliderComponent } from '../shared/archive-slider/archive-slider.component';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-category',
@@ -32,6 +33,7 @@ import { ArchiveSliderComponent } from '../shared/archive-slider/archive-slider.
 export class DetailsComponent {
 
   categoryData!: any;
+  private destroyRef = inject(DestroyRef);
   type!: string;
   paramTypes = ParamType;
   viewByDecade = false;
@@ -62,14 +64,18 @@ export class DetailsComponent {
   }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
+    this.route.paramMap.pipe(
+      takeUntilDestroyed(this.destroyRef)
+    ).subscribe(params => {
       this.selectedId = params.get('id');
       this.type = params.get('type') ?? '';
       this.fetchDetailsBasedOnParamType(this.selectedId, this.type);
 
     });
 
-    this.route.queryParams.subscribe(params => {
+    this.route.queryParams.pipe(
+      takeUntilDestroyed(this.destroyRef)
+    ).subscribe(params => {
       this.selectedDecade = params['decade'] || null;
       this.fromId = params['from'] || null;
       if (this.fromId) {
@@ -269,7 +275,7 @@ export class DetailsComponent {
   }
 
   getPublicationTitle(item: archive) {
-    return this.currentLang === 'hi' && item.hindiTitle ? item.hindiTitle : item.title;
+    return this.languageService.isEnglish() ? item.title : item.hindiTitle;
   }
 
   onPublicationClick(item: archive) {

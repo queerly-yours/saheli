@@ -22,7 +22,7 @@
     <div class="article-content">
         <span class="article-title {{'title-'+[currentLang]}}">{{categoryData?.title[currentLang] |
             customCapitalize:['Net-En']}}</span>
-        @if (categoryData?.subtitle) {
+        @if (categoryData?.subtitle?.[currentLang]) {
         <span class="article-subtitle {{'subtitle-'+[currentLang]}}">
             {{
             currentLang === 'en'
@@ -31,7 +31,7 @@
             }}
         </span>
         }
-        <div class="article-dates-wrapper {{'dates-'+[currentLang]}}" [ngClass]="{'mt-10': !categoryData?.subtitle}">
+        <div class="article-dates-wrapper {{'dates-'+[currentLang]}}" [ngClass]="{'mt-8': !categoryData?.subtitle?.[currentLang]}">
             <div>{{categoryData?.publishedDate[currentLang]}}</div>
         </div>
         <app-article [articleId]="categoryData.id"></app-article>
@@ -40,23 +40,23 @@
     } @else {
     <div class="category-content">
         @if (currentLang === 'en') {
-        <span class="category-name">{{categoryData?.title | customCapitalize }}</span>
+        <span class="category-name" [ngClass]="{'mb-8': !categoryData?.subtitle?.[currentLang]}">{{categoryData?.title | customCapitalize }}</span>
         } @else {
-        <span class="category-name">{{categoryData?.hindiTitle | customCapitalize }}</span>
+        <span class="category-name" [ngClass]="{'mb-8': !categoryData?.subtitle?.[currentLang]}">{{categoryData?.hindiTitle | customCapitalize }}</span>
         }
-        @if (categoryData?.subtitle) {
+        @if (categoryData?.subtitle?.[currentLang]) {
         <span class="article-subtitle {{'subtitle-'+[currentLang]}}">
             {{
             currentLang === 'en'
-            ? (categoryData?.subtitle[currentLang] | uppercase)
-            : (categoryData?.subtitle[currentLang])
+            ? (categoryData?.subtitle?.[currentLang] | uppercase)
+            : (categoryData?.subtitle?.[currentLang])
             }}
         </span>
         }
         <div class="category-description-wrapper">
             @if (currentLang === 'en') {
             @for (item of categoryData?.description['en']; track $index) {
-            <span class="category-description">{{item}}</span>
+            <span class="category-description" [ngClass]="{'mt-10': categoryData?.subtitle?.[currentLang] === ''}">{{item}}</span>
             }
             } @else {
             @for (item of categoryData?.description['hi']; track $index) {

@@ -38,7 +38,7 @@
           type="button"
           [attr.aria-expanded]="isOpen(section.id)"
           [attr.aria-controls]="'gallery-panel-' + section.id">
-          <span class="accordion-title">{{ section.title }}</span>
+          <span class="accordion-title" [ngClass]="{'accordion-title-hi': currentLang === 'hi'}">{{ getPublicationTitle(section) }}</span>
           <ng-icon
             class="chev"
             [name]="isOpen(section.id) ? 'heroChevronUp' : 'heroChevronDown'"
@@ -52,6 +52,12 @@
           [class.open]="isOpen(section.id)"
           [id]="'gallery-panel-' + section.id"
           role="region">
+
+          @if (getSectionDescription(section)) {
+          <div class="accordion-description" [class.accordion-description-hi]="currentLang === 'hi'">
+            {{ getSectionDescription(section) }}
+          </div>
+          }
 
           <div class="slider-container">
             <!-- Left scroll arrow -->
@@ -112,44 +118,65 @@
 @if (lightboxOpen && lightboxImage) {
 <div class="lightbox-overlay" (click)="closeLightbox()" role="dialog" aria-modal="true" aria-label="Image viewer">
   <div class="lightbox-container" (click)="$event.stopPropagation()">
+    <div class="lightbox-toolbar">
+      <div class="lightbox-toolbar-left">
+        <div class="lightbox-meta">
+          <span class="toolbar-image-badge">IMG</span>
+          <span class="lightbox-title">{{ lightboxImage.alt || lightboxImage.caption }}</span>
+        </div>
+      </div>
 
-    <!-- Close button -->
-    <button class="lightbox-close" (click)="closeLightbox()" aria-label="Close lightbox" type="button">
-      <ng-icon name="heroXMark" size="22"></ng-icon>
-    </button>
-
-    <!-- Prev arrow -->
-    <button
-      class="lightbox-nav lightbox-nav-prev"
-      (click)="prevImage()"
-      [disabled]="!lightboxHasPrev"
-      aria-label="Previous image"
-      type="button">
-      <ng-icon name="heroChevronLeft" size="28"></ng-icon>
-    </button>
-
-    <!-- Image -->
-    <div class="lightbox-image-wrapper">
-      <img
-        [src]="lightboxImage.url"
-        [alt]="lightboxImage.alt"
-        class="lightbox-img" />
-      <p class="lightbox-caption">{{ lightboxImage.caption }}</p>
-      <span class="lightbox-counter">
-        {{ lightboxImageIndex + 1 }} / {{ lightboxSection!.images.length }}
-      </span>
+      <div class="lightbox-actions">
+        <button class="lightbox-close" (click)="closeLightbox()" aria-label="Close lightbox" type="button">
+          <ng-icon name="heroXMark" size="20"></ng-icon>
+        </button>
+      </div>
     </div>
 
-    <!-- Next arrow -->
-    <button
-      class="lightbox-nav lightbox-nav-next"
-      (click)="nextImage()"
-      [disabled]="!lightboxHasNext"
-      aria-label="Next image"
-      type="button">
-      <ng-icon name="heroChevronRight" size="28"></ng-icon>
-    </button>
+    <div class="lightbox-body">
+      <button
+        class="lightbox-nav lightbox-nav-prev"
+        (click)="prevImage()"
+        [disabled]="!lightboxHasPrev"
+        aria-label="Previous image"
+        type="button">
+        <ng-icon name="heroChevronLeft" size="26"></ng-icon>
+      </button>
 
+      <div class="lightbox-frame-shell">
+        <div class="lightbox-frame-wrapper">
+          <div class="lightbox-image-wrapper">
+            <img
+              [src]="lightboxImage.url"
+              [alt]="lightboxImage.alt"
+              class="lightbox-img" />
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="lightbox-nav lightbox-nav-next"
+        (click)="nextImage()"
+        [disabled]="!lightboxHasNext"
+        aria-label="Next image"
+        type="button">
+        <ng-icon name="heroChevronRight" size="26"></ng-icon>
+      </button>
+    </div>
+
+    <div class="lightbox-footer">
+      <div class="lightbox-caption-shell">
+        <p class="lightbox-caption">{{ lightboxImage.caption }}</p>
+      </div>
+      <div class="lightbox-counter-pill">
+        <span>Image</span>
+        <span class="lightbox-counter">
+          <b>{{ lightboxImageIndex + 1 }}</b>
+          <span>/</span>
+          <span>{{ lightboxSection!.images.length }}</span>
+        </span>
+      </div>
+    </div>
   </div>
 </div>
 }

@@ -126,8 +126,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter Dec 2006",
             hi: "न्यूज़लेटर दिसंबर 2006"
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: ["Subcategory24"]
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory24", "Subcategory34" ]
     },
     {
         isArticle: true,
@@ -144,8 +144,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter Dec 2006",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: ["Subcategory24"]
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory24", "Subcategory34"]
     },
     {
         isArticle: true,
@@ -234,8 +234,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter Jan - Aug 2011",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: [ "Subcategory33" ]
     },
     {
         isArticle: true,
@@ -252,8 +252,8 @@ export const articlesSummary: articleList[] = [
             en: "First Four Years Souvenir 1981 - 1985",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory33"]
     },
     {
         isArticle: true,
@@ -360,8 +360,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter Sep 2011 - Apr 2012",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory33"]
     },
     {
         isArticle: true,
@@ -450,8 +450,8 @@ export const articlesSummary: articleList[] = [
             en: "25 Years' Souvenir 1981 - 2006",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory34"]
     },
     {
         isArticle: true,
@@ -540,8 +540,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter Sep - Dec 2010",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: ["Subcategory24"]
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory24", "Subcategory34"]
     },
     {
         isArticle: true,
@@ -648,8 +648,8 @@ export const articlesSummary: articleList[] = [
             en: "25 Years' Souvenir 1981 - 2006",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: ["Subcategory24"]
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory24", "Subcategory34"]
     },
     {
         isArticle: true,
@@ -1453,8 +1453,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter May - Aug 2002",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory34"]
     },
     {
         isArticle: true,
@@ -1795,8 +1795,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter Sep - Dec 2004",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory32"]
     },
     {
         isArticle: true,
@@ -1813,8 +1813,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter Sep 1986",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory32"]
     },
     {
         isArticle: true,
@@ -1831,8 +1831,8 @@ export const articlesSummary: articleList[] = [
             en: "25 Years' Souvenir 1981 - 2006",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory32"]
     },
     {
         isArticle: true,
@@ -1849,8 +1849,8 @@ export const articlesSummary: articleList[] = [
             en: "7th Anniversary Souvenir 1981 - 1988",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory32"]
     },
     {
         isArticle: true,
@@ -1957,8 +1957,8 @@ export const articlesSummary: articleList[] = [
             en: "25 Years' Souvenir 1981 - 2006",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory33"]
     },
     {
         isArticle: true,
@@ -2191,8 +2191,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter Jan - Apr 2003",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory33"]
     },
     {
         isArticle: true,
@@ -2353,8 +2353,8 @@ export const articlesSummary: articleList[] = [
             en: "7th Anniversary Souvenir 1981 - 1988",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory34"]
     },
     {
         isArticle: true,
@@ -2371,8 +2371,8 @@ export const articlesSummary: articleList[] = [
             en: "7th Anniversary Souvenir 1981 - 1988",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory34"]
     },
     {
         isArticle: true,
@@ -2587,8 +2587,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter Sep 1986",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory33"]
     },
     {
         isArticle: true,
@@ -2821,8 +2821,8 @@ export const articlesSummary: articleList[] = [
             en: "Saheli Souvenir 2006",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory33"]
     },
     {
         isArticle: true,
@@ -2839,8 +2839,8 @@ export const articlesSummary: articleList[] = [
             en: "Saheli Souvenir 2006",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory33"]
     },
     {
         isArticle: true,
@@ -2929,8 +2929,8 @@ export const articlesSummary: articleList[] = [
             en: "7th Anniversary Souvenir 1981 - 1988",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory33"]
     },
     {
         isArticle: true,
@@ -3001,8 +3001,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter Sep 1986",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory33"]
     },
     {
         isArticle: true,
@@ -3037,8 +3037,8 @@ export const articlesSummary: articleList[] = [
             en: "In Solidarity Souvenir 1995",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory33"]
     },
     {
         isArticle: true,
@@ -3055,8 +3055,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter Jun 1984",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory33"]
     },
     {
         isArticle: true,
@@ -4873,8 +4873,8 @@ export const articlesSummary: articleList[] = [
             en: "25 Years' Souvenir 1981 - 2006",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory33"]
     },
     {
         isArticle: true,
@@ -4927,8 +4927,8 @@ export const articlesSummary: articleList[] = [
             en: "First Four Years Souvenir 1981 - 1985",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory32"]
     },
     {
         isArticle: true,
@@ -5953,8 +5953,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter Apr 2016 – Jul 2017",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: ["Subcategory22"]
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory22", "Subcategory34"]
     },
     {
         isArticle: true,
@@ -6151,8 +6151,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter Apr 2016 – Jul 2017",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory33"]
     },
     {
         isArticle: true,
@@ -6727,8 +6727,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter Jan - Aug 2013",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory33"]
     },
     {
         isArticle: true,
@@ -6835,8 +6835,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter July - Dec 2012",
             hi: ""
         },
-        categoryIdList: ["6", "1"],
-        subCategoryIdList: ["Subcategory2", "Subcategory1"]
+        categoryIdList: ["6"],
+        subCategoryIdList: ["Subcategory2", "Subcategory1", "Subcategory34"]
     },
     {
         isArticle: true,
@@ -7249,8 +7249,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter Jan - Apr 2005",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory31"]
     },
     {
         isArticle: true,
@@ -7635,8 +7635,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter Jan 1995",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory32"]
     },
     {
         isArticle: true,
@@ -7941,8 +7941,8 @@ export const articlesSummary: articleList[] = [
             en: "Newsletter Apr 1987",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory32"]
     },
     {
         isArticle: true,
@@ -8157,8 +8157,8 @@ export const articlesSummary: articleList[] = [
             en: "First Four Years Souvenir 1981-1985",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory33"]
     },
     {
         isArticle: true,
@@ -8391,8 +8391,8 @@ export const articlesSummary: articleList[] = [
             en: "First Four Years Souvenir 1981-1985",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory34"]
     },
     {
         isArticle: true,
@@ -8427,8 +8427,8 @@ export const articlesSummary: articleList[] = [
             en: "7th Anniversary Souvenir 1981 - 1988",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory32"]
     },
     {
         isArticle: true,
@@ -8445,8 +8445,8 @@ export const articlesSummary: articleList[] = [
             en: "In Solidarity Souvenir 1981 - 1995",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory33"]
     },
     {
         isArticle: true,
@@ -8463,8 +8463,8 @@ export const articlesSummary: articleList[] = [
             en: "In Solidarity Souvenir 1981 - 1995",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory32"]
     },
     {
         isArticle: true,
@@ -8481,8 +8481,8 @@ export const articlesSummary: articleList[] = [
             en: "Booklet 2004",
             hi: ""
         },
-        categoryIdList: ["1"],
-        subCategoryIdList: []
+        categoryIdList: [],
+        subCategoryIdList: ["Subcategory34"]
     },
     {
         isArticle: true,

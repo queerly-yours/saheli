@@ -2,12 +2,12 @@
     @if (articleSummary?.title) {
         <span [ngClass]="currentLang === 'en' ? 'article-title' : 'article-title hi'"> {{$any(articleSummary?.title)[currentLang] ?? ''}} </span>
     }
-    @if (articleSummary?.subtitle) {
+    @if (currentSubtitle) {
         <span [ngClass]="currentLang === 'en' ? 'article-subtitle' : 'article-subtitle hi'"> 
             @if (currentLang === 'en') {
-                {{$any(articleSummary?.subtitle)[currentLang] ?? '' | customCapitalize }} 
+                {{ currentSubtitle | customCapitalize }} 
             } @else {
-                {{$any(articleSummary?.subtitle)[currentLang] ?? ''}} 
+                {{ currentSubtitle }} 
             }
         </span>
     }

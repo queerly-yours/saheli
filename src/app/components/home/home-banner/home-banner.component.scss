@@ -2,7 +2,7 @@
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 150px;
 }
 
 .banner-inner {
@@ -290,6 +290,10 @@ Values tuned to visually match the provided mock. Adjust per-asset sizes and pos
 
 /* Typography scaling for smaller screens */
 @media (max-width:900px) {
+    .saheli-banner {
+        padding-top: 80px;
+    }
+
     .circle .label {
         font-size: 12px;
     }
@@ -453,6 +457,10 @@ Values tuned to visually match the provided mock. Adjust per-asset sizes and pos
 
 
 @media (max-width:480px) {
+    .saheli-banner {
+        padding-top: 20% !important;
+    }
+
     .banner-inner {
         padding-top: 96%;
     }

@@ -1,6 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
-import { heroBars3, heroChevronDown, heroMagnifyingGlass, heroChevronUp, heroLanguage } from '@ng-icons/heroicons/outline';
+import { heroChevronDown, heroChevronUp, heroLanguage } from '@ng-icons/heroicons/outline';
 import { RouterModule } from '@angular/router';
 import { categories } from '../../../utils/category';
 import { category, subCategory } from '../../../utils/data-model';
@@ -13,7 +13,7 @@ import { SearchBoxComponent } from '../../search-box/search-box.component';
   selector: 'app-header',
   standalone: true,
   imports: [NgIconComponent, RouterModule, CommonModule, SearchBoxComponent],
-  providers: [provideIcons({ heroBars3, heroMagnifyingGlass, heroChevronDown, heroChevronUp, heroLanguage })],
+  providers: [provideIcons({ heroChevronDown, heroChevronUp, heroLanguage })],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

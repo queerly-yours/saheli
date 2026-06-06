@@ -67,11 +67,15 @@ export interface ArchiveImage {
 }
 
 export interface archive {
-    id: string;
-    title: string;
-    hindiTitle?: string;
-    archiveImg?: string;
-    images?: ArchiveImage[];
+  id: string;
+  title: string;
+  hindiTitle?: string;
+  archiveImg?: string;
+  images?: ArchiveImage[];
+  subtitle?: {
+    en?: string,
+    hi?: string
+  };
 }
 
 export type PublicationFileType = 'pdf' | 'jpeg' | 'png' | 'doc' | 'other';
