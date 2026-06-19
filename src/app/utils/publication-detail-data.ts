@@ -475,10 +475,10 @@ const mixedMiscFiles: PublicationFileItem[] = [
 export const publicationDetails: PublicationDetail[] = [
   {
     id: 'P1',
-    title: 'Fund Raising Calendars',
+    title: 'Calendars',
     description: {
-      en: [''],
-      hi: ['फंड जुटाने के उद्देश्य से तैयार किए गए कैलेंडरों की झलकियाँ।'],
+      en: ['Calendars that we produced occasionally to raise funds once for the North India Regional Autonomous Women’s Conference, Kanpur 1993 and twice to support our own work. Each calendar also sought to highlight issues and celebrate women’s creativity.'],
+      hi: ['हमने कभी-कभी फंड जुटाने के लिए कैलेंडर बनाए। एक बार 1993 में कानपुर में हुई उत्तर भारत क्षेत्रीय स्वायत्त महिला सम्मेलन के लिए, और दो बार अपने काम को आर्थिक सहयोग देने के लिए बनाए गए। हर कैलेंडर का उद्देश्य महिलाओं से जुड़े मुद्दों को सामने लाना और औरतों की कला को उजागर करना भी था।'],
     },
     mode: 'grid',
     hindiTitle: 'फंड रेज़िंग कैलेंडर',
@@ -503,7 +503,7 @@ export const publicationDetails: PublicationDetail[] = [
         'Since 1982, except for a short break in the early 1990s, we have brought out newsletters to share our work and perspectives. Despite our best efforts, it was always  a challenge for us to be regular in this effort, so issues across the years arrived with varying periodicity. However, it is still interesting to trace how issues evolved, languages changed and even political positions sometimes altered with experience and fresh thinking over time.',
       ],
       hi: [
-        'न्यूज़लेटर को दशकवार समूहों में रखा गया है। हर अकॉर्डियन के भीतर कैप्शन सहित फाइल स्लाइडर है।',
+        '1982 से, 1990 के शुरुआती वर्षों में थोड़े समय के अंतराल को छोड़कर, हम अपने काम और विचारों को साझा करने के लिए न्यूज़लेटर्स प्रकाशित करते रहे हैं। यह काम हमेशा नियमित नहीं हो पाया, इसलिए अलग-अलग वर्षों में ये अलग-अलग अंतराल पर प्रकाशित हुए हैं। फिर भी, इन न्यूज़लेटर्स को पढ़कर यह देखा जा सकता है कि समय के साथ मुद्दे कैसे बदले, भाषा कैसे बदली और अनुभव के साथ हमारे विचार और राजनीतिक समझ भी धीरे-धीरे विकसित हुई।',
       ],
     },
     mode: 'accordion',
@@ -698,10 +698,10 @@ export const publicationDetails: PublicationDetail[] = [
     description: {
       en: [
         'Scientific analysis on hazardous long-acting contraceptives and sterilisation. Accessible information on sexual health, contraception and safety. Investigative reports on how women are socialised into their roles within caste, religion and community. Findings of a survey on sexual harassment at the workplace. Specific case study reports. These are just some of the published reports of Saheli, readily available for you to browse and download.',
-        'In addition, featured here are reports we have worked on jointly with other women’s groups, democratic rights’ groups and others who we have worked with in solidarity on issues of mutual concern, or as part of joint campaigns and struggles.',
+        'In addition, featured here are reports we have worked on jointly with other women’s groups, democratic rights’ groups and others who we have worked with in solidarity on issues of mutual concern, or as part of joint campaigns and struggles',
       ],
       hi: [
-        'रिपोर्ट और तथ्य-खोज दस्तावेज़ यहां डाउनलोड योग्य मिश्रित मॉक फाइलों के रूप में दिए गए हैं।',
+        'खतरनाक लंबे समय तक असर करने वाले गर्भनिरोधक तरीकों और नसबंदी पर वैज्ञानिक अध्ययन, यौन स्वास्थ्य, गर्भनिरोध और सुरक्षा से जुड़ी सरल जानकारी, जाति, धर्म और समुदाय में महिलाओं की सामाजिक भूमिका पर शोध रिपोर्टें, कार्यस्थल पर यौन उत्पीड़न से जुड़े सर्वे के नतीजे, और विशेष केस स्टडी रिपोर्ट्स — ये सहेली की कुछ प्रकाशित रिपोर्टों के उदाहरण हैं। इन्हें आप यहाँ पढ़ सकते हैं और डाउनलोड भी कर सकते हैं।',
       ],
     },
     mode: 'grid',
@@ -716,7 +716,8 @@ export const publicationDetails: PublicationDetail[] = [
         'Statements and petitions issued from time to time, some singly as Saheli, many initiated collectively as part of joint platforms or networks; or as issue based alliances with other women’s groups, democratic rights’ groups, students’ collectives, anti-nuclear platforms and others.',
       ],
       hi: [
-        'वक्तव्य, एकजुटता नोट और नीतिगत प्रतिक्रियाएं यहां मिश्रित मॉक प्रारूपों में हैं।',
+        'समय-समय पर सहेली द्वारा और कई साझा मंचों या नेटवर्कों के साथ मिलकर सामूहिक रूप से या अलग-अलग मुद्दों पर आधारित गठबंधनों, जैसे महिला समूहों, लोकतांत्रिक अधिकार समूहों, छात्र संगठनों, परमाणु-विरोधी मंचों और अन्य समूहों के साथ मिलकर जो वक्तव्य और याचिकाएँ जारी किए गए हैं, उन्हें भी यहाँ शामिल किया गया है।',
+        'इसके अलावा, यहाँ वे रिपोर्टें भी शामिल हैं जो हमने अन्य महिला समूहों, लोकतांत्रिक अधिकार संगठनों और सहयोगी समूहों के साथ मिलकर तैयार की हैं, जिन के साथ हम ने साझा मुद्दों पर एकजुटता के आधार पर या संयुक्त अभियानों और आंदोलनों के हिस्से के रूप में काम किया।'
       ],
     },
     mode: 'grid',
@@ -731,7 +732,7 @@ export const publicationDetails: PublicationDetail[] = [
         '1985. 1988. 1995. 2004. 2006. Periodically we have written and published compilations of reflective, analytical essays on our work, campaigns, issues, international challenges and internal debates, organisational and funding related questions, and more. In 1988 and 1995, these were issued on the occasion of fund raising events and even carried advertisements which we used to ‘sell space’ for. That’s how this collection of publications started getting called ‘souvenirs’ - a name that has stuck. But we guess that’s okay now that they have all become ‘souvenirs’ of their times, by now!',
       ],
       hi: [
-        'स्मारिका पुस्तिकाएं और स्मृति दस्तावेज़ यहां मिश्रित मॉक फाइलों के रूप में हैं।',
+        '1985, 1988, 1995, 2004, 2006, समय-समय पर हमने अपने काम, अभियानों, मुद्दों, अंतर्राष्ट्रीय चुनौतियों, आंतरिक बहसों, संगठन और फंडिंग से जुड़े सवालों और अन्य विषयों पर विचारात्मक और विश्लेषणात्मक संकलन लिखे और प्रकाशित किये है। 1988 और 1995 में इन्हें फण्ड जुटाने के कार्यक्रमों के अवसर पर जारी किया गया थे और इन में विज्ञापन भी शामिल थे जिन्हें स्मारिका में जगह दे कर हम पैसा जुटाते थ। इस तरह इन प्रकाशनों कों ‘स्मारिकाएं’ कहा जाने लगा – एक ऐसा नाम जो अब तक बना हुआ है।  पर हमें लगता है कि यह ठीक ही है क्योंकि अब तक ये सभी अपने अपने समय की ‘यादें’ (स्मारिकायें) बन चुके है।',
       ],
     },
     mode: 'grid',
@@ -742,8 +743,8 @@ export const publicationDetails: PublicationDetail[] = [
     id: 'P8',
     title: 'Miscellaneous',
     description: {
-      en: [''],
-      hi: ['विभिन्न विषयों से जुड़ी अन्य यादों का संग्रह।'],
+      en: ['An assortment of other materials we’ve published.'],
+      hi: ['प्रकाशित की गई अन्य सामग्रियां।'],
     },
     mode: 'grid',
     hindiTitle: 'विविध सामग्री',

@@ -8,7 +8,7 @@ export const publicationsCategory: archive[] = [
     {
         id: 'P3',
         title: 'NEWSLETTERS',
-        hindiTitle: '',
+        hindiTitle: 'न्यूज़लेटर्स',
         archiveImg: C,
         subtitle: {
             en: '',
@@ -25,7 +25,7 @@ export const publicationsCategory: archive[] = [
     {
         id: 'P7',
         title: 'SOUVENIRS',
-        hindiTitle: '',
+        hindiTitle: 'स्मारिकाएं',
         subtitle: {
             en: '',
             hi: ''
@@ -45,7 +45,7 @@ export const publicationsCategory: archive[] = [
             en: '',
             hi: ''
         },
-        hindiTitle: '',
+        hindiTitle: 'रिपोर्ट्स',
         archiveImg: C,
         images: [
             { url: C, caption: 'Report on coercive population control policies', alt: 'Population control report' },
@@ -53,6 +53,22 @@ export const publicationsCategory: archive[] = [
             { url: B, caption: 'Report on Quinacrine sterilisation trials', alt: 'Quinacrine report' },
             { url: C, caption: 'Report on caste-based violence against women', alt: 'Caste violence report' },
             { url: A, caption: 'Report on HPV vaccine trials in India', alt: 'HPV vaccine report' },
+        ]
+    },
+    {
+        id: 'P6',
+        title: 'STATEMENTS',
+        hindiTitle: 'वक्तव्य',
+        subtitle: {
+            en: '',
+            hi: ''
+        },
+        archiveImg: C,
+        images: [
+            { url: B, caption: 'Statement on the Shah Bano case, 1986', alt: 'Shah Bano statement' },
+            { url: C, caption: 'Statement against the two-child norm policy', alt: 'Two-child norm statement' },
+            { url: A, caption: 'Statement in solidarity with Manipuri women', alt: 'Manipur solidarity statement' },
+            { url: B, caption: 'Statement on the Mathura rape judgment', alt: 'Mathura statement' },
         ]
     },
     {
@@ -89,25 +105,9 @@ export const publicationsCategory: archive[] = [
         ]
     },
     {
-        id: 'P6',
-        title: 'STATEMENTS',
-        hindiTitle: '',
-        subtitle: {
-            en: '',
-            hi: ''
-        },
-        archiveImg: C,
-        images: [
-            { url: B, caption: 'Statement on the Shah Bano case, 1986', alt: 'Shah Bano statement' },
-            { url: C, caption: 'Statement against the two-child norm policy', alt: 'Two-child norm statement' },
-            { url: A, caption: 'Statement in solidarity with Manipuri women', alt: 'Manipur solidarity statement' },
-            { url: B, caption: 'Statement on the Mathura rape judgment', alt: 'Mathura statement' },
-        ]
-    },
-    {
         id: 'P1',
-        title: 'FUND RAISING CALENDARS',
-        hindiTitle: 'फंड रेज़िंग कैलेंडर',
+        title: 'CALENDARS',
+        hindiTitle: 'कैलेंडर',
         subtitle: {
             en: '',
             hi: ''
@@ -123,7 +123,7 @@ export const publicationsCategory: archive[] = [
     {
         id: 'P8',
         title: 'MISCELLANEOUS',
-        hindiTitle: 'विविध सामग्री',
+        hindiTitle: 'अन्य',
         subtitle: {
             en: '',
             hi: ''

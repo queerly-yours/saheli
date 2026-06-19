@@ -51,6 +51,10 @@
     font-size: 16px;
 }
 
+.publication-description-text-hi {
+  font-size: 18px;
+}
+
 .publication-pdf-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -133,6 +137,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   min-height: calc(1.4em * 2);
+}
+
+.pdf-caption-hi {
+  font-size: 14px;
 }
 
 .pdf-caption.two-line {
@@ -243,6 +251,10 @@
   word-break: break-word;
   font-weight: 400;
   color: black;
+}
+
+.pdf-card-slider .pdf-caption.pdf-caption-hi {
+  font-size: 14px;
 }
 
 .scroll-btn {
@@ -356,9 +368,7 @@
 }
 
 .pdf-preview-frame-wrapper {
-  // background: #fff;
   border-radius: 8px;
-  // border: 1px solid rgba(255, 255, 255, 0.24);
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -427,6 +437,19 @@
   display: flex;
   justify-content: center;
   padding: 0 20px 18px;
+}
+
+.pdf-preview-caption {
+  color: #f2287f;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  max-width: min(100%, 920px);
+  line-height: 1.5;
+  margin: 0 20px 10px;
+  font-weight: 500;
+  flex-shrink: 0;
+  align-self: center;
 }
 
 .preview-footer-pill {
@@ -636,6 +659,10 @@
 
   .pdf-preview-frame-wrapper {
     border-radius: 6px;
+  }
+
+  .pdf-preview-caption {
+    font-size: 13px;
   }
 
   .pdf-preview-footer {

@@ -41,6 +41,10 @@
     }
   }
 
+  .search-input.search-input-hi::placeholder {
+    font-size: 18px;
+  }
+
   .search-btn {
     width: 34px;
     height: 34px;
@@ -65,5 +69,9 @@
   .search-box .search-input {
     width: 100%;
     font-size: 14px;
+  }
+
+  .search-box .search-input.search-input-hi::placeholder {
+    font-size: 16px;
   }
 }

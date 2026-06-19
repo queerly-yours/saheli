@@ -18,11 +18,11 @@ export interface GallerySection {
 export const gallerySections: GallerySection[] = [
   {
     id: 'sahelis',
-    title: 'Saheli and Sahelis',
-    hindiTitle: 'सहेली और सहेलियाँ',
+    title: 'Saheli & Sahelis',
+    hindiTitle: 'सहेली व सहेलियाँ',
     description: {
-      en: 'Test',
-      hi: '',
+      en: 'Snapshots of the office, meetings and actions within it, and Sahelis over time.',
+      hi: 'सहेली के दफ़्तर, बैठकों, आंदोलनों और सहेलियों के सफ़र की झलकियाँ।',
     },
     images: [
       {
@@ -59,11 +59,11 @@ export const gallerySections: GallerySection[] = [
   },
   {
     id: 'protests',
-    title: 'Protests',
-    hindiTitle: 'आंदोलन और अभियान',
+    title: 'Movements & Campaigns',
+    hindiTitle: 'आंदोलन व अभियान',
     description: {
-      en: '',
-      hi: '',
+      en: 'A collection of some of the many public campaigns and protest actions we have been part of.',
+      hi: 'समय-समय पर किए गए अभियानों और विरोध प्रदर्शनों की कुछ तस्वीरें और यादें।',
     },
     images: [
       {
@@ -93,8 +93,8 @@ export const gallerySections: GallerySection[] = [
     title: 'Plays',
     hindiTitle: 'नाटक',
     description: {
-      en: '',
-      hi: '',
+      en: 'Street theatre has always been one of our ways to reach out to people on a variety of issues.',
+      hi: 'नुक्कड़  नाटक हमारे लिए लोगों से जुड़ने और कई मुद्दों पर बात करने का एक अहम तरीका रहा हैं।',
     },
     images: [
       {
@@ -124,26 +124,13 @@ export const gallerySections: GallerySection[] = [
       },
     ],
   },
-  // {
-  //   id: 'celebrations',
-  //   title: 'Fun time / Celebrations',
-  //   images: [
-  //     { url: 'https://picsum.photos/seed/cel01/800/600', caption: '25 years of Saheli celebration, 2006', alt: '25 years celebration' },
-  //     { url: 'https://picsum.photos/seed/cel02/800/600', caption: 'Annual Diwali gathering at Saheli', alt: 'Diwali gathering' },
-  //     { url: 'https://picsum.photos/seed/cel03/800/600', caption: 'Team outing — a rare day off!', alt: 'Team outing' },
-  //     { url: 'https://picsum.photos/seed/cel04/800/600', caption: 'Birthday celebration for a long-time volunteer', alt: 'Birthday celebration' },
-  //     { url: 'https://picsum.photos/seed/cel05/800/600', caption: 'Farewell for a beloved member', alt: 'Farewell gathering' },
-  //     { url: 'https://picsum.photos/seed/cel06/800/600', caption: 'Potluck lunch at the office', alt: 'Potluck lunch' },
-  //     { url: 'https://picsum.photos/seed/cel07/800/600', caption: 'Cultural evening with music and dance', alt: 'Cultural evening' },
-  //   ]
-  // },
   {
     id: 'fundraising',
-    title: 'Fund Raising',
-    hindiTitle: 'फंड जुटाना',
+    title: 'Fund Raising Events',
+    hindiTitle: 'फंड रेज़िंग कार्यक्रम',
     description: {
-      en: '',
-      hi: '',
+      en: 'Some moments from the events we occasionally held to help raise funds for our work.',
+      hi: 'समय-समय पर किए गए उन आयोजनों के कुछ पल, जिनका उद्देश्य हमारे काम के लिए फंड जुटाना था।',
     },
     images: [
       {
@@ -168,8 +155,8 @@ export const gallerySections: GallerySection[] = [
     title: "International Women's Day",
     hindiTitle: 'अंतर्राष्ट्रीय महिला दिवस',
     description: {
-      en: '',
-      hi: '',
+      en: 'Marking International Women’s Day with our sisters.',
+      hi: 'अपनी बहनों के साथ अंतर्राष्ट्रीय महिला दिवस के कुछ खास पल।',
     },
     images: [
       {
@@ -204,8 +191,8 @@ export const gallerySections: GallerySection[] = [
     title: 'Saheli Day',
     hindiTitle: 'सहेली दिवस',
     description: {
-      en: '',
-      hi: '',
+      en: 'Marking many Saheli anniversaries together with saathis.',
+      hi: 'सहेलियों और साथियों के साथ सहेली की कई वर्षगाँठों के खास पल।',
     },
     images: [
       {
@@ -235,8 +222,8 @@ export const gallerySections: GallerySection[] = [
     title: 'Press',
     hindiTitle: 'प्रेस',
     description: {
-      en: '',
-      hi: '',
+      en: 'A few press clippings related to our work.',
+      hi: 'हमारे काम पर प्रकाशित कुछ प्रेस कवरेज की झलकियाँ।',
     },
     images: [
       {

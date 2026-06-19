@@ -13,7 +13,9 @@
 
     <div class="publication-page-description">
       @for (item of descriptionList; track $index) {
-      <span class="publication-description-text">{{ item }}</span>
+      <span
+        class="publication-description-text"
+        [class.publication-description-text-hi]="currentLang === 'hi'">{{ item }}</span>
       }
     </div>
 
@@ -63,7 +65,10 @@
                   }
                   <span class="pdf-badge">{{ getFileBadge(item) }}</span>
                 </div>
-                <span class="pdf-caption" [title]="item.caption">{{ item.caption }}</span>
+                <span
+                  class="pdf-caption"
+                  [class.pdf-caption-hi]="currentLang === 'hi'"
+                  [title]="item.caption">{{ item.caption }}</span>
               </button>
               }
             </div>
@@ -94,7 +99,10 @@
           }
           <span class="pdf-badge">{{ getFileBadge(item) }}</span>
         </div>
-        <span class="pdf-caption two-line" [title]="item.caption">{{ item.caption }}</span>
+        <span
+          class="pdf-caption two-line"
+          [class.pdf-caption-hi]="currentLang === 'hi'"
+          [title]="item.caption">{{ item.caption }}</span>
       </button>
       }
     </div>
@@ -211,6 +219,7 @@
           } @else if (isImagePreview && previewUrl) {
           <div class="file-preview-image-shell">
             <img [src]="previewFileUrl" [alt]="previewFileTitle" class="file-preview-image" />
+            <p class="pdf-preview-caption">{{ previewFileTitle || previewFileName }}</p>
           </div>
           } @else if (isDocPreview) {
           <div class="file-preview-fallback-shell">
@@ -251,6 +260,10 @@
         <ng-icon name="heroChevronRight" size="26"></ng-icon>
       </button>
     </div>
+
+    @if (!isImagePreview) {
+    <p class="pdf-preview-caption">{{ previewFileTitle || previewFileName }}</p>
+    }
 
     <div class="pdf-preview-footer">
       <div class="preview-footer-pill">

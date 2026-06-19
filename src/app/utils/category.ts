@@ -83,7 +83,7 @@ export const categories: category[] = [
             en: [
                 `New technologies and contraceptives have repeatedly posed dangers to women’s health, with risks overlooked or ignored by agencies promoting them. Saheli, with other women’s and health groups, has pressured the government to reduce risks and, where necessary, ban hazardous technologies. Women’s health have been key focus areas, from action against misuse of E.P. drugs to campaigns against coercive population control programmes, long-acting hazardous contraceptives, sex determination, new reproductive technologies, unethical trials and promotion of anti-fertility and HPV vaccines. We have demanded accountability from both the state and the market, women’s right to information, safer contraceptives, adequate health facilities, and redressal for adverse effects. We oppose measures like the two-child norm and critiqued ethical guidelines and power imbalances in medical research, pushing for safeguards in clinical trials. Our activities ranged from taking recourse to the courts, engaging with parliamentarians and lawmakers, to public campaigns, seminars, street plays, protests and direct interventions.`
             ],
-            hi: [`नई तकनीकों और गर्भ निरोधकों ने बार बार औरतों के स्वास्थ्य के लिए खतरे पैदा किये हैं, और ये खतरे उन एजेंसियों द्वारा अनदेखे किये गए हैं जो इनको बढावा दे रही हैं। सहेली ने दूसरे महिला और स्वास्थ्य समूहों के साथ मिल कर सरकार पर दबाव डाला है कि इन खतरों को कम किया जाए और जहाँ ज़रूरी है वहां इस खतरनाक तक़नीकों पर प्रतिबन्ध लगाए जाएँ। औरतों का स्वास्थ्य हमारे काम के केंद्र में रहा है – ई पी ड्रग्स के गलत इस्तेमाल के खिलाफ कार्यवाही से लेकर दबावकारी जनसँख्या नियंत्रण कार्यक्रमों, दूरगामी हानिकारक प्रभावों वाले खतरनाक गर्भ निरोधकों, लिंग चयन, नई प्रजनन तकनीकें, अनैतिक परीक्षण, और गर्भ निरोधक और एच.पी.व़ी को बढावा देने के खिलाफ कार्यवाही तक। हम ने राज्य और बाज़ार दोनों से जवाबदेही की मांग की है कि औरतों को सूचना के अधिकार, सुरक्षित गर्भ निरोधक, समुचित स्वास्थ्य सुविधायें, और हानिकारक प्रभावों का निदान मिले। हम ने दो-बच्चा नीति का विरोध किया और नैतिक दिशा निर्देशों की समीक्षा की और मेडिकल शोधों में सत्ता असंतुलन  और क्लिनिकल परीक्षणों में सुरक्षा पर ध्यान देने पर जोर दिया। हमारी गतिविधियों में शामिल था – कोर्ट्स में जाना, सांसदों और कानून बनाने वालों से मिलना, सार्वजनिक अभियान, सेमीनार, नुक्कड़ नाटक, प्रदर्शन और सीधा हस्तक्षेप।`]
+            hi: [`नई तकनीकों और गर्भ निरोधकों ने बार बार औरतों के स्वास्थ्य के लिए खतरे पैदा किये हैं, और ये खतरे उन एजेंसियों द्वारा अनदेखे किये गए हैं जो इनको बढावा दे रही हैं। सहेली ने दूसरे महिला और स्वास्थ्य समूहों के साथ मिल कर सरकार पर दबाव डाला है कि इन खतरों को कम किया जाए और जहाँ ज़रूरी है वहां इस खतरनाक तक़नीकों पर प्रतिबन्ध लगाए जाएँ। औरतों का स्वास्थ्य हमारे काम के केंद्र में रहा है – ई पी ड्रग्स के गलत इस्तेमाल के खिलाफ कार्यवाही से लेकर दबावकारी जनसंख्या नियंत्रण कार्यक्रमों, दूरगामी हानिकारक प्रभावों वाले खतरनाक गर्भ निरोधकों, लिंग चयन, नई प्रजनन तकनीकें, अनैतिक परीक्षण, और गर्भ निरोधक और एच.पी.व़ी को बढावा देने के खिलाफ कार्यवाही तक। हम ने राज्य और बाज़ार दोनों से जवाबदेही की मांग की है कि औरतों को सूचना के अधिकार, सुरक्षित गर्भ निरोधक, समुचित स्वास्थ्य सुविधायें, और हानिकारक प्रभावों का निदान मिले। हम ने दो-बच्चा नीति का विरोध किया और नैतिक दिशा निर्देशों की समीक्षा की और मेडिकल शोधों में सत्ता असंतुलन  और क्लिनिकल परीक्षणों में सुरक्षा पर ध्यान देने पर जोर दिया। हमारी गतिविधियों में शामिल था – कोर्ट्स में जाना, सांसदों और कानून बनाने वालों से मिलना, सार्वजनिक अभियान, सेमीनार, नुक्कड़ नाटक, प्रदर्शन और सीधा हस्तक्षेप।`]
         },
         subCategoryList: filterByArrayKeyAndIds(subcategoriesSummary, ['4'], 'categoryIdList'),
         isOpen: false,
@@ -93,7 +93,7 @@ export const categories: category[] = [
         id: '5',
         archiveImg: '../../../assets/archive/1.png',
         articleList: filterByArrayKeyAndIds(articlesSummary, ['5'], 'categoryIdList'),
-        title: 'Sexualities and Gender',
+        title: 'Sexualities & Gender',
         subtitle: {
             en: 'diversities, desires, dignity, rights',
             hi: 'विविधिताएं, चाहतें, सम्मान, अधिकार'
@@ -119,7 +119,7 @@ export const categories: category[] = [
             en: 'structured violence and discrimination',
             hi: 'ढांचागत हिंसा और भेदभाव'
         },
-        hindiTitle: 'जातिवाद के खिलाफ',
+        hindiTitle: 'जातिवाद के खिलाफ़',
         decades: ['1990s', '2000s', '2010s'],
         description: {
             en: [
@@ -146,7 +146,7 @@ export const categories: category[] = [
             en: [
                 `Saheli has maintained a strong critique of the coercive and repressive role of the State, whether in the name of population control, development, or “law and order.” We have campaigned against coercive population control measures, for repeal of draconian laws such as the Armed Forces Special Powers Act (AFSPA), Terrorism and Disruptive Activities (Prevention of) Act, (TADA) Prevention of Terrorism Act (POTA), and Unlawful Activities (Prevention) ACT (UAPA). Through fact-finding on militarisation and campaigns against disappearances, arbitrary arrests, torture, encounter killings and the use of sexual violence, we joined hands with women’s groups, students groups, human rights, democratic rights and peoples’ organisations. We have also been part of the nationwide alliance “Women against Sexual Violence and State Repression,” strengthening efforts against such terror by the state.`
             ],
-            hi: [`सहेली ने हमेशा ही राज्य की दमनकारी और बाध्यकारी भूमिका की तीखी अलोचना की है, चाहे वे जनसँख्या नियंत्रण की नीतियां हों या “कानून और व्यवस्था“ के सवाल। हम ने सशस्त्र सेना विशेषाधिकार कानून, आतंकवादी और विघटनकारी गतिविधियाँ (रोकथाम) कानून, आतंकवाद रोकथाम कानून, और गैरकानूनी गतिविधियाँ रोकथाम अधिनियम जैसे कठोर कानूनों को समाप्त करने के लिए अभियान किये हैं। हम महिला संगठनों, छात्र संगठनों, मानवाधिकार, जनतांत्रिक अधिकार और जन संगठनों के साथ मिल कर सैनियकरण, मनमानी गरिफ्तारी, यातनाओं, एनकाउंटर हत्याओं, और यौनिक हिंसा के खिलाफ अभियानों और तथ्य खोजी टीमों  का हिस्सा बने। हम राज्य के आतंक के खिलाफ़ हो रही कोशिशों को मजबूत करने के लिए राष्ट्रव्यापी गठबंधन “यौनिक हिंसा और राजकीय दमन के खिलाफ़ महिलायें” का भी हिस्सा रहे हैं।`]
+            hi: [`सहेली ने हमेशा ही राज्य की दमनकारी और बाध्यकारी भूमिका की तीखी अलोचना की है, चाहे वे जनसंख्या नियंत्रण की नीतियां हों या “कानून और व्यवस्था“ के सवाल। हम ने सशस्त्र सेना विशेषाधिकार कानून, आतंकवादी और विघटनकारी गतिविधियाँ (रोकथाम) कानून, आतंकवाद रोकथाम कानून, और गैरकानूनी गतिविधियाँ रोकथाम अधिनियम जैसे कठोर कानूनों को समाप्त करने के लिए अभियान किये हैं। हम महिला संगठनों, छात्र संगठनों, मानवाधिकार, जनतांत्रिक अधिकार और जन संगठनों के साथ मिल कर सैनियकरण, मनमानी गरिफ्तारी, यातनाओं, एनकाउंटर हत्याओं, और यौनिक हिंसा के खिलाफ अभियानों और तथ्य खोजी टीमों  का हिस्सा बने। हम राज्य के आतंक के खिलाफ़ हो रही कोशिशों को मजबूत करने के लिए राष्ट्रव्यापी गठबंधन “यौनिक हिंसा और राजकीय दमन के खिलाफ़ महिलायें” का भी हिस्सा रहे हैं।`]
         },
         subCategoryList: filterByArrayKeyAndIds(subcategoriesSummary, ['7'], 'categoryIdList'),
         isOpen: false,
@@ -177,8 +177,8 @@ export const categories: category[] = [
         id: '9',
         archiveImg: '',
         articleList: filterByArrayKeyAndIds(articlesSummary, ['9'], 'categoryIdList'),
-        title: 'Other Debates and Concerns',
-        hindiTitle: 'अन्य बहस और चिंताएं',
+        title: 'Other Concerns',
+        hindiTitle: 'अन्य विमर्श',
         subtitle: {
             en: 'Not quite the usual feminist issue',
             hi: 'सामान्य नारीवादी मुद्दा नहीं'
