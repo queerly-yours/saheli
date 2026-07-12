@@ -1,0 +1,683 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Text / Blocks → Article JSON (Sections)</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 16px; }
+    textarea, input, select { box-sizing: border-box; }
+    textarea { width: 100%; max-width: 1000px; }
+    .block { margin: 14px 0 18px; }
+    .counts { font-weight: 700; margin: 6px 0; }
+    .counts small { font-weight: 600; color: #444; }
+    button { padding: 10px 16px; cursor: pointer; }
+    pre { background: #f7f7f7; padding: 12px; border-radius: 8px; overflow: auto; }
+    .err { color: #b00020; font-weight: 700; }
+    label { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .card { border: 1px solid #ddd; border-radius: 10px; padding: 12px; margin-bottom: 12px; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    .hidden { display:none; }
+  </style>
+</head>
+<body>
+  <h2>Text / Blocks → Article JSON (Sections)</h2>
+  <p style="color:#444;margin-top:-6px;">
+    Build <code>sections[]</code> compatible with the app renderer.
+    For unknown/custom section types (e.g., <code>customYellowBox</code>), switch the block to <b>Raw JSON</b>.
+  </p>
+
+  <div class="block">
+    <div class="row">
+      <label>
+        <input id="trimInside" type="checkbox" checked />
+        Trim &amp; collapse whitespace (structured inputs)
+      </label>
+      <label>
+        <input id="autoHi" type="checkbox" checked />
+        If Hindi is empty, generate <code>hi: ""</code>
+      </label>
+    </div>
+  </div>
+
+  <div id="blocksContainer"></div>
+
+  <div class="block row">
+    <button type="button" onclick="addBlock()">+ Add section block</button>
+    <button type="button" onclick="convert()">Convert to JSON</button>
+  </div>
+
+  <div class="block">
+    <div id="error" class="err" style="display:none;"></div>
+  </div>
+
+  <h3>Output JSON:</h3>
+  <pre id="output"></pre>
+
+  <script>
+    const $blocksContainer = document.getElementById("blocksContainer");
+    const $output = document.getElementById("output");
+    const $error = document.getElementById("error");
+    const $trimInside = document.getElementById("trimInside");
+    const $autoHi = document.getElementById("autoHi");
+
+    function uid() { return Math.random().toString(16).slice(2); }
+
+    function normWhitespace(str) {
+      return String(str ?? "")
+        .replace(/\r?\n/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function makeTextArea(placeholder, rows = 5) {
+      const ta = document.createElement("textarea");
+      ta.rows = rows;
+      ta.placeholder = placeholder;
+      return ta;
+    }
+
+    function makeInput(placeholder) {
+      const input = document.createElement("input");
+      input.type = "text";
+      input.placeholder = placeholder;
+      input.style.width = "100%";
+      return input;
+    }
+
+    function makeSelect(options) {
+      const sel = document.createElement("select");
+      for (const opt of options) {
+        const o = document.createElement("option");
+        o.value = opt.value;
+        o.textContent = opt.label;
+        sel.appendChild(o);
+      }
+      return sel;
+    }
+
+    function showError(msg) {
+      $error.style.display = "block";
+      $error.textContent = msg;
+    }
+
+    function clearError() {
+      $error.style.display = "none";
+      $error.textContent = "";
+    }
+
+    function looksLikeUrl(s) {
+      return /^https?:\/\/[\S]+$/i.test(String(s ?? "").trim());
+    }
+
+    // Returns tokens split by URLs, preserving URLs in the output.
+    function splitByUrls(txt) {
+      const urlRegex = /(https?:\/\/[^\s)\]]+)/g;
+      const parts = String(txt ?? "").split(urlRegex);
+      return parts.filter(p => p !== "");
+    }
+
+    // Parses **bold** markers inside a plain-text token (no URLs inside this token).
+    // Returns run objects (type paragraph) with correct class.
+    function parseBoldRuns(token) {
+      const runs = [];
+
+      // **bold**, __underline__, and *italic* markers inside a token (URLs handled separately)
+      const boldRegex = /\*\*([^*]+)\*\*/g;
+      const underlineRegex = /__([^_]+)__/g;
+      // Match single-asterisk italic only (avoid matching inside **bold**)
+      const italicRegex = /(?<!\*)\*([^*]+)\*(?!\*)/g;
+
+      // Merge both marker matches in-order
+      const matches = [];
+
+      for (let m; (m = boldRegex.exec(token)) !== null;) {
+        matches.push({ start: m.index, end: m.index + m[0].length, class: "fw-bold", text: m[1] });
+      }
+      for (let m; (m = underlineRegex.exec(token)) !== null;) {
+        matches.push({ start: m.index, end: m.index + m[0].length, class: "fw-underline", text: m[1] });
+      }
+      for (let m; (m = italicRegex.exec(token)) !== null;) {
+        matches.push({ start: m.index, end: m.index + m[0].length, class: "fw-italic", text: m[1] });
+      }
+
+      matches.sort((a, b) => a.start - b.start);
+
+      let cursor = 0;
+      for (const m of matches) {
+        if (m.start > cursor) {
+          const before = token.slice(cursor, m.start);
+          if (before) runs.push({ type: "paragraph", class: "", content: { en: before, hi: "" } });
+        }
+
+        if (m.text) {
+          const isItalic = m.class === "fw-italic";
+        
+          runs.push({
+            type: "paragraph",
+            class: isItalic ? "fs-italic" : m.class,
+            content: { en: m.text, hi: "" }
+          });
+        }
+
+        cursor = Math.max(cursor, m.end);
+      }
+
+      const after = token.slice(cursor);
+      if (after) {
+        runs.push({ type: "paragraph", class: "", content: { en: after, hi: "" } });
+      }
+
+      return runs;
+    }
+
+    // Converts a paragraph string into paragraphCombo runs.
+    // URL tokens become item.type="link".
+    // Non-URL tokens are further parsed for **bold** markers.
+    // IMPORTANT: For EN-only generation we keep hi empty (""), matching app expectation.
+    function paragraphTextToComboRuns(text) {
+      const tokens = splitByUrls(text);
+      const runs = [];
+
+      for (const token of tokens) {
+        if (/^https?:\/\//i.test(token) && looksLikeUrl(token)) {
+          runs.push({
+            type: "link",
+            url: token,
+            text: token,
+            content: { en: token, hi: "" }
+          });
+        } else {
+          runs.push(...parseBoldRuns(token));
+        }
+      }
+
+      return runs;
+    }
+
+    function createBlockUI() {
+      const id = uid();
+
+      const card = document.createElement("div");
+      card.className = "card";
+      card.dataset.blockId = id;
+
+      // Header
+      const header = document.createElement("div");
+      header.className = "row";
+      header.style.justifyContent = "space-between";
+
+      const modeSel = makeSelect([
+        { label: "Structured (known types)", value: "structured" },
+        { label: "Raw JSON (unknown/custom)", value: "raw" }
+      ]);
+      modeSel.value = "structured";
+
+      const typeSel = makeSelect([
+        { label: "paragraph", value: "paragraph" },
+        // boxedParagraph removed: use customYellowBox instead for boxed content with internal subheadings
+        { label: "list (bullet/number)", value: "list" },
+        { label: "paragraphCombo", value: "paragraphCombo" },
+        { label: "pullQuote", value: "pullQuote" },
+        { label: "heading", value: "heading" },
+        { label: "subHeading", value: "subHeading" },
+        { label: "quote", value: "quote" },
+        { label: "poetry", value: "poetry" },
+        { label: "dictionary", value: "dictionary" },
+        { label: "image", value: "image" },
+        { label: "imageText", value: "imageText" },
+        { label: "bannerImage", value: "bannerImage" },
+        { label: "customYellowBox", value: "customYellowBox" },
+        { label: "twoColumn", value: "twoColumn" },
+        { label: "emptySpace", value: "emptySpace" },
+        { label: "poem-document", value: "poem-document" }
+      ]);
+
+      header.appendChild(document.createTextNode("Mode"));
+      header.appendChild(modeSel);
+      header.appendChild(document.createTextNode("Type"));
+      header.appendChild(typeSel);
+      card.appendChild(header);
+
+      // Language inputs
+      const langGrid = document.createElement("div");
+      langGrid.className = "grid";
+      langGrid.style.marginTop = "10px";
+
+      const enBox = document.createElement("div");
+      enBox.innerHTML = `<div style="font-weight:700;margin-bottom:6px;">English (en)</div>`;
+      const enText = makeTextArea("EN text", 6);
+      enBox.appendChild(enText);
+
+      const hiBox = document.createElement("div");
+      hiBox.innerHTML = `<div style="font-weight:700;margin-bottom:6px;">Hindi (hi)</div>`;
+      const hiText = makeTextArea("HI text (optional)", 6);
+      hiBox.appendChild(hiText);
+
+      langGrid.appendChild(enBox);
+      langGrid.appendChild(hiBox);
+      card.appendChild(langGrid);
+
+      // Structured extras (minimal: only what app uses for these types)
+      const extra = document.createElement("div");
+      extra.style.marginTop = "10px";
+
+      const listStyleRow = document.createElement("div");
+      listStyleRow.className = "row hidden";
+      listStyleRow.innerHTML = `<div style="font-weight:700;">List style</div>`;
+      const listStyleSel = makeSelect([
+        { label: "bullet", value: "bullet" },
+        { label: "number", value: "number" }
+      ]);
+      listStyleRow.appendChild(listStyleSel);
+
+      const listItemsTA = makeTextArea("List items (one per line for EN). Put Hindi items in HI box (same order/count).", 6);
+      listItemsTA.className = "hidden";
+
+      const paragraphComboHint = document.createElement("div");
+      paragraphComboHint.className = "counts hidden";
+      paragraphComboHint.innerHTML = `<small>paragraphCombo: one line per paragraph run. Format: <code>[class?]::text</code></small>`;
+      const comboLinesTA = makeTextArea("paragraphCombo lines (one per line): class::text or ::text", 8);
+      comboLinesTA.className = "hidden";
+
+      const headingLevelRow = document.createElement("div");
+      headingLevelRow.className = "row hidden";
+      headingLevelRow.innerHTML = `<div style="font-weight:700;">Heading level</div>`;
+      const headingLevelSel = makeSelect([
+        { label: "2", value: "2" },
+        { label: "3", value: "3" }
+      ]);
+      headingLevelRow.appendChild(headingLevelSel);
+
+      const pullLayoutRow = document.createElement("div");
+      pullLayoutRow.className = "row hidden";
+      pullLayoutRow.innerHTML = `<div style="font-weight:700;">pullQuote layout</div>`;
+      const pullLayoutSel = makeSelect([
+        { label: "left", value: "left" },
+        { label: "withImage", value: "withImage" }
+      ]);
+      pullLayoutRow.appendChild(pullLayoutSel);
+
+      const imageUrlInput = makeInput("Image URL (e.g., /1.jpeg or full url)");
+      imageUrlInput.className = "hidden";
+      const imageAltInput = makeInput("Alt text (EN). Put HI alt in HI box if needed.");
+      imageAltInput.className = "hidden";
+
+      const creditInput = makeInput("Credit text (optional). Used for both EN/HI as same string.");
+      creditInput.className = "hidden";
+
+      const creditTypeSel = makeSelect([
+        { label: "text", value: "text" },
+        { label: "other/link", value: "other" }
+      ]);
+      creditTypeSel.className = "hidden";
+
+      const creditUrlInput = makeInput("Credit URL (optional; used if creditType is other/link)." );
+      creditUrlInput.className = "hidden";
+
+      const dictionaryHint = document.createElement("div");
+      dictionaryHint.className = "counts hidden";
+      dictionaryHint.innerHTML = `<small>dictionary: one entry per line: <code>word | partOfSpeech | meaning</code></small>`;
+      const dictionaryItemsTA = makeTextArea("Dictionary entries (one per line): word | partOfSpeech | meaning", 8);
+      dictionaryItemsTA.className = "hidden";
+
+      const poetryHint = document.createElement("div");
+      poetryHint.className = "counts hidden";
+      poetryHint.innerHTML = `<small>poetry: one line per row</small>`;
+
+      const rawTA = makeTextArea('Raw mode: paste full section JSON object', 10);
+      rawTA.className = "hidden";
+
+      extra.appendChild(listStyleRow);
+      extra.appendChild(listItemsTA);
+      extra.appendChild(paragraphComboHint);
+      extra.appendChild(comboLinesTA);
+      extra.appendChild(headingLevelRow);
+      extra.appendChild(pullLayoutRow);
+      extra.appendChild(imageUrlInput);
+      extra.appendChild(imageAltInput);
+      extra.appendChild(creditInput);
+      extra.appendChild(creditTypeSel);
+      extra.appendChild(creditUrlInput);
+      extra.appendChild(dictionaryHint);
+      extra.appendChild(dictionaryItemsTA);
+      extra.appendChild(poetryHint);
+
+      card.appendChild(extra);
+      card.appendChild(rawTA);
+
+      const removeBtn = document.createElement("button");
+      removeBtn.type = "button";
+      removeBtn.textContent = "Remove block";
+      removeBtn.style.marginTop = "10px";
+      removeBtn.onclick = () => card.remove();
+      card.appendChild(removeBtn);
+
+      function getClean(str) {
+        const s = String(str ?? "");
+        return $trimInside.checked ? normWhitespace(s) : s;
+      }
+
+      function syncVisibility() {
+        // hide all
+        for (const el of [listStyleRow, listItemsTA, paragraphComboHint, comboLinesTA, headingLevelRow, pullLayoutRow, imageUrlInput, imageAltInput, creditInput, creditTypeSel, creditUrlInput, dictionaryHint, dictionaryItemsTA, poetryHint, rawTA]) {
+          el.classList.add("hidden");
+        }
+
+        if (modeSel.value === "raw") {
+          rawTA.classList.remove("hidden");
+          return;
+        }
+
+        const t = typeSel.value;
+        if (t === "list") {
+          listStyleRow.classList.remove("hidden");
+          listItemsTA.classList.remove("hidden");
+        } else if (t === "paragraphCombo") {
+          paragraphComboHint.classList.remove("hidden");
+          comboLinesTA.classList.remove("hidden");
+        } else if (t === "heading") {
+          headingLevelRow.classList.remove("hidden");
+        } else if (t === "pullQuote") {
+          pullLayoutRow.classList.remove("hidden");
+          if (pullLayoutSel.value === "withImage") {
+            imageUrlInput.classList.remove("hidden");
+            imageAltInput.classList.remove("hidden");
+            creditInput.classList.remove("hidden");
+            creditTypeSel.classList.remove("hidden");
+            creditUrlInput.classList.remove("hidden");
+          }
+        } else if (t === "poetry") {
+          poetryHint.classList.remove("hidden");
+        } else if (t === "dictionary") {
+          dictionaryHint.classList.remove("hidden");
+          dictionaryItemsTA.classList.remove("hidden");
+        } else if (t === "image") {
+          imageUrlInput.classList.remove("hidden");
+          imageAltInput.classList.remove("hidden");
+        } else if (t === "imageText") {
+          imageUrlInput.classList.remove("hidden");
+          imageAltInput.classList.remove("hidden");
+          creditInput.classList.remove("hidden");
+          creditTypeSel.classList.remove("hidden");
+          creditUrlInput.classList.remove("hidden");
+        } else if (t === "bannerImage") {
+          imageUrlInput.classList.remove("hidden");
+          imageAltInput.classList.remove("hidden");
+          creditInput.classList.remove("hidden");
+          creditTypeSel.classList.remove("hidden");
+          creditUrlInput.classList.remove("hidden");
+        }
+      }
+
+      modeSel.onchange = syncVisibility;
+      typeSel.onchange = syncVisibility;
+      pullLayoutSel.onchange = syncVisibility;
+      syncVisibility();
+
+      return {
+        id,
+        card,
+        getData: () => {
+          const mode = modeSel.value;
+          const t = typeSel.value;
+
+          const cleanedEn = getClean(enText.value);
+          const cleanedHiRaw = String(hiText.value ?? "");
+          const cleanedHi = $trimInside.checked ? normWhitespace(cleanedHiRaw) : cleanedHiRaw;
+
+          if (mode === "raw") {
+            const raw = String(rawTA.value ?? "").trim();
+            if (!raw) throw new Error("Raw JSON mode: Raw textarea is empty.");
+            return JSON.parse(raw);
+          }
+
+          const hiFinal = ($autoHi.checked && !String(cleanedHiRaw).trim()) ? "" : cleanedHi;
+
+          if (t === "paragraph") {
+            // Split by blank lines into multiple paragraphs; Convert() expands.
+            const blocks = String(enText.value ?? "")
+              .split(/\r?\n\s*\r?\n+/g)
+              .map(s => ( $trimInside.checked ? normWhitespace(s) : String(s ?? "") ).trim())
+              .filter(Boolean);
+
+            const hiBlocks = String(hiText.value ?? "")
+              .split(/\r?\n\s*\r?\n+/g)
+              .map(s => ($trimInside.checked ? normWhitespace(s) : String(s ?? "") ).trim())
+              .filter(Boolean);
+
+            return {
+              type: "paragraph",
+              content: {
+                en: blocks,
+                hi: hiBlocks.length ? hiBlocks : blocks.map(() => "")
+              }
+            };
+          }
+
+          if (t === "quote") {
+            return { type: "quote", content: { en: cleanedEn, hi: hiFinal } };
+          }
+
+          if (t === "heading") {
+            return { type: "heading", level: Number(headingLevelSel.value), content: { en: cleanedEn, hi: hiFinal } };
+          }
+
+          if (t === "subHeading") {
+            // App renderer expects top-level type="subHeading"
+            return { type: "subHeading", class: "", content: { en: cleanedEn, hi: hiFinal } };
+          }
+
+          if (t === "pullQuote") {
+            const layout = pullLayoutSel.value;
+            const sec = { type: "pullQuote", layout, content: { en: cleanedEn, hi: hiFinal } };
+            if (layout === "withImage") {
+              const url = String(imageUrlInput.value || "").trim();
+              if (!url) throw new Error("pullQuote withImage: provide Image URL.");
+              sec.image = {
+                url,
+                alt: { en: String(imageAltInput.value || "").trim(), hi: hiFinal },
+                credit: String(creditInput.value || ""),
+                creditType: creditTypeSel.value,
+                creditUrl: String(creditUrlInput.value || "")
+              };
+            }
+            return sec;
+          }
+
+          if (t === "list") {
+            const style = listStyleSel.value;
+            const enLines = String(listItemsTA.value || "").split(/\r?\n/).map(s => s.trim()).filter(Boolean);
+            const hiLines = String(hiText.value || "").split(/\r?\n/).map(s => s.trim()).filter(Boolean);
+            const itemsEn = enLines.map(txt => ({ type: "text", url: "", text: txt }));
+            const itemsHi = hiLines.length ? hiLines.map(txt => ({ type: "text", url: "", text: txt })) : enLines.map(() => ({ type: "text", url: "", text: "" }));
+            return { type: "list", style, class: "", items: { en: itemsEn, hi: itemsHi } };
+          }
+
+          if (t === "paragraphCombo") {
+            const lines = String(comboLinesTA.value || "").split(/\r?\n/).map(s => s.trim()).filter(Boolean);
+            const hiLines = String(hiText.value || "").split(/\r?\n/).map(s => s.trim()).filter(Boolean);
+            const sections = lines.map((line, idx) => {
+              const parts = line.split("::");
+              const left = (parts[0] ?? "").trim();
+              const text = (parts.slice(1).join("::") ?? "").trim();
+              const cls = left ? (left.includes("fw-bold") ? "fw-bold" : left) : "";
+              return { type: "paragraph", class: cls, content: { en: text, hi: hiLines[idx] ?? "" } };
+            });
+            return { type: "paragraphCombo", class: "", content: { en: sections, hi: [] } };
+          }
+
+          if (t === "customYellowBox") {
+            // customYellowBox items:
+            // - subHeading item: {type:"subHeading", content:{en,hi}}
+            // - paragraph item:  {type:"paragraph",  content:{en,hi}}
+            // Expected input format in EN textarea:
+            // [subheading] TITLE
+            // paragraph line(s)...
+            // (blank line separates paragraphs)
+            const rawEn = String(enText.value ?? "");
+            const rawHi = String(hiText.value ?? "");
+
+            const preserveNewlinesClean = (s) => {
+              const str = String(s ?? "");
+              if (!$trimInside.checked) return str;
+              return str
+                .replace(/\r?\n/g, "\n")
+                .replace(/[ \t]+/g, " ")
+                .replace(/\n{3,}/g, "\n\n");
+            };
+
+            const cleanedEn = preserveNewlinesClean(rawEn).trimEnd();
+            const cleanedHi = hiFinal && String(rawHi).trim() ? preserveNewlinesClean(rawHi).trimEnd() : "";
+
+            const lines = cleanedEn.split(/\r?\n/);
+
+            const items = [];
+            let currentSub = null;
+            let currentParaLines = [];
+
+            const flushParagraph = () => {
+              const paraText = currentParaLines.join("\n").trim();
+              if (paraText) {
+                items.push({
+                  type: "paragraph",
+                  class: "",
+                  content: { en: paraText, hi: "" }
+                });
+              }
+              currentParaLines = [];
+            };
+
+            const flushSubheading = () => {
+              if (currentSub !== null) {
+                items.push({
+                  type: "subHeading",
+                  class: "",
+                  content: { en: currentSub, hi: "" }
+                });
+              }
+            };
+
+            for (const line of lines) {
+              const m = line.match(/^\s*\[subheading\]\s*(.*)$/i);
+              if (m) {
+                flushParagraph();
+                currentSub = (m[1] ?? "").trim();
+                flushSubheading();
+                continue;
+              }
+
+              currentParaLines.push(line);
+
+              // paragraph boundary on blank line
+              if (line.trim() === "") {
+                flushParagraph();
+              }
+            }
+            flushParagraph();
+
+            return {
+              type: "customYellowBox",
+              class: "",
+              items
+            };
+          }
+
+          // Fallback for remaining structured types
+          return { type: t, content: { en: cleanedEn, hi: hiFinal } };
+        }
+      };
+    }
+
+    if (!window.__blocks) window.__blocks = [];
+
+    function addBlock() {
+      const block = createBlockUI();
+      $blocksContainer.appendChild(block.card);
+      window.__blocks.push(block);
+    }
+
+    function getBlocks() {
+      return window.__blocks || [];
+    }
+
+    function convert() {
+      clearError();
+      try {
+        const blocks = getBlocks();
+        if (!blocks.length) throw new Error("Add at least one block first.");
+
+        const sections = [];
+
+        for (const b of blocks) {
+          const data = b.getData();
+
+          // Expand paragraph blocks into multiple section paragraphs.
+          if (data && data.type === "paragraph" && data.content && Array.isArray(data.content.en)) {
+            const enArr = data.content.en;
+            const hiArr = data.content.hi || [];
+            const maxLen = Math.max(enArr.length, hiArr.length);
+
+            for (let i = 0; i < maxLen; i++) {
+              const enTextVal = enArr[i] ?? "";
+              const hiTextVal = hiArr[i] ?? "";
+
+              // If English paragraph contains URLs OR bold markers, emit paragraphCombo.
+              // Bold markers are **...**; URLs are http(s)://...
+              const hasUrl = /(https?:\/\/)/i.test(enTextVal);
+              const hasBoldMarker = /\*\*[^*]+\*\*/.test(enTextVal) || /__[^_]+__/.test(enTextVal) || /\*[^*]+\*/.test(enTextVal);
+
+              // Support inline marker to generate a top-level subHeading.
+              // Syntax (at start of a paragraph line): [subheading] Some title
+              const subHeadingMarker = String(enTextVal).match(/^\s*\[subheading\]\s*(.*)$/i);
+
+              if (subHeadingMarker) {
+                sections.push({
+                  type: "subHeading",
+                  class: "",
+                  content: { en: subHeadingMarker[1].trim(), hi: hiTextVal }
+                });
+              } else if (hasUrl || hasBoldMarker) {
+                sections.push({
+                  type: "paragraphCombo",
+                  class: "",
+                  content: {
+                    en: paragraphTextToComboRuns(enTextVal).map(run => {
+                      if (run.type === "link") return run;
+                      // paragraph runs already contain en/hi
+                      return run;
+                    }),
+                    hi: []
+                  }
+                });
+              } else {
+                sections.push({ type: "paragraph", content: { en: enTextVal, hi: hiTextVal } });
+              }
+            }
+          } else {
+            sections.push(data);
+          }
+        }
+
+        const result = {
+          sections,
+          meta: {
+            generatedFrom: "text-to-article-json.html",
+            generatedAt: new Date().toISOString()
+          }
+        };
+
+        $output.textContent = JSON.stringify(result, null, 2);
+      } catch (e) {
+        showError("Error: " + (e?.message || String(e)));
+      }
+    }
+
+    // init with one paragraph block
+    addBlock();
+  </script>
+</body>
+</html>
+
