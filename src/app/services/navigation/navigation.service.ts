@@ -42,4 +42,12 @@ export class NavigationService {
       this.router.navigate(['hi/details/', id, ParamType.SubCategory]);
     }
   }
+
+  toPublication(id: string) {
+    if (this.languageService.isEnglish()) {
+      this.router.navigate(['/publications', id]);
+    } else {
+      this.router.navigate(['/hi/publications', id]);
+    }
+  }
 }

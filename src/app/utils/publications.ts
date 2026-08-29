@@ -6,32 +6,14 @@ const C = '../../../assets/archive/3.png';
 
 export const publicationsCategory: archive[] = [
     {
-        id: 'P1',
-        title: 'FUND RAISING CALENDARS',
-        archiveImg: C,
-        images: [
-            { url: C, caption: 'Saheli fundraising calendar, 1990', alt: 'Calendar 1990' },
-            { url: A, caption: 'Annual calendar featuring Saheli campaigns, 1995', alt: 'Calendar 1995' },
-            { url: B, caption: 'Hand-illustrated calendar for fundraising, 2002', alt: 'Calendar 2002' },
-            { url: C, caption: 'Saheli calendar highlighting women\'s struggles, 2008', alt: 'Calendar 2008' },
-        ]
-    },
-    {
-        id: 'P2',
-        title: 'LEAFLETS',
-        archiveImg: C,
-        images: [
-            { url: B, caption: 'Leaflet on dowry harassment awareness', alt: 'Dowry leaflet' },
-            { url: A, caption: 'Leaflet for the anti-rape campaign', alt: 'Anti-rape leaflet' },
-            { url: C, caption: 'Leaflet on women\'s health and contraceptives', alt: 'Health leaflet' },
-            { url: A, caption: 'Leaflet for the Voices Against 377 campaign', alt: '377 leaflet' },
-            { url: B, caption: 'Leaflet on workplace sexual harassment', alt: 'POSH leaflet' },
-        ]
-    },
-    {
         id: 'P3',
         title: 'NEWSLETTERS',
+        hindiTitle: 'न्यूज़लेटर्स',
         archiveImg: C,
+        subtitle: {
+            en: '',
+            hi: ''
+        },
         images: [
             { url: A, caption: 'Saheli newsletter, 1984 — early years of the collective', alt: 'Newsletter 1984' },
             { url: C, caption: 'Newsletter covering the anti-sati campaign, 1987', alt: 'Newsletter 1987' },
@@ -41,19 +23,29 @@ export const publicationsCategory: archive[] = [
         ]
     },
     {
-        id: 'P4',
-        title: 'POSTERS',
+        id: 'P7',
+        title: 'SOUVENIRS',
+        hindiTitle: 'स्मारिकाएं',
+        subtitle: {
+            en: '',
+            hi: ''
+        },
         archiveImg: C,
         images: [
-            { url: B, caption: 'Poster for the dowry abolition campaign', alt: 'Dowry poster' },
-            { url: A, caption: 'Poster for International Women\'s Day march', alt: 'IWD poster' },
-            { url: C, caption: 'Poster against sex determination', alt: 'Sex determination poster' },
-            { url: B, caption: 'Poster supporting survivors of communal violence', alt: 'Communal violence poster' },
+            { url: A, caption: 'Souvenir booklet from Saheli\'s 10th anniversary, 1991', alt: 'Souvenir 1991' },
+            { url: C, caption: 'Souvenir from the fundraising event, 1998', alt: 'Souvenir 1998' },
+            { url: B, caption: 'Souvenir marking 25 years of Saheli, 2006', alt: 'Souvenir 2006' },
+            { url: A, caption: 'Souvenir booklet from Saheli\'s 40th anniversary, 2021', alt: 'Souvenir 2021' },
         ]
     },
     {
         id: 'P5',
         title: 'REPORTS',
+        subtitle: {
+            en: '',
+            hi: ''
+        },
+        hindiTitle: 'रिपोर्ट्स',
         archiveImg: C,
         images: [
             { url: C, caption: 'Report on coercive population control policies', alt: 'Population control report' },
@@ -66,6 +58,11 @@ export const publicationsCategory: archive[] = [
     {
         id: 'P6',
         title: 'STATEMENTS',
+        hindiTitle: 'वक्तव्य',
+        subtitle: {
+            en: '',
+            hi: ''
+        },
         archiveImg: C,
         images: [
             { url: B, caption: 'Statement on the Shah Bano case, 1986', alt: 'Shah Bano statement' },
@@ -75,19 +72,62 @@ export const publicationsCategory: archive[] = [
         ]
     },
     {
-        id: 'P7',
-        title: 'SOUVENIRS',
+        id: 'P4',
+        title: 'POSTERS',
+        subtitle: {
+            en: '',
+            hi: ''
+        },
+        hindiTitle: 'पोस्टर',
         archiveImg: C,
         images: [
-            { url: A, caption: 'Souvenir booklet from Saheli\'s 10th anniversary, 1991', alt: 'Souvenir 1991' },
-            { url: C, caption: 'Souvenir from the fundraising event, 1998', alt: 'Souvenir 1998' },
-            { url: B, caption: 'Souvenir marking 25 years of Saheli, 2006', alt: 'Souvenir 2006' },
-            { url: A, caption: 'Souvenir booklet from Saheli\'s 40th anniversary, 2021', alt: 'Souvenir 2021' },
+            { url: B, caption: 'Poster for the dowry abolition campaign', alt: 'Dowry poster' },
+            { url: A, caption: 'Poster for International Women\'s Day march', alt: 'IWD poster' },
+            { url: C, caption: 'Poster against sex determination', alt: 'Sex determination poster' },
+            { url: B, caption: 'Poster supporting survivors of communal violence', alt: 'Communal violence poster' },
+        ]
+    },
+    {
+        id: 'P2',
+        title: 'LEAFLETS',
+        hindiTitle: 'पर्चे',
+        subtitle: {
+            en: '',
+            hi: ''
+        },
+        archiveImg: C,
+        images: [
+            { url: B, caption: 'Leaflet on dowry harassment awareness', alt: 'Dowry leaflet' },
+            { url: A, caption: 'Leaflet for the anti-rape campaign', alt: 'Anti-rape leaflet' },
+            { url: C, caption: 'Leaflet on women\'s health and contraceptives', alt: 'Health leaflet' },
+            { url: A, caption: 'Leaflet for the Voices Against 377 campaign', alt: '377 leaflet' },
+            { url: B, caption: 'Leaflet on workplace sexual harassment', alt: 'POSH leaflet' },
+        ]
+    },
+    {
+        id: 'P1',
+        title: 'CALENDARS',
+        hindiTitle: 'कैलेंडर',
+        subtitle: {
+            en: '',
+            hi: ''
+        },
+        archiveImg: C,
+        images: [
+            { url: C, caption: 'Saheli fundraising calendar, 1990', alt: 'Calendar 1990' },
+            { url: A, caption: 'Annual calendar featuring Saheli campaigns, 1995', alt: 'Calendar 1995' },
+            { url: B, caption: 'Hand-illustrated calendar for fundraising, 2002', alt: 'Calendar 2002' },
+            { url: C, caption: 'Saheli calendar highlighting women\'s struggles, 2008', alt: 'Calendar 2008' },
         ]
     },
     {
         id: 'P8',
         title: 'MISCELLANEOUS',
+        hindiTitle: 'अन्य',
+        subtitle: {
+            en: '',
+            hi: ''
+        },
         archiveImg: C,
         images: [
             { url: B, caption: 'Booklet on talking marriage, caste and community', alt: 'Caste booklet' },

@@ -13,14 +13,19 @@ import { CommonModule } from '@angular/common';
 export class ArticleSummaryComponent {
   @Input() articleSummary: articleList | null = null;
   @Output() navigateToArticleEvent = new EventEmitter();
-   currentLang = 'en';
+  currentLang = 'en';
 
   constructor(private languageService: LanguageService) {
-     effect(() => {
-      console.log('Language changed to:', this.languageService.lang());
+    effect(() => {
       this.currentLang = this.languageService.lang();
     });
-   }
+  }
+
+  get currentSubtitle() {
+    const subtitle = this.articleSummary?.subtitle;
+    const value = subtitle ? (subtitle[this.currentLang as keyof typeof subtitle] ?? '') : '';
+    return typeof value === 'string' ? value.trim() : '';
+  }
 
   navigateToArticle(id: string | undefined) {
     this.navigateToArticleEvent.emit(id);

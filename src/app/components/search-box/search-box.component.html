@@ -5,8 +5,7 @@
     (keydown)="onKeydown($event)"
     [placeholder]="languageService.isEnglish() ? 'Search...' : 'खोजें...'"
     class="search-input"
+    [class.search-input-hi]="!languageService.isEnglish()"
   />
-  <button class="search-btn" (click)="onSearch()" aria-label="Search">
-    <ng-icon name="heroMagnifyingGlass" size="18"></ng-icon>
-  </button>
+  <button class="search-btn" (click)="onSearch()" aria-label="Search" type="button"></button>
 </div>

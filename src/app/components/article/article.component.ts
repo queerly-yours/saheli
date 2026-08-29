@@ -1,10 +1,11 @@
 import { JsonPipe, NgClass, NgStyle } from '@angular/common';
-import { Component, effect, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, DestroyRef, effect, inject, Input, OnChanges } from '@angular/core';
 import { LanguageService } from '../../services/language/language.service';
 import { ContentService } from '../../services/content/content.service';
 import { contentElement, r2FetchArticleImgURL } from '../../utils/constants';
 import { PopoverDirective } from '../../services/directives/popover/popover.directive';
 import { LightboxComponent } from '../shared/lightbox/lightbox.component';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-article',
@@ -15,6 +16,7 @@ import { LightboxComponent } from '../shared/lightbox/lightbox.component';
 export class ArticleComponent implements OnChanges {
 
   @Input() articleId!: string;
+  private destroyRef = inject(DestroyRef);
   currentLang = 'en';
   articleContent: any;
   elements = contentElement;
@@ -26,13 +28,14 @@ export class ArticleComponent implements OnChanges {
 
   constructor(private languageService: LanguageService, private contentService: ContentService) {
     effect(() => {
-      console.log('Language changed to:', this.languageService.lang());
       this.currentLang = this.languageService.lang();
     });
   }
 
   ngOnChanges(): void {
-    this.contentService.getArticleContent(this.articleId).subscribe({
+    this.contentService.getArticleContent(this.articleId).pipe(
+      takeUntilDestroyed(this.destroyRef)
+    ).subscribe({
       next: (data) => {
         this.articleContent = data.sections;
       },

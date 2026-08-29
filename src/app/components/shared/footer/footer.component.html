@@ -1,7 +1,7 @@
 <div>
     <img src="../../../../assets/footer/footerImg1.png" alt="" class="footer-img w-100">
 </div>
-<div class="bg-primary font-white footer-wrapper">
+<div class="bg-primary font-white footer-wrapper" [class.footer-wrapper-hi]="!languageService.isEnglish()">
     <div class="footer-info-left">
         @if(languageService.isEnglish()) {
         <p>You are free to quote or use any materials from <br> our site, and it would be great to hear if you do.</p>

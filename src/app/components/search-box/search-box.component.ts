@@ -1,16 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { NgIconComponent, provideIcons } from '@ng-icons/core';
-import { heroMagnifyingGlass } from '@ng-icons/heroicons/outline';
 import { LanguageService } from '../../services/language/language.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-search-box',
   standalone: true,
-  imports: [FormsModule, NgIconComponent, CommonModule],
-  providers: [provideIcons({ heroMagnifyingGlass })],
+  imports: [FormsModule, CommonModule],
   templateUrl: './search-box.component.html',
   styleUrls: ['./search-box.component.scss']
 })

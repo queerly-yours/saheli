@@ -1,4 +1,4 @@
-import { afterNextRender, Component, effect, Injector, runInInjectionContext } from '@angular/core';
+import { afterNextRender, Component, DestroyRef, effect, inject, Injector, runInInjectionContext } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { filterByArrayKeyAndIds, filterByIds, ParamType } from '../../utils/utils';
 import { NavigationService } from '../../services/navigation/navigation.service';
@@ -11,7 +11,7 @@ import { articles } from '../../utils/all-articles';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { CategoryPopComponent } from "../shared/category-pop/category-pop.component";
 import { NgClass, UpperCasePipe } from '@angular/common';
-import { articleList, subCategory } from '../../utils/data-model';
+import { archive, articleList, subCategory } from '../../utils/data-model';
 import { DateUtilsService } from '../../services/date-utils/date-utils.service';
 import { CapitalizePipe } from "../../services/pipes/capitalize/capitalize.pipe";
 import { initialVisibilityCount } from '../../utils/constants';
@@ -21,6 +21,7 @@ import { NgIcon, provideIcons } from '@ng-icons/core';
 import { heroChevronLeft, heroChevronRight } from '@ng-icons/heroicons/outline';
 import { ArticleComponent } from '../article/article.component';
 import { ArchiveSliderComponent } from '../shared/archive-slider/archive-slider.component';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-category',
@@ -32,6 +33,7 @@ import { ArchiveSliderComponent } from '../shared/archive-slider/archive-slider.
 export class DetailsComponent {
 
   categoryData!: any;
+  private destroyRef = inject(DestroyRef);
   type!: string;
   paramTypes = ParamType;
   viewByDecade = false;
@@ -44,6 +46,8 @@ export class DetailsComponent {
   incrementBy = 10;
   articleNavList: string[] = [];
   currentLang = 'en';
+
+  private readonly publicationsCategoryId = '14';
 
 
 
@@ -60,14 +64,18 @@ export class DetailsComponent {
   }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
+    this.route.paramMap.pipe(
+      takeUntilDestroyed(this.destroyRef)
+    ).subscribe(params => {
       this.selectedId = params.get('id');
       this.type = params.get('type') ?? '';
       this.fetchDetailsBasedOnParamType(this.selectedId, this.type);
 
     });
 
-    this.route.queryParams.subscribe(params => {
+    this.route.queryParams.pipe(
+      takeUntilDestroyed(this.destroyRef)
+    ).subscribe(params => {
       this.selectedDecade = params['decade'] || null;
       this.fromId = params['from'] || null;
       if (this.fromId) {
@@ -260,6 +268,18 @@ export class DetailsComponent {
 
   navigateToArticle(id: string | undefined, fromId?: string) {
     this.navService.toArticle(id, fromId ?? this.selectedId);
+  }
+
+  get isPublicationsPage() {
+    return this.type === ParamType.Category && this.selectedId === this.publicationsCategoryId;
+  }
+
+  getPublicationTitle(item: archive) {
+    return this.languageService.isEnglish() ? item.title : item.hindiTitle;
+  }
+
+  onPublicationClick(item: archive) {
+    this.navService.toPublication(item.id);
   }
   
   visibleArticles(articlesList: articleList[]) {

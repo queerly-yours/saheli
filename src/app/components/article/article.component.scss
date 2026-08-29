@@ -314,7 +314,8 @@ a:active {
     min-width: 0;
 
     img {
-      width: 100%;
+      width: min(100%, 66.666%);
+      max-width: 66.666%;
       height: auto;
     }
   }

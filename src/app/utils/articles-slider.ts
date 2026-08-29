@@ -87,7 +87,7 @@ export const cardDetailsList: cardDetails[] = [
         title: "THE 'DECENCY' DEBATES",
         subtitle: "Censorship and the Journey of a Women’s Group",
         date: "2004",
-        category: "OTHER DEBATES AND CONCERNS",
+        category: "OTHER CONCERNS",
         image: '../../../../assets/home/articles-slider/10.png'
     },
     {

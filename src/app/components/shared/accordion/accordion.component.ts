@@ -28,7 +28,6 @@ export class AccordionComponent {
 
   constructor(private injector: Injector, private navService: NavigationService, public languageService: LanguageService) { 
     effect(() => {
-      console.log('Language changed to:', this.languageService.lang());
       this.currentLang = this.languageService.lang();
     });
   }
