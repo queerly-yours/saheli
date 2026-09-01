@@ -1,6 +1,6 @@
 {
   "name": "saheli-draft-1",
-  "version": "0.0.9",
+  "version": "0.0.11",
   "scripts": {
     "ng": "ng",
     "start": "npm run build:search-index && ng serve",
